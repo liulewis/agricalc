@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drip System First Design: Mainline, Laterals and Emitter Count from Scratch</title>
+<meta name="description" content="Design a drip irrigation system from scratch: water requirement, emitter count, lateral length, mainline sizing and pump pressure with a worked example for a one-hectare vegetable block.">
+<meta name="keywords" content="drip system designer first lateral layout, drip, system, designer, Tool Tutorials &amp; Q&amp;A">
+<link rel="canonical" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html"><meta property="og:url" content="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=41">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Drip System First Design: Sizing Mainline, Laterals and Emitters from a Blank Page",
+  "datePublished": "2026-09-14",
+  "dateModified": "2026-09-14",
+  "author": {"@type": "Person", "name": "Agricalc Editorial Team"},
+  "publisher": {"@type": "Organization", "name": "Agricalc", "logo": {"@type": "ImageObject", "url": "https://agricalc.online/assets/images/logo.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html"},
+  "keywords": "drip system designer first lateral layout, drip, system, designer, Tool Tutorials &amp; Q&amp;A",
+  "articleSection": "Tool Tutorials &amp; Q&amp;A",
+  "description": "Design a drip irrigation system from scratch: water requirement, emitter count, lateral length, mainline sizing and pump pressure with a worked example for a one-hectare vegetable block.",
+  "image": "https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg"
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I size emitters for my crop?", "acceptedAnswer": {"@type": "Answer", "text": "Start from peak water requirement in mm/day and plant spacing; divide the daily litres per plant by the emitter's L/h rating to get runtime. Two emitters per plant halve the runtime and provide redundancy on high-value crops."}}, {"@type": "Question", "name": "What pressure does my pump need to deliver?", "acceptedAnswer": {"@type": "Answer", "text": "Add the emitter operating pressure (commonly 1 bar), the lateral friction loss (typically 0.4 to 0.7 bar at the far end), mainline friction and any lift. Most flat-block drip systems need 1.8 to 2.2 bar at the zone inlet."}}, {"@type": "Question", "name": "How long should each lateral be?", "acceptedAnswer": {"@type": "Answer", "text": "Keep lateral length so that friction loss stays under 15 percent of the operating pressure. For 16 mm PE tape with 4 L/h emitters every 0.30 m, lateral lengths above 60 to 70 m start to lose uniformity."}}, {"@type": "Question", "name": "What filter mesh do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Most drip emitters require 120 to 130 micron filtration, roughly 120 to 150 mesh. Disc or screen filters are both acceptable; the key is sizing for at least double the nominal flow so backwash does not choke the system."}}]}</script>
+<meta property="og:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drip System First Design: Mainline, Laterals and Emitter Count from Scratch">
+<meta name="twitter:description" content="Design a drip irrigation system from scratch: water requirement, emitter count, lateral length, mainline sizing and pump pressure with a worked example for a one-hectare vegetable block.">
+<meta name="twitter:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta property="og:title" content="Drip System First Design: Mainline, Laterals and Emitter Count from Scratch">
+<meta property="og:description" content="Design a drip irrigation system from scratch: water requirement, emitter count, lateral length, mainline sizing and pump pressure with a worked example for a one-hectare vegetable block.">
+<meta property="og:type" content="article">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head>
+
+<body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Skip to content</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/" aria-label="Agricalc home">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Primary">
+      <a class="ag-nav__link" href="/">Home</a>
+      <a class="ag-nav__link" href="/#tools">Calculators</a>
+      <a class="ag-nav__link" href="/guides/">Guides</a>
+      <a class="ag-nav__link is-active" href="/blog/" aria-current="page">Blog</a>
+      <a class="ag-nav__link" href="/glossary/">Glossary</a>
+      <a class="ag-nav__link" href="/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Language">
+        <a class="ag-lang__btn" href="/blog/tool-tutorials/drip-system-designer-first-design.html" aria-current="true">EN</a>
+        <a class="ag-lang__btn" href="/es/blog/tool-tutorials/drip-system-designer-first-design.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/blog/tool-tutorials/drip-system-designer-first-design.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/">Home</a>
+      <a href="/#tools">Calculators</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/glossary/">Glossary</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">Tool Tutorials &amp; Q&amp;A</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Tool Tutorials &amp; Q&amp;A</span>
+      <h1 class="ag-article-head__title">Drip System First Design: Sizing Mainline, Laterals and Emitters from a Blank Page</h1>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-09-14">14 Sep 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>5 min read</span>
+      </div>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<p><img src="/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg" alt="drip system designer first lateral layout — peak L/h = plants × emitters × L/h ; zone flow = peak ÷ zones ; pump bar = emitt" width="1200" height="630" loading="lazy"></p>
+<div class="related-tools">
+<p><strong>Related Calculators:</strong> <a href="/tools/drip-system-designer.html">drip system designer</a></p>
+</div>
+<p>A first drip system looks like plumbing, but it is arithmetic. Five decisions — water need per day, emitter output, lateral length, mainline size and pump pressure — turn an intimidating shopping list into a coherent design that delivers the same drop at row one and row fifty.</p>
+<h2>Start with Water Need, Not Pipe</h2>
+<p>Every drip design begins with peak crop water requirement, expressed in millimeters per day or litres per square metre per day. A vegetable block under plastic mulch in mid-summer commonly peaks at 6 mm/day, which is 60 m3 per hectare per day — the volume the system must replace in roughly two irrigation events of three hours each.</p>
+<p>Convert volume to emitters per plant using plant spacing. Tomatoes at 0.45 m along the row and 1.0 m between rows occupy 0.45 m2; one 4 L/h emitter per plant delivers peak water in 60/4×0.45 ≈ 6.75 hours per week, or one hour per day. Two emitters per plant halve the runtime and protect against clogging, which is the standard choice for high-value crops.</p>
+<h3>Choosing emitter output</h3>
+<p>Low flow (1-2 L/h) suits sandy soils and tight spacing where the wetted bulb stays small; medium (4 L/h) handles most vegetables on loams; high flow (8 L/h) is for orchards with wider root zones. Match the emitter to the soil&#x27;s lateral spread, not to the catalogue&#x27;s top seller.</p>
+<h2>The Design Chain</h2>
+<h3>Step 1: emitters per plant and per hectare</h3>
+<p>Tomatoes at 0.45 × 1.0 m spacing are 22 222 plants per hectare. With two 4 L/h emitters per plant the peak flow is 22 222 × 2 × 4 = 177 776 L/h during irrigation, roughly 178 m3/h — clearly too much for one zone. Split into four zones of 0.25 ha each and each zone draws 44 m3/h.</p>
+<h3>Step 2: lateral length and pressure loss</h3>
+<p>Laterals run along the rows. With 1.0 m between rows, a 0.25 ha zone (50 × 50 m) fits 50 laterals of 50 m each. A 16 mm PE drip tape with 4 L/h emitters every 0.30 m carries about 33 emitters per 50 m. Pressure loss along a 50 m 16 mm PE lateral at this flow is roughly 0.5 bar; together with the 1 bar emitter operating pressure, the lateral inlet needs about 1.5 bar.</p>
+<h3>Step 3: mainline sizing</h3>
+<p>The mainline delivers 44 m3/h to the zone. PVC pressure pipe charts give a 90 mm PVC main at 2 m/s velocity for that flow, with pressure loss around 0.3 bar over 50 m. Pump output therefore needs at least 1.5 + 0.3 + 0.2 (valves and fittings) = 2 bar at 44 m3/h — a 3 HP pump on a flat block, 5 HP if there is a 20 m lift.</p>
+<h2>Worked Example: One-Hectare Tomato Block, Four Zones</h2>
+<p>Total daily peak demand: 60 m3/ha. Tomato spacing 0.45 × 1.0 m, two 4 L/h emitters per plant. Four zones of 0.25 ha each, irrigated sequentially two times per day at 1 hour each. Per zone: 11 111 plants, 22 222 emitters, peak flow 44 m3/h.</p>
+<p>Each zone has 50 laterals of 50 m on a 16 mm PE tape, with emitters every 0.30 m and a lateral inlet pressure of 1.5 bar. The mainline is 90 mm PVC running 50 m from pump to the farthest zone, with head loss of 0.3 bar. The pump delivers 44 m3/h at 2.0 bar; a 3 HP surface centrifugal on a flat block covers it. Filters: a 130 mesh (120 micron) disc filter sized for 50 m3/h to protect the emitters from the silt that clogs them most.</p>
+<h3>Zoning and runtime</h3>
+<p>Sequential zones keep peak flow low and pump size small. With four zones each running one hour twice a day, the full cycle finishes in four hours and the pump rests twenty hours — leaving margin for cloudy days when demand falls and nights when no irrigation is needed.</p>
+<h2>Mistakes and Practical Notes</h2>
+<h3>Buying Pipe Before Computing Demand</h3>
+<p>Sizing the mainline by guess leads to either expensive over-pipe or chronic under-pressure at the last emitter. Always compute peak flow per zone first, then read the pipe chart for the velocity that keeps friction reasonable.</p>
+<h3>Ignoring Lateral Pressure Loss</h3>
+<p>A lateral is not a perfect manifold — friction drops pressure along its length, so the last emitter flows less than the first. Limiting lateral length to keep the loss under 15 percent of operating pressure keeps uniformity above 90 percent, the threshold for high-value drip.</p>
+<h3>Under-Sized Filtration</h3>
+<p>More drip systems fail from clogged emitters than from any other cause. Size the filter for double the nominal zone flow so backwash never chokes irrigation, and flush the ends of every lateral weekly during the season.</p>
+<p>Drip design tools and irrigation supplier spreadsheets all reduce to this same chain — peak demand, emitter choice, lateral friction, mainline sizing and filtration. The Drip System Designer on agricalc.online lays out the five steps with a worked example on one screen.</p>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-list">
+<div class="faq-item"><h3 class="faq-question">How do I size emitters for my crop?</h3><div class="faq-answer"><p>Start from peak water requirement in mm/day and plant spacing; divide the daily litres per plant by the emitter&#x27;s L/h rating to get runtime. Two emitters per plant halve the runtime and provide redundancy on high-value crops.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">What pressure does my pump need to deliver?</h3><div class="faq-answer"><p>Add the emitter operating pressure (commonly 1 bar), the lateral friction loss (typically 0.4 to 0.7 bar at the far end), mainline friction and any lift. Most flat-block drip systems need 1.8 to 2.2 bar at the zone inlet.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">How long should each lateral be?</h3><div class="faq-answer"><p>Keep lateral length so that friction loss stays under 15 percent of the operating pressure. For 16 mm PE tape with 4 L/h emitters every 0.30 m, lateral lengths above 60 to 70 m start to lose uniformity.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">What filter mesh do I need?</h3><div class="faq-answer"><p>Most drip emitters require 120 to 130 micron filtration, roughly 120 to 150 mesh. Disc or screen filters are both acceptable; the key is sizing for at least double the nominal flow so backwash does not choke the system.</p></div></div>
+</div>
+<p>A first drip design is five decisions chained: peak water need, emitter output, lateral friction, mainline size and pump pressure. Enter your block size and crop spacing in the Drip System Designer on agricalc.online and get a coherent shopping list today.</p>
+<div class="guide-related">
+      <h2>Related Calculators</h2>
+      <div class="guide-related-links">
+        <a href="/tools/drip-system-designer.html">Drip System Designer Calculator</a>
+        <a href="/tools/yield-calculator.html">Yield Calculator</a>
+        <a href="/tools/fertilizer-calculator.html">Fertilizer Calculator</a>
+      </div>
+    </div>
+<section class="ma-section" aria-labelledby="ma-title"><h2 class="ma-title" id="ma-title">More Articles</h2><div class="ma-grid"><a class="ma-card" href="/blog/high-tunnel-vs-greenhouse-cost-comparison.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/greenhouse.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-20</span><span>Greenhouse</span></div></div></a><a class="ma-card" href="/blog/npk-fertilizer-ratio-vegetable-garden.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/fertilizer.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-29</span><span>Fertilization</span></div></div></a><a class="ma-card" href="/blog/agricultural-drones.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/technology.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-03</span><span>Technology</span></div></div></a></div></section>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="On this page"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Editorial team</span>
+          <p class="ag-card__text ag-mt-5">
+            Reviewed against regional extension guidance and updated when
+            recommendations change.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Agricultural technology specialists</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Related calculators</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/tools/drip-system-designer.html">drip system designer</a></li>
+            <li><a href="/tools/yield-calculator.html">Yield Calculator</a></li>
+            <li><a href="/tools/fertilizer-calculator.html">Fertilizer Calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>On this page</summary>
+        <nav data-ag-toc aria-label="On this page"></nav>
+      </details>
+    </div>
+  </article>
+
+  
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculators, all free, no sign-up</p>
+        <p class="ag-cta__text">Planting, soil, irrigation, livestock, machinery and farm finance — pick a tool and get an answer in under a minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/#tools">Browse calculators</a>
+    </div>
+  </div>
+</main>
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 free agricultural calculators for modern farming.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Tools">
+        <p class="ag-footer__col-title">Tools</p>
+        <ul class="ag-footer__links">
+          <li><a href="/#planting">Planting</a></li>
+          <li><a href="/#land">Land &amp; Soil</a></li>
+          <li><a href="/#livestock">Livestock</a></li>
+          <li><a href="/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Resources">
+        <p class="ag-footer__col-title">Resources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Company">
+        <p class="ag-footer__col-title">Company</p>
+        <ul class="ag-footer__links">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Languages">
+        <p class="ag-footer__col-title">Languages</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">For reference only — consult local extension services or an agronomist before acting on these figures.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script>
+</body>
+</html>

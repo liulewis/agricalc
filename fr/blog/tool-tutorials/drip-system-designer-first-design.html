@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Première conception d'un système goutte-à-goutte : conduite, rampes et nombre de goutteurs à partir de zéro</title>
+<meta name="description" content="Concevez un système d'irrigation goutte-à-goutte à partir de zéro : besoin en eau, nombre de goutteurs, longueur des rampes, dimensionnement de la conduite et pression de la pompe, avec un exemple chiffré pour un bloc maraîcher d'un hectare.">
+<meta name="keywords" content="concepteur goutte-à-goutte premier trajet de rampes, goutte-à-goutte, système, concepteur, Tutoriels et Questions">
+<link rel="canonical" href="https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html"><meta property="og:url" content="https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=41">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Première conception d'un système goutte-à-goutte : dimensionner la conduite, les rampes et les goutteurs à partir d'une page blanche",
+  "datePublished": "2026-09-14",
+  "dateModified": "2026-09-14",
+  "author": {"@type": "Person", "name": "Agricalc Editorial Team"},
+  "publisher": {"@type": "Organization", "name": "Agricalc", "logo": {"@type": "ImageObject", "url": "https://agricalc.online/assets/images/logo.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html"},
+  "keywords": "concepteur goutte-à-goutte premier trajet de rampes, goutte-à-goutte, système, concepteur, Tutoriels et Questions",
+  "articleSection": "Tutoriels et Questions",
+  "description": "Concevez un système d'irrigation goutte-à-goutte à partir de zéro : besoin en eau, nombre de goutteurs, longueur des rampes, dimensionnement de la conduite et pression de la pompe, avec un exemple chiffré pour un bloc maraîcher d'un hectare.",
+  "image": "https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg"
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comment dimensionner les goutteurs pour ma culture ?", "acceptedAnswer": {"@type": "Answer", "text": "Partez du besoin en eau de pointe en mm/jour et de l'écartement ; divisez les litres quotidiens par plante par le débit du goutteur en L/h pour obtenir la durée de fonctionnement. Deux goutteurs par plante divisent cette durée par deux et offrent une redondance sur les cultures à haute valeur."}}, {"@type": "Question", "name": "Quelle pression ma pompe doit-elle fournir ?", "acceptedAnswer": {"@type": "Answer", "text": "Additionnez la pression de service du goutteur (généralement 1 bar), la perte de charge des rampes (typiquement 0,4 à 0,7 bar en bout de ligne), le frottement de la conduite principale et la hauteur de refoulement éventuelle. La plupart des systèmes goutte-à-goutte sur terrain plat demandent 1,8 à 2,2 bar à l'entrée de zone."}}, {"@type": "Question", "name": "Quelle longueur doit faire chaque rampe ?", "acceptedAnswer": {"@type": "Answer", "text": "Gardez une longueur de rampe telle que la perte de frottement reste sous 15 pour cent de la pression de service. Pour un ruban PE de 16 mm avec des goutteurs de 4 L/h tous les 0,30 m, les rampes dépassant 60 à 70 m commencent à perdre en uniformité."}}, {"@type": "Question", "name": "Quelle finesse de filtre me faut-il ?", "acceptedAnswer": {"@type": "Answer", "text": "La plupart des goutteurs exigent une filtration de 120 à 130 microns, soit environ 120 à 150 mesh. Les filtres à disques ou à tamis conviennent tous deux ; l'essentiel est de dimensionner pour au moins le double du débit nominal afin que le contre-lavage n'étrangle pas le système."}}]}</script>
+<meta property="og:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Première conception d'un système goutte-à-goutte : conduite, rampes et nombre de goutteurs à partir de zéro">
+<meta name="twitter:description" content="Concevez un système d'irrigation goutte-à-goutte à partir de zéro : besoin en eau, nombre de goutteurs, longueur des rampes, dimensionnement de la conduite et pression de la pompe, avec un exemple chiffré pour un bloc maraîcher d'un hectare.">
+<meta name="twitter:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta property="og:title" content="Première conception d'un système goutte-à-goutte : conduite, rampes et nombre de goutteurs à partir de zéro">
+<meta property="og:description" content="Concevez un système d'irrigation goutte-à-goutte à partir de zéro : besoin en eau, nombre de goutteurs, longueur des rampes, dimensionnement de la conduite et pression de la pompe, avec un exemple chiffré pour un bloc maraîcher d'un hectare.">
+<meta property="og:type" content="article">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head>
+
+<body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link" href="/fr/#tools">Outils</a>
+      <a class="ag-nav__link" href="/fr/guides/">Guides</a>
+      <a class="ag-nav__link is-active" href="/fr/blog/" aria-current="page">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/blog/tool-tutorials/drip-system-designer-first-design.html">EN</a>
+        <a class="ag-lang__btn" href="/es/blog/tool-tutorials/drip-system-designer-first-design.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/blog/tool-tutorials/drip-system-designer-first-design.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><a href="/fr/blog/">Blog</a></li>
+        <li><span aria-current="page">Tutoriels et Questions</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Tutoriels et Questions</span>
+      <h1 class="ag-article-head__title">Première conception d'un système goutte-à-goutte : dimensionner la conduite, les rampes et les goutteurs à partir d'une page blanche</h1>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-09-14">14 Sep 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>5 min de lecture</span>
+      </div>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<p><img src="/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg" alt="concepteur goutte-à-goutte premier trajet de rampes — L/h pointe = plants × goutteurs × L/h ; débit zone = pointe ÷ zones ; bar pompe = gou" width="1200" height="630" loading="lazy"></p>
+<div class="related-tools">
+<p><strong>Calculatrices Connexes:</strong> <a href="/fr/tools/drip-system-designer.html">drip system designer</a></p>
+</div>
+<p>Un premier système goutte-à-goutte ressemble à de la plomberie, mais c'est de l'arithmétique. Cinq décisions — besoin en eau par jour, débit des goutteurs, longueur des rampes, diamètre de la conduite et pression de la pompe — transforment une liste d'achats intimidante en un projet cohérent qui délivre la même goutte au rang un et au rang cinquante.</p>
+<h2>Commencez par le besoin en eau, pas par les tuyaux</h2>
+<p>Tout projet de goutte-à-goutte commence par le besoin en eau de pointe de la culture, exprimé en millimètres par jour ou en litres par mètre carré par jour. Un bloc maraîcher sous paillis plastique en plein été culmine couramment à 6 mm/jour, soit 60 m3 par hectare et par jour — le volume que le système doit restituer en deux arrosages d'environ trois heures chacun.</p>
+<p>Convertissez le volume en goutteurs par plante grâce à l'écartement. Des tomates à 0,45 m sur le rang et 1,0 m entre rangs occupent 0,45 m2 ; un goutteur de 4 L/h par plante délivre le besoin de pointe en 60/4×0,45 ≈ 6,75 heures par semaine, soit une heure par jour. Deux goutteurs par plante divisent le temps de fonctionnement par deux et protègent du colmatage : c'est le choix standard pour les cultures à haute valeur.</p>
+<h3>Choisir le débit des goutteurs</h3>
+<p>Le faible débit (1-2 L/h) convient aux sols sableux et aux écartements serrés où le bulbe humide reste petit ; le moyen (4 L/h) couvre la plupart des légumes sur limons ; le fort débit (8 L/h) est réservé aux vergers à enracinement plus large. Choisissez le goutteur selon l'étalement latéral du sol, pas selon la meilleure vente du catalogue.</p>
+<h2>La chaîne de conception</h2>
+<h3>Étape 1 : goutteurs par plante et par hectare</h3>
+<p>Des tomates à un écartement de 0,45 × 1,0 m correspondent à 22 222 plants par hectare. Avec deux goutteurs de 4 L/h par plante, le débit de pointe est de 22 222 × 2 × 4 = 177 776 L/h pendant l'irrigation, soit environ 178 m3/h — bien trop pour une seule zone. En divisant en quatre zones de 0,25 ha, chacune tire 44 m3/h.</p>
+<h3>Étape 2 : longueur des rampes et perte de pression</h3>
+<p>Les rampes suivent les rangs. Avec 1,0 m entre rangs, une zone de 0,25 ha (50 × 50 m) loge 50 rampes de 50 m chacune. Un ruban de goutte-à-goutte PE de 16 mm avec des goutteurs de 4 L/h tous les 0,30 m porte environ 33 goutteurs par 50 m. La perte de charge le long d'une rampe PE de 16 mm de 50 m à ce débit avoisine 0,5 bar ; avec la pression de service de 1 bar du goutteur, l'entrée de rampe demande environ 1,5 bar.</p>
+<h3>Étape 3 : dimensionnement de la conduite principale</h3>
+<p>La conduite principale achemine 44 m3/h vers la zone. Les abaques de tuyau PVC pression donnent une conduite de 90 mm à 2 m/s de vitesse pour ce débit, avec une perte de charge d'environ 0,3 bar sur 50 m. La pompe doit donc fournir au moins 1,5 + 0,3 + 0,2 (vannes et raccords) = 2 bar à 44 m3/h — une pompe de 3 HP sur terrain plat, 5 HP s'il y a 20 m de refoulement.</p>
+<h2>Exemple chiffré : un bloc de tomates d'un hectare, quatre zones</h2>
+<p>Demande de pointe quotidienne totale : 60 m3/ha. Écartement des tomates 0,45 × 1,0 m, deux goutteurs de 4 L/h par plante. Quatre zones de 0,25 ha chacune, irriguées séquentiellement deux fois par jour à raison d'une heure chacune. Par zone : 11 111 plants, 22 222 goutteurs, débit de pointe 44 m3/h.</p>
+<p>Chaque zone compte 50 rampes de 50 m sur un ruban PE de 16 mm, avec des goutteurs tous les 0,30 m et une pression d'entrée de rampe de 1,5 bar. La conduite principale est un PVC de 90 mm courant sur 50 m de la pompe à la zone la plus éloignée, avec une perte de charge de 0,3 bar. La pompe délivre 44 m3/h à 2,0 bar ; une centrifugeuse de surface de 3 HP sur un terrain plat suffit. Filtres : un filtre à disques de 130 mesh (120 microns) dimensionné pour 50 m3/h afin de protéger les goutteurs du limon qui les colmate le plus souvent.</p>
+<h3>Zonage et durée de fonctionnement</h3>
+<p>Des zones séquentielles maintiennent le débit de pointe bas et la pompe petite. Avec quatre zones fonctionnant une heure deux fois par jour, le cycle complet s'achève en quatre heures et la pompe se repose vingt heures — ce qui laisse de la marge pour les jours nuageux où la demande baisse et les nuits où aucune irrigation n'est nécessaire.</p>
+<h2>Erreurs et Notes Pratiques</h2>
+<h3>Acheter les tuyaux avant de calculer la demande</h3>
+<p>Dimensionner la conduite à l'estime conduit soit à un surdimensionnement coûteux, soit à une sous-pression chronique au dernier goutteur. Calculez toujours d'abord le débit de pointe par zone, puis lisez l'abaque pour la vitesse qui garde un frottement raisonnable.</p>
+<h3>Ignorer la perte de pression des rampes</h3>
+<p>Une rampe n'est pas un collecteur parfait : le frottement fait chuter la pression sur sa longueur, si bien que le dernier goutteur débite moins que le premier. Limiter la longueur de rampe pour garder la perte sous 15 pour cent de la pression de service maintient l'uniformité au-dessus de 90 pour cent, le seuil d'un goutte-à-goutte à haute valeur.</p>
+<h3>Une filtration sous-dimensionnée</h3>
+<p>Les goutteurs colmatés font échouer plus de systèmes goutte-à-goutte que toute autre cause. Dimensionnez le filtre pour le double du débit nominal de la zone afin que le contre-lavage n'étrangle jamais l'irrigation, et rincez les extrémités de chaque rampe chaque semaine pendant la saison.</p>
+<p>Les outils de conception goutte-à-goutte et les tableurs des fournisseurs d'irrigation se ramènent tous à la même chaîne — demande de pointe, choix des goutteurs, frottement des rampes, dimensionnement de la conduite et filtration. Le Concepteur de système goutte-à-goutte sur agricalc.online déroule les cinq étapes avec un exemple chiffré sur un seul écran.</p>
+<h2>Questions fréquentes</h2>
+<div class="faq-list">
+<div class="faq-item"><h3 class="faq-question">Comment dimensionner les goutteurs pour ma culture ?</h3><div class="faq-answer"><p>Partez du besoin en eau de pointe en mm/jour et de l'écartement ; divisez les litres quotidiens par plante par le débit du goutteur en L/h pour obtenir la durée de fonctionnement. Deux goutteurs par plante divisent cette durée par deux et offrent une redondance sur les cultures à haute valeur.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">Quelle pression ma pompe doit-elle fournir ?</h3><div class="faq-answer"><p>Additionnez la pression de service du goutteur (généralement 1 bar), la perte de charge des rampes (typiquement 0,4 à 0,7 bar en bout de ligne), le frottement de la conduite principale et la hauteur de refoulement éventuelle. La plupart des systèmes goutte-à-goutte sur terrain plat demandent 1,8 à 2,2 bar à l'entrée de zone.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">Quelle longueur doit faire chaque rampe ?</h3><div class="faq-answer"><p>Gardez une longueur de rampe telle que la perte de frottement reste sous 15 pour cent de la pression de service. Pour un ruban PE de 16 mm avec des goutteurs de 4 L/h tous les 0,30 m, les rampes dépassant 60 à 70 m commencent à perdre en uniformité.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">Quelle finesse de filtre me faut-il ?</h3><div class="faq-answer"><p>La plupart des goutteurs exigent une filtration de 120 à 130 microns, soit environ 120 à 150 mesh. Les filtres à disques ou à tamis conviennent tous deux ; l'essentiel est de dimensionner pour au moins le double du débit nominal afin que le contre-lavage n'étrangle pas le système.</p></div></div>
+</div>
+<p>Un premier projet goutte-à-goutte, c'est cinq décisions enchaînées : besoin en eau de pointe, débit des goutteurs, frottement des rampes, diamètre de la conduite et pression de la pompe. Saisissez la taille de votre bloc et l'écartement de votre culture dans le Concepteur de système goutte-à-goutte sur agricalc.online et obtenez une liste d'achats cohérente dès aujourd'hui.</p>
+<div class="guide-related">
+      <h2>Calculatrices liées</h2>
+      <div class="guide-related-links">
+        <a href="/fr/tools/drip-system-designer.html">Drip System Designer Calculator</a>
+        <a href="/fr/tools/yield-calculator.html">Yield Calculator</a>
+        <a href="/fr/tools/fertilizer-calculator.html">Fertilizer Calculator</a>
+      </div>
+    </div>
+<div class="guide-related">
+      <h2>Articles liés</h2>
+      <div class="guide-related-links">
+        <a href="/fr/blog/tool-tutorials/">Tutoriels et Questions</a>
+        <a href="/fr/blog/">Blog</a>
+      </div>
+    </div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="Sur cette page"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Équipe éditoriale</span>
+          <p class="ag-card__text ag-mt-5">
+            Vérifié selon les recommandations des services de vulgarisation régionaux et mis à jour lorsque celles-ci évoluent.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Spécialistes en technologie agricole</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Calculateurs associés</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/fr/tools/drip-system-designer.html">drip system designer</a></li>
+            <li><a href="/fr/tools/yield-calculator.html">Yield Calculator</a></li>
+            <li><a href="/fr/tools/fertilizer-calculator.html">Fertilizer Calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>Sur cette page</summary>
+        <nav data-ag-toc aria-label="Sur cette page"></nav>
+      </details>
+    </div>
+  <section class="ma-section" aria-labelledby="ma-title"><h2 class="ma-title" id="ma-title">Plus d'articles</h2><div class="ma-grid"><a class="ma-card" href="/fr/blog/hydroponic-farming.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/technology.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-25</span><span>Technologie</span></div></div></a><a class="ma-card" href="/fr/blog/farm-equipment-cost-per-acre.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/crops.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-24</span><span>Gestion Agricole</span></div></div></a><a class="ma-card" href="/fr/blog/soil-health-indicators.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/soil.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-23</span><span>Gestion des Sols</span></div></div></a></div></section></article>
+
+  
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script>
+</body>
+</html>

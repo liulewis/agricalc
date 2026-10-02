@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requerimiento Hídrico del Cultivo: de ETo a la Dosis de Riego</title>
+<meta name="description" content="Calcula el requerimiento hídrico paso a paso: ETo del clima, Kc por etapa, ETc, lluvia efectiva y riego bruto con un ejemplo resuelto.">
+<meta name="keywords" content="requerimiento hídrico cultivo eto, requerimiento, hídrico, cultivo, Riego y Agua">
+<link rel="canonical" href="https://agricalc.online/es/blog/irrigation-water/crop-water-requirement-etc.html"><meta property="og:url" content="https://agricalc.online/es/blog/irrigation-water/crop-water-requirement-etc.html">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/blog/irrigation-water/crop-water-requirement-etc.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/blog/irrigation-water/crop-water-requirement-etc.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/blog/irrigation-water/crop-water-requirement-etc.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/blog/irrigation-water/crop-water-requirement-etc.html">
+<meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=41">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Requerimiento Hídrico del Cultivo: de la ETo a la Dosis Real de Riego",
+  "datePublished": "2026-09-14",
+  "dateModified": "2026-09-14",
+  "author": {"@type": "Person", "name": "Agricalc Editorial Team"},
+  "publisher": {"@type": "Organization", "name": "Agricalc", "logo": {"@type": "ImageObject", "url": "https://agricalc.online/assets/images/logo.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://agricalc.online/es/blog/irrigation-water/crop-water-requirement-etc.html"},
+  "keywords": "requerimiento hídrico cultivo eto, requerimiento, hídrico, cultivo, Riego y Agua",
+  "articleSection": "Riego y Agua",
+  "description": "Calcula el requerimiento hídrico paso a paso: ETo del clima, Kc por etapa, ETc, lluvia efectiva y riego bruto con un ejemplo resuelto.",
+  "image": "https://agricalc.online/assets/blog-img/irrigation-water/crop-water-requirement-etc.svg"
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuál es la diferencia entre ETo y ETc?", "acceptedAnswer": {"@type": "Answer", "text": "La ETo es el consumo de una superficie de pasto estándar en tu zona; la ETc es el consumo real de tu cultivo tras multiplicar la ETo por su coeficiente de etapa. La programación se hace sobre la ETc; el clima publicado te da la ETo."}}, {"@type": "Question", "name": "¿Dónde encuentro los Kc de mi cultivo?", "acceptedAnswer": {"@type": "Answer", "text": "Las tablas del Boletín 56 de la FAO listan Kc por cultivo y etapa y son la referencia detrás de casi toda la extensión. Elige la etapa en la que está realmente tu lote, no un promedio de campaña."}}, {"@type": "Question", "name": "¿Cuánta lluvia cuenta como efectiva?", "acceptedAnswer": {"@type": "Answer", "text": "Como regla práctica, el 60-80% de la lluvia semanal sobre suelo plano y cubierto cuenta para el cultivo; reduce ese porcentaje en laderas, suelo recién labrado, lloviznas sobre superficie seca y tormentas que escurren."}}, {"@type": "Question", "name": "¿Debo reponer toda la ETc en cada riego?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Permitir un secado controlado entre eventos — reponer una fracción grande de la ETc sin llevar el suelo a capacidad de campo cada vez — ahorra agua sin perder rendimiento en muchos cultivos. Ajústalo a tu almacenamiento de suelo y a las etapas críticas."}}]}</script>
+<meta property="og:image" content="https://agricalc.online/assets/blog-img/irrigation-water/crop-water-requirement-etc.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Requerimiento Hídrico del Cultivo: de ETo a la Dosis de Riego">
+<meta name="twitter:description" content="Calcula el requerimiento hídrico paso a paso: ETo del clima, Kc por etapa, ETc, lluvia efectiva y riego bruto con un ejemplo resuelto.">
+<meta name="twitter:image" content="https://agricalc.online/assets/blog-img/irrigation-water/crop-water-requirement-etc.svg">
+<meta property="og:title" content="Requerimiento Hídrico del Cultivo: de ETo a la Dosis de Riego">
+<meta property="og:description" content="Calcula el requerimiento hídrico paso a paso: ETo del clima, Kc por etapa, ETc, lluvia efectiva y riego bruto con un ejemplo resuelto.">
+<meta property="og:type" content="article">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head>
+
+<body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Saltar al contenido</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/es/" aria-label="Inicio de Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/es/">Inicio</a>
+      <a class="ag-nav__link" href="/es/#tools">Herramientas</a>
+      <a class="ag-nav__link" href="/es/guides/">Guías</a>
+      <a class="ag-nav__link is-active" href="/es/blog/" aria-current="page">Blog</a>
+      <a class="ag-nav__link" href="/es/glossary/">Glosario</a>
+      <a class="ag-nav__link" href="/es/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Idioma">
+        <a class="ag-lang__btn" href="/blog/irrigation-water/crop-water-requirement-etc.html">EN</a>
+        <a class="ag-lang__btn" href="/es/blog/irrigation-water/crop-water-requirement-etc.html" aria-current="true">ES</a>
+        <a class="ag-lang__btn" href="/fr/blog/irrigation-water/crop-water-requirement-etc.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/es/">Inicio</a>
+      <a href="/es/#tools">Herramientas</a>
+      <a href="/es/guides/">Guías</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/glossary/">Glosario</a>
+      <a href="/es/faq.html">FAQ</a>
+      <a href="/es/about.html">Acerca de</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Riego y Agua</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Riego y Agua</span>
+      <h1 class="ag-article-head__title">Requerimiento Hídrico del Cultivo: de la ETo a la Dosis Real de Riego</h1>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-09-14">14 Sep 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>5 min de lectura</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-irrigation.webp" alt="Requerimiento Hídrico del Cultivo: de la ETo a la Dosis Real de Riego" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<p><img src="/assets/blog-img/irrigation-water/crop-water-requirement-etc.svg" alt="requerimiento hídrico cultivo eto — ETc = ETo × Kc; neta = ETc − lluvia efectiva; bruta = neta ÷ eficiencia (1 mm × " width="1200" height="630" loading="lazy"></p>
+<div class="related-tools">
+<p><strong>Calculadoras relacionadas:</strong> <a href="/es/tools/crop-water-requirement.html">crop water requirement</a></p>
+</div>
+<p>La pregunta &#x27;¿cuánto debo regar?&#x27; tiene respuesta exacta, pero pasa por tres números que casi todos han oído y pocos han usado juntos: la evapotranspiración de referencia, el coeficiente de cultivo y la lluvia efectiva. Encadenarlos bien convierte el requerimiento hídrico en milímetros programables.</p>
+<h2>Los Tres Números de Todo Presupuesto de Riego</h2>
+<p>La evapotranspiración de referencia (ETo) es el agua que pierde por día una superficie de pasto estándar en tu zona — la mueven el sol, el viento, la temperatura y la humedad, y los servicios meteorológicos la publican a diario. El coeficiente de cultivo (Kc) convierte esa referencia en lo que tu cultivo realmente gasta en su etapa actual. Multiplicados dan la ETc: el consumo real del lote.</p>
+<p>Los rangos de Kc por etapa vienen del Boletín 56 de Riego y Drenaje de la FAO, la referencia estándar detrás de casi toda la planificación mundial: en maíz, unos 0,3-0,5 a la emergencia, 1,05-1,2 en plena temporada y 0,5-0,6 al final; hortalizas de fruto y caña siguen sus propias curvas en las mismas tablas.</p>
+<h3>De dónde sacar la ETo</h3>
+<p>Usa la ETo publicada de la estación más cercana, un servicio agrometeo local o un tanque evaporímetro convertido con su coeficiente. Lo importante es que el número venga del clima medido localmente, no de la tabla de otra región.</p>
+<h2>La Cadena de Cálculo Paso a Paso</h2>
+<h3>Paso 1: consumo diario del cultivo</h3>
+<p>ETc (mm/día) = ETo × Kc de la etapa actual. En la semana de máxima demanda ese es el número a programar; en la práctica se trabaja el total semanal: ETc (mm/semana) = ETo media semanal × Kc × 7.</p>
+<h3>Paso 2: descontar la lluvia efectiva</h3>
+<p>No todo milímetro de lluvia llega a la raíz — las lloviznas se evaporan y las tormentas fuertes escurren. Lo habitual es tomar como efectiva el 60-80% de la lluvia semanal en suelo plano y cubierto, y menos en laderas o recién labrado. Necesidad neta = ETc − lluvia efectiva del mismo periodo.</p>
+<h3>Paso 3: dosis bruta y horas de bombeo</h3>
+<p>Todo sistema pierde: el goteo entrega 85-90% de lo que bombea, el aspersión 70-80% y el superficial a menudo 50-60%. Dosis bruta = necesidad neta ÷ eficiencia. Dos equivalencias útiles: 1 mm sobre 1 hectárea = 10 m3; una dosis bruta de 45 mm por hectárea son 450 m3, y las horas de bombeo salen del caudal de tu sistema.</p>
+<h2>Ejemplo Resuelto: Maíz en Plena Temporada, Una Hectárea</h2>
+<p>La estación local reporta ETo media de 5,5 mm/día para la semana. El maíz está en plena temporada, Kc 1,15: ETc = 5,5 × 1,15 = 6,3 mm/día, unos 44 mm semanales. Lluvia registrada y considerada efectiva: 10 mm. Necesidad neta: 44 − 10 = 34 mm.</p>
+<p>El lote se riega por aspersión con ~75% de eficiencia, así que la dosis bruta es 34 ÷ 0,75 ≈ 45 mm, o sea 450 m3 por hectárea en la semana. Repartido en tres eventos, cada riego aplica 15 mm — suficiente para recargar la raíz superficial sin encharcarla. Si el equipo entrega 20 m3/hora, cada evento corre unos 45 minutos por hectárea. La calculadora de Requerimiento Hídrico de agricalc.online hace toda esta cadena con ETo, Kc, lluvia y eficiencia en una sola pantalla.</p>
+<h3>Ajustar dentro de la semana</h3>
+<p>Una ola de calor sube la ETo a mitad de ciclo; una tormenta de 20 mm cancela el siguiente riego. El calendario es un cálculo rodante, no un papel impreso en primavera: actualízalo con cada cambio de clima.</p>
+<h2>Errores y Notas Prácticas</h2>
+<h3>Usar el Kc equivocado de etapa</h3>
+<p>Aplicar el coeficiente de plena temporada a un lote en emergencia casi duplica la dosis. Lleva un calendario simple de etapas por fecha de siembra y mueve el Kc con él; el suelo cubierto por el cultivo es la comprobación visual.</p>
+<h3>Contar toda la lluvia como efectiva</h3>
+<p>Veinte milímetros en cinco minutos sobre ladera recién labrada son escorrentía. Subestima la lluvia efectiva en lloviznas sobre superficie seca y tormentas fuertes; sobrevalórala solo en terreno plano y cubierto.</p>
+<h3>Ignorar la deriva de eficiencia</h3>
+<p>Una cinta con goteros tapados o una línea con boquillas gastadas ya no entrega la eficiencia de catálogo. Una prueba rápida de uniformidad con latas cada campaña mantiene honesto el número.</p>
+<p>Los servicios de planificación de riego basados en la metodología FAO-56 se reducen a la misma cadena de tres pasos: medir la atmósfera, corregir por el cultivo, descontar el cielo y las tuberías. Aprendida una vez, cada cultivo y campaña es una versión de la misma aritmética.</p>
+<h2>Preguntas frecuentes</h2>
+<div class="faq-list">
+<div class="faq-item"><h3 class="faq-question">¿Cuál es la diferencia entre ETo y ETc?</h3><div class="faq-answer"><p>La ETo es el consumo de una superficie de pasto estándar en tu zona; la ETc es el consumo real de tu cultivo tras multiplicar la ETo por su coeficiente de etapa. La programación se hace sobre la ETc; el clima publicado te da la ETo.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Dónde encuentro los Kc de mi cultivo?</h3><div class="faq-answer"><p>Las tablas del Boletín 56 de la FAO listan Kc por cultivo y etapa y son la referencia detrás de casi toda la extensión. Elige la etapa en la que está realmente tu lote, no un promedio de campaña.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Cuánta lluvia cuenta como efectiva?</h3><div class="faq-answer"><p>Como regla práctica, el 60-80% de la lluvia semanal sobre suelo plano y cubierto cuenta para el cultivo; reduce ese porcentaje en laderas, suelo recién labrado, lloviznas sobre superficie seca y tormentas que escurren.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Debo reponer toda la ETc en cada riego?</h3><div class="faq-answer"><p>No necesariamente. Permitir un secado controlado entre eventos — reponer una fracción grande de la ETc sin llevar el suelo a capacidad de campo cada vez — ahorra agua sin perder rendimiento en muchos cultivos. Ajústalo a tu almacenamiento de suelo y a las etapas críticas.</p></div></div>
+</div>
+<p>El riego deja de ser costumbre cuando se convierte en esta cadena: ETo medida, Kc correcto, lluvia honesta y eficiencia real. Mete tus cuatro valores en la calculadora de Requerimiento Hídrico de agricalc.online y riega por milímetros esta semana.</p>
+<div class="guide-related">
+      <h2>Calculadoras relacionadas</h2>
+      <div class="guide-related-links">
+        <a href="/es/tools/crop-water-requirement.html">Crop Water Requirement Calculator</a>
+        <a href="/es/tools/yield-calculator.html">Yield Calculator</a>
+        <a href="/es/tools/fertilizer-calculator.html">Fertilizer Calculator</a>
+      </div>
+    </div>
+<div class="guide-related">
+      <h2>Artículos relacionados</h2>
+      <div class="guide-related-links">
+        <a href="/es/blog/irrigation-water/">Riego y Agua</a>
+        <a href="/es/blog/">Blog</a>
+      </div>
+    </div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="En esta página"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Equipo editorial</span>
+          <p class="ag-card__text ag-mt-5">
+            Revisado según las guías de extensión regionales y actualizado cuando cambian las recomendaciones.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Especialistas en tecnología agrícola</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Calculadoras relacionadas</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/es/tools/crop-water-requirement.html">crop water requirement</a></li>
+            <li><a href="/es/tools/yield-calculator.html">Yield Calculator</a></li>
+            <li><a href="/es/tools/fertilizer-calculator.html">Fertilizer Calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>En esta página</summary>
+        <nav data-ag-toc aria-label="En esta página"></nav>
+      </details>
+    </div>
+  <section class="ma-section" aria-labelledby="ma-title"><h2 class="ma-title" id="ma-title">Más artículos</h2><div class="ma-grid"><a class="ma-card" href="/es/blog/center-pivot-irrigation-design.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/irrigation.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-22</span><span>Riego</span></div></div></a><a class="ma-card" href="/es/blog/rainwater-harvesting.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/irrigation.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-28</span><span>Riego</span></div></div></a><a class="ma-card" href="/es/blog/drought-irrigation-scheduling-water-limited.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/irrigation.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-24</span><span>Riego</span></div></div></a></div></section></article>
+
+  
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculadoras, todas gratis y sin registro</p>
+        <p class="ag-cta__text">Siembra, suelo, riego, ganadería, maquinaria y finanzas agrícolas: elige una herramienta y obtén la respuesta en menos de un minuto.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/es/#tools">Ver calculadoras</a>
+    </div>
+  </div>
+</main>
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculadoras agrícolas gratuitas para la agricultura moderna.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Herramientas">
+        <p class="ag-footer__col-title">Herramientas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/#planting">Siembra</a></li>
+          <li><a href="/es/#land">Tierra y suelo</a></li>
+          <li><a href="/es/#livestock">Ganadería</a></li>
+          <li><a href="/es/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Recursos">
+        <p class="ag-footer__col-title">Recursos</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/guides/">Guías</a></li>
+          <li><a href="/es/blog/">Blog</a></li>
+          <li><a href="/es/glossary/">Glosario</a></li>
+          <li><a href="/es/faq.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Empresa">
+        <p class="ag-footer__col-title">Empresa</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/about.html">Acerca de</a></li>
+          <li><a href="/es/contact.html">Contacto</a></li>
+          <li><a href="/es/privacy.html">Privacidad</a></li>
+          <li><a href="/es/editorial-policy.html">Política editorial</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Idiomas">
+        <p class="ag-footer__col-title">Idiomas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">Solo a título informativo: consulte a los servicios de extensión locales o a un agrónomo antes de tomar decisiones basadas en estas cifras.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+<rect width="1200" height="630" fill="#f8fafc"/>
+<rect x="24" y="24" width="1152" height="582" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="24" y="24" width="1152" height="110" rx="24" fill="#2d5a2d"/>
+<text x="600" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">AGricalc • Farm Calculation Guide</text>
+<text x="600" y="108" font-family="Arial, sans-serif" font-size="20" fill="#d1e7d1" text-anchor="middle">Fertilisation du Cacaoyer Adulte : Doses selon l&#x27;Âge et l&#x27;Objectif de </text>
+<rect x="140" y="220" width="920" height="180" rx="16" fill="#f0f7f0" stroke="#2d5a2d" stroke-width="2"/>
+<text x="600" y="295" font-family="Consolas, monospace" font-size="30" font-weight="bold" fill="#1e293b" text-anchor="middle">Produit par arbre = objectif nutrition (g) ÷ teneur </text>
+<text x="600" y="345" font-family="Consolas, monospace" font-size="30" font-weight="bold" fill="#1e293b" text-anchor="middle">du produit ; par hectare = par arbre × nombre réel d</text>
+<text x="600" y="470" font-family="Arial, sans-serif" font-size="22" fill="#475569" text-anchor="middle">Metric units • Step-by-step example inside</text>
+<text x="600" y="540" font-family="Arial, sans-serif" font-size="20" fill="#2d5a2d" text-anchor="middle">agricalc.online — free farm calculators</text>
+</svg>

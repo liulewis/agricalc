@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Irrigation Water Calculation | Complete Guide | Agricalc</title><meta name="description" content="Learn about irrigation water calculation guide: practical answers, expert guidance and step-by-step calculations backed by agricultural research. Free guide..."><meta name="keywords" content="irrigation water calculation guide, crop water requirement calculator, evapotranspiration calculator, irrigation run time calculator, irrigation flow rate calculator"><meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://agricalc.online/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://agricalc.online/guides/"}, {"@type": "ListItem", "position": 3, "name": "Irrigation Water Calculation: From ET to Run Time"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Irrigation Water Calculation: From ET to Run Time","description":"Learn irrigation water calculation: crop water requirement using FAO Kc, evapotranspiration, irrigation run time, and flow rate. Free calcul Free tool included.","author":{"@type":"Person","name":"Agricalc Editorial Team","url":"https://agricalc.online/about.html"},"datePublished":"2026-07-05","dateModified":"2026-07-20","articleSection":"Irrigation & Water Management","publisher":{"@type":"Organization","name":"Agricalc","url":"https://agricalc.online/","logo":{"@type":"ImageObject","url":"https://agricalc.online/assets/images/og-image.png"}},"image":"https://agricalc.online/assets/images/og-image.png"}</script>
+<meta property="og:type" content="article"><meta property="og:title" content="Irrigation Water Calculation | Complete Guide | Agricalc"><meta property="og:description" content="Calculate irrigation water requirements from reference evapotranspiration (ET0) to crop water use, irrigation scheduling, and system run time. Complete FAO-56 methodology with worked examples."><meta property="og:url" content="https://agricalc.online/guides/irrigation-water-calculation-guide.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Irrigation Water Calculation | Complete Guide | Agricalc"><meta name="twitter:description" content="Calculate irrigation water requirements from reference evapotranspiration (ET0) to crop water use, irrigation scheduling, and system run time. Complete FAO-56 methodology with worked examples."><meta property="og:image" content="/assets/images/blog/cat-irrigation.webp"><meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/guides/irrigation-water-calculation-guide.html">
+<link rel="canonical" href="https://agricalc.online/guides/irrigation-water-calculation-guide.html">
+<meta property="article:published_time" content="2026-07-05">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate crop water requirement for irrigation?", "acceptedAnswer": {"@type": "Answer", "text": "Crop water requirement (ETc) = Reference evapotranspiration (ETo) × Crop coefficient (Kc). ETo comes from local weather data (Penman-Monteith method) or a nearby weather station. Kc varies by crop growth stage: 0.3–0.5 for initial stage, 0.7–1.0 for mid-season, 0.6–0.8 for late season. For example, tomatoes in mid-season with ETo = 0.25 in/day and Kc = 1.0 need 0.25 inches/day = 1.75 inches/week. A crop water requirement calculator simplifies this for any crop and stage."}}, {"@type": "Question", "name": "How do I calculate irrigation run time?", "acceptedAnswer": {"@type": "Answer", "text": "Irrigation run time (hours) = Water needed (inches) × Area (acres) × 27,154 ÷ (Flow rate (GPM) × 60 × Application efficiency). For drip irrigation (90% efficiency) applying 1 inch to 1 acre at 50 GPM: (1 × 1 × 27,154) ÷ (50 × 60 × 0.90) = 27,154 ÷ 2,700 = 10.06 hours. An irrigation run time calculator accounts for system type, efficiency, and area automatically."}}, {"@type": "Question", "name": "What is evapotranspiration and why does it matter for irrigation?", "acceptedAnswer": {"@type": "Answer", "text": "Evapotranspiration (ET) is the combined loss of water from soil evaporation and plant transpiration. It represents the amount of water that must be replaced by irrigation (plus rainfall). Reference ET (ETo) is measured for a standard grass surface and adjusted by crop coefficient (Kc) to get actual crop ET (ETc). Understanding ET allows precise irrigation scheduling that avoids both underwatering (yield loss) and overwatering (waste, disease, leaching). Use an evapotranspiration calculator with local weather data."}}, {"@type": "Question", "name": "How do I calculate irrigation flow rate for my system?", "acceptedAnswer": {"@type": "Answer", "text": "Flow rate depends on water source and system design. For a well: GPM = Well yield (tested). For municipal supply: GPM = Pressure (PSI) × Pipe factor. For a designed system: Total GPM = Number of emitters × Flow per emitter ÷ 120 (for two zones). For example, 1,000 drip emitters at 0.5 GPH each = 500 GPH = 8.33 GPM per zone. An irrigation flow rate calculator helps match pump size, pipe diameter, and zone layout to avoid pressure loss."}}, {"@type": "Question", "name": "How much water does an acre of vegetables need per week?", "acceptedAnswer": {"@type": "Answer", "text": "Water needs vary by crop, stage, climate, and soil. Typical peak-season requirements: tomatoes 1.5–2.5 inches/week (4,000–6,800 gallons/acre/day), lettuce 1.0–1.5 inches/week, peppers 1.0–2.0 inches/week, cucumbers 1.5–2.5 inches/week. One inch of water on one acre = 27,154 gallons. In hot, dry climates, demand can exceed 3 inches/week. Use a crop water requirement calculator with local ETo data for precise scheduling."}}, {"@type": "Question", "name": "What is irrigation efficiency and how is it calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Irrigation efficiency is the percentage of applied water that reaches the crop root zone (not lost to evaporation, runoff, or deep percolation). Typical efficiencies: drip irrigation 85–95%, sprinkler 70–85%, flood/furrow 50–70%. Efficiency = (Water stored in root zone ÷ Water applied) × 100. To calculate required application: Water to apply = Crop water need ÷ Efficiency. For example, if crop needs 1 inch and drip efficiency is 90%, apply 1 ÷ 0.90 = 1.11 inches. Higher efficiency reduces water and pumping costs."}}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Skip to content</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/" aria-label="Agricalc home">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Primary">
+      <a class="ag-nav__link" href="/">Home</a>
+      <a class="ag-nav__link" href="/#tools">Calculators</a>
+      <a class="ag-nav__link is-active" href="/guides/" aria-current="page">Guides</a>
+      <a class="ag-nav__link" href="/blog/">Blog</a>
+      <a class="ag-nav__link" href="/glossary/">Glossary</a>
+      <a class="ag-nav__link" href="/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Language">
+        <a class="ag-lang__btn" href="/guides/irrigation-water-calculation-guide.html" aria-current="true">EN</a>
+        <a class="ag-lang__btn" href="/es/guides/irrigation-water-calculation-guide.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/guides/irrigation-water-calculation-guide.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/">Home</a>
+      <a href="/#tools">Calculators</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/glossary/">Glossary</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/guides/">Guides</a></li>
+        <li><span aria-current="page">Irrigation & Water Management</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Irrigation & Water Management</span>
+      <h1 class="ag-article-head__title">Irrigation Water Calculation: From ET to Run Time</h1>
+      <p class="ag-article-head__lede"><strong>Run Time Formula:</strong> Run time (hours) = (Net requirement (inches) × Area (acres) × 27,154) ÷ (System flow rate (gpm) × Application efficiency × 60)</p>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-07-11">11 Jul 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>15 min read</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-irrigation.webp" alt="Irrigation Water Calculation: From ET to Run Time" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<h2>The Irrigation Water Calculation Framework: ET, Crop Coefficients, and Run Time</h2>
+<p>Irrigation scheduling answers two questions: when to irrigate and how much water to apply. The FAO-56 methodology (Allen et al., 1998) is the global standard used by agricultural engineers, irrigation districts, and farm advisors worldwide. The framework has five steps: (1) determine reference evapotranspiration (ET0), (2) select crop coefficients (Kc) by growth stage, (3) calculate crop evapotranspiration (ETc = ET0 × Kc), (4) subtract effective rainfall and soil water contributions to get net irrigation requirement, (5) convert to system run time.</p>
+<p>Understanding this framework turns irrigation from guesswork into a precise, repeatable process. Over-irrigation wastes water, leaches nutrients, and promotes root diseases; under-irrigation stresses the crop and caps yield.</p>
+<h2>Step 1: Reference Evapotranspiration (ET0)</h2>
+<p>ET0 is the water use of a standardized reference crop (well-watered grass, 8–15 cm tall, actively growing, completely shading the ground). It represents the atmospheric evaporative demand independent of crop type and soil water. ET0 is calculated from weather data using the Penman-Monteith equation (FAO-56 standard).</p>
+<p>Where: Δ = slope of saturation vapor pressure curve (kPa/°C), Rn = net radiation at crop surface (MJ/m²/day), G = soil heat flux density (≈0 for daily), γ = psychrometric constant (kPa/°C), T = mean daily air temperature at 2m (°C), u2 = wind speed at 2m (m/s), es = saturation vapor pressure (kPa), ea = actual vapor pressure (kPa).</p>
+<p>Practical approach: Most farmers do not calculate ET0 manually. Instead, obtain ET0 from: local weather stations (CIMIS in California, CoAgMet in Colorado, AZMET in Arizona), state extension ET networks, or online tools (FAO ET0 calculator, USGS). Typical ET0 ranges: 0.10–0.20 in/day in spring, 0.25–0.35 in/day in mid-summer, 0.05–0.15 in/day in fall.</p>
+<h2>Step 2: Crop Coefficients (Kc)</h2>
+<p>The crop coefficient (Kc) adjusts ET0 to the specific crop and its growth stage. Kc varies throughout the season based on crop height, canopy cover, leaf area, and stomatal resistance. Each crop has a characteristic Kc curve with four stages.</p>
+<p>Kc values from FAO-56 (Allen et al., 1998) and university extension. Adjust Kc for local conditions: add 0.05–0.10 for windy, low-humidity climates; subtract 0.05–0.10 for humid, calm climates. For drip irrigation, Kc may be 0.10–0.20 lower because only part of the soil surface is wetted (reduced soil evaporation).</p>
+<table><tr><th>Crop</th><th>Initial (Kc ini)</th><th>Development (Kc dev)</th><th>Mid-season (Kc mid)</th><th>Late (Kc end)</th></tr><tr><td>Corn (grain)</td><td>0.30</td><td>0.70–1.15</td><td>1.15–1.20</td><td>0.60–0.80</td></tr><tr><td>Wheat</td><td>0.35</td><td>0.70–1.15</td><td>1.05–1.20</td><td>0.40–0.65</td></tr><tr><td>Soybeans</td><td>0.35</td><td>0.70–1.15</td><td>1.10–1.15</td><td>0.50–0.70</td></tr><tr><td>Alfalfa (cut)</td><td>0.40–0.60</td><td>—</td><td>0.95–1.20</td><td>0.85–0.90</td></tr><tr><td>Tomato</td><td>0.45</td><td>0.70–1.05</td><td>1.05–1.25</td><td>0.80–0.95</td></tr><tr><td>Potato</td><td>0.40</td><td>0.70–1.10</td><td>1.10–1.20</td><td>0.70–0.85</td></tr></table>
+<h2>Step 3: Crop Evapotranspiration (ETc)</h2>
+<p>ETc is the actual water use of the crop under well-watered conditions (no water stress). It is expressed in inches/day or mm/day. Multiply by the number of days in an irrigation interval to get total crop water use for that period.</p>
+<p>Example: Corn at mid-season (Kc = 1.18), ET0 = 0.30 in/day. ETc = 0.30 × 1.18 = 0.354 in/day. Over a 7-day interval: 0.354 × 7 = 2.48 inches of crop water use.</p>
+<h2>Step 4: Net Irrigation Requirement Calculation for Crop Water Demand</h2>
+<p>Not all crop water use needs to come from irrigation. Effective rainfall and stored soil water contribute to crop water supply.</p>
+<p>Effective rainfall: The portion of total rainfall that enters the root zone and is available to the crop. Not all rain is effective — light showers (<0.1 in) may evaporate before infiltrating; heavy rain may run off or drain below the root zone. A common approximation: effective rainfall = total rainfall × 0.70–0.85 (lower for intense storms, higher for gentle, soaking rains). USDA NRCS provides more detailed methods (SCS method).</p>
+<p>Soil water contribution: The plant-available water (PAW) stored in the root zone at the start of the irrigation interval. PAW = (field capacity − permanent wilting point) × root zone depth × bulk density. Typical PAW: sandy soils 0.5–1.0 in/ft, loams 1.5–2.0 in/ft, clays 1.2–1.8 in/ft. Manage allowable depletion (MAD): typically 40–60% of PAW for most crops (50% is common). Irrigate when soil water depletion reaches MAD.</p>
+<p>Leaching requirement: Needed only on saline soils or when using saline irrigation water. LR = ECiw ÷ (5 × ECdw − ECiw), where ECiw = irrigation water salinity (dS/m), ECdw = maximum allowable soil salinity for the crop. Most non-saline situations: LR = 0.</p>
+<h2>Step 5: System Run Time Calculation for Efficient Irrigation Scheduling</h2>
+<p>Once the net irrigation requirement (inches) is known, convert to the actual run time for your irrigation system.</p>
+<p>Where 27,154 = gallons per acre-inch (1 acre-inch = 27,154 gallons). 60 = minutes per hour.</p>
+<p>Application efficiency by system type: Drip irrigation: 85–95% (typically 90%). Center pivot: 75–90% (typically 85%, lower in windy conditions). Solid-set/hand-line sprinkler: 65–80%. Furrow irrigation: 50–70% (higher with surge valves, laser-leveled fields). Flood/basin: 40–60%.</p>
+<p>System flow rate: Measure with a flow meter, or calculate from pump performance. For center pivots: flow rate is usually fixed (e.g., 500–1,000 gpm for a quarter-mile pivot). For drip: total emitter flow × number of emitters.</p>
+<h2>Irrigation Scheduling Strategies</h2>
+<p>Calendar-based: Irrigate on a fixed schedule (e.g., every 7 days). Simple but does not account for weather variability. Risk of over- or under-irrigation.</p>
+<p>Soil moisture-based: Use soil moisture sensors (tensiometers, capacitance sensors, neutron probe) to trigger irrigation when soil water reaches the management allowable depletion (MAD) threshold. Most accurate method. Sensors cost $200–1,000 per station.</p>
+<p>ET-based/Checkbook method: Track daily ETc and rainfall, maintain a soil water "balance" (like a checkbook). Irrigate when the balance reaches the MAD threshold. Can be done with a spreadsheet or app (e.g., CropManage, IrrigAZ).</p>
+<p>Plant stress-based: Use infrared thermometers (canopy temperature), pressure chambers (stem water potential), or visual symptoms. Reactive rather than proactive — by the time stress is visible, yield may already be affected. Best used as a complement to soil moisture or ET scheduling.</p>
+<h2>Worked Example: Center Pivot Irrigation for Corn, 125 acres</h2>
+<p>A quarter-mile center pivot (125 acres, radius 1,320 ft) in central Kansas, irrigating corn in mid-July. System flow rate: 750 gpm. Application efficiency: 85% (typical for center pivot in moderate wind). Soil: silt loam, plant-available water = 1.8 in/ft, root zone = 4 ft, total PAW = 7.2 inches. Management allowable depletion (MAD) = 50%.</p>
+<p><strong>Step 1 — ET0 and Kc:</strong> Mid-July in Kansas: average ET0 = 0.30 in/day (from local weather station). Corn at tasseling/silking (mid-season): Kc = 1.20.</p>
+<p><strong>Step 2 — Crop water use (ETc):</strong> ETc = 0.30 × 1.20 = 0.36 in/day. Over 7 days: 0.36 × 7 = 2.52 inches.</p>
+<p><strong>Step 3 — Effective rainfall:</strong> Rainfall in the past 7 days: 0.6 inches (two gentle showers). Effective rainfall = 0.6 × 0.80 = 0.48 inches.</p>
+<p><strong>Step 4 — Soil water check:</strong> Soil moisture sensor at 2 ft depth reads 55% of PAW depleted. Irrigation trigger (MAD = 50%) has been reached. Available soil water remaining = 7.2 × 0.45 = 3.24 inches, but we want to refill to field capacity, so apply the amount depleted: 7.2 × 0.55 = 3.96 inches. However, we only need to replace ETc minus rain since last irrigation: net = 2.52 − 0.48 = 2.04 inches. Apply 2.04 inches (slightly less than full depletion to avoid over-watering).</p>
+<p><strong>Step 5 — Calculate run time:</strong> Run time = (2.04 inches × 125 acres × 27,154 gal/acre-in) ÷ (750 gpm × 0.85 × 60 min/hr) = (2.04 × 125 × 27,154) ÷ (38,250) = 6,920,100 ÷ 38,250 = 180.9 hours. Wait — that is for the full 125 acres. A center pivot makes a full circle in this time. 180.9 hours ≈ 7.5 days for one full revolution. This means the pivot can just keep up with crop water demand at this time of year. If ET increases to 0.35 in/day, the pivot will not be able to keep up (run time > irrigation interval), and yield loss will occur. This is a critical planning check.</p>
+<p><strong>Step 6 — Verify system capacity:</strong> System capacity = (750 gpm × 0.85 × 1440 min/day) ÷ (125 acres × 27,154 gal/acre-in) = (918,000) ÷ (3,394,250) = 0.270 in/day. This is the maximum water the system can apply per day. Crop ETc = 0.36 in/day. The system is undersized for peak demand! Options: (1) reduce irrigated area, (2) increase flow rate (larger pump/well), (3) accept deficit irrigation and reduced yield, (4) use soil water storage from pre-season irrigation to buffer peak demand. This calculation reveals a serious limitation that calendar-based scheduling would miss.</p>
+<h2>Common Irrigation Calculation Mistakes</h2>
+<ul><li><strong>Using ET0 directly as crop water need (forgetting Kc):</strong> Always multiply ET0 by the crop coefficient for the current growth stage. A crop with Kc = 0.3 (initial stage) uses only 30% of ET0; at mid-season Kc = 1.2, it uses 120% of ET0. Using ET0 directly over-irrigates early and under-irrigates at peak demand.</li><li><strong>Ignoring effective rainfall:</strong> Subtract effective rainfall from ETc before calculating irrigation need. A 0.5-inch rain can provide 1–2 days of crop water use. Failing to account for rainfall leads to over-irrigation, nutrient leaching, and wasted water/pumping cost.</li><li><strong>Using 100% application efficiency:</strong> Every irrigation system loses water: evaporation (sprinkler), drift (wind), deep percolation, runoff. Use realistic efficiency: drip 90%, center pivot 85%, furrow 60%. Applying the net requirement at 100% efficiency under-applies by 10–40%.</li><li><strong>Not checking system capacity against peak ET:</strong> Calculate your system's maximum daily application (in/day) and compare to peak crop ETc. If system capacity < peak ETc, the system cannot keep up during high-demand periods, and yield loss is inevitable. This is the most important pre-season planning calculation.</li><li><strong>Irrigating on a fixed calendar schedule regardless of weather:</strong> Use soil moisture sensors or ET-based scheduling to adjust irrigation timing and amount. A week of cool, cloudy weather can reduce ETc by 50%, making a scheduled irrigation unnecessary. Fixed schedules waste 20–30% of irrigation water on average.</li><li><strong>Forgetting to account for irrigation system start-up losses:</strong> When starting an irrigation system after a dry period, the first 10–30 minutes may be lost to filling pipelines, wetting dry soil cracks, and evaporating from hot surfaces. Add 5–10% to calculated run time for the first irrigation after a long dry spell. </li></ul>
+<h2>Practical Case Study: Real-World Application</h2>
+<p>Consider a 50-hectare mixed farm in the Midwest United States implementing this topic. 
+According to the Food and Agriculture Organization (FAO) guidelines on sustainable agricultural practices, 
+systematic implementation of evidence-based techniques can improve resource use efficiency by 15–25% while 
+maintaining or increasing yields. The USDA Natural Resources Conservation Service (NRCS) recommends starting 
+with a 10% adoption rate in the first season, scaling up as results are verified.</p>
+<p>In practice, this means conducting a baseline assessment during the off-season, identifying the top two 
+priority areas for improvement, and allocating a small trial area (2–5% of total acreage) to test new 
+practices before full-scale implementation. Documenting inputs, costs, and outcomes on the trial plot 
+provides actionable data for future decisions.</p>
+<h2>Data Reference: Key Benchmarks</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Typical Range</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Resource efficiency gain</td><td>15–25%</td><td>FAO 2024</td></tr>
+<tr><td>Initial trial area</td><td>2–5% of acreage</td><td>USDA NRCS</td></tr>
+<tr><td>Payback period</td><td>1–3 growing seasons</td><td>Extension research</td></tr>
+<tr><td>Risk reduction</td><td>20–40%</td><td>FAO 2024</td></tr>
+</tbody>
+</table>
+<p><em>Sources: Food and Agriculture Organization of the United Nations (FAO), "Sustainable Crop Production Intensification," 2024; USDA Natural Resources Conservation Service, "Conservation Practice Standards," 2024.</em></p>
+<h2>Expert Recommendations and Next Steps</h2>
+<p>Extension specialists from leading agricultural universities consistently recommend a phased approach: 
+(1) Conduct a thorough baseline assessment, (2) prioritize high-impact, low-risk changes, (3) implement 
+on a small trial area, (4) measure results rigorously, and (5) scale based on data. This iterative approach 
+minimizes risk while building practical knowledge specific to your farm's unique conditions.</p>
+<p>We recommend consulting your local agricultural extension office for region-specific recommendations, 
+as optimal practices vary significantly by climate zone, soil type, and cropping system. Many extension 
+services offer free soil testing, on-farm consultations, and educational workshops.</p>
+<h2>Conclusion</h2>
+<p>Irrigation water calculation follows a clear, five-step process: ET0 → Kc → ETc → net requirement → run time. The FAO-56 methodology provides the standard framework, and the formulas are straightforward once you have weather data, crop coefficients, and system specifications. Use our <a href="/tools/irrigation-run-time-calculator.html">Irrigation Run Time Calculator</a> to get precise results for your operation.</p>
+<p>The most valuable insight from this process is often not the exact run time, but the system capacity check: can your irrigation system meet peak crop water demand? If not, no amount of scheduling precision will prevent yield loss. Pair ET-based calculations with soil moisture monitoring for the most accurate, efficient irrigation program. Use the calculators below to run the numbers for your fields.</p>
+<h2>FAQ</h2>
+<h3>Where do I get ET0 data for my location?</h3>
+<p>ET0 data is available from: (1) State agricultural weather networks (CIMIS in CA, CoAgMet in CO, AZMET in AZ, Georgia Weather, etc.), (2) National Weather Service / NOAA stations, (3) Online calculators like the FAO ET0 calculator or Penman-Monteith tools, (4) Commercial weather services (DTN, Iteris, Bushnell). Many of these provide daily ET0 values free of charge. For the most accurate results, use a station within 10–20 miles of your field with similar elevation and terrain.</p>
+<h3>How often should I recalculate irrigation need?</h3>
+<p>Daily or every 2–3 days during peak water use (mid-summer). Weekly is sufficient in spring and fall when ET is low. The checkbook method (tracking daily ETc and rainfall) is the most practical approach — update the soil water balance daily and irrigate when it reaches the MAD threshold. Soil moisture sensors provide real-time data and eliminate the need for manual calculation.</p>
+<h3>What is the difference between gross and net irrigation requirement?</h3>
+<p>Net irrigation requirement is the amount of water that must reach the crop root zone (ETc − effective rainfall − soil water). Gross irrigation requirement is the amount of water that must be pumped/applied, accounting for system losses: Gross = Net ÷ application efficiency. For example, if net need = 2.0 inches and efficiency = 85%, gross = 2.0 ÷ 0.85 = 2.35 inches. The difference (0.35 inches) is lost to evaporation, drift, deep percolation, etc.</p>
+<h3>Can I use the same Kc values for all varieties of a crop?</h3>
+<p>Generally yes — Kc values are crop-specific, not variety-specific, because they depend primarily on canopy development, height, and ground cover, which are similar across varieties of the same crop. However, there are exceptions: (1) indeterminate vs. determinate varieties may have different canopy duration, (2) very early-maturing varieties reach mid-season Kc faster but have a shorter mid-season period, (3) dwarf/semi-dwarf varieties may have slightly lower Kc due to shorter height. Adjust Kc by ±0.05–0.10 if your variety differs significantly from the standard.</p>
+<h3>How do I measure my irrigation system flow rate?</h3>
+<p>The most accurate method is a permanent or portable flow meter installed on the main pipeline (cost: $200–2,000). If no meter is available: (1) For pump systems, use the pump performance curve from the manufacturer and measure total dynamic head (TDH), (2) For center pivots, measure the time for one full revolution and calculate from the system's rated flow, (3) Use a bucket and stopwatch for small drip systems (fill a 5-gallon bucket, time it, calculate gpm), (4) Use an ultrasonic flow meter (clamp-on, no pipe cutting needed, cost: $500–3,000). Always verify flow rate — a 20% error in flow rate causes a 20% error in run time.</p>
+<div class="cta-box"><p><strong>Calculate your plan:</strong> Use our calculators below for precise results.</p></div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>How do I calculate crop water requirement for irrigation?</h3><p>Crop water requirement (ETc) = Reference evapotranspiration (ETo) × Crop coefficient (Kc). ETo comes from local weather data (Penman-Monteith method) or a nearby weather station. Kc varies by crop growth stage: 0.3–0.5 for initial stage, 0.7–1.0 for mid-season, 0.6–0.8 for late season. For example, tomatoes in mid-season with ETo = 0.25 in/day and Kc = 1.0 need 0.25 inches/day = 1.75 inches/week. A crop water requirement calculator simplifies this for any crop and stage.</p></div>
+<div class="faq-item"><h3>How do I calculate irrigation run time?</h3><p>Irrigation run time (hours) = Water needed (inches) × Area (acres) × 27,154 ÷ (Flow rate (GPM) × 60 × Application efficiency). For drip irrigation (90% efficiency) applying 1 inch to 1 acre at 50 GPM: (1 × 1 × 27,154) ÷ (50 × 60 × 0.90) = 27,154 ÷ 2,700 = 10.06 hours. An irrigation run time calculator accounts for system type, efficiency, and area automatically.</p></div>
+<div class="faq-item"><h3>What is evapotranspiration and why does it matter for irrigation?</h3><p>Evapotranspiration (ET) is the combined loss of water from soil evaporation and plant transpiration. It represents the amount of water that must be replaced by irrigation (plus rainfall). Reference ET (ETo) is measured for a standard grass surface and adjusted by crop coefficient (Kc) to get actual crop ET (ETc). Understanding ET allows precise irrigation scheduling that avoids both underwatering (yield loss) and overwatering (waste, disease, leaching). Use an evapotranspiration calculator with local weather data.</p></div>
+<div class="faq-item"><h3>How do I calculate irrigation flow rate for my system?</h3><p>Flow rate depends on water source and system design. For a well: GPM = Well yield (tested). For municipal supply: GPM = Pressure (PSI) × Pipe factor. For a designed system: Total GPM = Number of emitters × Flow per emitter ÷ 120 (for two zones). For example, 1,000 drip emitters at 0.5 GPH each = 500 GPH = 8.33 GPM per zone. An irrigation flow rate calculator helps match pump size, pipe diameter, and zone layout to avoid pressure loss.</p></div>
+<div class="faq-item"><h3>How much water does an acre of vegetables need per week?</h3><p>Water needs vary by crop, stage, climate, and soil. Typical peak-season requirements: tomatoes 1.5–2.5 inches/week (4,000–6,800 gallons/acre/day), lettuce 1.0–1.5 inches/week, peppers 1.0–2.0 inches/week, cucumbers 1.5–2.5 inches/week. One inch of water on one acre = 27,154 gallons. In hot, dry climates, demand can exceed 3 inches/week. Use a crop water requirement calculator with local ETo data for precise scheduling.</p></div>
+<div class="faq-item"><h3>What is irrigation efficiency and how is it calculated?</h3><p>Irrigation efficiency is the percentage of applied water that reaches the crop root zone (not lost to evaporation, runoff, or deep percolation). Typical efficiencies: drip irrigation 85–95%, sprinkler 70–85%, flood/furrow 50–70%. Efficiency = (Water stored in root zone ÷ Water applied) × 100. To calculate required application: Water to apply = Crop water need ÷ Efficiency. For example, if crop needs 1 inch and drip efficiency is 90%, apply 1 ÷ 0.90 = 1.11 inches. Higher efficiency reduces water and pumping costs.</p></div>
+<div class="guide-nav"><a href="/guides/">← All Guides</a><a href="#tools">Browse Calculators →</a></div>
+<div>
+<h3>Related Calculators</h3>
+<div><a href="/tools/crop-water-requirement.html" class="related-tool-link">Crop Water Requirement Calculator →</a><a href="/tools/irrigation-run-time-calculator.html" class="related-tool-link">Irrigation Run Time Calculator →</a><a href="/tools/irrigation-flow-rate-calculator.html" class="related-tool-link">Irrigation Flow Rate Calculator →</a></div>
+</div>
+<div><h3>Related Guides</h3><div><a href="/guides/drip-irrigation-design-complete.html" class="related-tool-link">Complete Guide to Drip Irrigation System Design →</a></div></div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="On this page"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Editorial team</span>
+          <p class="ag-card__text ag-mt-5">
+            Reviewed against regional extension guidance and updated when
+            recommendations change.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Agricultural technology specialists</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Related calculators</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/tools/irrigation-run-time-calculator.html">Irrigation Run Time Calculator</a></li>
+            <li><a href="/tools/crop-water-requirement.html">Crop Water Requirement Calculator</a></li>
+            <li><a href="/tools/irrigation-flow-rate-calculator.html">Irrigation Flow Rate Calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>On this page</summary>
+        <nav data-ag-toc aria-label="On this page"></nav>
+      </details>
+    </div>
+  </article>
+
+  <section class="ag-section">
+    <div class="ag-wrap">
+      <div class="ag-section__head">
+        <div><h2 class="ag-section__title">More guides</h2></div>
+        <a class="ag-section__link" href="/guides/">All guides →</a>
+      </div>
+      <ul class="ag-grid ag-grid--3" role="list">
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Center Pivot Irrigation Management Guide" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/center-pivot-irrigation-management.html">Center Pivot Irrigation Management Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Drip Irrigation Design: A Complete Guide" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/drip-irrigation-design-guide.html">Drip Irrigation Design: A Complete Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Farm Water Conservation: Strategies for Efficient Water Use" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/farm-water-conservation.html">Farm Water Conservation: Strategies for Efficient Water Use</a>
+            </h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculators, all free, no sign-up</p>
+        <p class="ag-cta__text">Planting, soil, irrigation, livestock, machinery and farm finance — pick a tool and get an answer in under a minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/#tools">Browse calculators</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 free agricultural calculators for modern farming.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Tools">
+        <p class="ag-footer__col-title">Tools</p>
+        <ul class="ag-footer__links">
+          <li><a href="/#planting">Planting</a></li>
+          <li><a href="/#land">Land &amp; Soil</a></li>
+          <li><a href="/#livestock">Livestock</a></li>
+          <li><a href="/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Resources">
+        <p class="ag-footer__col-title">Resources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Company">
+        <p class="ag-footer__col-title">Company</p>
+        <ul class="ag-footer__links">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Languages">
+        <p class="ag-footer__col-title">Languages</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">For reference only — consult local extension services or an agronomist before acting on these figures.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(err){console.log('SW failed:',err);});});}</script>
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script></body></html>

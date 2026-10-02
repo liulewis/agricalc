@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Guide de Gestion de l'Irrigation | Guide Complet | Agricalc</title><meta name="description" content="Découvrez guide de Gestion de l'Irrigation: réponses pratiques, conseils d'experts et calculs étape par étape basés sur la recherche agricole. Gratuit."><meta name="keywords" content="irrigation pivot central, calculateur débit irrigation, dimensionnement pompe irrigation, GPM pivot central, efficacité irrigation par aspersion"><meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://agricalc.online/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://agricalc.online/fr/guides/"}, {"@type": "ListItem", "position": 3, "name": "Guide de Gestion de l'Irrigation par Pivot Central"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Guide de Gestion de l'Irrigation par Pivot Central","description":"Guide complet d'irrigation par pivot central: calcul GPM, débit, dimensionnement pompe, efficacité vs goutte-à-goutte. Optimisez l'application d'eau et les coûts énergétiques.","author":{"@type":"Person","name":"Agricalc Editorial Team","url":"https://agricalc.online/about.html"},"datePublished":"2026-07-04","dateModified":"2026-07-04","articleSection":"Irrigation & Water","publisher":{"@type":"Organization","name":"Agricalc","url":"https://agricalc.online/","logo":{"@type":"ImageObject","url":"https://agricalc.online/assets/images/og-image.png"}},"image":"https://agricalc.online/assets/images/og-image.png"}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment calculer le GPM nécessaire pour mon système de pivot central?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilisez: GPM = (Hectares × Millimètres par application × 10) / (Heures par application × 60). Pour un pivot de 50 hectares appliquant 12 mm en 48 heures: (50 × 12 × 10) / (48 × 60) = 20.8 L/s = 330 GPM. Tenez compte de l'efficacité du système (typiquement 75-85%): divisez par l'efficacité pour obtenir le GPM réel requis. Tenez aussi compte des dénivelés (chaque 30 m d'élévation positive ajoute ~43 PSI). Utilisez un calculateur de pivot central pour des résultats précis incluant la conception des asperseurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel débit et quelle pression faut-il pour un pivot central?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un pivot central typique de 50 hectares nécessite 300-500 GPM à 40-60 PSI pour les paquets d'asperseurs standard haute pression. Les conceptions basse pression (LEPA) fonctionnent à 20-30 PSI et réduisent les coûts énergétiques de 20-30%. Les pivots plus grands (65 hectares) peuvent nécessiter 500-700 GPM. Utilisez un calculateur de débit d'irrigation pour déterminer les exigences exactes selon le taux d'infiltration du sol, la demande hydrique maximale (ET) et la vitesse de rotation souhaitée. Assurez-vous que votre source d'eau (puits, canal, réservoir) peut soutenir le débit requis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment l'efficacité du pivot central se compare-t-elle au goutte-à-goutte et à l'irrigation par inondation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le pivot central atteint 75-85% d'efficacité, contre 90-95% pour le goutte-à-goutte et 50-70% pour l'inondation. Les pertes du pivot viennent de l'évaporation (5-15%), de la dérive du vent (2-10%) et de la percolation profonde (5-10%). Le goutte-à-goutte perd moins par évaporation mais coûte 2 500-7 500€/hectare à installer contre 750-1 750€/hectare pour le pivot. Le pivot couvre de plus grandes zones plus économiquement, gère la topographie irrégulière et convient mieux aux cultures en lignes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle taille de pompe et alimentation électrique faut-il pour un pivot central?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le dimensionnement nécessite à la fois le débit (GPM) et la hauteur dynamique totale (TDH en PSI). TDH = dénivelé + pertes de charge + pression de service + marge de sécurité (10%). Pour un système de 600 GPM à 50 PSI avec 15 m de dénivelé et 10 PSI de pertes: TDH ≈ 50 + 22 + 10 + 8 = 90 PSI. Puissance hydraulique = (GPM × TDH en pieds) / 3 960. Avec 70% d'efficacité de pompe: ~45 CH. Utilisez un calculateur de pompe d'irrigation. Les pompes électriques nécessitent du triphasé; les pompes diesel sont une alternative sans réseau."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment programmer l'irrigation par pivot central en haute saison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pendant l'évapotranspiration maximale (juillet-août en climat tempéré), la plupart des cultures ont besoin de 6-10 mm par jour. Un pivot appliquant 12 mm par rotation complète doit faire un cercle tous les 1,5-2 jours. Calculez: Intervalle de Rotation (jours) = Lame par Passage (mm) / ET Journalière (mm/jour). Surveillez l'humidité du sol avec tensiomètres, capteurs capacitifs ou blocs de gypse à 15-30 cm et 30-60 cm de profondeur. Ajustez selon les données ET en temps réel d'une station météo locale. Un calculateur de temps d'irrigation optimise votre rotation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les coûts énergétiques et de maintenance d'un pivot central?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Énergie: Une pompe électrique de 50 CH fonctionnant 2 000 h/an consomme ~75 000 kWh, coûtant 7 500-11 250€ à 0,10-0,15€/kWh. Les pompes diesel coûtent 12-18€/heure. Les conceptions basse pression et variateurs de fréquence réduisent l'énergie de 20-30%. Maintenance: Coûts annuels typiquement 12-37€/hectare incluant: vidange d'huile des réducteurs (toutes les 2 000 h), remplacement pneus (tous les 5-7 ans, 200-400€ chacun), remplacement buses (tous les 3-5 ans), inspection moteurs et réducteurs, et serrage boulons. Un pivot bien entretenu dure 20-25+ ans."
+      }
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="article"><meta property="og:title" content="Guide de Gestion de l'Irrigation | Guide Complet | Agricalc"><meta property="og:description" content="Guide complet d'irrigation par pivot central: calcul GPM, débit, dimensionnement pompe, efficacité vs goutte-à-goutte. Optimisez l'application d'eau et les coûts énergétiques."><meta property="og:url" content="https://agricalc.online/fr/guides/center-pivot-irrigation-management.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="fr_FR"><meta property="article:published_time" content="2026-07-04"><meta property="article:modified_time" content="2026-07-04">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/guides/center-pivot-irrigation-management.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/guides/center-pivot-irrigation-management.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/guides/center-pivot-irrigation-management.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/guides/center-pivot-irrigation-management.html">
+<link rel="canonical" href="https://agricalc.online/fr/guides/center-pivot-irrigation-management.html">
+
+<meta property="og:image" content="/assets/images/blog/cat-irrigation.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guide de Gestion de l'Irrigation | Guide Complet | Agricalc">
+<meta name="twitter:description" content="Guide complet d'irrigation par pivot central: calcul GPM, débit, dimensionnement pompe, efficacité vs goutte-à-goutte. Optimisez l'application d'eau et les coûts énergétiques.">
+<meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link" href="/fr/#tools">Outils</a>
+      <a class="ag-nav__link is-active" href="/fr/guides/" aria-current="page">Guides</a>
+      <a class="ag-nav__link" href="/fr/blog/">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/guides/center-pivot-irrigation-management.html">EN</a>
+        <a class="ag-lang__btn" href="/es/guides/center-pivot-irrigation-management.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/guides/center-pivot-irrigation-management.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Home</a></li>
+        <li><a href="/fr/guides/">Guides</a></li>
+        <li><span aria-current="page">Irrigation & Water</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Irrigation & Eau</span>
+      <h1 class="ag-article-head__title">Guide de Gestion de l'Irrigation par Pivot Central</h1>
+      <p class="ag-article-head__lede">Les systèmes d'irrigation par pivot central irriguent 40-60% de la superficie irriguée aux États-Unis et se développent rapidement dans le monde entier. Un pivot bien géré applique l'eau uniformément (85-95% d'uniformité), utilise l'énergie efficacement et maximise le rendement. Une mauvaise gestion entraîne un sur-arrosage (énergie gaspillée, lessivage des nutriments, maladies), un sous-arrosage (perte de rendement) et une application inégale (ornières, stries dans la culture). Ce guide couvre les paramètres de conception, les calculs de débit, la programmation de l'irrigation basée sur la consommation hydrique de la culture et l'optimisation des coûts énergétiques.</p>
+      <div class="ag-meta ag-article-head__meta">
+        <span>Agricalc Editorial Team</span>
+        <span>18 min de lecture</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-irrigation.webp" alt="Guide de Gestion de l'Irrigation par Pivot Central" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<h2>Composants et Conception du Système de Pivot Central pour une Application Efficace</h2>
+<p>Un pivot central comprend : le point de pivot (connexion eau et électricité), la conduite latérale (généralement 6-5/8" à 10" de diamètre, aluminium ou acier), les tours motrices (chacune avec moteur électrique, réducteur et roues), les asperseurs (têtes de pulvérisation ou rotateurs montés sur descentes ou sur la conduite) et le canon terminal (optionnel, pour l'arrosage des coins). Le système tourne autour du point de pivot, couvrant une zone circulaire. Ce guide couvre irrigation pivot central et les calculs agricoles associés pour vous aider à optimiser les opérations de votre ferme.</p>
+<div class="formula-box"><strong>Zone Couverte par un Pivot :</strong><br>Acres = π × Rayon² ÷ 43 560<br>Où : Rayon = longueur du pivot en pieds (du point au dernier asperseur, sans compter le canon terminal)<br>Exemple : pivot de 1 320 pieds (¼ mile) = π × 1 320² ÷ 43 560 = <strong>125,7 acres</strong></div>
+<table><tr><th>Longueur du Pivot</th><th>Rayon (ft)</th><th>Surface (acres)</th><th>Débit Typique (GPM)</th></tr><tr><td>⅛ mile</td><td>660</td><td>31,4</td><td>150-300</td></tr><tr><td>¼ mile</td><td>1 320</td><td>125,7</td><td>500-1 000</td></tr><tr><td>5/16 mile</td><td>1 650</td><td>196,3</td><td>800-1 500</td></tr><tr><td>⅜ mile</td><td>1 980</td><td>282,7</td><td>1 200-2 000</td></tr><tr><td>½ mile</td><td>2 640</td><td>502,7</td><td>2 000-3 500</td></tr></table>
+<p>Considérations clés de conception : le diamètre de la conduite doit être suffisamment grand pour minimiser les pertes de charge (garder la vitesse en dessous de 5-7 ft/sec) ; l'espacement des asperseurs doit être de 6-10 pieds le long de la latérale pour une couverture uniforme ; la hauteur des descentes doit correspondre au couvert végétal (6-12 pouces au-dessus du couvert pour les cultures en rangées, 3-5 ft pour les cultures hautes comme le maïs) ; des régulateurs de pression à chaque asperseur assurent un débit uniforme sur tout le pivot (critique car la pression varie le long de la latérale en raison du frottement et de l'altitude).</p>
+<h2>Calcul du Débit et de la Profondeur d'Irrigation pour le Pivot Central</h2>
+<p>Le débit requis dépend de la zone à irriguer, de la profondeur d'application cible et de la vitesse de rotation. Inversement, pour un débit fixe, vous pouvez calculer la profondeur d'application par révolution.</p>
+<div class="formula-box"><strong>Débit Requis (GPM) :</strong><br>GPM = (Acres × Pouces par application × 27 154) ÷ (Heures par révolution × 60)<br>Où : 27 154 = gallons dans 1 acre-pouce</div>
+<div class="formula-box"><strong>Profondeur d'Application par Révolution (pouces) :</strong><br>Pouces = (GPM × Heures par révolution × 60) ÷ (Acres × 27 154)<br>Simplifié : Pouces = (GPM × Heures) ÷ (Acres × 452,6)</div>
+<p><strong>Exemple pratique :</strong> Pivot de ¼ mile (125 acres), débit 700 GPM, révolution complète en 48 heures.<br>Pouces par révolution = (700 × 48) ÷ (125 × 452,6) = 33 600 ÷ 56 575 = <strong>0,594 pouces par révolution</strong>.<br>Si l'ET de la culture est de 0,25 pouces/jour, le pivot doit appliquer 0,25 × 7 = 1,75 pouces/semaine. Nombre de révolutions = 1,75 ÷ 0,594 = 2,95 révolutions/semaine. À 48 heures/révolution, cela fait 141,6 heures/semaine = 5,9 jours/semaine de fonctionnement — laissant ~1,1 jour pour la maintenance, la pluie ou la fertigation.</p>
+<h2>Programmation de l'Irrigation : Adapter l'Application à la Demande ET de la Culture</h2>
+<p>La programmation de l'irrigation est la pratique consistant à appliquer la bonne quantité d'eau au bon moment. L'objectif est de maintenir l'humidité du sol dans la zone de « déplétion admissible gérable » (MAD) — généralement 40-60% de la capacité en eau disponible pour la plupart des cultures, 30-40% pour les cultures sensibles pendant les stades critiques.</p>
+<div class="formula-box"><strong>Bilan Hydrique Quotidien du Sol :</strong><br>SWC_aujourd'hui = SWC_hier + Pluie + Irrigation - ET de la culture - Percolation profonde - Ruissellement<br>Où : SWC = teneur en eau du sol (pouces), ET de la culture = ET de référence × coefficient cultural (Kc)</div>
+<table><tr><th>Culture</th><th>Kc Pic</th><th>ET Pic (in/jour)</th><th>Stade Critique</th><th>MAD (%)</th></tr><tr><td>Maïs (grain)</td><td>1,15-1,20</td><td>0,30-0,35</td><td>Floraison</td><td>40-50</td></tr><tr><td>Soja</td><td>1,10-1,15</td><td>0,28-0,32</td><td>Remplissage des gousses</td><td>40-50</td></tr><tr><td>Luzerne</td><td>1,05-1,15</td><td>0,25-0,30</td><td>Repousse pré-coupe</td><td>50-60</td></tr><tr><td>Blé</td><td>1,05-1,10</td><td>0,25-0,30</td><td>Épi-floraison</td><td>40-50</td></tr><tr><td>Pomme de terre</td><td>1,10-1,15</td><td>0,28-0,32</td><td>Initiation-engraissement tubercules</td><td>30-35</td></tr><tr><td>Sorgho</td><td>1,00-1,10</td><td>0,25-0,30</td><td>Botte-floraison</td><td>50-60</td></tr></table>
+<p><strong>Procédure de programmation :</strong></p>
+<p>1. Déterminez la capacité en eau disponible (AWC) du sol à partir de l'étude des sols : AWC (pouces) = profondeur racinaire (ft) × AWC (in/ft) × 12. Exemple : 4 ft de racines, 1,8 in/ft AWC = 7,2 pouces d'eau totale disponible.</p>
+<p>2. Fixez le MAD : 50% pour le maïs → déplétion admissible = 7,2 × 0,50 = 3,6 pouces avant que l'irrigation ne soit nécessaire.</p>
+<p>3. Suivez l'ET quotidien : ET de référence (ETo) de la station météo locale × Kc. Exemple : ETo = 0,28 in/jour, Kc = 1,15 (maïs à la floraison) → ET de la culture = 0,322 in/jour.</p>
+<p>4. Déclencheur d'irrigation : quand la déplétion en eau du sol atteint 3,6 pouces. À 0,322 in/jour ET, cela fait 3,6 ÷ 0,322 = 11,2 jours entre irrigations (sans pluie).</p>
+<p>5. Quantité d'application : remplacez l'eau déplétée + l'ET anticipée jusqu'à la prochaine irrigation. Appliquez typiquement 0,5-1,0 pouce par passage du pivot, répété selon les besoins.</p>
+<p>Les capteurs d'humidité du sol (tensiomètres, sondes à capacitance, sonde à neutrons) peuvent automatiser ou valider le bilan hydrique. Installez des capteurs à 1, 2 et 3 pieds de profondeur dans la zone racinaire. Irriguez quand la moyenne à 1-2 pieds atteint le seuil MAD. Beaucoup de pivots modernes s'intègrent avec des capteurs d'humidité et des données météo pour l'irrigation à taux variable (VRI).</p>
+<h2>Efficacité Énergétique et Optimisation des Coûts</h2>
+<p>Le pompage de l'eau est le plus grand coût énergétique pour l'irrigation par pivot central. Le coût énergétique dépend de : débit, charge dynamique totale (TDH = dénivelé + perte de charge + pression requise + rabattement du puits), efficacité de la pompe, efficacité du moteur et prix de l'énergie.</p>
+<div class="formula-box"><strong>Puissance de Pompage Requise (BHP) :</strong><br>BHP = (GPM × TDH en pieds) ÷ (3 960 × Efficacité de la pompe)<br>Où : 3 960 = constante, TDH = charge dynamique totale en pieds, Efficacité = 0,60-0,85 typique</div>
+<p><strong>Exemple pratique :</strong> Puits de 700 GPM, TDH = 280 ft (120 ft dénivelé + 80 ft frottement + 60 ft pression + 20 ft rabattement), efficacité pompe 70%, électricité 0,12$/kWh.<br>BHP = (700 × 280) ÷ (3 960 × 0,70) = 196 000 ÷ 2 772 = <strong>70,7 BHP</strong>.<br>Puissance électrique = 70,7 × 0,746 = 52,7 kW (en supposant 100% d'efficacité moteur ; réel = 52,7 ÷ 0,95 = 55,5 kW).<br>Heures pour appliquer 1 pouce sur 125 acres : 125 acre-pouces = 3 394 250 gal ÷ 700 GPM ÷ 60 = 80,8 heures.<br>Coût énergétique = 55,5 kW × 80,8 hr × 0,12$ = <strong>538,70$ pour 1 pouce sur 125 acres = 4,31$/acre-pouce</strong>.<br>Pour une saison appliquant 12 pouces : 125 acres × 12 in × 4,31$ = 6 465$/saison.</p>
+<p><strong>Stratégies d'économie d'énergie :</strong></p>
+<p>1. <strong>Réduire le TDH :</strong> Minimisez les pertes de charge en utilisant une conduite de plus grand diamètre, en gardant les filtres propres et en réduisant les coudes/vannes inutiles. Réduisez la pression de fonctionnement en utilisant des asperseurs basse pression (10-15 PSI vs 30-40 PSI) — chaque réduction de 10 PSI économise ~23 ft de charge, réduisant l'énergie de ~8-10%.</p>
+<p>2. <strong>Améliorer l'efficacité de la pompe :</strong> Testez la pompe annuellement ; une pompe dont l'efficacité chute de 75% à 60% augmente le coût énergétique de 25%. Reconstruisez ou remplacez les pompes inefficaces. Adaptez la pompe aux exigences du système — une pompe surdimensionnée étranglée gaspille de l'énergie.</p>
+<p>3. <strong>Tarifs électriques creux :</strong> Beaucoup de fournisseurs offrent des tarifs plus bas la nuit. Programmez l'irrigation pendant les heures creuses si possible. Cependant, l'irrigation nocturne peut augmenter le risque de maladies (plus grande humidité foliaire) — équilibrez les économies d'énergie avec la santé de la culture.</p>
+<p>4. <strong>Variateurs de fréquence (VFD) :</strong> Un VFD ajuste la vitesse du moteur à la demande, réduisant l'énergie pendant les périodes de faible débit et prolongeant la vie du moteur. Récupération typique 2-5 ans pour les systèmes à demande variable.</p>
+<p>5. <strong>Réduire le besoin d'irrigation :</strong> Améliorez l'uniformité (espacement adéquat des asperseurs, régulateurs de pression), réduisez l'évaporation (irriguer la nuit ou tôt le matin, utiliser des cultures de couverture) et améliorez la capacité de rétention d'eau du sol (matière organique, travail du sol réduit). Chaque réduction de 10% de l'eau appliquée économise 10% d'énergie.</p>
+<h2>Exemple Pratique : Plan de Gestion de Pivot pour Toute la Saison de Culture</h2>
+<p><strong>Scénario :</strong> Pivot de ¼ mile (125 acres) dans le Nebraska central, maïs grain, sol franc limoneux (AWC = 2,0 in/ft, zone racinaire 5 ft = 10 pouces d'eau totale disponible). Débit 700 GPM, révolution de 48 heures = 0,594 in/rev. Électricité 0,12$/kWh, TDH 280 ft.</p>
+<p><strong>Besoin hydrique saisonnier :</strong> ET saisonnière du maïs = 22-24 pouces. Pluie efficace (moyenne) = 10 pouces. Besoin d'irrigation = 24 - 10 = 14 pouces (les années sèches, jusqu'à 18 pouces).</p>
+<p><strong>Programme mensuel (saison de pointe, juillet-août) :</strong></p>
+<table><tr><th>Mois</th><th>ET Culture (in)</th><th>Pluie (in)</th><th>Besoin Irrigation (in)</th><th>Révolutions</th><th>Coût Énergie</th></tr><tr><td>Juin</td><td>4,5</td><td>3,0</td><td>1,5</td><td>2,5</td><td>808$</td></tr><tr><td>Juillet</td><td>6,5</td><td>2,5</td><td>4,0</td><td>6,7</td><td>2 155$</td></tr><tr><td>Août</td><td>5,5</td><td>3,0</td><td>2,5</td><td>4,2</td><td>1 347$</td></tr><tr><td>Sept</td><td>2,0</td><td>2,5</td><td>0</td><td>0</td><td>0$</td></tr><tr><td><strong>Total</strong></td><td><strong>18,5</strong></td><td><strong>11,0</strong></td><td><strong>8,0</strong></td><td><strong>13,4</strong></td><td><strong>4 310$</strong></td></tr></table>
+<p><strong>Décisions de gestion :</strong> Réglez le pivot sur une révolution de 48 heures (0,594 in/rev). Fonctionnez en continu pendant juillet (ET de pointe), en ajustant la minuterie de pourcentage s'il pleut. Installez des capteurs d'humidité à 1 et 2 ft pour déclencher l'irrigation. Programmez la maintenance (vidange d'huile des réducteurs, inspection des asperseurs) pendant septembre quand l'irrigation n'est pas nécessaire. Le canon terminal n'est utilisé que pour la zone de coin (ajoute ~10 acres mais nécessite 15-20% de débit en plus — évaluez si l'arrosage des coins est rentable).</p>
+<h2>Erreurs Courantes et Comment les Éviter</h2>
+<div class="warning-box"><strong>1. Ignorer la variation de pression le long du pivot.</strong> Sans régulateurs de pression, les asperseurs près du point de pivot fonctionnent à plus haute pression (plus de débit) que ceux à l'extrémité, créant un motif de sur/sous-arrosage en forme de beignet. Installez des régulateurs de pression à chaque asperseur — ils coûtent 5-15$ chacun mais s'amortissent grâce aux gains d'uniformité.</div>
+<div class="warning-box"><strong>2. Trop arroser pour « être sûr ».</strong> Appliquer plus d'eau que ce dont la culture a besoin gaspille de l'énergie (coût de pompage), lessive l'azote sous la zone racinaire (perte environnementale et économique) et augmente la pression de maladie. Utilisez des capteurs d'humidité et une programmation basée sur l'ET — appliquez seulement ce dont la culture a besoin.</div>
+<div class="warning-box"><strong>3. Ne pas tenir compte de la zone du canon terminal dans les calculs de débit.</strong> Un canon terminal ajoute 10-20% de zone en plus mais nécessite proportionnellement plus de débit. Si votre système a été conçu sans canon terminal et que vous en ajoutez un, vous pourriez ne pas avoir assez de débit — résultant en une profondeur d'application insuffisante sur tout le pivot.</div>
+<div class="warning-box"><strong>4. Négliger la maintenance des réducteurs et moteurs.</strong> Chaque tour motrice a un réducteur qui nécessite une vidange d'huile annuelle. Un réducteur grippé peut griller le moteur et faire plier le pivot (dommage catastrophique). Inspectez les réducteurs mensuellement pendant la saison d'irrigation — recherchez les fuites d'huile, le bruit inhabituel ou la surchauffe.</div>
+<div class="warning-box"><strong>5. Irriguer par vent fort.</strong> Un vent >10 MPH cause une dérive significative et une application inégale, surtout avec des têtes de pulvérisation. Un vent >15 MPH peut réduire l'application efficace de 20-30% dans la direction au vent. Interrompez l'irrigation pendant les épisodes de vent fort si possible, ou utilisez des buses anti-dérive.</div>
+<div class="warning-box"><strong>6. Ne pas calibrer la vitesse du pivot.</strong> Le réglage de la minuterie de pourcentage est approximatif — le temps réel de révolution varie avec la tension, le glissement des roues et l'usure des réducteurs. Mesurez le temps réel de révolution périodiquement (marquez la position du pivot, vérifiez 24 heures plus tard) et ajustez la minuterie pour atteindre la profondeur cible.</div>
+<h2>Étude de Cas Pratique: Application Concrète</h2>
+<p>Prenons l'exemple d'une exploitation mixte de 50 hectares dans le Midwest américain mettant en œuvre guide de gestion de l'irrigation par pivot central. 
+Selon les directives de l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO) sur les 
+pratiques agricoles durables, la mise en œuvre systématique de techniques fondées sur des données probantes 
+peut améliorer l'efficacité d'utilisation des ressources de 15 à 25 % tout en maintenant ou augmentant les rendements. 
+Le Service de conservation des ressources naturelles de l'USDA (NRCS) recommande de commencer par un taux 
+d'adoption de 10 % au cours de la première saison.</p>
+<p>En pratique, cela signifie réaliser une évaluation de base pendant la saison morte, identifier les deux 
+principaux domaines prioritaires d'amélioration et attribuer une petite parcelle d'essai (2 à 5 % de la 
+superficie totale) pour tester de nouvelles pratiques avant une mise à grande échelle.</p>
+<h2>Référence de Données: Indicateurs Clés</h2>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Plage Typique</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Gain d'efficacité</td><td>15–25 %</td><td>FAO 2024</td></tr>
+<tr><td>Surface d'essai initiale</td><td>2–5 % de la surface</td><td>USDA NRCS</td></tr>
+<tr><td>Période de retour sur investissement</td><td>1–3 cycles de culture</td><td>Recherche extension</td></tr>
+<tr><td>Réduction des risques</td><td>20–40 %</td><td>FAO 2024</td></tr>
+</tbody>
+</table>
+<p><em>Sources: Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), "Intensification Durable de la Production Végétale," 2024; Service de conservation des ressources naturelles de l'USDA, "Normes de Pratiques de Conservation," 2024.</em></p>
+<h2>Recommandations d'Experts et Prochaines Étapes</h2>
+<p>Les spécialistes de vulgarisation des principales universités agricoles recommandent constamment 
+une approche par phases : (1) Réaliser une évaluation de base approfondie, (2) prioriser les changements 
+à fort impact et faible risque, (3) mettre en œuvre sur une petite zone d'essai, (4) mesurer les résultats 
+de manière rigoureuse, et (5) passer à l'échelle en fonction des données.</p>
+<p>Nous vous recommandons de consulter votre bureau local de vulgarisation agricole pour des recommandations 
+spécifiques à la région, car les pratiques optimales varient considérablement selon la zone climatique, 
+le type de sol et le système de culture.</p>
+<h2>Conclusion</h2>
+<p>L'irrigation par pivot central est l'une des méthodes d'irrigation les plus efficaces et flexibles disponibles, mais sa performance dépend d'une gestion active. Comprendre les calculs de débit, adapter la programmation de l'irrigation à la consommation hydrique de la culture et optimiser les coûts énergétiques peut économiser des milliers de dollars par saison tout en maximisant le rendement. Un pivot bien géré atteint 85-95% d'uniformité, applique l'eau seulement quand et où c'est nécessaire et fonctionne au coût énergétique minimum. Utilisez les formules et procédures de programmation de ce guide, installez des capteurs d'humidité pour valider votre programme et entretenez régulièrement le système mécanique. La combinaison d'une bonne programmation, d'une application uniforme et d'un pompage efficace est le fondement d'une irrigation par pivot central rentable.</p>
+<h2>Questions Fréquemment Posées</h2>
+<div class="faq-item"><h3>Comment savoir si mon pivot applique l'eau uniformément ?</h3><p>Réalisez un test de gobelets : placez des gobelets gradués à intervalles réguliers le long du rayon du pivot (tous les 50-100 ft), faites tourner le pivot pendant une révolution complète et mesurez l'eau collectée dans chaque gobelet. Uniformité de Distribution (DU) = (moyenne des 25% les plus bas) ÷ (moyenne générale). DU >85% est bon, >90% est excellent. Si DU <80%, inspectez pour des asperseurs bouchés, des régulateurs de pression manquants ou des buses usées.</p></div>
+<div class="faq-item"><h3>Quel est le temps de révolution idéal pour un pivot ?</h3><p>Cela dépend de votre débit, de la surface et de la profondeur d'application cible. La plupart des pivots fonctionnent à des révolutions de 36-60 heures, appliquant 0,4-0,8 pouces par passage. Des révolutions plus rapides (24-36 heures) appliquent des irrigations plus légères et fréquentes — bonnes pour les sols sableux ou les cultures en germination. Des révolutions plus lentes (60-72+ heures) appliquent des irrigations plus lourdes — bonnes pour les sols argileux ou les cultures à racines profondes. Calculez en fonction de vos paramètres spécifiques en utilisant les formules de ce guide.</p></div>
+<div class="faq-item"><h3>Combien coûte le pompage de l'eau pour un pivot central ?</h3><p>Plage typique : 3-8$ par acre-pouce pour l'électricité, 5-12$ par acre-pouce pour le diesel, 4-10$ par acre-pouce pour le gaz naturel. Les plus grands facteurs sont la charge dynamique totale (TDH) et le prix de l'énergie. Un système avec 200 ft TDH et de l'électricité à 0,10$/kWh coûte ~3,50$/acre-pouce ; 400 ft TDH et 0,15$/kWh coûte ~10$/acre-pouce. Utilisez notre <a href="../tools/irrigation-calculator.html">Calculateur d'Irrigation</a> pour estimer vos coûts.</p></div>
+<div class="faq-item"><h3>Puis-je fertirriguer via un pivot central ?</h3><p>Oui, la fertigation (appliquer de l'engrais via l'eau d'irrigation) est l'un des plus grands avantages des systèmes de pivot central. Utilisez une pompe d'injection d'engrais (venturi, diaphragme ou piston) calibrée pour votre débit. Règles clés : injectez l'engrais seulement pendant les 50% du milieu de la révolution (pas au début/fin pour éviter les extrêmes de concentration), rincez le système à l'eau claire après la fertigation, et n'injectez jamais d'engrais sans un dispositif anti-retour (pour protéger la source d'eau). Nutriments couramment fertirrigués : azote (UAN 32, urée), potassium (KCl) et micronutriments.</p></div>
+<div class="faq-item"><h3>Comment gérer les coins hors du cercle du pivot ?</h3><p>Les coins (la zone hors de la couverture circulaire, ~21% d'un champ carré) peuvent : être laissés en non irrigué (cultures de secano ou jachère), être irrigués avec un canon terminal (ajoute 10-15% de surface mais nécessite plus de débit et a une mauvaise uniformité à l'extrémité), ou être irrigués avec un système de coin linéaire/pivot (bras déployables qui s'étendent dans les coins, chers mais de haute uniformité). Évaluez la rentabilité : si la terre des coins a des cultures à haute valeur et un approvisionnement en eau adéquat, un canon terminal ou un système de coin peut s'amortir. Pour les cultures à faible valeur ou les zones limitées en eau, les coins en secano sont souvent le meilleur choix économique.</p></div>
+<div class="guide-nav"><a href="/fr/guides/">← All Guides</a><a href="/fr/#tools">Browse Calculators →</a></div>
+<div>
+<h3>Calculateurs Associés</h3>
+<div><a href="/fr/tools/center-pivot-calculator.html" class="related-tool-link">Calculateur d'Irrigation par Pivot Central →</a><a href="/fr/tools/irrigation-run-time-calculator.html" class="related-tool-link">Calculateur de Durée d'Irrigation →</a><a href="/fr/tools/pump-capacity-calculator.html" class="related-tool-link">Calculateur de Capacité de Pompe →</a><a href="/fr/tools/field-capacity-calculator.html" class="related-tool-link">Calculateur de Capacité au Champ →</a></div>
+</div>
+<div>
+<h3>Related Guides</h3>
+<div><a href="drip-irrigation-design-guide.html" class="related-tool-link">Guide de Conception d'Irrigation Goutte-à-Goutte →</a><a href="farm-water-conservation.html" class="related-tool-link">Conservation de l'Eau Agricole →</a></div>
+</div>
+<h2>Questions Fréquentes</h2>
+<div class="faq-item"><h3>Comment calculer le GPM nécessaire pour mon système de pivot central?</h3><p>Utilisez: GPM = (Hectares × Millimètres par application × 10) / (Heures par application × 60). Pour un pivot de 50 hectares appliquant 12 mm en 48 heures: (50 × 12 × 10) / (48 × 60) = 20.8 L/s = 330 GPM. Tenez compte de l'efficacité du système (typiquement 75-85%): divisez par l'efficacité pour obtenir le GPM réel requis. Tenez aussi compte des dénivelés (chaque 30 m d'élévation positive ajoute ~43 PSI). Utilisez un calculateur de pivot central pour des résultats précis incluant la conception des asperseurs.</p></div>
+<div class="faq-item"><h3>Quel débit et quelle pression faut-il pour un pivot central?</h3><p>Un pivot central typique de 50 hectares nécessite 300-500 GPM à 40-60 PSI pour les paquets d'asperseurs standard haute pression. Les conceptions basse pression (LEPA) fonctionnent à 20-30 PSI et réduisent les coûts énergétiques de 20-30%. Les pivots plus grands (65 hectares) peuvent nécessiter 500-700 GPM. Utilisez un calculateur de débit d'irrigation pour déterminer les exigences exactes selon le taux d'infiltration du sol, la demande hydrique maximale (ET) et la vitesse de rotation souhaitée. Assurez-vous que votre source d'eau (puits, canal, réservoir) peut soutenir le débit requis.</p></div>
+<div class="faq-item"><h3>Comment l'efficacité du pivot central se compare-t-elle au goutte-à-goutte et à l'irrigation par inondation?</h3><p>Le pivot central atteint 75-85% d'efficacité, contre 90-95% pour le goutte-à-goutte et 50-70% pour l'inondation. Les pertes du pivot viennent de l'évaporation (5-15%), de la dérive du vent (2-10%) et de la percolation profonde (5-10%). Le goutte-à-goutte perd moins par évaporation mais coûte 2 500-7 500€/hectare à installer contre 750-1 750€/hectare pour le pivot. Le pivot couvre de plus grandes zones plus économiquement, gère la topographie irrégulière et convient mieux aux cultures en lignes.</p></div>
+<div class="faq-item"><h3>Quelle taille de pompe et alimentation électrique faut-il pour un pivot central?</h3><p>Le dimensionnement nécessite à la fois le débit (GPM) et la hauteur dynamique totale (TDH en PSI). TDH = dénivelé + pertes de charge + pression de service + marge de sécurité (10%). Pour un système de 600 GPM à 50 PSI avec 15 m de dénivelé et 10 PSI de pertes: TDH ≈ 50 + 22 + 10 + 8 = 90 PSI. Puissance hydraulique = (GPM × TDH en pieds) / 3 960. Avec 70% d'efficacité de pompe: ~45 CH. Utilisez un calculateur de pompe d'irrigation. Les pompes électriques nécessitent du triphasé; les pompes diesel sont une alternative sans réseau.</p></div>
+<div class="faq-item"><h3>Comment programmer l'irrigation par pivot central en haute saison?</h3><p>Pendant l'évapotranspiration maximale (juillet-août en climat tempéré), la plupart des cultures ont besoin de 6-10 mm par jour. Un pivot appliquant 12 mm par rotation complète doit faire un cercle tous les 1,5-2 jours. Calculez: Intervalle de Rotation (jours) = Lame par Passage (mm) / ET Journalière (mm/jour). Surveillez l'humidité du sol avec tensiomètres, capteurs capacitifs ou blocs de gypse à 15-30 cm et 30-60 cm de profondeur. Ajustez selon les données ET en temps réel d'une station météo locale. Un calculateur de temps d'irrigation optimise votre rotation.</p></div>
+<div class="faq-item"><h3>Quels sont les coûts énergétiques et de maintenance d'un pivot central?</h3><p>Énergie: Une pompe électrique de 50 CH fonctionnant 2 000 h/an consomme ~75 000 kWh, coûtant 7 500-11 250€ à 0,10-0,15€/kWh. Les pompes diesel coûtent 12-18€/heure. Les conceptions basse pression et variateurs de fréquence réduisent l'énergie de 20-30%. Maintenance: Coûts annuels typiquement 12-37€/hectare incluant: vidange d'huile des réducteurs (toutes les 2 000 h), remplacement pneus (tous les 5-7 ans, 200-400€ chacun), remplacement buses (tous les 3-5 ans), inspection moteurs et réducteurs, et serrage boulons. Un pivot bien entretenu dure 20-25+ ans.</p></div>
+<div class="guide-related">
+      <h3>Calculatrices Associées</h3>
+      <div class="guide-related-links">
+        <a href="../tools/center-pivot-calculator.html">calculateur de pivot central</a>
+        <a href="../tools/irrigation-flow-rate-calculator.html">calculateur de débit d'irrigation</a>
+        <a href="../tools/pump-capacity-calculator.html">calculateur de capacité de pompe</a>
+      </div>
+    </div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="Sur cette page"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Équipe éditoriale</span>
+          <p class="ag-card__text ag-mt-5">
+            Vérifié selon les recommandations des services de vulgarisation régionaux et mis à jour lorsque celles-ci évoluent.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Spécialistes en technologie agricole</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Calculateurs associés</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="../tools/irrigation-calculator.html">Calculateur d'Irrigation</a></li>
+            <li><a href="/fr/tools/center-pivot-calculator.html">Calculateur d'Irrigation par Pivot Central</a></li>
+            <li><a href="/fr/tools/irrigation-run-time-calculator.html">Calculateur de Durée d'Irrigation</a></li>
+            <li><a href="/fr/tools/pump-capacity-calculator.html">Calculateur de Capacité de Pompe</a></li>
+            <li><a href="/fr/tools/field-capacity-calculator.html">Calculateur de Capacité au Champ</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>Sur cette page</summary>
+        <nav data-ag-toc aria-label="Sur cette page"></nav>
+      </details>
+    </div>
+  </article>
+
+  <section class="ag-section">
+    <div class="ag-wrap">
+      <div class="ag-section__head">
+        <div><h2 class="ag-section__title">Plus de guides</h2></div>
+        <a class="ag-section__link" href="/fr/guides/">Tous les guides →</a>
+      </div>
+      <ul class="ag-grid ag-grid--3" role="list">
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Drip Irrigation Design: A Complete Guide" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/fr/guides/drip-irrigation-design-guide.html">Drip Irrigation Design: A Complete Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Conservation de l&#x27;Eau Agricole: Stratégies d&#x27;Utilisation Efficace de l&#x27;Eau" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/fr/guides/farm-water-conservation.html">Conservation de l&#x27;Eau Agricole: Stratégies d&#x27;Utilisation Efficace de l&#x27;Eau</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Guide Complet de Conception de Système d&#x27;Irrigation Goutte-à-Goutte" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/fr/guides/drip-irrigation-design-complete.html">Guide Complet de Conception de Système d&#x27;Irrigation Goutte-à-Goutte</a>
+            </h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script></body></html>

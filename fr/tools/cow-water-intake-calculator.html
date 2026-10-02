@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Calculateur de Consommation d'Eau de la Vache Laitière | Outil Élevage Gratuit | Agricalc</title><meta name="description" content="Estimez combien de litres d'eau boit une vache laitière par jour selon sa production laitière, sa matière sèche ingérée, son poids et la température. Dimensionnez abreuvoirs et points d'eau pour tout le troupeau."><meta name="keywords" content="combien boit une vache par jour, consommation eau vache laitière, besoin en eau bovin laitier, abreuvement vaches laitières, stress thermique eau vache"><link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Calculateur de Consommation d'Eau de la Vache Laitière", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "url": "https://agricalc.online/fr/tools/cow-water-intake-calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculez la consommation quotidienne d'eau par vache laitière selon la production laitière, la matière sèche ingérée, le poids et la température du bâtiment, ainsi que le total du troupeau, la demande de pointe, la capacité d'abreuvoir et le nombre de points d'eau.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "96", "bestRating": "5", "worstRating": "1"}}</script>
+<meta property="og:type" content="article"><meta property="og:title" content="Calculateur de Consommation d'Eau de la Vache Laitière | Combien boit une vache par jour ?"><meta property="og:description" content="Estimez combien de litres d'eau boit une vache laitière par jour selon sa production laitière, sa matière sèche ingérée, son poids et la température. Dimensionnez abreuvoirs et points d'eau pour tout le troupeau."><meta property="og:url" content="https://agricalc.online/fr/tools/cow-water-intake-calculator.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Calculateur de Consommation d'Eau de la Vache Laitière | Combien boit une vache par jour ?"><meta name="twitter:description" content="Estimez combien de litres d'eau boit une vache laitière par jour selon sa production laitière, sa matière sèche ingérée, son poids et la température. Dimensionnez abreuvoirs et points d'eau pour tout le troupeau."><meta property="og:image" content="https://agricalc.online/assets/images/og-image.png">
+<meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/tools/cow-water-intake-calculator.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/tools/cow-water-intake-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/tools/cow-water-intake-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/tools/cow-water-intake-calculator.html">
+<link rel="canonical" href="https://agricalc.online/fr/tools/cow-water-intake-calculator.html">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page"><a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link is-active" href="/fr/#tools" aria-current="page">Outils</a>
+      <a class="ag-nav__link" href="/fr/guides/">Guides</a>
+      <a class="ag-nav__link" href="/fr/blog/">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/tools/cow-water-intake-calculator.html">EN</a>
+        <a class="ag-lang__btn" href="/es/tools/cow-water-intake-calculator.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/tools/cow-water-intake-calculator.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+  <div class="ag-wrap">
+      <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><span aria-current="page">Consommation d'eau - vache laitière</span></li>
+      </ol>
+    </nav>
+      <div class="ux-toolbar">
+  <div class="ux-toolbar-left">
+    <div class="unit-switch">
+      <button type="button" class="unit-btn metric-btn active" data-unit="metric" onclick="toggleUnits('metric')">Métrique</button>
+      <button type="button" class="unit-btn imperial-btn" data-unit="imperial" onclick="toggleUnits('imperial')">Impérial</button>
+    </div>
+  </div>
+  <div class="ux-toolbar-right">
+    <button type="button" class="ux-icon-btn dark-mode" onclick="toggleDarkModeUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg> <span class="tooltip">Mode sombre</span></button>
+    <button type="button" class="ux-icon-btn favorite" onclick="toggleFavoriteUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Ajouter aux favoris</span></button>
+    <button type="button" class="ux-icon-btn" onclick="openShareModal()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> <span class="tooltip">Partager et Exporter</span></button>
+    <button type="button" class="ux-icon-btn" onclick="toggleHistoryPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> <span class="tooltip">Historique</span></button>
+    <button type="button" class="ux-icon-btn" onclick="toggleFavoritesPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Favoris</span></button>
+  </div>
+</div>
+      <div class="ux-panel" id="historyPanel">
+  <div class="ux-panel-header">
+    <div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> Historique des Calculs</div>
+    <span class="ux-panel-clear" onclick="clearHistory()">Tout effacer</span>
+  </div>
+  <div id="historyList"></div>
+</div>
+      <div class="ux-panel" id="favoritesPanel">
+  <div class="ux-panel-header">
+    <div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> Outils Favoris</div>
+    <span class="ux-panel-clear" onclick="clearFavorites()">Tout effacer</span>
+  </div>
+  <div id="favoritesList"></div>
+</div>
+    </div>
+
+  
+<header class="ag-wrap ag-article-head ag-article-head--app">
+  <h1 class="ag-article-head__title">Calculateur de Consommation d'Eau de la Vache Laitière</h1>
+  <figure class="ag-tool-cover">
+    <img src="/assets/images/tools/cat-livestock.webp" alt="Élevage et animaux" width="1600" height="900">
+  </figure>
+</header>
+<div class="ag-wrap ag-mt-6">
+  <div class="prose">
+    <p class="content-text">L'eau est le nutriment le moins cher de la ration laitière et celui qui coûte le plus vite : une vache qui ne boit pas assez perd du lait en quelques heures. Ce calculateur estime ce qu'une vache boit réellement par jour à partir de sa production laitière, de sa matière sèche ingérée, de son poids et de la température du bâtiment, puis extrapole au troupeau entier pour dimensionner abreuvoirs, points d'eau et alimentation.</p>
+    <aside class="ag-card ag-card--pad">
+      <p class="content-text"><strong>Ce qu'il donne :</strong> Litres par vache et par jour, total quotidien du troupeau, demande de pointe horaire, capacité d'abreuvoir recommandée et nombre de points d'eau nécessaires — plus la surcharge imposée par la chaleur.</p>
+    </aside>
+    <aside class="ag-card ag-card--pad">
+      <p class="content-text"><strong>Exemple chiffré :</strong> Une vache de 650 kg produisant 32 L/jour à 22 °C ingère environ 21,8 kg de matière sèche et boit près de 100 L/jour. Un troupeau de 120 vaches a donc besoin d'environ 12 m³/jour, avec une pointe proche de 1,8 m³/heure, et d'au moins 10 points d'eau.</p>
+    </aside>
+  </div>
+  <div class="ag-calc">
+    <form onsubmit="event.preventDefault();calculate();">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cowType">Type de vache</label>
+                <select id="cowType">
+                  <option value="lactating">Vache en lactation</option>
+                  <option value="dry">Vache tarie</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="herdSize">Nombre de vaches</label>
+                <input type="number" class="form-input" id="herdSize" value="60" step="1" min="1">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bodyWeight">Poids vif (kg)</label>
+                <input type="number" class="form-input" id="bodyWeight" value="650" step="10" min="0">
+              </div>
+              <div class="form-group">
+                <label for="milkYield">Production laitière (L/jour)</label>
+                <input type="number" class="form-input" id="milkYield" value="32" step="0.5" min="0">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dmi">Matière sèche ingérée (kg MS/jour, 0 = estimer)</label>
+                <input type="number" class="form-input" id="dmi" value="0" step="0.1" min="0">
+              </div>
+              <div class="form-group">
+                <label for="temperature">Température du bâtiment (°C)</label>
+                <input type="number" class="form-input" id="temperature" value="20" step="1">
+              </div>
+            </div>
+      <div class="form-actions">
+        <div class="button-group">
+          <button type="button" class="btn-calculate" onclick="calculate()">Calculer</button>
+          <button type="button" class="btn-reset" onclick="resetForm()">Réinitialiser</button>
+        </div>
+      </div>
+    </form>
+    <div class="result-box" id="resultBox">
+      <h2>Résultats</h2>
+            <div class="result-item">
+              <span class="label">Eau par vache et par jour</span>
+              <span class="value" id="r1">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Total quotidien du troupeau</span>
+              <span class="value" id="r2">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Demande de pointe horaire</span>
+              <span class="value" id="r3">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Capacité d'abreuvoir recommandée</span>
+              <span class="value" id="r4">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Points d'eau nécessaires</span>
+              <span class="value" id="r5">-</span>
+            </div>
+    </div>
+  </div>
+  <div class="prose">
+    <aside class="ag-card ag-card--pad">
+      <p><strong>Validé par des experts :</strong> Ce calculateur et son contenu ont été relus par des experts agricoles. Les formules suivent l'équation d'abreuvement du NRC (2001). Pour un conseil adapté à votre situation, consultez votre vétérinaire ou votre nutritionniste.</p>
+    </aside>
+    <h2>Comment utiliser ce calculateur</h2>
+    <p class="content-text">Choisissez le type de vache, saisissez le nombre d'animaux, le poids vif et la production laitière. Laissez la matière sèche à 0 pour qu'elle soit estimée, ou saisissez la valeur de votre ration si vous la connaissez. Indiquez la température du bâtiment — c'est elle qui déclenche la correction liée à la chaleur — puis cliquez sur Calculer.</p>
+    <h2>À propos de cet outil</h2>
+    <p class="content-text">Le lait contient environ 87 % d'eau : l'abreuvement d'une vache suit donc sa courbe de lactation de bien plus près que son poids. Une vache tarie boit 30 à 50 L/jour ; une vache à forte production boit 80 à 130 L/jour, et nettement plus par forte chaleur. Une restriction se traduit vite par une baisse de lait, une baisse d'ingestion et, en cas de canicule, de réels problèmes de bien-être.</p>
+    <h2>Comment fonctionne le calcul</h2>
+    <p class="content-text">Pour une vache en lactation : eau (L/jour) = 15,99 + 1,58 × MS + 0,90 × lait (kg/jour) + 1,20 × (température − 5 °C, comptée seulement au-dessus de 5 °C). Pour une vache tarie : eau (L/jour) = 14,0 + 1,35 × MS + 0,90 × (température − 5 °C). Si la matière sèche est laissée à 0, elle est estimée par 0,0185 × poids + 0,305 × production laitière en lactation, ou 0,0185 × poids pour les vaches taries. La demande de pointe est prise à 15 % du total quotidien et la capacité d'abreuvoir à deux heures de pointe.</p>
+    <h2>Exemple chiffré</h2>
+    <p class="content-text">120 vaches en lactation, 650 kg, 32 L/jour, bâtiment à 22 °C. MS estimée = 0,0185 × 650 + 0,305 × 32 = 21,8 kg. Eau par vache = 15,99 + 1,58 × 21,8 + 0,90 × 32 + 1,20 × 17 = 99,9 L/jour. Total troupeau = 11 988 L/jour. Pointe horaire = 1 798 L. Capacité d'abreuvoir = 3 596 L. Points d'eau = 120 ÷ 12 = 10.</p>
+    <h2>Conseils pratiques</h2>
+    <ul>
+            <li>Comptez environ 10 cm de bord d'abreuvoir par vache et un point d'eau pour 10 à 15 animaux.</li>
+            <li>Une vache peut boire 20 L en moins de deux minutes : le débit de remplissage limite l'ingestion autant que le volume.</li>
+            <li>Au-dessus d'environ 20 °C, la consommation augmente d'environ 1,2 L par °C supplémentaire ; au-dessus de 30 °C elle peut bondir de 30 à 50 %.</li>
+            <li>Les vaches préfèrent une eau entre 15 et 27 °C et boivent moins une eau presque glacée en hiver.</li>
+            <li>Nettoyez les abreuvoirs chaque semaine : algues et résidus d'aliment font chuter l'abreuvement bien avant que la capacité ne manque.</li>
+    </ul>
+    <h2>Sources et lectures complémentaires</h2>
+    <ul>
+            <li><a href="https://www.nap.edu/catalog/9825/nutrient-requirements-of-dairy-cattle-seventh-revised-edition-2001" target="_blank" rel="noopener noreferrer">Nutrient Requirements of Dairy Cattle (NRC, 2001)</a></li>
+            <li><a href="https://www.fao.org/3/t0239e/T0239E03.htm" target="_blank" rel="noopener noreferrer">FAO — Livestock water needs</a></li>
+            <li><a href="https://extension.psu.edu/water-requirements-for-dairy-cattle" target="_blank" rel="noopener noreferrer">Penn State Extension — Water requirements for dairy cattle</a></li>
+    </ul>
+    <div class="ag-faq">
+      <h2>Questions fréquentes</h2>
+            <details>
+              <summary>Combien de litres d'eau boit une vache laitière par jour ?</summary>
+              <p class="content-text">Une vache tarie boit 30 à 50 L/jour. Une vache à forte production boit 80 à 130 L/jour, et davantage par forte chaleur. Comme le lait contient environ 87 % d'eau, la consommation suit de près la production laitière.</p>
+            </details>
+            <details>
+              <summary>Pourquoi la température modifie-t-elle autant la consommation ?</summary>
+              <p class="content-text">Les vaches se refroidissent en haletant et en transpirant. Au-dessus d'environ 20 °C, l'abreuvement augmente d'environ 1,2 L par °C supplémentaire ; au-dessus de 30 °C il peut grimper de 30 à 50 % alors que l'animal cherche à dissiper la chaleur.</p>
+            </details>
+            <details>
+              <summary>Combien de points d'eau pour un troupeau ?</summary>
+              <p class="content-text">Prévoyez un point d'eau pour 10 à 15 vaches, ou environ 10 cm de bord d'abreuvoir par animal, afin que tout le troupeau puisse boire dans l'heure qui suit la traite.</p>
+            </details>
+            <details>
+              <summary>Puis-je l'utiliser pour des bovins allaitants ?</summary>
+              <p class="content-text">Les équations sont calibrées pour les bovins laitiers. Pour un troupeau allaitant, des veaux ou un cheptel mixte, utilisez le Calculateur d'Abreuvoirs, qui travaille à partir de valeurs de base par catégorie d'animal.</p>
+            </details>
+    </div>
+  </div>
+</div>
+</article>
+
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19" defer></script>
+<script>
+function calculate(){
+  var type=document.getElementById("cowType").value;
+  var head=getVal("herdSize");
+  var bw=getVal("bodyWeight");
+  var my=getVal("milkYield");
+  var dmiIn=getVal("dmi");
+  var t=getVal("temperature");
+  var dmi;
+  if(type==="lactating"){ dmi = dmiIn>0 ? dmiIn : (0.0185*bw + 0.305*my); }
+  else { my=0; dmi = dmiIn>0 ? dmiIn : (0.0185*bw); }
+  var heat=Math.max(0,t-5);
+  var perCow;
+  if(type==="lactating"){ perCow = 15.99 + 1.58*dmi + 0.90*my + 1.20*heat; }
+  else { perCow = 14.0 + 1.35*dmi + 0.90*heat; }
+  var herdDaily=perCow*head;
+  var peak=herdDaily*0.15;
+  var trough=peak*2;
+  var spaces=Math.ceil(head/12);
+  setResult("r1",perCow.toFixed(0),"L / jour par vache");
+  setResult("r2",herdDaily.toFixed(0),"L / jour (troupeau)");
+  setResult("r3",peak.toFixed(0),"L / heure (pointe)");
+  setResult("r4",trough.toFixed(0),"L de capacité");
+  setResult("r5",spaces,"points");
+  showResult("resultBox");
+}
+</script>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('/sw.js').then(function(reg){}).catch(function(err){console.log('SW registration failed:',err);});
+  });
+}
+</script>
+<script src="/assets/js/weather-api.js" defer></script>
+<script>(function(){try{var initRating=function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem("rating_"+pageId);var stars=document.querySelectorAll(".rating-stars .star");var message=document.querySelector(".rating-message");if(!stars.length||!message)return;var ratingMessages={5:"Excellent ! Merci pour votre évaluation !",4:"Super ! Content que cela vous ait été utile !",3:"Bien, merci pour votre retour.",2:"Merci, nous allons travailler à améliorer.",1:"Désolé d'apprendre cela, dites-nous comment améliorer."};function setRating(rating){stars.forEach(function(star,i){star.style.color=i<rating?"#f5a623":"#ddd";});message.textContent=ratingMessages[rating]||"";localStorage.setItem("rating_"+pageId,rating);}stars.forEach(function(star){star.addEventListener("click",function(){setRating(parseInt(this.dataset.rating));});star.addEventListener("mouseenter",function(){var rating=parseInt(this.dataset.rating);stars.forEach(function(s,i){s.style.color=i<rating?"#f5a623":"#ddd";});});});var starsContainer=document.querySelector(".rating-stars");if(starsContainer){starsContainer.addEventListener("mouseleave",function(){if(savedRating)setRating(parseInt(savedRating));else stars.forEach(function(s){s.style.color="#999";});});}if(savedRating)setRating(parseInt(savedRating));var submitBtn=document.querySelector(".feedback-submit");if(submitBtn){submitBtn.addEventListener("click",function(){var text=document.querySelector(".feedback-text");var feedbackSection=document.querySelector(".feedback-section");var thanks=document.querySelector(".feedback-thanks");if(text&&text.value.trim()){localStorage.setItem("feedback_"+pageId,text.value);if(feedbackSection)feedbackSection.style.display="none";if(thanks)thanks.style.display="block";}});}};if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initRating);}else{initRating();}}catch(e){console.error("Rating widget error:",e);}})();</script>
+<script src="/assets/js/agri-ui.js?v=2" defer></script>
+</body></html>

@@ -1,0 +1,6 @@
+tools/index.html anchors= 136 uniq= 135
+   dup: ['index']
+es/tools/index.html anchors= 136 uniq= 135
+   dup: ['index']
+fr/tools/index.html anchors= 136 uniq= 135
+   dup: ['index']

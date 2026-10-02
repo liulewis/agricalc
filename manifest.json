@@ -1,0 +1,68 @@
+{
+  "name": "Agricalc - 40+ Agricultural Calculators",
+  "short_name": "Agricalc",
+  "description": "40+ free online agricultural calculators for farming, livestock, soil management and more.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f3ee",
+  "theme_color": "#2d5a2d",
+  "categories": [
+    "productivity",
+    "utilities",
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%232d5a2d'/%3E%3Ctext x='96' y='130' font-size='100' text-anchor='middle'%3E\ud83c\udf3e%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%232d5a2d'/%3E%3Ctext x='256' y='350' font-size='280' text-anchor='middle'%3E\ud83c\udf3e%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Seed Rate Calculator",
+      "short_name": "Seed Rate",
+      "description": "Calculate seed requirement",
+      "url": "/tools/seed-calculator.html?source=pwa",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%232d5a2d'/%3E%3Ctext x='48' y='65' font-size='50' text-anchor='middle'%3E\ud83c\udf3e%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Fertilizer Calculator",
+      "short_name": "Fertilizer",
+      "description": "N-P-K fertilizer planning",
+      "url": "/tools/fertilizer-calculator.html?source=pwa",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%232d5a2d'/%3E%3Ctext x='48' y='65' font-size='50' text-anchor='middle'%3E\ud83e\uddea%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "All Guides",
+      "short_name": "Guides",
+      "description": "In-depth farming articles",
+      "url": "/guides/?source=pwa",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%232d5a2d'/%3E%3Ctext x='48' y='65' font-size='50' text-anchor='middle'%3E\ud83d\udcda%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

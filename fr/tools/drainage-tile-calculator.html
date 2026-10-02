@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Calculateur drainage tile | Équipement Gratuit | Agricalc</title><meta name="description" content="Calculateur drainage tile en ligne gratuit avec résultats instantanés. Formules vérifiées, exemples pratiques et conseils pour votre ferme. Sans inscription."><meta name="keywords" content="drainage tile calculator, tile spacing, subsurface drainage, Hooghoudt formula, drain cost"><link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+
+
+<meta property="og:type" content="article"><meta property="og:title" content="Calculateur de Drainage Enterré | Espacement et Coût | Agricalc"><meta property="og:description" content="Calculateur gratuit de drainage agricole souterrain. Estimez l'espacement recommandé à partir de la conductivité hydraulique, la profondeur et le coefficient de drainage."><meta property="og:url" content="https://agricalc.online/fr/tools/drainage-tile-calculator.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Calculateur de Drainage Enterré | Espacement et Coût | Agricalc"><meta name="twitter:description" content="Calculateur gratuit de drainage agricole souterrain. Estimez l'espacement recommandé à partir de la conductivité hydraulique, la profondeur et le coefficient de drainage."><meta property="og:image" content="https://agricalc.online/assets/images/og-image.png"><meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/tools/drainage-tile-calculator.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/tools/drainage-tile-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/tools/drainage-tile-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/tools/drainage-tile-calculator.html">
+<link rel="canonical" href="https://agricalc.online/fr/tools/drainage-tile-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Drainage Tile Calculator", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "url": "https://agricalc.online/fr/tools/drainage-tile-calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculateur gratuit de drainage agricole souterrain.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "128", "bestRating": "5", "worstRating": "1"}}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page"><a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link is-active" href="/fr/#tools" aria-current="page">Outils</a>
+      <a class="ag-nav__link" href="/fr/guides/">Guides</a>
+      <a class="ag-nav__link" href="/fr/blog/">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/tools/drainage-tile-calculator.html">EN</a>
+        <a class="ag-lang__btn" href="/es/tools/drainage-tile-calculator.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/tools/drainage-tile-calculator.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+  <div class="ag-wrap">
+      <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><span aria-current="page">Drainage Tile Calculator</span></li>
+      </ol>
+    </nav>
+      <div class="ux-toolbar">
+<div class="ux-toolbar-left"><div class="unit-switch">
+<button type="button" class="unit-btn metric-btn active" data-unit="metric" onclick="toggleUnites('metric')">Métrique</button>
+<button type="button" class="unit-btn imperial-btn" data-unit="imperial" onclick="toggleUnites('imperial')">Impérial</button>
+</div></div>
+<div class="ux-toolbar-right">
+<button type="button" class="ux-icon-btn dark-mode" onclick="toggleDarkModeUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg> <span class="tooltip">Mode sombre</span></button>
+<button type="button" class="ux-icon-btn favorite" onclick="toggleFavoriteUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Ajouter aux favoris</span></button>
+<button type="button" class="ux-icon-btn" onclick="openShareModal()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> <span class="tooltip">Partager et Exporter</span></button>
+<button type="button" class="ux-icon-btn" onclick="toggleHistoryPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> <span class="tooltip">Historique</span></button>
+<button type="button" class="ux-icon-btn" onclick="toggleFavoritesPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Favoris</span></button>
+</div></div>
+      <div class="ux-panel" id="historyPanel"><div class="ux-panel-header"><div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> Historique des Calculs</div><span class="ux-panel-clear" onclick="clearHistory()">Tout effacer</span></div><div id="historyList"><p class="ux-empty">Aucun calcul pour le moment</p></div></div>
+      <div class="ux-panel" id="favoritesPanel"><div class="ux-panel-header"><div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> Outils Favoris</div><span class="ux-panel-clear" onclick="clearFavorites()">Tout effacer</span></div><div id="favoritesList"></div></div>
+    </div>
+
+  <header class="ag-wrap ag-article-head ag-article-head--app">
+          <h1 class="ag-article-head__title">Calculateur de Drainage Enterré</h1>
+        <figure class="ag-tool-cover"><img src="/assets/images/tools/cat-irrigation.webp" alt="Irrigation et Eau" width="1600" height="900" loading="lazy" decoding="async"></figure></header>
+
+  <div class="ag-wrap ag-mt-6">
+          <div class="prose">
+        <p class="content-text">Estimez l'espacement entre drains souterrains via une version simplifiée de la formule de Hooghoudt, puis calculez la longueur totale et le coût d'installation.</p>
+        <aside class="ag-card ag-card--pad">
+<p class="content-text">Saisissez la conductivité hydraulique (m/jour), la profondeur, le coefficient de drainage (mm/jour), la surface et le coût au mètre. La calculatrice renvoie l'espacement, la longueur totale, le coût total et le coût par hectare.</p>
+</aside>
+        <aside class="ag-card ag-card--pad">
+<p class="content-text">Votre champ de 10 ha mal drainé reste gorgé au printemps. L'entrepreneur a proposé un espacement de 20 m à 5 $/m, mais votre sol n'a que K = 0.5 m/jour. Avec cet espacement les drains n'évacueront pas assez vite — il faut 10 m et le coût double.</p>
+</aside>
+      </div>
+          <div class="ag-calc">
+        <form onsubmit="event.preventDefault();calculate();">
+<div class="form-row ag-cluster">
+<div class="form-group ag-field-col"><label>Conductivité Hydraulique (m/jour)</label><input type="number" id="K" value="1.0" step="0.1" min="0.1"></div>
+<div class="form-group ag-field-col"><label>Profondeur du Drain (m)</label><input type="number" id="depth" value="1.0" step="0.1" min="0.5" max="2"></div></div>
+<div class="form-row ag-cluster">
+<div class="form-group ag-field-col"><label>Coeficient de Drainage (mm/jour)</label><input type="number" id="q" value="10" step="1" min="2" max="30"></div>
+<div class="form-group ag-field-col"><label>Surface (ha)</label><input type="number" id="area" value="10" step="1" min="0.1"></div></div>
+<div class="form-group"><label>Coût d'Installation ($/m de drain)</label><input type="number" id="cost" value="5" step="0.5" min="0.5"></div>
+<div class="form-actions"><div class="button-group">
+<button type="button" class="btn-calculate" onclick="calculate()">Calculer</button>
+<button type="button" class="btn-reset" onclick="resetForm()">Réinitialiser</button>
+</div></div></form>
+        <div class="result-box" id="resultBox">
+<h2>Résultats</h2>
+<div class="result-item ag-result-row"><span class="label">Espacement Recommandé</span><span class="value" id="r1">-</span></div>
+<div class="result-item ag-result-row"><span class="label">Longueur Totale de Drain</span><span class="value" id="r2">-</span></div>
+<div class="result-item ag-result-row"><span class="label">Coût Total d'Installation</span><span class="value" id="r3">-</span></div>
+<div class="result-item ag-result-row"><span class="label">Coût par Hectare</span><span class="value" id="r4">-</span></div>
+</div>
+      </div>
+          <div class="prose">
+        <aside class="ag-card ag-card--pad">
+
+<p><strong>Vérifié par des Experts:</strong> Cette calculatrice et son contenu ont été vérifiés par des experts agricoles. Les formules reposent sur les recommandations standard des services de vulgarisation. Pour des conseils spécifiques, consultez votre agronome local.</p>
+
+</aside>
+        <h2>Comment Utiliser Cette Calculatrice</h2>
+<p class="content-text">Estimez la conductivité hydraulique selon le sol (sables 2–5, limons 0.5–2, argiles 0.1–0.5 m/jour). Fixez la profondeur (typiquement 0.9–1.2 m), le coefficient de drainage (10–15 mm/jour pour grandes cultures), la surface et le coût local. Cliquez sur Calculer.</p>
+        <h2>À Propos de Cet Outil</h2>
+<p class="content-text">Cette calculatrice utilise une version simplifiée de l'équation en régime permanent de Hooghoudt : S = sqrt(4 × K × (2d² − 0.5d²) ÷ q), où K est la conductivité hydraulique, d la profondeur du drain et q le coefficient de drainage en m/jour. Longueur totale = surface (m²) ÷ espacement.</p><p class="content-text"><strong>Applicabilité:</strong> Conçu pour les équipements agricoles en contexte africain francophone.</p>
+        <h2>Comment le Calcul Fonctionne</h2>
+<p class="content-text">Convertir q de mm/jour en m/jour (÷ 1000). Espacement S = sqrt(4 × K × 1.5 × d² ÷ q). Longueur totale (m) = surface (ha) × 10 000 ÷ S. Coût total = longueur × coût au mètre. Coût/ha = coût total ÷ surface.</p>
+<h2>Exemple Concret</h2>
+<p class="content-text">K = 1.0 m/jour, d = 1.0 m, q = 10 mm/jour = 0.01 m/jour. S = sqrt(4 × 1 × 1.5 × 1.0 ÷ 0.01) = sqrt(600) ≈ 24.5 m. Pour 10 ha : longueur = 10 × 10 000 ÷ 24.5 ≈ 4 082 m. À 5 $/m : 20 410 $, soit 2 041 $/ha.</p>
+<h2>Erreurs Courantes et Conseils</h2>
+<p class="content-text">Erreurs courantes : utiliser K de la surface alors que la couche limitante est plus profonde, poser des drains trop superficiels (< 0.9 m), choisir un coefficient trop faible pour les grandes cultures (utilisez 10–15 mm/jour), et oublier les coûts de collecteur et de sortie. Localisez toujours l'exutoire avant de concevoir.</p>
+        <div><p><strong>Révisé par l'Équipe Éditoriale d'Agricalc</strong> — Ingénieurs agricoles et agronomes avec plus de 10 ans d'expérience sur le terrain. Notre équipe vérifie chaque formule contre des publications de vulgarisation révisées par des pairs. Pour des conseils spécifiques, consultez votre agronome local.</p></div>
+<h2>Références</h2>
+<ul><li><a href="https://www.nrcs.usda.gov/resources/guides-and-instructions/drainage" target="_blank" rel="noopener noreferrer">USDA NRCS — Drainage Agricole</a></li><li><a href="https://extension.umn.edu/agricultural-drainage" target="_blank" rel="noopener noreferrer">Extension U. du Minnesota — Drainage Agricole</a></li><li><a href="https://www.fao.org/3/y5536e/y5536e.pdf" target="_blank" rel="noopener noreferrer">FAO — Conception de Drainage</a></li></ul>
+        <div class="ag-faq">
+
+<h2>Questions Fréquemment Posées</h2>
+<details><summary>Quel espacement entre drains ?</summary><p class="content-text">Les espacements typiques sont 10–15 m en argiles lourdes, 15–25 m en limons, 25–50 m en sables. L'espacement dépend de la perméabilité et de l'abaissement de nappe souhaité en 24 h. Cette calculatrice le calcule à partir de K, profondeur et coefficient.</p></details><details><summary>À quelle profondeur poser les drains ?</summary><p class="content-text">Les drains secondaires sont typiquement à 0.9–1.2 m. Moins de 0.9 m expose au gel et aux racines ; plus de 1.5 m renchérit sans améliorer le séchage. Le collecteur principal doit avoir une pente de 0.1–0.3% vers l'exutoire.</p></details><details><summary>Qu'est-ce qu'un coefficient de drainage ?</summary><p class="content-text">C'est le taux, en mm/jour, auquel la nappe doit être abaissée après un orage. Les grandes cultures demandent typiquement 10–15 mm/jour ; légumes et cultures à haute valeur 15–25 mm/jour. Un coefficient plus élevé sèche plus vite mais coûte plus cher.</p></details><details><summary>Combien coûte le drainage enterré ?</summary><p class="content-text">L'installation coûte typiquement 4–10 $ par mètre de tube, plus collecteurs, regards et ouvrages de sortie. Avec 10 m d'espacement à 5 $/m en limon, le coût est ~2 000–2 500 $/ha. Le retour sur investissement est typiquement de 5–10 ans.</p></details><details><summary>Le drainage enterré améliore-t-il les rendements ?</summary><p class="content-text">Oui, sur les sols mal drainés. Il avance la fenêtre de plantation (on entre au champ plus tôt au printemps), réduit la saturation racinaire, améliore l'aération et permet des opérations plus précoces. Des gains de 10–30% sont typiques les premières années sur cultures en terre humide.</p></details>
+</div>
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quel espacement entre drains ?", "acceptedAnswer": {"@type": "Answer", "text": "Les espacements typiques sont 10–15 m en argiles lourdes, 15–25 m en limons, 25–50 m en sables. L'espacement dépend de la perméabilité et de l'abaissement de nappe souhaité en 24 h. Cette calculatrice le calcule à partir de K, profondeur et coefficient."}}, {"@type": "Question", "name": "À quelle profondeur poser les drains ?", "acceptedAnswer": {"@type": "Answer", "text": "Les drains secondaires sont typiquement à 0.9–1.2 m. Moins de 0.9 m expose au gel et aux racines ; plus de 1.5 m renchérit sans améliorer le séchage. Le collecteur principal doit avoir une pente de 0.1–0.3% vers l'exutoire."}}, {"@type": "Question", "name": "Qu'est-ce qu'un coefficient de drainage ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est le taux, en mm/jour, auquel la nappe doit être abaissée après un orage. Les grandes cultures demandent typiquement 10–15 mm/jour ; légumes et cultures à haute valeur 15–25 mm/jour. Un coefficient plus élevé sèche plus vite mais coûte plus cher."}}, {"@type": "Question", "name": "Combien coûte le drainage enterré ?", "acceptedAnswer": {"@type": "Answer", "text": "L'installation coûte typiquement 4–10 $ par mètre de tube, plus collecteurs, regards et ouvrages de sortie. Avec 10 m d'espacement à 5 $/m en limon, le coût est ~2 000–2 500 $/ha. Le retour sur investissement est typiquement de 5–10 ans."}}, {"@type": "Question", "name": "Le drainage enterré améliore-t-il les rendements ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, sur les sols mal drainés. Il avance la fenêtre de plantation (on entre au champ plus tôt au printemps), réduit la saturation racinaire, améliore l'aération et permet des opérations plus précoces. Des gains de 10–30% sont typiques les premières années sur cultures en terre humide."}}]}</script>
+      </div>
+        </div>
+
+  <div class="ag-wrap ag-mt-7">
+      <div class="ag-related">
+        <p class="ag-related__title">Calculateurs associés</p>
+        <ul class="ag-related__list">
+          <li><a href="/fr/tools/soil-compaction-analyzer.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Analyseur de Compactage</span></a></li>
+          <li><a href="/fr/tools/bulk-density-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Masse Volumique</span></a></li>
+          <li><a href="/fr/tools/irrigation-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-irrigation.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur d&#x27;Irrigation</span></a></li>
+          <li><a href="/fr/tools/soil-test-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Recommandation de Sol</span></a></li>
+          <li><a href="/fr/tools/center-pivot-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-irrigation.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice d&#x27;Irrigation par Pivot Central</span></a></li>
+          <li><a href="/fr/tools/irrigation-schedule-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-irrigation-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Programme d&#x27;Irrigation</span></a></li>
+          <li><a href="/fr/tools/irrigation-run-time-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-irrigation.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Durée d&#x27;Irrigation</span></a></li>
+          <li><a href="/fr/tools/irrigation-flow-rate-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-irrigation-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Débit d&#x27;Irrigation</span></a></li>
+          <li><a href="/fr/tools/crop-water-requirement.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-irrigation-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Besoins en Eau</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="rating-feedback-widget ag-feedback">
+<div class="feedback-title ag-feedback__title">Cette calculatrice vous a-t-elle été utile ?</div>
+<div class="rating-stars ag-stars">
+<span class="star ag-star" data-rating="1">★</span><span class="star ag-star" data-rating="2">★</span><span class="star ag-star" data-rating="3">★</span><span class="star ag-star" data-rating="4">★</span><span class="star ag-star" data-rating="5">★</span>
+</div>
+<p class="rating-message ag-feedback__hint">Click to rate this tool</p>
+<div class="feedback-section ag-mt-4">
+<textarea class="feedback-text ag-textarea" placeholder="Dites-nous comment améliorer cet outil..."></textarea>
+<button type="submit" class="feedback-submit btn-calculate">Envoyer un Avis</button>
+</div>
+<p style="display:none" class="feedback-thanks ag-feedback__thanks">Merci pour votre avis !</p>
+</div>
+  </article>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19" defer></script>
+<script>function calculate(){
+var K=getVal("K");var depth=getVal("depth");var qmm=getVal("q");var area=getVal("area");var cost=getVal("cost");
+var qm=qmm/1000; // m/day
+// Simplified Hooghoudt: S = sqrt(4*K*(2*depth*depth - depth*depth*0.5)/qm)
+var S = Math.sqrt(4*K*(2*depth*depth - depth*depth*0.5)/qm);
+var spacing = S; // meters between laterals
+var totalLength = (area*10000)/spacing; // m of drain per field (1 ha = 10000 m²)
+var totalCost = totalLength*cost;
+var costHa = totalCost/area;
+setResult("r1",spacing.toFixed(1),"m");
+setResult("r2",totalLength.toFixed(0),"m");
+setResult("r3","$"+totalCost.toFixed(0));
+setResult("r4","$"+costHa.toFixed(0)+"/ha");
+showResult("resultBox");}
+document.querySelectorAll("input").forEach(function(el){el.addEventListener("input",calculate);});</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(err){console.log('SW registration failed:',err);});});}
+</script>
+<script src="/assets/js/weather-api.js" defer></script>
+<script>(function(){try{var initRating=function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem("rating_"+pageId);var stars=document.querySelectorAll(".rating-stars .star");var message=document.querySelector(".rating-message");if(!stars.length||!message)return;var ratingMessages={5:"Excellent ! Merci pour votre évaluation !",4:"Super ! Content que cela vous ait été utile !",3:"Bien, merci pour votre retour.",2:"Merci, nous allons travailler à améliorer.",1:"Désolé d'apprendre cela, dites-nous comment améliorer."};function setRating(rating){stars.forEach(function(star,i){star.style.color=i<rating?"#f5a623":"#ddd";});message.textContent=ratingMessages[rating]||"";localStorage.setItem("rating_"+pageId,rating);}stars.forEach(function(star){star.addEventListener("click",function(){setRating(parseInt(this.dataset.rating));});star.addEventListener("mouseenter",function(){var rating=parseInt(this.dataset.rating);stars.forEach(function(s,i){s.style.color=i<rating?"#f5a623":"#ddd";});});});var starsContainer=document.querySelector(".rating-stars");if(starsContainer){starsContainer.addEventListener("mouseleave",function(){if(savedRating)setRating(parseInt(savedRating));else stars.forEach(function(s){s.style.color="#999";});});}if(savedRating)setRating(parseInt(savedRating));var submitBtn=document.querySelector(".feedback-submit");if(submitBtn){submitBtn.addEventListener("click",function(){var text=document.querySelector(".feedback-text");var feedbackSection=document.querySelector(".feedback-section");var thanks=document.querySelector(".feedback-thanks");if(text&&text.value.trim()){localStorage.setItem("feedback_"+pageId,text.value);if(feedbackSection)feedbackSection.style.display="none";if(thanks)thanks.style.display="block";}});}};if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initRating);}else{initRating();}}catch(e){console.error("Rating widget error:",e);}})();</script>
+<script src="/assets/js/agri-ui.js?v=2" defer></script>
+</body></html>

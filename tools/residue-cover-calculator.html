@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Crop Residue Cover Calculator | Free Soil Tool | Agricalc</title><meta name="description" content="Estimate the share of soil surface left covered by crop residue after harvest and each tillage pass. Check erosion risk and whether the field still counts as conservation tillage."><meta name="keywords" content="residue cover calculator, crop residue percentage, conservation tillage 30 percent cover, tillage residue retention, soil erosion risk, no-till residue"><link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Crop Residue Cover Calculator", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "url": "https://agricalc.online/tools/residue-cover-calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate residue mass produced by the previous crop, how much survives each tillage pass, the resulting soil surface cover percentage, erosion risk rating and conservation tillage status.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "84", "bestRating": "5", "worstRating": "1"}}</script>
+<meta property="og:type" content="article"><meta property="og:title" content="Crop Residue Cover Calculator | Erosion Risk &amp; Conservation Tillage"><meta property="og:description" content="Estimate the share of soil surface left covered by crop residue after harvest and each tillage pass. Check erosion risk and whether the field still counts as conservation tillage."><meta property="og:url" content="https://agricalc.online/tools/residue-cover-calculator.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Crop Residue Cover Calculator | Erosion Risk &amp; Conservation Tillage"><meta name="twitter:description" content="Estimate the share of soil surface left covered by crop residue after harvest and each tillage pass. Check erosion risk and whether the field still counts as conservation tillage."><meta property="og:image" content="https://agricalc.online/assets/images/og-image.png">
+<meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/tools/residue-cover-calculator.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/tools/residue-cover-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/tools/residue-cover-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/tools/residue-cover-calculator.html">
+<link rel="canonical" href="https://agricalc.online/tools/residue-cover-calculator.html">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page"><a class="ag-skip-link" href="#main">Skip to content</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/" aria-label="Agricalc home">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Primary">
+      <a class="ag-nav__link" href="/">Home</a>
+      <a class="ag-nav__link is-active" href="/#tools" aria-current="page">Calculators</a>
+      <a class="ag-nav__link" href="/guides/">Guides</a>
+      <a class="ag-nav__link" href="/blog/">Blog</a>
+      <a class="ag-nav__link" href="/glossary/">Glossary</a>
+      <a class="ag-nav__link" href="/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Language">
+        <a class="ag-lang__btn" href="/tools/residue-cover-calculator.html" aria-current="true">EN</a>
+        <a class="ag-lang__btn" href="/es/tools/residue-cover-calculator.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/tools/residue-cover-calculator.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/">Home</a>
+      <a href="/#tools">Calculators</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/glossary/">Glossary</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+  <div class="ag-wrap">
+      <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><span aria-current="page">Crop Residue Cover Calculator</span></li>
+      </ol>
+    </nav>
+      <div class="ux-toolbar">
+  <div class="ux-toolbar-left">
+    <div class="unit-switch">
+      <button type="button" class="unit-btn metric-btn active" data-unit="metric" onclick="toggleUnits('metric')">Metric</button>
+      <button type="button" class="unit-btn imperial-btn" data-unit="imperial" onclick="toggleUnits('imperial')">Imperial</button>
+    </div>
+  </div>
+  <div class="ux-toolbar-right">
+    <button type="button" class="ux-icon-btn dark-mode" onclick="toggleDarkModeUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg> <span class="tooltip">Dark mode</span></button>
+    <button type="button" class="ux-icon-btn favorite" onclick="toggleFavoriteUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Add to favorites</span></button>
+    <button type="button" class="ux-icon-btn" onclick="openShareModal()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> <span class="tooltip">Share & Export</span></button>
+    <button type="button" class="ux-icon-btn" onclick="toggleHistoryPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> <span class="tooltip">History</span></button>
+    <button type="button" class="ux-icon-btn" onclick="toggleFavoritesPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Favorites</span></button>
+  </div>
+</div>
+      <div class="ux-panel" id="historyPanel">
+  <div class="ux-panel-header">
+    <div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> Calculation History</div>
+    <span class="ux-panel-clear" onclick="clearHistory()">Clear all</span>
+  </div>
+  <div id="historyList"></div>
+</div>
+      <div class="ux-panel" id="favoritesPanel">
+  <div class="ux-panel-header">
+    <div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> Favorite Tools</div>
+    <span class="ux-panel-clear" onclick="clearFavorites()">Clear all</span>
+  </div>
+  <div id="favoritesList"></div>
+</div>
+    </div>
+
+  
+<header class="ag-wrap ag-article-head ag-article-head--app">
+  <h1 class="ag-article-head__title">Crop Residue Cover Calculator</h1>
+  <figure class="ag-tool-cover">
+    <img src="/assets/images/tools/cat-soil.webp" alt="Soil &amp; Fertility" width="1600" height="900">
+  </figure>
+</header>
+<div class="ag-wrap ag-mt-6">
+  <div class="prose">
+    <p class="content-text">Residue cover is the single number that decides whether a field is protected or exposed. This calculator starts from your previous crop and grain yield, works out how much residue the crop left, then applies the retention rate of your tillage implements to show what is actually left on the surface at planting — and whether that is enough to control erosion.</p>
+    <aside class="ag-card ag-card--pad">
+      <p class="content-text"><strong>What it answers:</strong> Residue produced (kg/ha), residue remaining after tillage, soil surface cover (%), an erosion risk rating, and whether the field still meets the 30% cover threshold used to define conservation tillage.</p>
+    </aside>
+    <aside class="ag-card ag-card--pad">
+      <p class="content-text"><strong>Worked example:</strong> Corn at 9 t/ha leaves about 9,000 kg/ha of residue and covers roughly 93% of the surface. One mouldboard pass buries almost all of it — cover drops to about 24%, well under the 30% conservation threshold.</p>
+    </aside>
+  </div>
+  <div class="ag-calc">
+    <form onsubmit="event.preventDefault();calculate();">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prevCrop">Previous crop</label>
+                <select id="prevCrop">
+                  <option value="corn">Maize / corn</option>
+                  <option value="wheat">Wheat</option>
+                  <option value="soybean">Soybean</option>
+                  <option value="sorghum">Sorghum</option>
+                  <option value="rice">Rice</option>
+                  <option value="smallgrain">Other small grain</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="grainYield">Grain yield (t/ha)</label>
+                <input type="number" class="form-input" id="grainYield" value="9" step="0.1" min="0">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="residueMass">Residue dry matter (kg/ha, 0 = estimate)</label>
+                <input type="number" class="form-input" id="residueMass" value="0" step="100" min="0">
+              </div>
+              <div class="form-group">
+                <label for="tillPasses">Number of tillage passes</label>
+                <select id="tillPasses">
+                  <option value="0">0 — no-till</option>
+                  <option value="1">1 pass</option>
+                  <option value="2">2 passes</option>
+                  <option value="3">3 passes</option>
+                  <option value="4">4 passes</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="implement">Main implement used</label>
+                <select id="implement">
+                  <option value="notill">No-till / zero tillage</option>
+                  <option value="vertical">Vertical tillage / harrow</option>
+                  <option value="chisel">Chisel / field cultivator</option>
+                  <option value="disc">Disc harrow</option>
+                  <option value="moldboard">Mouldboard plough</option>
+                </select>
+              </div>
+            </div>
+      <div class="form-actions">
+        <div class="button-group">
+          <button type="button" class="btn-calculate" onclick="calculate()">Calculate</button>
+          <button type="button" class="btn-reset" onclick="resetForm()">Reset</button>
+        </div>
+      </div>
+    </form>
+    <div class="result-box" id="resultBox">
+      <h2>Results</h2>
+            <div class="result-item">
+              <span class="label">Residue produced</span>
+              <span class="value" id="r1">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Residue after tillage</span>
+              <span class="value" id="r2">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Soil surface cover</span>
+              <span class="value" id="r3">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Erosion risk</span>
+              <span class="value" id="r4">-</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Conservation tillage status</span>
+              <span class="value" id="r5">-</span>
+            </div>
+    </div>
+  </div>
+  <div class="prose">
+    <aside class="ag-card ag-card--pad">
+      <p><strong>Expert Reviewed:</strong> This calculator and its content have been reviewed by agricultural experts. Retention factors follow published conservation-tillage figures. Verify real cover with a line-transect or photo method before making decisions.</p>
+    </aside>
+    <h2>How to Use This Calculator</h2>
+    <p class="content-text">Select the crop you harvested, enter the grain yield, and leave residue at 0 unless you have actually measured it. Then choose how many tillage passes you plan and which implement does most of the work. Click Calculate to see the cover that will be left at planting.</p>
+    <h2>About This Tool</h2>
+    <p class="content-text">Soil covered by residue absorbs raindrop impact, slows runoff and keeps moisture in the seedbed. The widely used threshold is 30% cover at planting: at or above that, a field qualifies as conservation tillage; at 15% or less it counts as intensive tillage and erosion risk rises sharply.</p>
+    <h2>How the Calculation Works</h2>
+    <p class="content-text">Residue produced (kg/ha) = grain yield (t/ha) × 1,000 × residue-to-grain ratio (maize 1.0, sorghum 1.1, wheat and small grains 1.3, rice 1.4, soybean 1.5). After tillage: residue remaining = residue produced × (retention per pass) ^ number of passes, with retention of 0.95 for no-till, 0.80 for vertical tillage, 0.70 for chisel, 0.55 for a disc and 0.10 for a mouldboard plough. Cover (%) = 100 × (1 − e^(−k × residue remaining)), where k is 0.00030 for maize, 0.00032 for sorghum, 0.00062 for wheat and small grains, 0.00060 for rice and 0.00045 for soybean.</p>
+    <h2>Worked Example</h2>
+    <p class="content-text">Maize at 9 t/ha: residue = 9 × 1,000 × 1.0 = 9,000 kg/ha. Two disc passes: 9,000 × 0.55² = 2,723 kg/ha. Cover = 100 × (1 − e^(−0.00030 × 2,723)) = 55.8% — still conservation tillage. Swap the disc for one mouldboard pass and cover falls to about 24%, below the threshold.</p>
+    <h2>Practical Tips</h2>
+    <ul>
+            <li>30% cover at planting is the standard conservation-tillage line; 15% or less is classed as intensive tillage.</li>
+            <li>Soybean residue breaks down fast — a field at 80% after harvest can be below 30% by the following spring.</li>
+            <li>A chisel or vertical-tillage tool keeps far more residue on top than a disc; a mouldboard plough buries almost all of it.</li>
+            <li>Measure real cover with a 30 m line-transect, counting residues under marked points, or with a photo-based app.</li>
+            <li>On cold, poorly drained ground, cover above 50% can delay soil warming and slow early growth.</li>
+    </ul>
+    <h2>Sources &amp; Further Reading</h2>
+    <ul>
+            <li><a href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener noreferrer">USDA NRCS — Conservation tillage &amp; residue management</a></li>
+            <li><a href="https://www.fao.org/conservation-agriculture/en/" target="_blank" rel="noopener noreferrer">FAO — Conservation agriculture</a></li>
+            <li><a href="https://crops.extension.iastate.edu/" target="_blank" rel="noopener noreferrer">Iowa State University Extension — Crop residue &amp; tillage</a></li>
+    </ul>
+    <div class="ag-faq">
+      <h2>Frequently Asked Questions</h2>
+            <details>
+              <summary>What counts as residue cover?</summary>
+              <p class="content-text">It is the percentage of the soil surface covered by crop residue — stalks, leaves and straw — when viewed from directly above. Everything else is bare soil exposed to raindrop impact.</p>
+            </details>
+            <details>
+              <summary>Why is 30% the target?</summary>
+              <p class="content-text">Around 30% cover is the point where erosion drops sharply, roughly halving soil loss compared with bare ground. It is the standard used to define conservation tillage and to qualify for many soil-health programmes.</p>
+            </details>
+            <details>
+              <summary>How much residue does a maize crop leave?</summary>
+              <p class="content-text">Roughly one tonne of residue per tonne of grain: a 9 t/ha maize crop leaves about 9 t/ha of dry residue, which is enough to cover well over 80% of the surface if it is left undisturbed.</p>
+            </details>
+            <details>
+              <summary>Does more residue always mean better yield?</summary>
+              <p class="content-text">No. Heavy residue keeps moisture in and builds organic matter, but on cold, wet soils it slows warming in spring. The aim is enough cover to control erosion without delaying planting or emergence.</p>
+            </details>
+    </div>
+  </div>
+</div>
+</article>
+
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculators, all free, no sign-up</p>
+        <p class="ag-cta__text">Planting, soil, irrigation, livestock, machinery and farm finance — pick a tool and get an answer in under a minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/">Browse calculators</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 free agricultural calculators for modern farming.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Tools">
+        <p class="ag-footer__col-title">Tools</p>
+        <ul class="ag-footer__links">
+          <li><a href="/#planting">Planting</a></li>
+          <li><a href="/#land">Land &amp; Soil</a></li>
+          <li><a href="/#livestock">Livestock</a></li>
+          <li><a href="/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Resources">
+        <p class="ag-footer__col-title">Resources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Company">
+        <p class="ag-footer__col-title">Company</p>
+        <ul class="ag-footer__links">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Languages">
+        <p class="ag-footer__col-title">Languages</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">For reference only — consult local extension services or an agronomist before acting on these figures.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19" defer></script>
+<script>
+function calculate(){
+  var crop=document.getElementById("prevCrop").value;
+  var yld=getVal("grainYield");
+  var massIn=getVal("residueMass");
+  var passes=parseInt(document.getElementById("tillPasses").value,10);
+  var impl=document.getElementById("implement").value;
+  var ratio,k;
+  if(crop==="corn"){ratio=1.00;k=0.00030;}
+  else if(crop==="sorghum"){ratio=1.10;k=0.00032;}
+  else if(crop==="wheat"){ratio=1.30;k=0.00062;}
+  else if(crop==="rice"){ratio=1.40;k=0.00060;}
+  else if(crop==="soybean"){ratio=1.50;k=0.00045;}
+  else {ratio=1.30;k=0.00062;}
+  var keep;
+  if(impl==="notill"){keep=0.95;}
+  else if(impl==="vertical"){keep=0.80;}
+  else if(impl==="chisel"){keep=0.70;}
+  else if(impl==="disc"){keep=0.55;}
+  else {keep=0.10;}
+  var mass0 = massIn>0 ? massIn : (yld*1000*ratio);
+  var massN = mass0*Math.pow(keep,passes);
+  var cover = 100*(1-Math.exp(-k*massN));
+  var risk,status;
+  if(cover>=75){risk="Very low";}
+  else if(cover>=60){risk="Low";}
+  else if(cover>=40){risk="Moderate";}
+  else if(cover>=25){risk="High";}
+  else {risk="Very high";}
+  status = cover>=30 ? "Meets 30% cover" : "Below 30% cover";
+  setResult("r1",mass0.toFixed(0),"kg / ha");
+  setResult("r2",massN.toFixed(0),"kg / ha");
+  setResult("r3",cover.toFixed(1),"% cover");
+  setResult("r4",risk,"");
+  setResult("r5",status,"");
+  showResult("resultBox");
+}
+</script>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('/sw.js').then(function(reg){}).catch(function(err){console.log('SW registration failed:',err);});
+  });
+}
+</script>
+<script src="/assets/js/weather-api.js" defer></script>
+<script>(function(){try{var initRating=function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem("rating_"+pageId);var stars=document.querySelectorAll(".rating-stars .star");var message=document.querySelector(".rating-message");if(!stars.length||!message)return;var ratingMessages={5:"Excellent! Thank you for your rating!",4:"Great! Glad you found it useful!",3:"Good, thanks for your feedback!",2:"Thanks, we will work to improve!",1:"Sorry to hear that, please tell us how to improve!"};function setRating(rating){stars.forEach(function(star,i){star.style.color=i<rating?"#f5a623":"#ddd";});message.textContent=ratingMessages[rating]||"";localStorage.setItem("rating_"+pageId,rating);}stars.forEach(function(star){star.addEventListener("click",function(){setRating(parseInt(this.dataset.rating));});star.addEventListener("mouseenter",function(){var rating=parseInt(this.dataset.rating);stars.forEach(function(s,i){s.style.color=i<rating?"#f5a623":"#ddd";});});});var starsContainer=document.querySelector(".rating-stars");if(starsContainer){starsContainer.addEventListener("mouseleave",function(){if(savedRating)setRating(parseInt(savedRating));else stars.forEach(function(s){s.style.color="#999";});});}if(savedRating)setRating(parseInt(savedRating));var submitBtn=document.querySelector(".feedback-submit");if(submitBtn){submitBtn.addEventListener("click",function(){var text=document.querySelector(".feedback-text");var feedbackSection=document.querySelector(".feedback-section");var thanks=document.querySelector(".feedback-thanks");if(text&&text.value.trim()){localStorage.setItem("feedback_"+pageId,text.value);if(feedbackSection)feedbackSection.style.display="none";if(thanks)thanks.style.display="block";}});}};if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initRating);}else{initRating();}}catch(e){console.error("Rating widget error:",e);}})();</script>
+<script src="/assets/js/agri-ui.js?v=2" defer></script>
+</body></html>

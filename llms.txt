@@ -1,0 +1,56 @@
+# Farm Tools Calculator
+
+## Overview
+Farm Tools Calculator provides 25+ free online agricultural calculators and in-depth farming guides. All tools are free, no registration required.
+
+## Available Calculators (25)
+
+### Planting Tools (10)
+- Seed Rate Calculator (/tools/seed-calculator.html) - Seed requirement from spacing, 1000-grain weight, germination
+- Fertilizer Calculator (/tools/fertilizer-calculator.html) - N-P-K requirements from target yield
+- Pesticide Dilution Calculator (/tools/pesticide-dilution.html) - Multiple method or ppm concentration
+- Irrigation Calculator (/tools/irrigation-calculator.html) - Water requirement and irrigation duration
+- Crop Growth Stage Calculator (/tools/growth-calculator.html) - Growth stages and harvest date
+- Crop Yield Estimator (/tools/yield-calculator.html) - Yield from plant population, grains/ear, test weight
+- Seed Germination Calculator (/tools/germination-calculator.html) - Germination rate test and seeding adjustment
+- Greenhouse Ventilation Calculator (/tools/greenhouse-ventilation.html) - Ventilation rate and duration
+- Orchard Spacing Calculator (/tools/orchard-spacing.html) - Tree spacing and trees per hectare
+- Herbicide Application Calculator (/tools/herbicide-calculator.html) - Herbicide amount and spray volume
+
+### Land Tools (4)
+- Land Area Converter (/tools/area-converter.html) - Hectares, acres, m², km², Chinese mu
+- Land Rent Calculator (/tools/rent-calculator.html) - Annual/monthly/total rent with escalation
+- Soil pH Amendment Calculator (/tools/soil-ph-calculator.html) - Lime for acid soil, sulfur for alkaline
+- Organic Fertilizer Calculator (/tools/organic-fertilizer.html) - Manure/compost nutrient content and rate
+
+### Livestock & Aquaculture Tools (5)
+- Feed Ration Calculator (/tools/feed-calculator.html) - Daily feed intake and protein needs
+- Feed Conversion Ratio Calculator (/tools/fcr-calculator.html) - FCR and profitability analysis
+- Livestock Stocking Density Calculator (/tools/livestock-density.html) - Optimal density and max capacity
+- Aquaculture Stocking Density Calculator (/tools/aquaculture-stocking.html) - Fish/shrimp stocking and feed
+- Veterinary Dosage Calculator (/tools/veterinary-dosage.html) - Medication by weight, water, or feed
+
+### General Tools (6)
+- Farm Date Calculator (/tools/date-calculator.html) - Planting/harvest dates and intervals
+- Produce Price Converter (/tools/price-converter.html) - $/kg, $/lb, $/ton conversion
+- Temperature & Humidity Calculator (/tools/temp-converter.html) - °C/°F/K and dew point
+- Agricultural Loan Calculator (/tools/agri-loan-calculator.html) - Monthly payment and total interest
+- Farm Subsidy Estimator (/tools/agri-subsidy-calculator.html) - Direct payments and conservation benefits
+- Crop Rotation Planner (/tools/crop-rotation.html) - Rotation sequences and planting schedules
+
+## Farming Guides (5)
+- How to Read a Soil Test Report (/guides/reading-a-soil-test-report.html) - pH, N-P-K, OM, CEC, base saturation
+- Stocking Rate: How Many Cows per Acre? (/guides/stocking-rate-cows-per-acre.html) - Pasture carrying capacity
+- Drip Irrigation: How Long to Run Your System (/guides/drip-irrigation-runtime.html) - Runtime calculation and maintenance
+- Plants per Acre: A Complete Guide by Crop (/guides/plants-per-acre-by-crop.html) - Spacing charts and stand counts
+- Fertilizer Cost per Acre: A Complete Budgeting Guide (/guides/fertilizer-cost-per-acre.html) - N-P-K costs and savings strategies
+
+## Key Features
+- All calculators work offline (PWA-enabled)
+- FAQ sections with structured data on every tool page
+- Related calculator cross-linking
+- English (default) and Chinese versions available
+- No registration, no ads, completely free
+
+## Contact
+For suggestions or questions, please refer to the website footer.

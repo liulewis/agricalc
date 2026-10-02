@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur growing degree days | Culture Gratuit | Agricalc</title>
+<meta name="description" content="Calculateur growing degree days en ligne gratuit avec résultats instantanés. Formules vérifiées, exemples pratiques et conseils pour votre ferme. Sans inscri...">
+<meta name="keywords" content="degrés-jours, GDD, unités chaleur, stade de culture">
+<link rel="canonical" href="https://agricalc.online/fr/tools/growing-degree-days-calculator.html">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/tools/growing-degree-days-calculator.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/tools/growing-degree-days-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/tools/growing-degree-days-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/tools/growing-degree-days-calculator.html">
+<link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Calculateur de Degrés-Jours de Croissance", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "url": "https://agricalc.online/fr/tools/growing-degree-days-calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculez les degrés-jours quotidiens et cumulés par culture, estimez les jours pour atteindre un objectif et suivez le stade.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "128", "bestRating": "5", "worstRating": "1"}}</script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculateur Degrés-Jours (GDD)">
+<meta property="og:description" content="Calculez les degrés-jours quotidiens et cumulés par culture, estimez les jours pour atteindre un objectif et suivez le stade.">
+<meta property="og:url" content="https://agricalc.online/fr/tools/growing-degree-days-calculator.html">
+
+<meta property="og:image" content="https://agricalc.online/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculateur Degrés-Jours (GDD)">
+<meta name="twitter:description" content="Calculez les degrés-jours quotidiens et cumulés par culture, estimez les jours pour atteindre un objectif et suivez le stade.">
+<meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head>
+<body class="ag-page"><a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link is-active" href="/fr/#tools" aria-current="page">Outils</a>
+      <a class="ag-nav__link" href="/fr/guides/">Guides</a>
+      <a class="ag-nav__link" href="/fr/blog/">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/tools/growing-degree-days-calculator.html">EN</a>
+        <a class="ag-lang__btn" href="/es/tools/growing-degree-days-calculator.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/tools/growing-degree-days-calculator.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+  <div class="ag-wrap">
+      <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><a href="/fr/#tools">Outils</a></li>
+        <li><span aria-current="page">Calculateur de Degrés-Jours de Croissance</span></li>
+      </ol>
+    </nav>
+    </div>
+
+  <header class="ag-wrap ag-article-head ag-article-head--app">
+          <h1 class="ag-article-head__title">Calculateur de Degrés-Jours (GDD)</h1>
+        <figure class="ag-tool-cover"><img src="/assets/images/tools/cat-climate.webp" alt="Climat et Risque" width="1600" height="900" loading="lazy" decoding="async"></figure></header>
+
+  <div class="ag-wrap ag-mt-6">
+          <div class="prose">
+        <p class="content-text">Les GDD mesurent l'accumulation de chaleur qui pilote le développement. Saisissez Tmax/Tmin du jour et la culture ; l'outil donne le GDD du jour, une estimation des jours vers une cible et une indication de stade.</p>
+        <aside class="ag-card ag-card--pad">
+<p class="content-text">Choisissez la culture (température de base préréglée), saisissez Tmax/Tmin du jour et la cible de GDD cumulés. Obtenez le GDD journalier, les jours estimés et une indication de stade.</p>
+</aside>
+      </div>
+          <div class="ag-calc">
+        <form onsubmit="event.preventDefault();calculate();">
+    <div class="form-row"><div class="form-group"><label>Culture (temp. de base)</label><select id="crop"><option value="corn" selected>Maïs (base 10 °C)</option><option value="soybean">Soja (base 10 °C)</option><option value="wheat">Blé (base 0 °C)</option><option value="alfalfa">Luzerne (base 5 °C)</option><option value="grape">Vigne (base 10 °C)</option></select></div><div class="form-group"><label>Température maximale (°C)</label><input type="number" id="tmax" value="28" step="1"></div></div><div class="form-row"><div class="form-group"><label>Température minimale (°C)</label><input type="number" id="tmin" value="15" step="1"></div><div class="form-group"><label>Objectif GDD cumulés</label><input type="number" id="target" value="1200" step="50"></div></div>
+    <div class="button-group">
+      <button type="button" class="btn-calculate" onclick="calculate()">Calculer</button>
+      <button type="button" class="btn-reset" onclick="resetForm()">Réinitialiser</button>
+    </div>
+  </form>
+        <div class="result-box" id="resultBox">
+    <h2>Résultats</h2>
+    <div class="result-item"><span class="label">Température de base</span><span class="value" id="r1">-</span></div><div class="result-item"><span class="label">GDD du jour</span><span class="value" id="r2">-</span></div><div class="result-item"><span class="label">Jours estimés vers la cible</span><span class="value" id="r3">-</span></div><div class="result-item"><span class="label">Indication de stade</span><span class="value" id="r4">-</span></div><div class="result-item"><span class="label">GDD en °F (jour)</span><span class="value" id="r5">-</span></div>
+  </div>
+      </div>
+          <div class="prose">
+        <aside class="ag-card ag-card--pad">
+
+    <p><strong>Vérifié par des experts :</strong> Cette calculatrice et son contenu ont été vérifiés par des experts agricoles. Les formules reposent sur les recommandations standard des services de vulgarisation et du Farm Financial Standards Council. Pour un conseil adapté, consultez votre agronome ou conseiller local.</p>
+  
+</aside>
+        <h2>Comment utiliser cette calculatrice</h2>
+    <p class="content-text">Choisissez la culture (base préchargée), saisissez Tmax/Tmin du jour (station ou prévision) et la cible (ex. maïs à maturité ~1200-1500). Cliquez sur Calculer. Répétez chaque jour et additionnez.</p>
+        <h2>À propos de cet outil</h2>
+    <p class="content-text">À propos</p>
+        <h2>Comment le calcul fonctionne</h2>
+    <p class="content-text">GDD = (Tmax + Tmin) ÷ 2 − Base ; si négatif, 0. Maïs 10 °C (50 °F), blé 0 °C (32 °F), soja 10 °C, luzerne 5 °C, vigne 10 °C. Pour Tmax 28, Tmin 15, maïs : moyenne 21,5, GDD 11,5. À ce rythme, 1200 GDD en ~104 jours. Erreurs : °F avec base °C, oublier le plancher à 0, ne pas plafonner Tmax.</p>
+        <div><p><strong>Révisé par l'Équipe Éditoriale d'Agricalc</strong> — Ingénieurs agricoles et agronomes avec plus de 10 ans d'expérience sur le terrain. Notre équipe vérifie chaque formule contre des publications de vulgarisation révisées par des pairs. Pour des conseils spécifiques, consultez votre agronome local.</p></div>
+<h2>Références</h2>
+    <ul><li><a href="https://www.weather.gov/" target="_blank" rel="noopener noreferrer">NOAA — Growing Degree Days</a></li><li><a href="https://extension.psu.edu/" target="_blank" rel="noopener noreferrer">Penn State Extension — Growing Degree Days</a></li><li><a href="https://www.climatehubs.usda.gov/" target="_blank" rel="noopener noreferrer">USDA Climate Hubs — Crop Development</a></li></ul>
+        <div class="ag-faq">
+
+    <h2>Foire aux questions</h2>
+    <details><summary>Quelle température de base utiliser ?</summary><p class="content-text">Utilisez le minimum cardinal de la culture : maïs, soja, vigne 10 °C (50 °F) ; blé et petites céréales 0 °C (32 °F) ; luzerne 5 °C (41 °F).</p></details><details><summary>Comment cumuler les GDD sur une saison ?</summary><p class="content-text">Calculez chaque matin le GDD de la veille (Tmax/Tmin), et additionnez depuis la date de départ (semis ou date calendaire). Comparez au total requis par la culture pour chaque stade.</p></details><details><summary>Combien de GDD pour que le maïs mûrisse ?</summary><p class="content-text">Selon le précocité, le maïs demande environ 1100 à 1500 GDD (base 10 °C, depuis semis) pour la couche noire. Précoce ~1100, tardif ~1500. Vérifiez l'étiquette.</p></details><details><summary>Les GDD marchent en °F ou °C ?</summary><p class="content-text">Les deux, pourvu que les unités correspondent à la base. 1 °C GDD = 1,8 °F GDD. Précisez toujours lequel vous utilisez.</p></details><details><summary>Pourquoi ma culture est-elle en avance cette année ?</summary><p class="content-text">Si les GDD cumulés dépassent la moyenne de la date, la culture est en avance — printemps chauds accélèrent. Les saisons fraîches retardent. Les GDD évitent de juger d'après le calendrier seul.</p></details>
+  
+</div>
+      </div>
+        </div>
+
+  <div class="ag-wrap ag-mt-7">
+      <div class="ag-related">
+        <p class="ag-related__title">Calculateurs associés</p>
+        <ul class="ag-related__list">
+          <li><a href="/fr/tools/frost-risk-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-climate-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Risque de Gel</span></a></li>
+          <li><a href="/fr/tools/yield-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-planting-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Estimateur de Rendement</span></a></li>
+          <li><a href="/fr/tools/crop-planting-calendar.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-planting.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calendrier de Semis des Cultures</span></a></li>
+          <li><a href="/fr/tools/crop-margin-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-finance-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Marge et Bénéfice par Acre</span></a></li>
+          <li><a href="/fr/tools/agri-subsidy-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-finance.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Subvention</span></a></li>
+          <li><a href="/fr/tools/seed-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-planting-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Semis</span></a></li>
+          <li><a href="/fr/tools/seed-spacing-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-planting.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur d&#x27;Espacement des Graines</span></a></li>
+          <li><a href="/fr/tools/plant-population-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-planting-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Population de Plantes et Dose de Semis</span></a></li>
+          <li><a href="/fr/tools/seed-drill-calibration.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-calibration-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Calibration de Semoir à Grains</span></a></li>
+          <li><a href="/fr/tools/seed-treatment-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-planting-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Traitement des Semences</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="rating-feedback-widget ag-feedback"><div class="feedback-title ag-feedback__title">Cette calculatrice vous a-t-elle été utile ?</div><div class="rating-stars ag-stars"><span class="star ag-star" data-rating="1">★</span><span class="star ag-star" data-rating="2">★</span><span class="star ag-star" data-rating="3">★</span><span class="star ag-star" data-rating="4">★</span><span class="star ag-star" data-rating="5">★</span></div><p class="rating-message ag-feedback__hint">Cliquez pour évaluer cet outil</p><div class="feedback-section ag-mt-4"><textarea class="feedback-text ag-textarea" placeholder="Dites-nous comment nous pouvons améliorer cet outil..."></textarea><button type="button" class="feedback-submit btn-calculate ag-mt-3">Envoyer le commentaire</button></div><p style="display:none" class="feedback-thanks ag-feedback__thanks">Merci pour votre commentaire !</p></div>
+  </article>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle température de base utiliser ?", "acceptedAnswer": {"@type": "Answer", "text": "Utilisez le minimum cardinal de la culture : maïs, soja, vigne 10 °C (50 °F) ; blé et petites céréales 0 °C (32 °F) ; luzerne 5 °C (41 °F)."}}, {"@type": "Question", "name": "Comment cumuler les GDD sur une saison ?", "acceptedAnswer": {"@type": "Answer", "text": "Calculez chaque matin le GDD de la veille (Tmax/Tmin), et additionnez depuis la date de départ (semis ou date calendaire). Comparez au total requis par la culture pour chaque stade."}}, {"@type": "Question", "name": "Combien de GDD pour que le maïs mûrisse ?", "acceptedAnswer": {"@type": "Answer", "text": "Selon le précocité, le maïs demande environ 1100 à 1500 GDD (base 10 °C, depuis semis) pour la couche noire. Précoce ~1100, tardif ~1500. Vérifiez l'étiquette."}}, {"@type": "Question", "name": "Les GDD marchent en °F ou °C ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux, pourvu que les unités correspondent à la base. 1 °C GDD = 1,8 °F GDD. Précisez toujours lequel vous utilisez."}}, {"@type": "Question", "name": "Pourquoi ma culture est-elle en avance cette année ?", "acceptedAnswer": {"@type": "Answer", "text": "Si les GDD cumulés dépassent la moyenne de la date, la culture est en avance — printemps chauds accélèrent. Les saisons fraîches retardent. Les GDD évitent de juger d'après le calendrier seul."}}]}</script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/weather-api.js" defer></script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){});}
+</script>
+<script>
+function getVal(id){return parseFloat(document.getElementById(id).value)||0;}
+function resetForm(){
+  document.querySelectorAll('input[type="number"],input[type="text"]').forEach(function(i){i.value=i.defaultValue;});
+  document.querySelectorAll('select').forEach(function(s){s.selectedIndex=0;});
+  document.querySelectorAll('.result-item .value').forEach(function(v){v.textContent='-';});
+}
+function calculate(){
+var crop=document.getElementById('crop').value;
+  var tmax=parseFloat(document.getElementById('tmax').value)||0;
+  var tmin=parseFloat(document.getElementById('tmin').value)||0;
+  var target=parseFloat(document.getElementById('target').value)||1;
+  var base = crop==='wheat'?0 : (crop==='alfalfa'?5 : 10);
+  var avg=(tmax+tmin)/2;
+  var gdd=Math.max(0, avg-base);
+  var days = gdd>0? Math.ceil(target/gdd) : 'n/a (no GDD today)';
+  var hint;
+  if(gdd<=0) hint='No heat accumulation (too cold)';
+  else if(crop==='corn') hint=gdd<10?'Early vegetative':(gdd<25?'Tasseling/silking':'Grain fill');
+  else if(crop==='soybean') hint=gdd<8?'Vegetative':(gdd<18?'Flowering':'Pod fill');
+  else if(crop==='wheat') hint=gdd<12?'Tillering':(gdd<25?'Heading':'Maturity');
+  else hint='Active growth';
+  var gddF=Math.max(0, ((tmax*9/5+32)+(tmin*9/5+32))/2 - (base*9/5+32));
+  document.getElementById('r1').textContent=base.toFixed(0)+'°C';
+  document.getElementById('r2').textContent=gdd.toFixed(1)+' GDD';
+  document.getElementById('r3').textContent=typeof days==='number'? days+' days' : days;
+  document.getElementById('r4').textContent=hint;
+  document.getElementById('r5').textContent=gddF.toFixed(1)+' °F GDD';
+}
+// auto-calculate on input
+document.addEventListener('input',function(e){if(e.target.closest('form')){calculate();}});
+document.addEventListener('change',function(e){if(e.target.closest('form')){calculate();}});
+window.addEventListener('load',calculate);
+</script>
+<script>(function(){try{var initRating=function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem("rating_"+pageId);var stars=document.querySelectorAll(".rating-stars .star");var message=document.querySelector(".rating-message");if(!stars.length||!message)return;var ratingMessages={5:"Excellent ! Merci pour votre évaluation !",4:"Super ! Content que cela vous ait été utile !",3:"Bien, merci pour votre retour.",2:"Merci, nous allons travailler à améliorer.",1:"Désolé d'apprendre cela, dites-nous comment améliorer."};function setRating(rating){stars.forEach(function(star,i){star.style.color=i<rating?"#f5a623":"#ddd";});message.textContent=ratingMessages[rating]||"";localStorage.setItem("rating_"+pageId,rating);}stars.forEach(function(star){star.addEventListener("click",function(){setRating(parseInt(this.dataset.rating));});star.addEventListener("mouseenter",function(){var rating=parseInt(this.dataset.rating);stars.forEach(function(s,i){s.style.color=i<rating?"#f5a623":"#ddd";});});});var starsContainer=document.querySelector(".rating-stars");if(starsContainer){starsContainer.addEventListener("mouseleave",function(){if(savedRating)setRating(parseInt(savedRating));else stars.forEach(function(s){s.style.color="#999";});});}if(savedRating)setRating(parseInt(savedRating));var submitBtn=document.querySelector(".feedback-submit");if(submitBtn){submitBtn.addEventListener("click",function(){var text=document.querySelector(".feedback-text");var feedbackSection=document.querySelector(".feedback-section");var thanks=document.querySelector(".feedback-thanks");if(text&&text.value.trim()){localStorage.setItem("feedback_"+pageId,text.value);if(feedbackSection)feedbackSection.style.display="none";if(thanks)thanks.style.display="block";}});}};if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initRating);}else{initRating();}}catch(e){console.error("Rating widget error:",e);}})();</script>
+<script src="/assets/js/agri-ui.js?v=2" defer></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diseño de Riego por Goteo: Tubería, Laterales y Número de Emisores desde Cero</title>
+<meta name="description" content="Diseña un sistema de goteo desde cero: necesidad de agua, número de emisores, longitud de lateral, diámetro de tubería y presión de bomba con un ejemplo resuelto por hectárea.">
+<meta name="keywords" content="diseñador goteo primer trazado laterales, diseñador, goteo, primer, Tutoriales y Preguntas">
+<link rel="canonical" href="https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html"><meta property="og:url" content="https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/blog/tool-tutorials/drip-system-designer-first-design.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/blog/tool-tutorials/drip-system-designer-first-design.html">
+<meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=41">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diseño de Goteo por Primera Vez: Calibre Tubería, Laterales y Emisores desde una Hoja en Blanco",
+  "datePublished": "2026-09-14",
+  "dateModified": "2026-09-14",
+  "author": {"@type": "Person", "name": "Agricalc Editorial Team"},
+  "publisher": {"@type": "Organization", "name": "Agricalc", "logo": {"@type": "ImageObject", "url": "https://agricalc.online/assets/images/logo.png"}},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://agricalc.online/es/blog/tool-tutorials/drip-system-designer-first-design.html"},
+  "keywords": "diseñador goteo primer trazado laterales, diseñador, goteo, primer, Tutoriales y Preguntas",
+  "articleSection": "Tutoriales y Preguntas",
+  "description": "Diseña un sistema de goteo desde cero: necesidad de agua, número de emisores, longitud de lateral, diámetro de tubería y presión de bomba con un ejemplo resuelto por hectárea.",
+  "image": "https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg"
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo elijo los emisores para mi cultivo?", "acceptedAnswer": {"@type": "Answer", "text": "Parte del requerimiento hídrico pico en mm/día y del marco de plantación; divide los litros diarios por planta entre el caudal L/h del emisor para obtener el tiempo de riego. Dos emisores por planta reducen a la mitad el tiempo y dan redundancia en cultivos de alto valor."}}, {"@type": "Question", "name": "¿Qué presión debe entregar mi bomba?", "acceptedAnswer": {"@type": "Answer", "text": "Suma la presión del emisor (habitualmente 1 bar), la pérdida del lateral (típicamente 0,4-0,7 bar al extremo), la fricción de la principal y la altura. La mayoría de los sistemas planos necesita 1,8 a 2,2 bar a la entrada de la zona."}}, {"@type": "Question", "name": "¿Qué longitud debe tener cada lateral?", "acceptedAnswer": {"@type": "Answer", "text": "Mantén la longitud del lateral para que la pérdida de fricción quede bajo el 15 % de la presión operativa. Para cinta PE de 16 mm con emisores de 4 L/h cada 0,30 m, los laterales sobre 60-70 m empiezan a perder uniformidad."}}, {"@type": "Question", "name": "¿Qué malla de filtro necesito?", "acceptedAnswer": {"@type": "Answer", "text": "La mayoría de los emisores exige filtración de 120 a 130 micras, aproximadamente malla 120 a 150. Filtros de disco o de malla sirven ambos; lo clave es dimensionar al menos al doble del caudal nominal para que el retrolavado no ahogue el sistema."}}]}</script>
+<meta property="og:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diseño de Riego por Goteo: Tubería, Laterales y Número de Emisores desde Cero">
+<meta name="twitter:description" content="Diseña un sistema de goteo desde cero: necesidad de agua, número de emisores, longitud de lateral, diámetro de tubería y presión de bomba con un ejemplo resuelto por hectárea.">
+<meta name="twitter:image" content="https://agricalc.online/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg">
+<meta property="og:title" content="Diseño de Riego por Goteo: Tubería, Laterales y Número de Emisores desde Cero">
+<meta property="og:description" content="Diseña un sistema de goteo desde cero: necesidad de agua, número de emisores, longitud de lateral, diámetro de tubería y presión de bomba con un ejemplo resuelto por hectárea.">
+<meta property="og:type" content="article">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head>
+
+<body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Saltar al contenido</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/es/" aria-label="Inicio de Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/es/">Inicio</a>
+      <a class="ag-nav__link" href="/es/#tools">Herramientas</a>
+      <a class="ag-nav__link" href="/es/guides/">Guías</a>
+      <a class="ag-nav__link is-active" href="/es/blog/" aria-current="page">Blog</a>
+      <a class="ag-nav__link" href="/es/glossary/">Glosario</a>
+      <a class="ag-nav__link" href="/es/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Idioma">
+        <a class="ag-lang__btn" href="/blog/tool-tutorials/drip-system-designer-first-design.html">EN</a>
+        <a class="ag-lang__btn" href="/es/blog/tool-tutorials/drip-system-designer-first-design.html" aria-current="true">ES</a>
+        <a class="ag-lang__btn" href="/fr/blog/tool-tutorials/drip-system-designer-first-design.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/es/">Inicio</a>
+      <a href="/es/#tools">Herramientas</a>
+      <a href="/es/guides/">Guías</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/glossary/">Glosario</a>
+      <a href="/es/faq.html">FAQ</a>
+      <a href="/es/about.html">Acerca de</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Tutoriales y Preguntas</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Tutoriales y Preguntas</span>
+      <h1 class="ag-article-head__title">Diseño de Goteo por Primera Vez: Calibre Tubería, Laterales y Emisores desde una Hoja en Blanco</h1>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-09-14">14 Sep 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>6 min de lectura</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-general.webp" alt="Diseño de Goteo por Primera Vez: Calibre Tubería, Laterales y Emisores desde una Hoja en Blanco" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<p><img src="/assets/blog-img/tool-tutorials/drip-system-designer-first-design.svg" alt="diseñador goteo primer trazado laterales — pico L/h = plantas × emisores × L/h ; caudal zona = pico ÷ zonas ; bar bomba = e" width="1200" height="630" loading="lazy"></p>
+<div class="related-tools">
+<p><strong>Calculadoras relacionadas:</strong> <a href="/es/tools/drip-system-designer.html">drip system designer</a></p>
+</div>
+<p>Un primer sistema de goteo parece fontanería, pero es aritmética. Cinco decisiones — agua diaria, caudal del emisor, longitud del lateral, diámetro de la tubería y presión de la bomba — convierten una lista de compra intimidante en un diseño coherente que entrega la misma gota en la hilera uno y en la cincuenta.</p>
+<h2>Empieza por la Necesidad de Agua, no por el Tubo</h2>
+<p>Todo diseño de goteo empieza con el requerimiento hídrico pico del cultivo, expresado en mm/día o litros por metro cuadrado por día. Una parcela de hortalizas bajo acolchado plástico en pleno verano suele picar a 6 mm/día, unos 60 m3 por hectárea por día — el volumen que el sistema debe reponer en dos riegos de tres horas cada uno.</p>
+<p>Convierte volumen a emisores por planta usando el marco de plantación. Tomates a 0,45 m sobre la línea y 1,0 m entre líneas ocupan 0,45 m2; un emisor de 4 L/h por planta entrega el agua pico en 60/4×0,45 ≈ 6,75 horas por semana, o una hora al día. Dos emisores por planta reducen a la mitad el tiempo de riego y protegen contra taponamiento, la opción estándar en cultivos de alto valor.</p>
+<h3>Elegir el caudal del emisor</h3>
+<p>Bajo caudal (1-2 L/h) se adapta a suelos arenosos y marcos cerrados donde el bulbo mojado queda pequeño; medio (4 L/h) cubre la mayoría de hortalizas en francos; alto (8 L/h) es para frutales con zona radicular más amplia. Casar el emisor a la expansión lateral del suelo, no al más vendido del catálogo.</p>
+<h2>La Cadena de Diseño</h2>
+<h3>Paso 1: emisores por planta y por hectárea</h3>
+<p>Tomates a marco 0,45 × 1,0 m son 22 222 plantas por hectárea. Con dos emisores de 4 L/h por planta el caudal pico es 22 222 × 2 × 4 = 177 776 L/h durante el riego, unos 178 m3/h — claramente demasiado para una zona. Divide en cuatro zonas de 0,25 ha y cada una demanda 44 m3/h.</p>
+<h3>Paso 2: longitud del lateral y pérdida de presión</h3>
+<p>Los laterales corren a lo largo de la hilera. Con 1,0 m entre líneas, una zona de 0,25 ha (50 × 50 m) aloja 50 laterales de 50 m cada uno. Una cinta de PE de 16 mm con emisores de 4 L/h cada 0,30 m lleva unos 33 emisores en 50 m. La pérdida de presión a lo largo de un lateral de 50 m con ese caudal es aproximadamente 0,5 bar; sumado a los 1 bar del emisor, la entrada del lateral necesita unos 1,5 bar.</p>
+<h3>Paso 3: diámetro de la tubería principal</h3>
+<p>La principal entrega 44 m3/h a la zona. Las tablas de tubería PVC a presión indican una principal de 90 mm a 2 m/s de velocidad para ese caudal, con pérdida de unos 0,3 bar en 50 m. La bomba debe dar al menos 1,5 + 0,3 + 0,2 (válvulas y accesorios) = 2 bar a 44 m3/h — una bomba de 3 CV en parcela plana, 5 CV si hay altura de 20 m.</p>
+<h2>Ejemplo Resuelto: Parcela de Tomate de una Hectárea, Cuatro Zonas</h2>
+<p>Demanda pico diaria: 60 m3/ha. Marco tomate 0,45 × 1,0 m, dos emisores de 4 L/h por planta. Cuatro zonas de 0,25 ha cada una, regadas en secuencia dos veces al día a una hora cada una. Por zona: 11 111 plantas, 22 222 emisores, caudal pico 44 m3/h.</p>
+<p>Cada zona tiene 50 laterales de 50 m sobre cinta PE de 16 mm, con emisores cada 0,30 m y presión de entrada al lateral de 1,5 bar. La tubería principal es PVC de 90 mm en 50 m desde la bomba hasta la zona más lejana, con pérdida de carga de 0,3 bar. La bomba entrega 44 m3/h a 2,0 bar; una centrífuga superficial de 3 CV en parcela plana la cubre. Filtros: un filtro de disco malla 130 (120 micras) dimensionado para 50 m3/h para proteger los emisores del limo que más los tapona.</p>
+<h3>Zoneo y tiempo de riego</h3>
+<p>Zonas secuenciales mantienen el caudal pico bajo y la bomba pequeña. Con cuatro zonas cada una regando una hora dos veces al día, el ciclo completo termina en cuatro horas y la bomba descansa veinte — margen para días nublados en que la demanda cae y noches sin riego.</p>
+<h2>Errores y Notas Prácticas</h2>
+<h3>Comprar Tubería antes de Calcular la Demanda</h3>
+<p>Dimensionar la principal por ojo lleva a tubería cara de más o presión crónicamente baja en el último emisor. Calcula siempre el caudal pico por zona primero y luego lee la tabla de tubería para la velocidad que mantenga la fricción razonable.</p>
+<h3>Ignorar la Pérdida del Lateral</h3>
+<p>Un lateral no es un colector perfecto — la fricción cae la presión a lo largo, así que el último emisor cae menos que el primero. Limitar la longitud del lateral para mantener la pérdida bajo el 15 % de la presión operativa mantiene la uniformidad sobre 90 %, el umbral para goteo de alto valor.</p>
+<h3>Filtración Subdimensionada</h3>
+<p>Más sistemas de goteo fallan por emisores taponados que por cualquier otra causa. Dimensiona el filtro para el doble del caudal nominal de la zona para que el lavado nunca ahogue el riego, y purga los extremos de cada lateral semanalmente durante la temporada.</p>
+<p>Las herramientas de diseño de goteo y las hojas de cálculo de proveedores se reducen a la misma cadena — demanda pico, emisor, fricción del lateral, tubería principal y filtración. El Diseñador de Sistemas de Goteo de agricalc.online despliega los cinco pasos con un ejemplo resuelto en una sola pantalla.</p>
+<h2>Preguntas frecuentes</h2>
+<div class="faq-list">
+<div class="faq-item"><h3 class="faq-question">¿Cómo elijo los emisores para mi cultivo?</h3><div class="faq-answer"><p>Parte del requerimiento hídrico pico en mm/día y del marco de plantación; divide los litros diarios por planta entre el caudal L/h del emisor para obtener el tiempo de riego. Dos emisores por planta reducen a la mitad el tiempo y dan redundancia en cultivos de alto valor.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Qué presión debe entregar mi bomba?</h3><div class="faq-answer"><p>Suma la presión del emisor (habitualmente 1 bar), la pérdida del lateral (típicamente 0,4-0,7 bar al extremo), la fricción de la principal y la altura. La mayoría de los sistemas planos necesita 1,8 a 2,2 bar a la entrada de la zona.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Qué longitud debe tener cada lateral?</h3><div class="faq-answer"><p>Mantén la longitud del lateral para que la pérdida de fricción quede bajo el 15 % de la presión operativa. Para cinta PE de 16 mm con emisores de 4 L/h cada 0,30 m, los laterales sobre 60-70 m empiezan a perder uniformidad.</p></div></div>
+<div class="faq-item"><h3 class="faq-question">¿Qué malla de filtro necesito?</h3><div class="faq-answer"><p>La mayoría de los emisores exige filtración de 120 a 130 micras, aproximadamente malla 120 a 150. Filtros de disco o de malla sirven ambos; lo clave es dimensionar al menos al doble del caudal nominal para que el retrolavado no ahogue el sistema.</p></div></div>
+</div>
+<p>Un primer diseño de goteo son cinco decisiones encadenadas: agua pico, caudal del emisor, fricción del lateral, tubería principal y presión de bomba. Mete tu tamaño de parcela y marco en el Diseñador de Sistemas de Goteo de agricalc.online y obtén hoy una lista de compra coherente.</p>
+<div class="guide-related">
+      <h2>Calculadoras relacionadas</h2>
+      <div class="guide-related-links">
+        <a href="/es/tools/drip-system-designer.html">Drip System Designer Calculator</a>
+        <a href="/es/tools/yield-calculator.html">Yield Calculator</a>
+        <a href="/es/tools/fertilizer-calculator.html">Fertilizer Calculator</a>
+      </div>
+    </div>
+<div class="guide-related">
+      <h2>Artículos relacionados</h2>
+      <div class="guide-related-links">
+        <a href="/es/blog/tool-tutorials/">Tutoriales y Preguntas</a>
+        <a href="/es/blog/">Blog</a>
+      </div>
+    </div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="En esta página"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Equipo editorial</span>
+          <p class="ag-card__text ag-mt-5">
+            Revisado según las guías de extensión regionales y actualizado cuando cambian las recomendaciones.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Especialistas en tecnología agrícola</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Calculadoras relacionadas</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/es/tools/drip-system-designer.html">drip system designer</a></li>
+            <li><a href="/es/tools/yield-calculator.html">Yield Calculator</a></li>
+            <li><a href="/es/tools/fertilizer-calculator.html">Fertilizer Calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>En esta página</summary>
+        <nav data-ag-toc aria-label="En esta página"></nav>
+      </details>
+    </div>
+  <section class="ma-section" aria-labelledby="ma-title"><h2 class="ma-title" id="ma-title">Más artículos</h2><div class="ma-grid"><a class="ma-card" href="/es/blog/rice-yield-calculation-tropical.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/crops.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-08</span><span>Cultivos Tropicales</span></div></div></a><a class="ma-card" href="/es/blog/grain-storage-costs-drying.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/storage.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-07-08</span><span>Producción de Granos</span></div></div></a><a class="ma-card" href="/es/blog/fertilizer-nutrients/compost-application-rate-vegetable.html"><div class="ma-thumb"><img src="/assets/blog-img/covers/fertilizer.webp" alt="" width="640" height="360" loading="lazy"></div><div class="ma-body"><h3 class="ma-card-title"></h3><div class="ma-meta"><span>2026-09-14</span><span>Fertilizantes y Nutrientes</span></div></div></a></div></section></article>
+
+  
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculadoras, todas gratis y sin registro</p>
+        <p class="ag-cta__text">Siembra, suelo, riego, ganadería, maquinaria y finanzas agrícolas: elige una herramienta y obtén la respuesta en menos de un minuto.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/es/#tools">Ver calculadoras</a>
+    </div>
+  </div>
+</main>
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculadoras agrícolas gratuitas para la agricultura moderna.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Herramientas">
+        <p class="ag-footer__col-title">Herramientas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/#planting">Siembra</a></li>
+          <li><a href="/es/#land">Tierra y suelo</a></li>
+          <li><a href="/es/#livestock">Ganadería</a></li>
+          <li><a href="/es/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Recursos">
+        <p class="ag-footer__col-title">Recursos</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/guides/">Guías</a></li>
+          <li><a href="/es/blog/">Blog</a></li>
+          <li><a href="/es/glossary/">Glosario</a></li>
+          <li><a href="/es/faq.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Empresa">
+        <p class="ag-footer__col-title">Empresa</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/about.html">Acerca de</a></li>
+          <li><a href="/es/contact.html">Contacto</a></li>
+          <li><a href="/es/privacy.html">Privacidad</a></li>
+          <li><a href="/es/editorial-policy.html">Política editorial</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Idiomas">
+        <p class="ag-footer__col-title">Idiomas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">Solo a título informativo: consulte a los servicios de extensión locales o a un agrónomo antes de tomar decisiones basadas en estas cifras.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,2540 @@
+/* ============================================================================
+   Agricalc UI — Enterprise Design System  ·  agri-ui.css
+   ----------------------------------------------------------------------------
+   Load AFTER /assets/css/style.css. Fully additive & namespaced:
+     · `body.ag-page`  → page shell (fonts / colors / dark mode)
+     · `.prose`        → content container (element-level typography, no classes)
+     · `ag-*`          → components (isolated, cannot collide with legacy CSS)
+   Rule of engagement: NEVER write inline `style=` in content. Use a class.
+   ----------------------------------------------------------------------------
+   Changelog  v1.0  · initial release — tokens, prose, content atoms, components
+   ========================================================================== */
+
+
+/* ==========================================================================
+   0. SELF-HOSTED FONTS (see templates/README.md "字体" section)
+   Inter variable (100–900) + IBM Plex Mono 400/600, latin subset.
+   ~78 KB total, font-display: swap — zero CLS risk beyond fallback metrics.
+   ========================================================================== */
+@font-face {
+  font-family:'Inter';
+  src:url('/assets/fonts/InterVariable.woff2') format('woff2-variations');
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'IBM Plex Mono';
+  src:url('/assets/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:'IBM Plex Mono';
+  src:url('/assets/fonts/IBMPlexMono-SemiBold.woff2') format('woff2');
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+}
+
+
+/* ==========================================================================
+   1. DESIGN TOKENS
+   ========================================================================== */
+:root {
+  /* — Brand & accent ————————————————————————————— */
+  --ag-accent:            #0E6B45;
+  --ag-accent-strong:     #0A5636;
+  --ag-accent-hover:      #095030;
+  --ag-accent-subtle:     #EAF4EE;
+  --ag-accent-contrast:   #FFFFFF;
+  /* 完整 accent 色阶（全站收敛时补齐：老样式表里存在大量中间调绿色，
+     只有 5 级会让它们全部挤到 --ag-accent 上，梯度全丢） */
+  --ag-accent-50:         #F2F9F5;
+  --ag-accent-100:        #C9E3D4;
+  --ag-accent-200:        #A5D2BA;
+  --ag-accent-300:        #7FC1A0;
+  --ag-accent-400:        #4FA47D;
+
+  /* — Surfaces ————————————————————————————————— */
+  --ag-bg-page:           #FBFAF8;
+  --ag-bg-surface:        #FFFFFF;
+  --ag-bg-sunken:         #F4F5F3;
+  --ag-bg-raised:         #FFFFFF;
+  --ag-bg-inverse:        #12211A;
+  --ag-bg-overlay:        rgba(14, 26, 20, .55);
+
+  /* — Text ———————————————————————————————————— */
+  --ag-text-primary:      #16181A;
+  --ag-text-body:         #2C3330;
+  --ag-text-secondary:    #565D5A;
+  --ag-text-muted:        #8A918E;
+  --ag-text-inverse:      #F2F5F3;
+  --ag-text-inverse-dim:  #A9B5AF;
+
+  /* — Borders ————————————————————————————————— */
+  --ag-border:            #E6E8E6;
+  --ag-border-strong:     #CFD4D1;
+  --ag-border-inverse:    rgba(255, 255, 255, .14);
+
+  /* — Semantic ———————————————————————————————— */
+  --ag-info-bg:           #EDF4FC;   --ag-info-border:  #C3DCF5;
+  --ag-info-text:         #0D4C86;   --ag-info-icon:    #1565C0;
+  --ag-warn-bg:           #FDF4E6;   --ag-warn-border:  #F3DDB4;
+  --ag-warn-text:         #7A4800;   --ag-warn-icon:    #B26A00;
+  --ag-success-bg:        #EBF6EE;   --ag-success-border:#C2E3CC;
+  --ag-success-text:      #14532D;   --ag-success-icon: #2E7D32;
+  --ag-danger-bg:         #FCEDEC;   --ag-danger-border:#F4C9C6;
+  --ag-danger-text:       #8A1F19;   --ag-danger-icon: #C62828;
+
+  /* — Code ———————————————————————————————————— */
+  --ag-code-bg:           #10201A;
+  --ag-code-border:       #1E332A;
+  --ag-code-text:         #E4EDE8;
+  --ag-code-inline-bg:    #F1F3F1;
+
+  /* — Radius —————————————————————————————————— */
+  --ag-radius-1:          6px;
+  --ag-radius-2:          8px;
+  --ag-radius-3:          12px;
+  --ag-radius-4:          16px;
+  --ag-radius-pill:       999px;
+
+  /* — Spacing scale (4pt) —————————————————————— */
+  --ag-space-1:           4px;
+  --ag-space-2:           8px;
+  --ag-space-3:           12px;
+  --ag-space-4:           16px;
+  --ag-space-5:           24px;
+  --ag-space-6:           32px;
+  --ag-space-7:           48px;
+  --ag-space-8:           80px;
+
+  /* — Measures ————————————————————————————————— */
+  --ag-measure-article:   720px;
+  --ag-measure-wide:      860px;
+  --ag-measure-page:      1200px;
+  --ag-sidebar-w:         288px;
+  --ag-header-h:          64px;
+
+  /* — Typography ——————————————————————————————— */
+  --ag-font-ui:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --ag-font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono',
+                  Menlo, Consolas, 'Liberation Mono', monospace;
+  --ag-font-serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+
+  --ag-fs-100:    0.75rem;
+  --ag-fs-200:    0.8125rem;
+  --ag-fs-300:    0.875rem;
+  --ag-fs-400:    0.9375rem;
+  --ag-fs-500:    1rem;
+  --ag-fs-600:    1.0625rem;
+  --ag-fs-700:    1.25rem;
+  --ag-fs-800:    1.5rem;
+  --ag-fs-900:    1.75rem;
+  --ag-fs-h2:     clamp(1.4375rem, 1.15rem + 1.05vw, 1.8125rem);
+  --ag-fs-h1:     clamp(1.875rem, 1.35rem + 2.1vw, 2.75rem);
+
+  --ag-lh-tight:  1.2;
+  --ag-lh-heading:1.3;
+  --ag-lh-snug:   1.5;
+  --ag-lh-body:   1.72;
+
+  /* — Elevation (three-layer, low-opacity) ——————— */
+  --ag-shadow-1: 0 1px 2px rgba(16, 24, 20, .06),
+                 0 1px 1px rgba(16, 24, 20, .04);
+  --ag-shadow-2: 0 2px 4px rgba(16, 24, 20, .05),
+                 0 4px 12px rgba(16, 24, 20, .06);
+  --ag-shadow-3: 0 8px 24px rgba(16, 24, 20, .08),
+                 0 2px 6px rgba(16, 24, 20, .05);
+  --ag-shadow-4: 0 1px 1px rgba(16, 24, 20, .04),
+                 0 8px 16px rgba(16, 24, 20, .06),
+                 0 24px 48px rgba(16, 24, 20, .10);
+
+  /* — Motion ——————————————————————————————————— */
+  --ag-ease:      cubic-bezier(.22, .61, .36, 1);
+  --ag-dur-fast:  .14s;
+  --ag-dur:       .22s;
+
+  /* — Layout ——————————————————————————————————— */
+  --ag-gutter:    var(--ag-space-5);
+  --ag-section-y: var(--ag-space-8);
+}
+
+/* — Dark theme. Keyed off the legacy `dark-mode` body class (used by
+     common.js toggleDarkMode) so both worlds stay in sync. ——————————————— */
+body.dark-mode,
+[data-theme="dark"] {
+  --ag-accent:            #4FBF8B;
+  --ag-accent-strong:     #6ED3A2;
+  --ag-accent-hover:      #7AD9AB;
+  --ag-accent-subtle:     #16281F;
+  --ag-accent-contrast:   #06251A;
+  --ag-accent-50:         #0E1A14;
+  --ag-accent-100:        #1C3A2B;
+  --ag-accent-200:        #25513C;
+  --ag-accent-300:        #3E8F68;
+  --ag-accent-400:        #46A87A;
+
+  --ag-bg-page:           #0F1412;
+  --ag-bg-surface:        #161D1A;
+  --ag-bg-sunken:         #101614;
+  --ag-bg-raised:         #1B2320;
+  --ag-bg-inverse:        #F4F5F3;
+  --ag-bg-overlay:        rgba(0, 0, 0, .6);
+
+  --ag-text-primary:      #ECEFED;
+  --ag-text-body:         #D3D9D6;
+  --ag-text-secondary:    #A3ACA8;
+  --ag-text-muted:        #78817D;
+  --ag-text-inverse:      #12211A;
+  --ag-text-inverse-dim:  #4C5652;
+
+  --ag-border:            #242C29;
+  --ag-border-strong:     #333C38;
+  --ag-border-inverse:    rgba(0, 0, 0, .14);
+
+  --ag-info-bg:           #122230;  --ag-info-border:  #1D3A55;
+  --ag-info-text:         #A8CFF0;  --ag-info-icon:    #64A8E6;
+  --ag-warn-bg:           #251E10;  --ag-warn-border:  #43381D;
+  --ag-warn-text:         #EFD49A;  --ag-warn-icon:    #D9A94A;
+  --ag-success-bg:        #10231A;  --ag-success-border:#1D3F2B;
+  --ag-success-text:      #A6DCB8;  --ag-success-icon: #5CBB7C;
+  --ag-danger-bg:         #291413;  --ag-danger-border: #4A2320;
+  --ag-danger-text:       #F0B3AE;  --ag-danger-icon:  #DB6E67;
+
+  --ag-code-bg:           #0B120F;
+  --ag-code-border:       #1C2B24;
+  --ag-code-inline-bg:    #1E2724;
+
+  --ag-shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --ag-shadow-2: 0 2px 4px rgba(0, 0, 0, .35), 0 4px 12px rgba(0, 0, 0, .3);
+  --ag-shadow-3: 0 8px 24px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .3);
+  --ag-shadow-4: 0 1px 1px rgba(0, 0, 0, .3), 0 8px 16px rgba(0, 0, 0, .35),
+                 0 24px 48px rgba(0, 0, 0, .5);
+}
+
+
+/* ==========================================================================
+   2. PAGE SHELL
+   Only `body.ag-page` is themed — legacy pages keep their original look.
+   ========================================================================== */
+body.ag-page {
+  font-family:var(--ag-font-ui);
+  background-color:var(--ag-bg-page);
+  color:var(--ag-text-body);
+  font-size:var(--ag-fs-500);
+  line-height:var(--ag-lh-snug);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+body.ag-page :is(h1, h2, h3, h4, h5, h6) {
+  font-family:var(--ag-font-ui);
+  color:var(--ag-text-primary);
+  font-weight:700;
+  letter-spacing:-0.014em;
+  line-height:var(--ag-lh-heading);
+  text-wrap:balance;
+}
+
+body.ag-page ::selection {
+  background:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+}
+
+/* Visible focus for keyboard users only — never remove outlines wholesale. */
+body.ag-page :focus-visible {
+  outline:2px solid var(--ag-accent);
+  outline-offset:2px;
+  border-radius:var(--ag-radius-1);
+}
+
+.ag-wrap {
+  width:100%;
+  max-width:var(--ag-measure-page);
+  margin-inline:auto;
+  padding-inline:var(--ag-gutter);
+}
+.ag-wrap--narrow { max-width:var(--ag-measure-wide); }
+
+
+/* ==========================================================================
+   3. PROSE — the content container
+   --------------------------------------------------------------------------
+   Authors write plain semantic HTML inside `.prose`. No classes, no inline
+   styles. Vertical rhythm is owned by `> * + *`, which eliminates the classic
+   "double margin / collapsed margin / first-child gap" bugs for good.
+   ========================================================================== */
+.prose {
+  font-family:var(--ag-font-ui);
+  font-size:var(--ag-fs-600);
+  line-height:var(--ag-lh-body);
+  color:var(--ag-text-body);
+  max-width:var(--ag-measure-article);
+  overflow-wrap:break-word;
+}
+
+/* — vertical rhythm ————————————————————————————— */
+.prose > * + * { margin-top:1.15em; }
+.prose > :is(h2, h3, h4) { margin-top:2.4em; }
+.prose > :is(h2, h3, h4) + * { margin-top:0.7em; }
+.prose > :is(ul, ol) + *,
+.prose > * + :is(ul, ol) { margin-top:1.15em; }
+.prose > .content-figure + *,
+.prose > * + .content-figure { margin-top:2.2em; }
+
+/* — headings ————————————————————————————————————— */
+.prose h2 {
+  font-size:var(--ag-fs-h2);
+  line-height:var(--ag-lh-heading);
+  letter-spacing:-0.019em;
+  padding-bottom:.35em;
+  border-bottom:1px solid var(--ag-border);
+}
+.prose h3 {
+  font-size:var(--ag-fs-700);
+  line-height:var(--ag-lh-heading);
+  letter-spacing:-0.012em;
+  margin-top:2em;
+}
+.prose h4 {
+  font-size:var(--ag-fs-600);
+  font-weight:600;
+  color:var(--ag-text-primary);
+  margin-top:1.8em;
+}
+.prose h5,
+.prose h6 {
+  font-size:var(--ag-fs-400);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ag-text-secondary);
+  margin-top:1.8em;
+}
+/* Sticky-header-safe anchor targets. */
+.prose :is(h1, h2, h3, h4) {
+  scroll-margin-top:calc(var(--ag-header-h) + var(--ag-space-4));
+}
+
+/* — text ————————————————————————————————————————— */
+.prose p { margin:0; }
+.prose > p:first-child {
+  font-size:1.105em;
+  line-height:1.68;
+  color:var(--ag-text-primary);
+}
+.prose strong, .prose b { font-weight:650; color:var(--ag-text-primary); }
+.prose em, .prose i { font-style:italic; }
+.prose small { font-size:var(--ag-fs-300); color:var(--ag-text-secondary); }
+.prose mark {
+  background:var(--ag-warn-bg);
+  color:var(--ag-warn-text);
+  padding:.08em .28em;
+  border-radius:var(--ag-radius-1);
+}
+.prose abbr[title] { text-decoration:underline dotted; text-underline-offset:.2em; }
+.prose sup, .prose sub { font-size:.72em; line-height:0; }
+.prose .lead {
+  font-size:1.22em;
+  line-height:1.6;
+  color:var(--ag-text-secondary);
+  font-weight:400;
+}
+
+/* — links ————————————————————————————————————————— */
+.prose a {
+  color:var(--ag-accent-strong);
+  text-decoration:underline;
+  text-decoration-thickness:.055em;
+  text-underline-offset:.18em;
+  text-decoration-color:currentColor;
+  transition:color var(--ag-dur-fast) var(--ag-ease);
+}
+@supports (text-decoration-color: color-mix(in srgb, red 40%, transparent)) {
+  .prose a { text-decoration-color:color-mix(in srgb, currentColor 38%, transparent); }
+}
+.prose a:hover {
+  color:var(--ag-accent-hover);
+  text-decoration-color:currentColor;
+}
+
+/* — lists ————————————————————————————————————————— */
+.prose :is(ul, ol) { padding-left:1.3em; margin:0; }
+.prose li { padding-left:.2em; }
+.prose li + li { margin-top:.42em; }
+.prose li::marker { color:var(--ag-accent); font-weight:600; }
+.prose ul { list-style:disc; }
+.prose ul ul { list-style:circle; }
+.prose ul ul ul { list-style:square; }
+.prose ol { list-style:decimal; }
+.prose ol ol { list-style:lower-alpha; }
+.prose :is(ul, ol) :is(ul, ol) { margin-top:.42em; }
+.prose li > p { margin:0; }
+.prose li > p + p { margin-top:.5em; }
+/* Definition list — tidy without extra markup. */
+.prose dl { margin:0; }
+.prose dt { font-weight:600; color:var(--ag-text-primary); margin-top:1em; }
+.prose dd { margin:.3em 0 0; padding-left:1.1em; border-left:2px solid var(--ag-border); }
+
+/* — blockquote ——————————————————————————————————— */
+.prose blockquote {
+  margin:2em 0;
+  padding:.1em 0 .1em 1.4em;
+  border-left:3px solid var(--ag-accent);
+  font-size:1.1em;
+  line-height:1.62;
+  color:var(--ag-text-primary);
+}
+.prose blockquote p { margin:0; }
+.prose blockquote p + p { margin-top:.8em; }
+.prose blockquote cite,
+.prose blockquote footer {
+  display:block;
+  margin-top:.8em;
+  font-size:var(--ag-fs-200);
+  font-style:normal;
+  color:var(--ag-text-muted);
+  letter-spacing:.01em;
+}
+.prose blockquote cite::before { content:"— "; }
+
+/* — horizontal rule ——————————————————————————————— */
+.prose hr {
+  height:1px;
+  margin:2.8em 0;
+  border:0;
+  background:var(--ag-border);
+}
+.prose hr.decorative {
+  height:auto;
+  border:0;
+  background:none;
+  text-align:center;
+  color:var(--ag-border-strong);
+  letter-spacing:.6em;
+}
+.prose hr.decorative::after { content:"• • •"; }
+
+/* — code ————————————————————————————————————————— */
+.prose code,
+.prose kbd,
+.prose samp {
+  font-family:var(--ag-font-mono);
+  font-size:.875em;
+  font-variant-ligatures:none;
+}
+.prose :not(pre) > code {
+  background:var(--ag-code-inline-bg);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-1);
+  padding:.12em .38em;
+  color:var(--ag-text-primary);
+  white-space:nowrap;
+}
+.prose kbd {
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border-strong);
+  border-bottom-width:2px;
+  border-radius:var(--ag-radius-1);
+  padding:.1em .42em;
+  font-size:.8em;
+  color:var(--ag-text-primary);
+  box-shadow:var(--ag-shadow-1);
+}
+.prose pre {
+  background:var(--ag-code-bg);
+  border:1px solid var(--ag-code-border);
+  border-radius:var(--ag-radius-3);
+  padding:1.15em 1.3em;
+  overflow-x:auto;
+  font-size:var(--ag-fs-300);
+  line-height:1.68;
+  color:var(--ag-code-text);
+  -webkit-overflow-scrolling:touch;
+}
+.prose pre code {
+  background:none;
+  border:0;
+  padding:0;
+  font-size:inherit;
+  color:inherit;
+  white-space:pre;
+}
+.code-block {
+  position:relative;
+  margin:2em 0;
+}
+.code-block pre { margin:0; }
+.code-block__label {
+  display:block;
+  font-family:var(--ag-font-mono);
+  font-size:var(--ag-fs-100);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+  margin-bottom:.5em;
+}
+.code-block__copy {
+  position:absolute;
+  top:.6em;
+  right:.6em;
+  font:inherit;
+  font-size:var(--ag-fs-100);
+  font-family:var(--ag-font-ui);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--ag-text-inverse-dim);
+  background:rgba(255, 255, 255, .07);
+  border:1px solid rgba(255, 255, 255, .14);
+  border-radius:var(--ag-radius-1);
+  padding:.3em .6em;
+  cursor:pointer;
+  opacity:0;
+  transition:opacity var(--ag-dur) var(--ag-ease), background var(--ag-dur-fast);
+}
+.code-block:hover .code-block__copy,
+.code-block__copy:focus-visible { opacity:1; }
+.code-block__copy:hover { background:rgba(255, 255, 255, .16); color:var(--ag-bg-surface); }
+
+/* — tables ————————————————————————————————————————— */
+.prose table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:var(--ag-fs-400);
+  line-height:1.55;
+  font-variant-numeric:tabular-nums;
+}
+.prose caption {
+  caption-side:top;
+  text-align:left;
+  font-size:var(--ag-fs-200);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+  padding-bottom:.6em;
+}
+.prose thead th {
+  text-align:left;
+  font-weight:600;
+  color:var(--ag-text-primary);
+  background:var(--ag-bg-sunken);
+  padding:.72em .9em;
+  border-bottom:1px solid var(--ag-border-strong);
+  white-space:nowrap;
+}
+.prose tbody td {
+  padding:.72em .9em;
+  border-bottom:1px solid var(--ag-border);
+  vertical-align:top;
+}
+.prose tbody tr:last-child td { border-bottom:0; }
+.prose tbody tr:hover { background:var(--ag-bg-sunken); }
+.prose :is(td, th).num { text-align:right; font-variant-numeric:tabular-nums; }
+.prose :is(td, th).center { text-align:center; }
+/* Author-friendly scroll container; also auto-falls back on small screens. */
+.content-table { margin:2em 0; }
+.content-table .content-table__scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.content-table figcaption { margin-top:.8em; font-size:var(--ag-fs-200); color:var(--ag-text-muted); }
+
+/* — media ————————————————————————————————————————— */
+.prose img,
+.prose video {
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:var(--ag-radius-3);
+}
+.prose figure { margin:0; }
+.prose figcaption {
+  margin-top:.85em;
+  font-size:var(--ag-fs-200);
+  line-height:1.55;
+  color:var(--ag-text-muted);
+}
+.content-figure { margin:2.2em 0; }
+.content-figure img {
+  width:100%;
+  border:1px solid var(--ag-border);
+  background:var(--ag-bg-sunken);
+}
+.content-figure--bleed { max-width:var(--ag-measure-wide); }
+.content-figure--bordered img { box-shadow:var(--ag-shadow-2); }
+
+
+/* ==========================================================================
+   4. CONTENT ATOMS — editorial patterns authors reach for every day
+   ========================================================================== */
+
+/* — 4.1 Callout ——————————————————————————————————— */
+.callout {
+  display:flex;
+  gap:.8em;
+  align-items:flex-start;
+  margin:2em 0;
+  padding:1.05em 1.2em;
+  border:1px solid;
+  border-radius:var(--ag-radius-3);
+  font-size:var(--ag-fs-400);
+  line-height:1.62;
+  color:var(--ag-text-body);
+}
+.callout__icon { flex:0 0 auto; width:1.15em; height:1.15em; margin-top:.22em; }
+.callout__icon svg { display:block; width:100%; height:100%; }
+.callout__body { flex:1 1 auto; min-width:0; }
+.callout__title {
+  display:block;
+  font-weight:600;
+  font-size:var(--ag-fs-500);
+  margin-bottom:.22em;
+}
+.callout > .callout__body > :last-child { margin-bottom:0; }
+.callout p { margin:0; }
+.callout p + p { margin-top:.55em; }
+.callout :is(ul, ol) { margin:.5em 0 0; padding-left:1.25em; }
+
+.callout--info    { background:var(--ag-info-bg);    border-color:var(--ag-info-border);    color:var(--ag-info-text); }
+.callout--info    .callout__title, .callout--info a    { color:var(--ag-info-text); }
+.callout--warn    { background:var(--ag-warn-bg);    border-color:var(--ag-warn-border);    color:var(--ag-warn-text); }
+.callout--warn    .callout__title, .callout--warn a    { color:var(--ag-warn-text); }
+.callout--success { background:var(--ag-success-bg); border-color:var(--ag-success-border); color:var(--ag-success-text); }
+.callout--success .callout__title, .callout--success a { color:var(--ag-success-text); }
+.callout--danger  { background:var(--ag-danger-bg);  border-color:var(--ag-danger-border);  color:var(--ag-danger-text); }
+.callout--danger  .callout__title, .callout--danger a  { color:var(--ag-danger-text); }
+.callout--tip     { background:var(--ag-accent-subtle); border-color:color-mix(in srgb, var(--ag-accent) 26%, transparent); color:var(--ag-accent-strong); }
+.callout--tip     .callout__title { color:var(--ag-accent-strong); }
+
+/* — 4.2 Key takeaways ————————————————————————————— */
+.key-takeaways {
+  margin:2.4em 0;
+  padding:1.5em 1.6em;
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-top:3px solid var(--ag-accent);
+  border-radius:var(--ag-radius-3);
+  box-shadow:var(--ag-shadow-2);
+}
+.key-takeaways__title {
+  display:flex;
+  align-items:center;
+  gap:.5em;
+  font-size:var(--ag-fs-300);
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ag-accent-strong);
+  margin-bottom:.9em;
+}
+.key-takeaways ul { list-style:none; padding:0; margin:0; }
+.key-takeaways li {
+  position:relative;
+  padding-left:1.7em;
+  font-size:var(--ag-fs-400);
+  line-height:1.6;
+}
+.key-takeaways li + li { margin-top:.6em; }
+.key-takeaways li::before {
+  content:"";
+  position:absolute;
+  left:.1em;
+  top:.58em;
+  width:.5em;
+  height:.28em;
+  border-left:2px solid var(--ag-accent);
+  border-bottom:2px solid var(--ag-accent);
+  transform:rotate(-45deg);
+}
+
+/* — 4.3 Stat strip ———————————————————————————————— */
+.stat-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:1px;
+  margin:2.2em 0;
+  background:var(--ag-border);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  overflow:hidden;
+}
+.stat {
+  background:var(--ag-bg-surface);
+  padding:1.1em 1.2em;
+}
+.stat__value {
+  display:block;
+  font-family:var(--ag-font-mono);
+  font-size:1.5rem;
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  font-variant-numeric:tabular-nums;
+  color:var(--ag-accent-strong);
+}
+.stat__unit { font-size:.55em; font-weight:500; color:var(--ag-text-secondary); margin-left:.18em; }
+.stat__label {
+  display:block;
+  margin-top:.35em;
+  font-size:var(--ag-fs-200);
+  line-height:1.45;
+  color:var(--ag-text-secondary);
+}
+
+/* — 4.4 Formula / calculation block ———————————————— */
+.formula {
+  margin:2em 0;
+  padding:1.2em 1.4em;
+  background:var(--ag-bg-sunken);
+  border:1px solid var(--ag-border);
+  border-left:3px solid var(--ag-accent);
+  border-radius:var(--ag-radius-2);
+  font-family:var(--ag-font-mono);
+  font-size:var(--ag-fs-400);
+  line-height:1.9;
+  color:var(--ag-text-primary);
+  overflow-x:auto;
+}
+.formula__label {
+  display:block;
+  font-family:var(--ag-font-ui);
+  font-size:var(--ag-fs-100);
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+  margin-bottom:.5em;
+}
+.formula var { font-style:italic; color:var(--ag-accent-strong); }
+
+
+/* ==========================================================================
+   5. COMPONENTS — `ag-` prefixed, collision-proof
+   ========================================================================== */
+
+/* — 5.1 Header / nav ——————————————————————————————— */
+.ag-header {
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:color-mix(in srgb, var(--ag-bg-page) 82%, transparent);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--ag-border);
+}
+@supports not (backdrop-filter: blur(2px)) {
+  .ag-header { background:var(--ag-bg-page); }
+}
+.ag-header__inner {
+  display:flex;
+  align-items:center;
+  gap:var(--ag-space-5);
+  min-height:var(--ag-header-h);
+}
+.ag-brand {
+  display:inline-flex;
+  align-items:center;
+  gap:.55em;
+  font-size:1.0625rem;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  color:var(--ag-text-primary);
+  text-decoration:none;
+  flex:0 0 auto;
+}
+.ag-brand:hover { color:var(--ag-text-primary); text-decoration:none; }
+.ag-brand__mark {
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  border-radius:var(--ag-radius-2);
+  background:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+  flex:0 0 auto;
+}
+.ag-brand__mark svg { width:17px; height:17px; display:block; }
+
+.ag-nav {
+  display:flex;
+  align-items:center;
+  gap:.15em;
+  margin-left:auto;
+  flex-wrap:nowrap;
+}
+.ag-nav__link {
+  display:inline-block;
+  padding:.42em .72em;
+  border-radius:var(--ag-radius-1);
+  font-size:var(--ag-fs-400);
+  font-weight:500;
+  color:var(--ag-text-secondary);
+  text-decoration:none;
+  white-space:nowrap;
+  transition:color var(--ag-dur-fast) var(--ag-ease), background var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-nav__link:hover {
+  color:var(--ag-text-primary);
+  background:var(--ag-bg-sunken);
+  text-decoration:none;
+}
+.ag-nav__link[aria-current="page"],
+.ag-nav__link.is-active {
+  color:var(--ag-accent-strong);
+  background:var(--ag-accent-subtle);
+}
+.ag-nav__sep {
+  width:1px;
+  height:18px;
+  background:var(--ag-border);
+  margin-inline:.45em;
+  flex:0 0 auto;
+}
+.ag-lang {
+  display:inline-flex;
+  gap:2px;
+  padding:2px;
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-1);
+  background:var(--ag-bg-surface);
+}
+.ag-lang__btn {
+  padding:.26em .5em;
+  border-radius:var(--ag-radius-1);
+  font-size:var(--ag-fs-100);
+  font-weight:700;
+  letter-spacing:.04em;
+  color:var(--ag-text-secondary);
+  text-decoration:none;
+}
+.ag-lang__btn:hover { background:var(--ag-bg-sunken); color:var(--ag-text-primary); text-decoration:none; }
+.ag-lang__btn[aria-current="true"] { background:var(--ag-accent); color:var(--ag-accent-contrast); }
+
+.ag-header__actions { display:flex; align-items:center; gap:var(--ag-space-2); flex:0 0 auto; }
+
+.ag-icon-btn {
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-2);
+  background:var(--ag-bg-surface);
+  color:var(--ag-text-secondary);
+  cursor:pointer;
+  transition:background var(--ag-dur-fast) var(--ag-ease), color var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-icon-btn:hover { background:var(--ag-bg-sunken); color:var(--ag-text-primary); }
+.ag-icon-btn svg { width:17px; height:17px; display:block; }
+.ag-menu-btn { display:none; }
+
+.ag-mobile-nav {
+  display:none;
+  border-top:1px solid var(--ag-border);
+  padding:var(--ag-space-3) 0 var(--ag-space-4);
+  background:var(--ag-bg-page);
+}
+.ag-mobile-nav[data-open="true"] { display:block; }
+.ag-mobile-nav a {
+  display:block;
+  padding:.62em .3em;
+  font-size:var(--ag-fs-500);
+  font-weight:500;
+  color:var(--ag-text-body);
+  text-decoration:none;
+  border-bottom:1px solid var(--ag-border);
+}
+.ag-mobile-nav a:last-child { border-bottom:0; }
+
+/* — 5.2 Reading progress ———————————————————————————— */
+.ag-progress {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:70;
+  height:3px;
+  width:0;
+  background:linear-gradient(90deg, var(--ag-accent), var(--ag-accent-strong));
+  transition:width .1s linear;
+}
+
+/* — 5.3 Breadcrumb ————————————————————————————————— */
+.ag-breadcrumb {
+  padding:var(--ag-space-4) 0 0;
+  font-size:var(--ag-fs-200);
+  color:var(--ag-text-muted);
+}
+.ag-breadcrumb ol {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.45em;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.ag-breadcrumb li { display:inline-flex; align-items:center; gap:.45em; }
+.ag-breadcrumb li + li::before {
+  content:"";
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:var(--ag-border-strong);
+  flex:0 0 auto;
+}
+.ag-breadcrumb a { color:var(--ag-text-secondary); text-decoration:none; }
+.ag-breadcrumb a:hover { color:var(--ag-accent-strong); text-decoration:underline; text-underline-offset:.18em; }
+.ag-breadcrumb [aria-current="page"] { color:var(--ag-text-muted); }
+
+/* — 5.4 Buttons ———————————————————————————————————— */
+.ag-btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  min-height:42px;
+  padding:0 1.1em;
+  border:1px solid transparent;
+  border-radius:var(--ag-radius-2);
+  font-family:var(--ag-font-ui);
+  font-size:var(--ag-fs-400);
+  font-weight:600;
+  letter-spacing:-0.005em;
+  line-height:1;
+  text-decoration:none;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background var(--ag-dur-fast) var(--ag-ease),
+              border-color var(--ag-dur-fast) var(--ag-ease),
+              color var(--ag-dur-fast) var(--ag-ease),
+              box-shadow var(--ag-dur-fast) var(--ag-ease),
+              transform var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-btn svg { width:16px; height:16px; flex:0 0 auto; }
+.ag-btn:hover { text-decoration:none; }
+.ag-btn:active { transform:translateY(1px); }
+
+.ag-btn--primary {
+  background:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+  box-shadow:var(--ag-shadow-1);
+}
+.ag-btn--primary:hover { background:var(--ag-accent-strong); box-shadow:var(--ag-shadow-2); }
+
+.ag-btn--secondary {
+  background:var(--ag-bg-surface);
+  color:var(--ag-text-primary);
+  border-color:var(--ag-border-strong);
+  box-shadow:var(--ag-shadow-1);
+}
+.ag-btn--secondary:hover { background:var(--ag-bg-sunken); border-color:var(--ag-text-muted); }
+
+.ag-btn--ghost { background:transparent; color:var(--ag-accent-strong); }
+.ag-btn--ghost:hover { background:var(--ag-accent-subtle); }
+
+.ag-btn--quiet { background:transparent; color:var(--ag-text-secondary); }
+.ag-btn--quiet:hover { background:var(--ag-bg-sunken); color:var(--ag-text-primary); }
+
+.ag-btn--sm { min-height:34px; padding:0 .85em; font-size:var(--ag-fs-300); }
+.ag-btn--lg { min-height:50px; padding:0 1.45em; font-size:var(--ag-fs-500); }
+.ag-btn--block { display:flex; width:100%; }
+.ag-btn[disabled], .ag-btn[aria-disabled="true"] { opacity:.5; pointer-events:none; }
+
+.ag-actions { display:flex; flex-wrap:wrap; gap:var(--ag-space-3); align-items:center; }
+
+/* — 5.5 Badges & chips ————————————————————————————— */
+.ag-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:.35em;
+  padding:.24em .6em;
+  border-radius:var(--ag-radius-pill);
+  font-size:var(--ag-fs-100);
+  font-weight:600;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  background:var(--ag-bg-sunken);
+  color:var(--ag-text-secondary);
+  border:1px solid var(--ag-border);
+  text-decoration:none;
+  white-space:nowrap;
+}
+.ag-badge--accent { background:var(--ag-accent-subtle); color:var(--ag-accent-strong); border-color:color-mix(in srgb, var(--ag-accent) 24%, transparent); }
+.ag-badge--info    { background:var(--ag-info-bg);    color:var(--ag-info-text);    border-color:var(--ag-info-border); }
+.ag-badge--warn    { background:var(--ag-warn-bg);    color:var(--ag-warn-text);    border-color:var(--ag-warn-border); }
+.ag-badge--success { background:var(--ag-success-bg); color:var(--ag-success-text); border-color:var(--ag-success-border); }
+
+.ag-chips { display:flex; flex-wrap:wrap; gap:var(--ag-space-2); }
+.ag-chip {
+  display:inline-flex;
+  align-items:center;
+  gap:.4em;
+  min-height:36px;
+  padding:0 .95em;
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-pill);
+  background:var(--ag-bg-surface);
+  font-size:var(--ag-fs-400);
+  font-weight:500;
+  color:var(--ag-text-secondary);
+  text-decoration:none;
+  cursor:pointer;
+  transition:all var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-chip:hover { border-color:var(--ag-border-strong); color:var(--ag-text-primary); background:var(--ag-bg-sunken); text-decoration:none; }
+.ag-chip[aria-pressed="true"], .ag-chip.is-active {
+  background:var(--ag-accent);
+  border-color:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+}
+.ag-chip__count {
+  font-family:var(--ag-font-mono);
+  font-size:var(--ag-fs-100);
+  opacity:.7;
+}
+
+/* — 5.6 Cards ——————————————————————————————————————— */
+.ag-card {
+  display:flex;
+  flex-direction:column;
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  box-shadow:var(--ag-shadow-1);
+  overflow:hidden;
+  transition:box-shadow var(--ag-dur) var(--ag-ease),
+              transform var(--ag-dur) var(--ag-ease),
+              border-color var(--ag-dur) var(--ag-ease);
+}
+.ag-card--pad { padding:var(--ag-space-5); }
+.ag-card--link:hover {
+  transform:translateY(-2px);
+  box-shadow:var(--ag-shadow-3);
+  border-color:var(--ag-border-strong);
+}
+.ag-card__body { padding:var(--ag-space-5); display:flex; flex-direction:column; flex:1 1 auto; gap:.6em; }
+.ag-card__title {
+  font-size:var(--ag-fs-600);
+  font-weight:650;
+  line-height:1.36;
+  letter-spacing:-0.012em;
+  color:var(--ag-text-primary);
+  margin:0;
+}
+.ag-card__text {
+  font-size:var(--ag-fs-400);
+  line-height:1.6;
+  color:var(--ag-text-secondary);
+  margin:0;
+}
+.ag-card__foot {
+  margin-top:auto;
+  padding-top:var(--ag-space-3);
+  display:flex;
+  align-items:center;
+  gap:var(--ag-space-3);
+  font-size:var(--ag-fs-200);
+  color:var(--ag-text-muted);
+}
+
+/* Media-bearing article card */
+.ag-article-card { position:relative; }
+.ag-article-card__media {
+  position:relative;
+  aspect-ratio:16 / 9;
+  background:var(--ag-bg-sunken);
+  overflow:hidden;
+}
+.ag-article-card__media img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:0;
+  transition:transform .5s var(--ag-ease);
+}
+.ag-article-card:hover .ag-article-card__media img { transform:scale(1.035); }
+/* Media-less cards: brand gradient block with a centred decorative icon,
+   so mixed grids (image cards + fallback cards) stay visually consistent. */
+.ag-article-card__media--art {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg, var(--ag-accent-strong) 0%, var(--ag-accent) 58%, var(--ag-accent) 100%);
+}
+.ag-article-card__media--art svg {
+  width:34%;
+  max-width:96px;
+  height:auto;
+  opacity:.8;
+}
+/* Badge inside a card body: the flex column would otherwise stretch the
+   inline-flex pill across the full card width. */
+.ag-card__body .ag-badge { align-self:flex-start; }
+/* Category badge overlaid on media (designed card pattern). */
+.ag-article-card__cat .ag-badge {
+  background:rgba(255, 255, 255, .92);
+  color:var(--ag-accent-strong);
+  box-shadow:var(--ag-shadow-1);
+}
+.ag-article-card__cat {
+  position:absolute;
+  left:var(--ag-space-3);
+  bottom:var(--ag-space-3);
+}
+.ag-article-card__title-link { text-decoration:none; color:inherit; }
+.ag-article-card__title-link::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+/* — 5.7 Meta line —————————————————————————————————— */
+.ag-meta {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.55em;
+  font-size:var(--ag-fs-200);
+  color:var(--ag-text-muted);
+}
+.ag-meta > * { display:inline-flex; align-items:center; gap:.35em; }
+.ag-meta > * + *::before {
+  content:"";
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:var(--ag-border-strong);
+  margin-right:.2em;
+}
+.ag-meta time { font-variant-numeric:tabular-nums; }
+.ag-meta svg { width:14px; height:14px; }
+
+/* — 5.8 Hero ———————————————————————————————————————— */
+.ag-hero {
+  position:relative;
+  background:linear-gradient(152deg, var(--ag-accent-strong) 0%, var(--ag-accent) 52%, var(--ag-accent) 100%);
+  color:var(--ag-bg-surface);
+  overflow:hidden;
+  isolation:isolate;
+}
+.ag-hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:radial-gradient(60% 120% at 88% 8%, rgba(255, 255, 255, .16), transparent 62%),
+    radial-gradient(46% 90% at 4% 100%, rgba(0, 0, 0, .3), transparent 60%);
+}
+/* Photo variant (blog index): panoramic farm photo under a brand-gradient
+   scrim — the scrim keeps the white headline at AA contrast in both themes. */
+.ag-hero--photo {
+  background:linear-gradient(155deg,
+      rgba(7, 40, 26, .93) 0%, rgba(10, 74, 49, .80) 46%,
+      rgba(16, 118, 80, .58) 100%);
+}
+.ag-hero--photo::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  /* the only hero photo shipped on disk is the .webp — the .jpg reference
+     here was a 404 on every page that used .ag-hero--photo */
+  background:url("/assets/images/blog/hero-index.webp") center 40% / cover no-repeat;
+}
+.ag-hero__inner { padding:clamp(2.6rem, 1.6rem + 4vw, 4.6rem) 0 clamp(2.3rem, 1.5rem + 3.2vw, 3.6rem); }
+.ag-hero__eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:.5em;
+  font-size:var(--ag-fs-200);
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255, 255, 255, .82);
+  margin-bottom:var(--ag-space-4);
+}
+.ag-hero__eyebrow::before {
+  content:"";
+  width:26px;
+  height:1px;
+  background:rgba(255, 255, 255, .55);
+}
+.ag-hero__title {
+  font-size:clamp(1.9rem, 1.15rem + 3.1vw, 3.1rem);
+  font-weight:700;
+  line-height:1.14;
+  letter-spacing:-0.028em;
+  color:var(--ag-bg-surface);
+  margin:0;
+  max-width:22ch;
+}
+.ag-hero__lede {
+  margin:var(--ag-space-4) 0 0;
+  max-width:62ch;
+  font-size:clamp(1rem, .93rem + .32vw, 1.125rem);
+  line-height:1.62;
+  color:rgba(255, 255, 255, .9);
+}
+.ag-hero__actions { margin-top:var(--ag-space-5); }
+.ag-hero .ag-btn--primary { background:var(--ag-bg-surface); color:var(--ag-accent-strong); }
+.ag-hero .ag-btn--primary:hover { background:var(--ag-accent-subtle); }
+.ag-hero .ag-btn--secondary {
+  background:rgba(255, 255, 255, .12);
+  border-color:rgba(255, 255, 255, .32);
+  color:var(--ag-bg-surface);
+}
+.ag-hero .ag-btn--secondary:hover { background:rgba(255, 255, 255, .2); }
+.ag-hero__search {
+  margin-top:var(--ag-space-6);
+  max-width:520px;
+  display:flex;
+  gap:var(--ag-space-2);
+}
+
+.ag-search {
+  display:flex;
+  align-items:center;
+  gap:.6em;
+  min-height:46px;
+  padding:0 .9em;
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-2);
+  box-shadow:var(--ag-shadow-1);
+  transition:border-color var(--ag-dur-fast), box-shadow var(--ag-dur-fast);
+}
+.ag-search:focus-within {
+  border-color:var(--ag-accent);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--ag-accent) 16%, transparent);
+}
+.ag-search svg { width:17px; height:17px; color:var(--ag-text-muted); flex:0 0 auto; }
+.ag-search input {
+  flex:1 1 auto;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:none;
+  font:inherit;
+  font-size:var(--ag-fs-400);
+  color:var(--ag-text-primary);
+}
+.ag-search input::placeholder { color:var(--ag-text-muted); }
+
+/* Heading permalink, injected by agri-ui.js */
+.ag-heading-anchor {
+  margin-left:.35em;
+  font-size:.62em;
+  font-weight:400;
+  color:var(--ag-border-strong);
+  text-decoration:none;
+  opacity:0;
+  transition:opacity var(--ag-dur-fast) var(--ag-ease), color var(--ag-dur-fast);
+}
+.prose :is(h2, h3):hover .ag-heading-anchor,
+.ag-heading-anchor:focus-visible { opacity:1; }
+.ag-heading-anchor:hover { color:var(--ag-accent); text-decoration:none; }
+
+/* Back-to-top affordance */
+.ag-jump {
+  position:fixed;
+  right:var(--ag-space-5);
+  bottom:var(--ag-space-5);
+  z-index:50;
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border:1px solid var(--ag-border);
+  border-radius:50%;
+  background:var(--ag-bg-surface);
+  color:var(--ag-text-secondary);
+  box-shadow:var(--ag-shadow-3);
+  cursor:pointer;
+  text-decoration:none;
+}
+.ag-jump:hover { color:var(--ag-accent-strong); border-color:var(--ag-border-strong); }
+.ag-jump svg { width:18px; height:18px; }
+
+/* — 5.9 Numbered index / tile grid (tools index) ————— */
+.ag-tile {
+  display:flex;
+  flex-direction:column;
+  gap:.55em;
+  padding:var(--ag-space-5);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  text-decoration:none;
+  box-shadow:var(--ag-shadow-1);
+  transition:all var(--ag-dur) var(--ag-ease);
+}
+.ag-tile:hover {
+  transform:translateY(-2px);
+  box-shadow:var(--ag-shadow-3);
+  border-color:var(--ag-border-strong);
+  text-decoration:none;
+}
+.ag-tile__icon {
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:var(--ag-radius-2);
+  background:var(--ag-accent-subtle);
+  color:var(--ag-accent-strong);
+  margin-bottom:.2em;
+}
+.ag-tile__icon svg { width:19px; height:19px; }
+.ag-tile__title { font-size:var(--ag-fs-500); font-weight:650; color:var(--ag-text-primary); line-height:1.4; }
+.ag-tile__text { font-size:var(--ag-fs-300); line-height:1.55; color:var(--ag-text-secondary); }
+
+/* — 5.10 Grids ——————————————————————————————————————— */
+.ag-grid { display:grid; gap:var(--ag-space-5); }
+.ag-grid--2 { grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); }
+.ag-grid--3 { grid-template-columns:repeat(auto-fill, minmax(272px, 1fr)); }
+.ag-grid--4 { grid-template-columns:repeat(auto-fill, minmax(216px, 1fr)); }
+
+/* — 5.11 Section heading ————————————————————————————— */
+.ag-section { padding:var(--ag-section-y) 0; }
+.ag-section--sunken { background:var(--ag-bg-sunken); }
+.ag-section__head {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--ag-space-4);
+  margin-bottom:var(--ag-space-6);
+}
+.ag-section__title {
+  font-size:clamp(1.35rem, 1.1rem + .9vw, 1.75rem);
+  font-weight:700;
+  letter-spacing:-0.02em;
+  margin:0;
+}
+.ag-section__sub {
+  margin:.4em 0 0;
+  font-size:var(--ag-fs-400);
+  color:var(--ag-text-secondary);
+  max-width:60ch;
+}
+.ag-section__link {
+  font-size:var(--ag-fs-400);
+  font-weight:600;
+  color:var(--ag-accent-strong);
+  text-decoration:none;
+  white-space:nowrap;
+}
+.ag-section__link:hover { text-decoration:underline; text-underline-offset:.18em; }
+
+/* — 5.12b Article header block —————————————————————— */
+.ag-article-head {
+  padding:var(--ag-space-4) 0 var(--ag-space-6);
+  max-width:var(--ag-measure-article);
+  margin-inline:auto;
+}
+/* App pages (the calculator family) put the head on the full content wrap so
+   its left edge lines up with .prose and the .ag-calc card below it, instead
+   of the centred article measure used by editorial pages.  Keep .ag-wrap's
+   auto centring and re-assert the inline padding, which the padding shorthand
+   on the base rule zeroes out. */
+.ag-article-head--app {
+  max-width:var(--ag-measure-page);
+  padding-inline:var(--ag-gutter);
+}
+.ag-article-head__title {
+  font-size:var(--ag-fs-h1);
+  font-weight:700;
+  line-height:1.14;
+  letter-spacing:-0.028em;
+  color:var(--ag-text-primary);
+  margin:var(--ag-space-3) 0 0;
+}
+.ag-article-head__lede {
+  margin:var(--ag-space-4) 0 0;
+  font-size:clamp(1.0625rem, 1rem + .34vw, 1.1875rem);
+  line-height:1.62;
+  color:var(--ag-text-secondary);
+}
+.ag-article-head__meta { margin-top:var(--ag-space-5); }
+.ag-article-head__figure {
+  margin:var(--ag-space-6) 0 0;
+  border-radius:var(--ag-radius-3);
+  overflow:hidden;
+  border:1px solid var(--ag-border);
+  background:var(--ag-bg-sunken);
+}
+.ag-article-head__figure img { display:block; width:100%; height:auto; }
+
+/* — 5.12c Calculator mount (hosts legacy interactive widgets) —— */
+.ag-calc {
+  margin:2.4em 0;
+  padding:var(--ag-space-5);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  box-shadow:var(--ag-shadow-2);
+}
+.ag-calc__head {
+  display:flex;
+  align-items:center;
+  gap:var(--ag-space-3);
+  margin-bottom:var(--ag-space-4);
+  padding-bottom:var(--ag-space-4);
+  border-bottom:1px solid var(--ag-border);
+}
+.ag-calc__icon {
+  display:grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  border-radius:var(--ag-radius-2);
+  background:var(--ag-accent-subtle);
+  color:var(--ag-accent-strong);
+  flex:0 0 auto;
+}
+.ag-calc__icon svg { width:18px; height:18px; }
+.ag-calc__title { font-size:var(--ag-fs-500); font-weight:650; color:var(--ag-text-primary); margin:0; }
+.ag-calc__hint { font-size:var(--ag-fs-200); color:var(--ag-text-muted); margin:.15em 0 0; }
+
+/* — 5.12 Article layout (content + sticky sidebar) ——— */
+.ag-article-layout {
+  display:grid;
+  grid-template-columns:minmax(0, var(--ag-measure-article)) var(--ag-sidebar-w);
+  gap:clamp(2rem, 1rem + 3vw, 4.5rem);
+  justify-content:center;
+  align-items:start;
+  padding-bottom:var(--ag-space-8);
+}
+.ag-sidebar {
+  position:sticky;
+  top:calc(var(--ag-header-h) + var(--ag-space-5));
+  display:flex;
+  flex-direction:column;
+  gap:var(--ag-space-5);
+  max-height:calc(100vh - var(--ag-header-h) - var(--ag-space-7));
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.ag-sidebar::-webkit-scrollbar { width:6px; }
+.ag-sidebar::-webkit-scrollbar-thumb { background:var(--ag-border-strong); border-radius:var(--ag-radius-1); }
+
+/* — 5.13 Table of contents ——————————————————————————— */
+.ag-toc {
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  padding:var(--ag-space-4);
+}
+.ag-toc__title {
+  font-size:var(--ag-fs-100);
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+  margin:0 0 var(--ag-space-3);
+}
+.ag-toc__list { list-style:none; margin:0; padding:0; }
+.ag-toc__list a {
+  display:block;
+  padding:.38em .6em;
+  border-left:2px solid transparent;
+  font-size:var(--ag-fs-300);
+  line-height:1.45;
+  color:var(--ag-text-secondary);
+  text-decoration:none;
+  border-radius:0 var(--ag-radius-1) var(--ag-radius-1) 0;
+  transition:all var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-toc__list a:hover { color:var(--ag-text-primary); background:var(--ag-bg-sunken); }
+.ag-toc__list a.is-active {
+  color:var(--ag-accent-strong);
+  border-left-color:var(--ag-accent);
+  background:var(--ag-accent-subtle);
+  font-weight:600;
+}
+.ag-toc__list--sub a,
+.ag-toc__item--sub > a { padding-left:1.35em; font-size:var(--ag-fs-200); }
+.ag-toc--collapsible { display:none; }
+.ag-toc--collapsible summary {
+  cursor:pointer;
+  font-size:var(--ag-fs-300);
+  font-weight:600;
+  color:var(--ag-text-primary);
+  padding:var(--ag-space-3) var(--ag-space-4);
+  list-style:none;
+}
+.ag-toc--collapsible summary::-webkit-details-marker { display:none; }
+
+/* — 5.14 Author card ————————————————————————————————— */
+.ag-author {
+  display:flex;
+  align-items:center;
+  gap:var(--ag-space-4);
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+}
+.ag-author__avatar {
+  display:grid;
+  place-items:center;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+  font-size:var(--ag-fs-400);
+  font-weight:700;
+  letter-spacing:.02em;
+  flex:0 0 auto;
+}
+.ag-author__name { font-size:var(--ag-fs-400); font-weight:650; color:var(--ag-text-primary); }
+.ag-author__role { font-size:var(--ag-fs-200); color:var(--ag-text-muted); line-height:1.45; }
+/* Bordered card variant is the default; --bare drops the chrome when the
+   component sits inside an existing card. */
+.ag-author--bare {
+  padding:0;
+  background:none;
+  border:0;
+  border-radius:0;
+}
+
+/* — 5.15 FAQ accordion ——————————————————————————————— */
+.ag-faq { border-top:1px solid var(--ag-border); }
+.ag-faq details { border-bottom:1px solid var(--ag-border); }
+.ag-faq summary {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:var(--ag-space-4);
+  padding:1.05em 0;
+  cursor:pointer;
+  font-size:var(--ag-fs-600);
+  font-weight:600;
+  line-height:1.5;
+  color:var(--ag-text-primary);
+  list-style:none;
+}
+.ag-faq summary::-webkit-details-marker { display:none; }
+.ag-faq summary:hover { color:var(--ag-accent-strong); }
+.ag-faq summary::after {
+  content:"";
+  flex:0 0 auto;
+  width:11px;
+  height:11px;
+  margin-top:.42em;
+  border-right:2px solid var(--ag-text-muted);
+  border-bottom:2px solid var(--ag-text-muted);
+  transform:rotate(45deg);
+  transition:transform var(--ag-dur) var(--ag-ease);
+}
+.ag-faq details[open] > summary::after { transform:rotate(-135deg); }
+.ag-faq__answer {
+  padding:0 var(--ag-space-7) 1.3em 0;
+  font-size:var(--ag-fs-400);
+  line-height:1.68;
+  color:var(--ag-text-body);
+  max-width:68ch;
+}
+.ag-faq__answer > :first-child { margin-top:0; }
+.ag-faq__answer > :last-child { margin-bottom:0; }
+
+/* — 5.16 Prev / next pager ——————————————————————————— */
+.ag-pager {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:var(--ag-space-4);
+  margin:var(--ag-space-7) 0 0;
+}
+.ag-pager a {
+  display:flex;
+  flex-direction:column;
+  gap:.35em;
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  text-decoration:none;
+  transition:all var(--ag-dur) var(--ag-ease);
+}
+.ag-pager a:hover {
+  border-color:var(--ag-border-strong);
+  box-shadow:var(--ag-shadow-2);
+  text-decoration:none;
+}
+.ag-pager__dir {
+  font-size:var(--ag-fs-100);
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+}
+.ag-pager__title { font-size:var(--ag-fs-400); font-weight:600; color:var(--ag-text-primary); line-height:1.45; }
+.ag-pager a:last-child { text-align:right; }
+.ag-pager a:last-child .ag-pager__dir::after { content:" →"; }
+.ag-pager a:first-child .ag-pager__dir::before { content:"← "; }
+
+/* — 5.17 Related links ——————————————————————————————— */
+.ag-related {
+  margin:var(--ag-space-7) 0 0;
+  padding-top:var(--ag-space-6);
+  border-top:1px solid var(--ag-border);
+}
+.ag-related__title {
+  font-size:var(--ag-fs-200);
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ag-text-muted);
+  margin:0 0 var(--ag-space-4);
+}
+.ag-related__list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:var(--ag-space-3);
+}
+.ag-related__list a {
+  display:flex;
+  align-items:baseline;
+  gap:.6em;
+  padding:.75em 1em;
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-2);
+  font-size:var(--ag-fs-400);
+  font-weight:500;
+  color:var(--ag-text-primary);
+  text-decoration:none;
+  transition:all var(--ag-dur-fast) var(--ag-ease);
+}
+.ag-related__list a::before {
+  content:"";
+  flex:0 0 auto;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--ag-accent);
+  transform:translateY(-2px);
+}
+.ag-related__list a:hover {
+  border-color:var(--ag-border-strong);
+  background:var(--ag-accent-subtle);
+  color:var(--ag-accent-strong);
+  text-decoration:none;
+}
+
+/* — 5.18 CTA band ——————————————————————————————————— */
+.ag-cta {
+  margin:var(--ag-space-7) 0;
+  padding:clamp(1.6rem, 1.1rem + 2vw, 2.6rem);
+  border-radius:var(--ag-radius-4);
+  background:linear-gradient(140deg, var(--ag-accent-strong) 0%, var(--ag-accent) 100%);
+  color:var(--ag-bg-surface);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--ag-space-5);
+  box-shadow:var(--ag-shadow-3);
+}
+.ag-cta__title { font-size:clamp(1.15rem, 1rem + .7vw, 1.45rem); font-weight:700; color:var(--ag-bg-surface); margin:0 0 .4em; letter-spacing:-0.018em; }
+.ag-cta__text { font-size:var(--ag-fs-400); color:rgba(255, 255, 255, .88); margin:0; max-width:52ch; line-height:1.6; }
+.ag-cta .ag-btn--primary { background:var(--ag-bg-surface); color:var(--ag-accent-strong); }
+.ag-cta .ag-btn--primary:hover { background:var(--ag-accent-subtle); }
+
+/* — 5.19 Footer ——————————————————————————————————————— */
+.ag-footer {
+  margin-top:var(--ag-space-8);
+  background:var(--ag-bg-inverse);
+  color:var(--ag-text-inverse-dim);
+  font-size:var(--ag-fs-400);
+}
+.ag-footer__main {
+  display:grid;
+  grid-template-columns:minmax(200px, 1.5fr) repeat(auto-fit, minmax(130px, 1fr));
+  gap:var(--ag-space-6) var(--ag-space-5);
+  padding:var(--ag-space-7) 0 var(--ag-space-6);
+}
+.ag-footer__brand { display:flex; align-items:center; gap:.55em; font-weight:700; font-size:var(--ag-fs-600); color:var(--ag-text-inverse); }
+.ag-footer__mark { display:grid; place-items:center; width:28px; height:28px; border-radius:var(--ag-radius-1); background:var(--ag-accent); color:var(--ag-bg-surface); }
+.ag-footer__mark svg { width:16px; height:16px; }
+
+/* Icons that used to be emoji inside the migrated calculator widgets (share
+   button, history panel title, export labels). Those legacy containers ship no
+   svg sizing rule, so the inline icon carries 1em itself and this only nudges
+   the baseline to sit like a glyph. */
+svg[data-ag-icon] { vertical-align:-0.125em; flex:0 0 auto; }
+button svg[data-ag-icon], .ag-icon-btn svg[data-ag-icon] { display:block; }
+
+/* ── 工具卡片图标（接 .tool-icon-wrap / .tool-card，老样式表里的遗留类） ──
+   .tool-icon-wrap 是 48x48 flex 居中、浅绿渐变底；hover 时整体翻成深绿，
+   所以图标必须跟着反白，否则会“消失”在底色里。 */
+.tool-icon { color:var(--ag-accent, var(--ag-accent)); line-height:0; }
+.tool-icon svg[data-ag-icon] { display:block; stroke-width:1.75; }
+.tool-card:hover .tool-icon,
+.tool-card:focus-visible .tool-icon { color:var(--ag-bg-surface); }
+.related-tool-card .tool-icon svg[data-ag-icon] { display:inline-block; }
+
+/* ── 首页其它图标宿主 ──────────────────────────────────────────────
+   这些容器原来是给 emoji 设 font-size 的，SVG 用 1em 自然跟着字号走，
+   所以只需要：① 去掉 inline 元素的基线间隙；② 按底色给图标定色。
+   .stat-icon / .search-icon 不改色 —— 它们在绿色 hero 里，继承白色即可。 */
+.category-icon svg[data-ag-icon],
+.section-icon svg[data-ag-icon],
+.stat-icon svg[data-ag-icon],
+.glossary-icon svg[data-ag-icon],
+.amazon-section-icon svg[data-ag-icon],
+.amazon-product-icon-fallback svg[data-ag-icon],
+.search-icon svg[data-ag-icon] { display:block; }
+
+.category-icon { color:var(--ag-accent, var(--ag-accent)); line-height:0; }
+.category-icon svg[data-ag-icon] { stroke-width:1.6; }
+.section-icon { color:#1D4ED8; line-height:0; }
+.blog-section .section-icon { color:var(--ag-warn-text); }
+.glossary-icon { color:var(--ag-accent, var(--ag-accent)); line-height:0; }
+.amazon-section-icon { color:var(--ag-bg-surface); line-height:0; }
+.amazon-product-icon-fallback { color:var(--ag-text-secondary, var(--ag-text-secondary)); }
+
+/* 功能区勾选 + 小标题装饰：跟着文字走，尺寸压小一点不抢标题 */
+.feature-icon { color:var(--ag-success-icon, var(--ag-success-icon)); line-height:0; }
+.feature-icon svg[data-ag-icon],
+h3 svg[data-ag-icon],
+.card-meta svg[data-ag-icon] { display:inline-block; vertical-align:-0.15em; }
+h3 svg[data-ag-icon] { color:var(--ag-accent, var(--ag-accent)); }
+.ag-footer__tagline { margin:.8em 0 0; font-size:var(--ag-fs-300); line-height:1.6; max-width:34ch; }
+.ag-footer__col-title {
+  font-size:var(--ag-fs-100);
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ag-text-inverse);
+  margin-bottom:.85em;
+}
+.ag-footer__links { list-style:none; margin:0; padding:0; display:grid; gap:.5em; }
+.ag-footer__links a { color:var(--ag-text-inverse-dim); text-decoration:none; font-size:var(--ag-fs-300); }
+.ag-footer__links a:hover { color:var(--ag-bg-surface); text-decoration:underline; text-underline-offset:.2em; }
+.ag-footer__bottom {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--ag-space-4);
+  padding:var(--ag-space-5) 0 var(--ag-space-6);
+  border-top:1px solid var(--ag-border-inverse);
+  font-size:var(--ag-fs-200);
+}
+.ag-footer__bottom p { margin:0; }
+.ag-footer__note { color:var(--ag-text-inverse-dim); opacity:.8; max-width:60ch; }
+
+
+/* ==========================================================================
+   6. UTILITIES
+   ========================================================================== */
+.ag-visually-hidden {
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  border:0;
+}
+.ag-skip-link {
+  position:absolute;
+  top:-100px;
+  left:var(--ag-space-4);
+  z-index:100;
+  padding:.7em 1.1em;
+  background:var(--ag-accent);
+  color:var(--ag-accent-contrast);
+  border-radius:var(--ag-radius-2);
+  font-size:var(--ag-fs-400);
+  font-weight:600;
+  text-decoration:none;
+  transition:top var(--ag-dur) var(--ag-ease);
+}
+.ag-skip-link:focus { top:var(--ag-space-3); }
+.ag-stack { display:flex; flex-direction:column; gap:var(--ag-space-5); }
+.ag-row { display:flex; flex-wrap:wrap; align-items:center; gap:var(--ag-space-3); }
+/* 间距工具类 —— 只保留全站实际用到的档位，避免工具类无限膨胀 */
+.ag-mt-3 { margin-top:var(--ag-space-3); }
+.ag-mt-4 { margin-top:var(--ag-space-4); }
+.ag-mt-5 { margin-top:var(--ag-space-5); }
+.ag-mt-6 { margin-top:var(--ag-space-6); }
+.ag-mt-7 { margin-top:var(--ag-space-7); }
+.ag-mb-3 { margin-bottom:var(--ag-space-3); }
+.ag-mb-5 { margin-bottom:var(--ag-space-5); }
+.ag-mb-6 { margin-bottom:var(--ag-space-6); }
+.ag-mb-7 { margin-bottom:var(--ag-space-7); }
+.ag-ml-3 { margin-left:var(--ag-space-3); }
+.ag-my-3 { margin:var(--ag-space-3) 0; }
+.ag-my-6 { margin:var(--ag-space-6) 0; }
+.ag-text-muted { color:var(--ag-text-muted); }
+.ag-divider { height:1px; background:var(--ag-border); border:0; margin:var(--ag-space-6) 0; }
+
+
+/* ==========================================================================
+   7. RESPONSIVE
+   --------------------------------------------------------------------------
+   全站统一 5 档断点（max-width），旧样式表里散落的 600 / 768 / 860 / 1024
+   已全部归并进这 5 档：
+
+     1200px  桌面窄屏（容器收窄、侧栏让位）
+     1080px  小笔记本 / 平板横屏（双栏 → 单栏）
+      900px  平板竖屏（网格降列、导航折叠）
+      720px  大屏手机 / 小平板（字号与间距收紧）
+      480px  手机（单列、按钮撑满）
+
+   归并方向一律"向更宽的一档"：这些断点里的规则多是「堆叠 / 缩字号」，把生效
+   区间往宽处扩一寸只是多留白，往窄处收反而会在中间宽度丢掉堆叠规则导致挤压。
+   ========================================================================== */
+@media (max-width: 1080px) {
+  :root { --ag-sidebar-w: 260px; }
+  .ag-article-layout {
+    grid-template-columns:minmax(0, 1fr);
+    max-width:var(--ag-measure-article);
+    margin-inline:auto;
+  }
+  .ag-sidebar { display:none; }
+  .ag-toc--collapsible { display:block; margin-bottom:var(--ag-space-5); }
+  .ag-toc--collapsible > nav { padding:0 var(--ag-space-4) var(--ag-space-3); }
+  .ag-nav { display:none; }
+  .ag-menu-btn { display:grid; }
+}
+
+@media (max-width: 900px) {
+  .ag-footer__main { grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); }
+  .ag-footer__brand-col { grid-column:1 / -1; }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --ag-gutter: var(--ag-space-4);
+    --ag-section-y: var(--ag-space-7);
+  }
+  .prose { font-size:1.03125rem; line-height:1.7; }
+  .prose > * + * { margin-top:1.1em; }
+  .prose > :is(h2, h3, h4) { margin-top:1.9em; }
+  .prose blockquote { padding-left:1.05em; font-size:1.04em; }
+  /* Tables scroll instead of breaking the layout. */
+  .prose table {
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    white-space:nowrap;
+  }
+  .prose table caption { white-space:normal; }
+  .ag-faq__answer { padding-right:0; }
+  .ag-jump { display:none; }
+  .ag-hero__title { max-width:none; }
+}
+
+@media (max-width: 480px) {
+  .ag-grid--2, .ag-grid--3, .ag-grid--4 { grid-template-columns:1fr; }
+  .ag-btn--block-xs { display:flex; width:100%; }
+  .ag-actions .ag-btn { flex:1 1 auto; }
+}
+
+
+/* ==========================================================================
+   8. PRINT
+   ========================================================================== */
+@media print {
+  body.ag-page { background:var(--ag-bg-surface); color:var(--ag-text-primary); font-size:10.5pt; }
+  .ag-header, .ag-footer, .ag-progress, .ag-sidebar, .ag-toc,
+  .ag-skip-link, .ag-related, .ag-pager, .ag-cta, .code-block__copy,
+  .ag-actions, .ag-icon-btn { display:none !important; }
+  .ag-hero { background:none; color:var(--ag-text-primary); }
+  .prose { max-width:none; }
+  .prose a { color:var(--ag-text-primary); text-decoration:underline; }
+  .prose a[href^="http"]::after { content:" (" attr(href) ")"; font-size:.85em; color:var(--ag-text-secondary); }
+  .prose pre, .prose blockquote, .callout, .key-takeaways, .stat-grid { break-inside:avoid; }
+  .prose :is(h2, h3) { break-after:avoid; }
+}
+
+
+/* ==========================================================================
+   9. MOTION PREFERENCES
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  body.ag-page *,
+  body.ag-page *::before,
+  body.ag-page *::after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .ag-card--link:hover, .ag-tile:hover, .ag-btn:active { transform:none; }
+}
+
+
+/* ==========================================================================
+   10. LEGACY CONTENT BRIDGE
+   --------------------------------------------------------------------------
+   Five class names are used across the published copy but are defined in NO
+   stylesheet. Every page that wants them carries a private copy inside its own
+   <style> block — that is the E3 debt. Measured with audit_scan/_classcheck.py:
+
+       .snippet                 intro / lede paragraph        453 pages  (was 0 styled)
+       .formula-box             formula + worked arithmetic    27 pages
+       .warning-box             caution / mistake list         27 pages
+       .tip-box                 practical advice                6 pages
+       .blog-calculator-links   inline tool chip row           57 pages
+
+   Those page-level blocks are deleted during migration, so these rules take
+   over: same intent, but expressed in tokens, so dark mode and the type scale
+   follow automatically.
+
+   Deliberately scoped to `.prose` — until a page is migrated, nothing changes.
+   ========================================================================== */
+
+.prose .snippet {
+  padding:var(--ag-space-5) var(--ag-space-5) var(--ag-space-5) var(--ag-space-6);
+  background:var(--ag-bg-sunken);
+  border-left:3px solid var(--ag-accent);
+  border-radius:0 var(--ag-radius-2) var(--ag-radius-2) 0;
+  font-size:var(--ag-fs-600);
+  line-height:var(--ag-lh-snug);
+  color:var(--ag-text-body);
+}
+
+.prose .formula-box {
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-bg-sunken);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-2);
+  font-family:var(--ag-font-mono);
+  font-size:var(--ag-fs-300);
+  line-height:1.9;
+  color:var(--ag-text-body);
+  overflow-x:auto;
+}
+.prose .formula-box strong { color:var(--ag-text-primary); }
+
+.prose .warning-box {
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-warn-bg);
+  border-left:3px solid var(--ag-warn-icon);
+  border-radius:0 var(--ag-radius-2) var(--ag-radius-2) 0;
+  color:var(--ag-warn-text);
+}
+.prose .warning-box strong { color:inherit; }
+.prose .warning-box a { color:inherit; text-decoration:underline; }
+
+.prose .tip-box {
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-accent-subtle);
+  border-left:3px solid var(--ag-accent);
+  border-radius:0 var(--ag-radius-2) var(--ag-radius-2) 0;
+  color:var(--ag-accent-strong);
+}
+.prose .tip-box strong { color:inherit; }
+
+.prose .blog-calculator-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--ag-space-2);
+}
+.prose .blog-calculator-links a {
+  display:inline-flex;
+  align-items:center;
+  padding:var(--ag-space-2) var(--ag-space-4);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border-strong);
+  border-radius:var(--ag-radius-pill);
+  font-size:var(--ag-fs-300);
+  font-weight:550;
+  text-decoration:none;
+}
+.prose .blog-calculator-links a::after { content:none; }
+
+/* The two FAQ wrappers are unstyled too, but their children (.faq-item /
+   .faq-question / .faq-answer) are not — they come from style.css. All that is
+   missing is the section rule, so the block reads as a unit. */
+.prose .faq-section { border-top:1px solid var(--ag-border); }
+.prose .faq-section > h2 { margin-top:0; }
+.prose .faq-list > :last-child { border-bottom:1px solid var(--ag-border); }
+
+/* --------------------------------------------------------------------------
+   Legacy blocks that DO have rules in style.css, but whose colours and radii
+   predate the design system (navy gradients, ad-hoc greens). Re-pointed at the
+   tokens so migrated copy does not read as a different website.
+   -------------------------------------------------------------------------- */
+
+.prose .guide-related {
+  padding:var(--ag-space-5);
+  background:var(--ag-bg-sunken);
+  border:1px solid var(--ag-border);
+  border-left:3px solid var(--ag-accent);
+  border-radius:var(--ag-radius-2);
+}
+.prose .guide-related > h2 {
+  margin:0 0 var(--ag-space-4);
+  padding:0;
+  border-bottom:0;
+  font-size:var(--ag-fs-600);
+  line-height:var(--ag-lh-heading);
+  letter-spacing:0;
+}
+.prose .guide-related-links { display:flex; flex-wrap:wrap; gap:var(--ag-space-2); }
+.prose .guide-related-links a {
+  display:inline-flex;
+  align-items:center;
+  padding:var(--ag-space-2) var(--ag-space-4);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border-strong);
+  border-bottom:1px solid var(--ag-border-strong);
+  border-radius:var(--ag-radius-pill);
+  font-size:var(--ag-fs-300);
+  font-weight:550;
+  text-decoration:none;
+}
+
+.prose .related-tools {
+  padding:var(--ag-space-5);
+  background:var(--ag-bg-inverse);
+  border-radius:var(--ag-radius-3);
+  color:var(--ag-text-inverse);
+}
+.prose .related-tools h3,
+.prose .related-tools .sub-heading {
+  margin:0 0 var(--ag-space-4);
+  color:var(--ag-text-inverse);
+  font-size:var(--ag-fs-600);
+}
+.prose .related-tools a,
+.prose .related-tool-link {
+  display:inline-flex;
+  align-items:center;
+  padding:var(--ag-space-2) var(--ag-space-4);
+  background:rgba(255, 255, 255, .10);
+  border:1px solid var(--ag-border-inverse);
+  border-radius:var(--ag-radius-pill);
+  color:var(--ag-text-inverse);
+  font-size:var(--ag-fs-300);
+  font-weight:600;
+  text-decoration:none;
+}
+.prose .related-tools a:hover,
+.prose .related-tool-link:hover {
+  background:var(--ag-bg-surface);
+  color:var(--ag-bg-inverse);
+}
+
+.prose .references-section {
+  padding:var(--ag-space-4) var(--ag-space-5);
+  background:var(--ag-bg-sunken);
+  border:0;
+  border-left:3px solid var(--ag-border-strong);
+  border-radius:0 var(--ag-radius-2) var(--ag-radius-2) 0;
+}
+.prose .references-section > h3 {
+  margin:0 0 var(--ag-space-3);
+  font-size:var(--ag-fs-300);
+  font-weight:650;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--ag-text-secondary);
+}
+.prose .references-section ul,
+.prose .references-section p {
+  margin:0;
+  font-size:var(--ag-fs-300);
+  color:var(--ag-text-secondary);
+}
+.prose .references-section li + li { margin-top:.35em; }
+
+
+/* ==========================================================================
+   11. LEGACY `!important` NEUTRALISER      (must stay last in this file)
+   --------------------------------------------------------------------------
+   The legacy `style.css` pins colours with `!important` on very broad
+   selectors, so no ordinary declaration can ever beat them:
+
+       h1 … h6                                          → #1A2E1A
+       a / a:hover                                      → #1A5A1A / #0D3D0D
+       button, .btn, .button, input[type=submit|button]  → #FFFFFF
+       label · small · table / th / td                   → legacy greens
+
+   Those pins silently wiped out the design system's whole colour layer. Two
+   were visible on the pilot pages: the hero title rendered #1A2E1A instead of
+   white, and the filter chips rendered white-on-white. Both were measured in
+   a real browser via `getComputedStyle` — not guessed.
+
+   agri-ui.css loads after style.css, so re-declaring here with `!important`
+   wins. To keep `!important` out of the components, the blanket rules read a
+   component-scoped variable first: a component only has to set that variable
+   and never needs `!important` itself.
+
+   Anchors carrying an inline `style` are deliberately skipped — those are the
+   legacy "button" links inside calculator widgets, which the legacy sheet
+   paints #FFFFFF onto a green inline background.
+
+   Everything is scoped to `body.ag-page` (plus its `.dark-mode` variant), so
+   the 836 legacy pages are completely unaffected.
+   ========================================================================== */
+
+/* 11.1 Blanket overrides. The legacy sheet pins these SAME elements with
+   `!important`, several under `body.dark-mode` at (0,1,2)+ — so these rules
+   must carry real specificity (NOT `:where()`) and !important to win.
+   Component-level colours ride in through the --ag-c-* custom properties,
+   which inherit, so the blanket stays the single enforcement point. */
+body.ag-page           { color:var(--ag-text-body) !important; }
+body.ag-page           :where(h1, h2, h3, h4, h5, h6) { color:var(--ag-c-head, var(--ag-text-primary)) !important; }
+body.ag-page.dark-mode :where(h1, h2, h3, h4, h5, h6) { color:var(--ag-c-head, var(--ag-text-primary)) !important; }
+body.ag-page           a:not([style])               { color:var(--ag-c-link, var(--ag-accent-strong)) !important; }
+body.ag-page           a:hover:not([style])         { color:var(--ag-c-link-hover, var(--ag-accent)) !important; }
+body.ag-page           p:not([style])               { color:var(--ag-c-text, var(--ag-text-body)) !important; }
+body.ag-page           :where(label)                { color:var(--ag-text-primary) !important; }
+body.ag-page           :where(small)                { color:var(--ag-text-muted)   !important; }
+body.ag-page           :where(th)                   { color:var(--ag-text-primary) !important; }
+body.ag-page           :where(td)                   { color:var(--ag-text-body)    !important; }
+
+/* 11.2 Buttons the legacy sheet turns white. Only the design system's own
+   button classes are listed, so calculator widgets keep their legacy look. */
+body.ag-page .ag-btn                        { color:inherit !important; }
+body.ag-page .ag-chip,
+body.ag-page .ag-icon-btn                   { color:var(--ag-c-btn, var(--ag-text-secondary)) !important; }
+body.ag-page .ag-chip:hover,
+body.ag-page .ag-icon-btn:hover             { color:var(--ag-c-btn-hover, var(--ag-text-primary)) !important; }
+body.ag-page .ag-chip.is-active,
+body.ag-page .ag-chip[aria-pressed="true"],
+body.ag-page .ag-btn--primary,
+body.ag-page .ag-skip-link                  { color:var(--ag-accent-contrast) !important; }
+body.ag-page .ag-btn--secondary,
+body.ag-page .ag-btn--quiet                 { color:var(--ag-text-primary) !important; }
+body.ag-page .ag-btn--ghost                 { color:var(--ag-accent-strong) !important; }
+
+/* 11.3 Dark surfaces. The hero keeps its single dark-green gradient in both
+   themes, so its heading must stay white — written after the `.dark-mode`
+   heading rule above so it tie-breaks in its own favour. */
+body.ag-page .ag-hero :where(h1, h2, h3, h4, h5, h6) { color:var(--ag-text-primary) !important; }
+body.ag-page .ag-hero .ag-btn--primary,
+body.ag-page .ag-cta  .ag-btn--primary      { color:var(--ag-accent-strong) !important; }
+/* 11.2's `.ag-btn--secondary` text pin is right on light surfaces but lands
+   on the hero's dark gradient too — re-assert white there. */
+body.ag-page .ag-hero .ag-btn--secondary,
+body.ag-page .ag-cta  .ag-btn--secondary    { color:var(--ag-bg-surface) !important; }
+/* `footer { color:var(--ag-bg-surface) !important }` would otherwise flatten the footer's
+   own dim tone. The footer keeps ONE fixed dark surface in both themes
+   (its brand mark is hardcoded #fff), so its palette is pinned to literal
+   values — the theme-flipping `--ag-text-inverse-*` tokens would turn the
+   dim tone near-invisible on the dark surface in dark mode. */
+body.ag-page .ag-footer                     { color:var(--ag-text-inverse-dim) !important; }
+
+/* 11.4 Component palettes the pins hijacked. Setting the variable is enough —
+   the blanket rules in 11.1 pick it up. */
+.prose .related-tools               { --ag-c-head:var(--ag-bg-surface); --ag-c-link:var(--ag-bg-surface); --ag-c-link-hover:var(--ag-bg-surface); }
+.prose .references-section > h3     { --ag-c-head:var(--ag-text-secondary); }
+.ag-nav__link,
+.ag-lang__btn                       { --ag-c-link:var(--ag-text-secondary); --ag-c-link-hover:var(--ag-text-primary); }
+.ag-nav__link.is-active,
+.ag-lang__btn[aria-current="true"]  { --ag-c-link:var(--ag-accent-strong); --ag-c-link-hover:var(--ag-accent-strong); }
+/* The current-language chip sits on an accent fill, so its link colour must
+   be the accent CONTRAST token (white in light / near-black in dark) —
+   accent-strong on accent would be green-on-green. */
+.ag-lang__btn[aria-current="true"]  { --ag-c-link:var(--ag-accent-contrast) !important; --ag-c-link-hover:var(--ag-accent-contrast) !important; }
+.ag-breadcrumb a                    { --ag-c-link:var(--ag-text-secondary); --ag-c-link-hover:var(--ag-accent-strong); }
+.ag-breadcrumb [aria-current="page"] { --ag-c-link:var(--ag-text-muted); }
+.ag-toc__list a                     { --ag-c-link:var(--ag-text-secondary); --ag-c-link-hover:var(--ag-text-primary); }
+.ag-toc__list a.is-active           { --ag-c-link:var(--ag-accent-strong); }
+.ag-pager a                         { --ag-c-link:var(--ag-text-primary); --ag-c-link-hover:var(--ag-accent-strong); }
+.ag-related__list a                 { --ag-c-link:var(--ag-text-primary); --ag-c-link-hover:var(--ag-accent-strong); }
+.ag-card__title a,
+.ag-article-card__title-link        { --ag-c-link:var(--ag-text-primary); --ag-c-link-hover:var(--ag-accent-strong); }
+.ag-footer__links a                 { --ag-c-link:var(--ag-text-inverse-dim); --ag-c-link-hover:var(--ag-bg-surface); }
+
+/* 11.5 Bare-element leaks. The legacy sheet paints a bare `header` with the
+   site-header gradient (its own `.site-header` overrides rescue the top bar,
+   but the element rule ALSO lands on `<header class="ag-article-head">`
+   inside articles). Class rules beat the element selector, so only the two
+   properties the DS component never declares need re-asserting. */
+body.ag-page article header.ag-article-head { background:none; box-shadow:none; color:var(--ag-text-body); }
+
+/* Dark-mode prefixed legacy rules carry HIGHER specificity than the DS
+   component classes they collide with:
+   `body.dark-mode header` (0,1,1) paints the sticky bar navy #0f3460 over
+   `.ag-header`'s translucent token background; `body.dark-mode input`
+   (0,1,2) paints the search field navy #2a2a4e over `.ag-search input`.
+   Re-assert with a body.scoped selector of our own. */
+body.ag-page header.ag-header {
+  background:color-mix(in srgb, var(--ag-bg-page) 82%, transparent);
+}
+body.ag-page .ag-search input {
+  background:none;
+  color:var(--ag-text-primary);
+  border-color:transparent;
+}
+
+/* 11.6 Dark-mode !important pins, matched one-for-one.
+   The legacy sheet also pins dark-mode colours with `!important`:
+   `body.dark-mode a` (#7ab87a) flattens EVERY link, `body.dark-mode p`
+   (#c0d0c0) flattens paragraphs, `.breadcrumb` / `.site-footer a` pins hit
+   our components. 11.1's blankets now outrank them; these rules feed the
+   blankets the right values where a component needs its own palette. */
+
+/* Dark surfaces: paragraphs inside them must stay light (the `p` blanket
+   would otherwise paint them body-colour, and the legacy pin painted them
+   #c0d0c0). Custom properties inherit — setting them on the container is
+   enough. */
+.ag-hero             { --ag-c-text: rgba(255, 255, 255, 0.90); }
+.ag-cta              { --ag-c-text:rgba(255, 255, 255, 0.88); }
+.prose .related-tools{ --ag-c-text:var(--ag-text-inverse); }
+
+/* The footer is a fixed dark surface in both themes (see 11.3), so its
+   palette is pinned to literals, NOT the theme-flipping inverse tokens. */
+.ag-footer           { --ag-c-text:var(--ag-text-inverse-dim); }
+.ag-footer__links a  { --ag-c-link:var(--ag-text-inverse-dim); --ag-c-link-hover:var(--ag-bg-surface); }
+
+/* Links the DS colours directly (normal declarations lost to the blanket):
+   re-express each as a --ag-c-link mapping. */
+.ag-mobile-nav a                     { --ag-c-link:var(--ag-text-body);      --ag-c-link-hover:var(--ag-text-primary); }
+.ag-heading-anchor                   { --ag-c-link:var(--ag-border-strong);  --ag-c-link-hover:var(--ag-border-strong); }
+.prose .warning-box a                { --ag-c-link:currentColor;             --ag-c-link-hover:currentColor; }
+.callout--info    a                  { --ag-c-link:var(--ag-info-text);      --ag-c-link-hover:var(--ag-info-text); }
+.callout--warn    a                  { --ag-c-link:var(--ag-warn-text);      --ag-c-link-hover:var(--ag-warn-text); }
+.callout--success a                  { --ag-c-link:var(--ag-success-text);   --ag-c-link-hover:var(--ag-success-text); }
+.callout--danger  a                  { --ag-c-link:var(--ag-danger-text);    --ag-c-link-hover:var(--ag-danger-text); }
+
+/* Breadcrumb: legacy `body.dark-mode .breadcrumb` (0,2,1) and
+   `.breadcrumb a` (0,2,2) outgun the blankets — match with `nav` added. */
+body.ag-page nav.ag-breadcrumb     { color:var(--ag-text-muted) !important; }
+body.ag-page nav.ag-breadcrumb a   { color:var(--ag-c-link, var(--ag-text-secondary)) !important; }
+body.ag-page nav.ag-breadcrumb a:hover { color:var(--ag-c-link-hover, var(--ag-accent-strong)) !important; }
+/* Legacy `footer { background:var(--ag-text-primary) !important }` (element) beats the DS
+   class's normal declaration — re-assert at equal-or-higher weight with a
+   fixed dark surface for both themes. */
+body.ag-page footer.ag-footer      { background:var(--ag-bg-inverse) !important; }
+
+
+/* ==========================================================================
+   12. 内联样式收敛组件（INLINE-EXTRACTED COMPONENTS）
+   --------------------------------------------------------------------------
+   全站 426 个页面里重复粘贴了同一套「评分 + 反馈」小组件和若干表格/结果
+   块，原先靠 inline style 逐字复制（1969 处、仅 45 种取值）。这一节把这些
+   重复样式提升为真正的组件类，取值全部走上一节的令牌。
+
+   ⚠️ 含 display:none 的模式**不要把 display 写进类**：切换脚本用的是
+      `el.style.display = ""`（清空内联），若类里仍有 display:none，
+      清空后元素反而重新隐藏，分组切换会失效。所以 display:none 保留为
+      内联残留，其余声明进类。
+   ========================================================================== */
+
+/* — 评分 / 反馈卡片 —————————————————————————————— */
+body.ag-page .ag-feedback {
+  margin-top:var(--ag-space-6);
+  padding:var(--ag-space-5);
+  background:var(--ag-bg-sunken);
+  border:1px solid var(--ag-border);
+  border-radius:var(--ag-radius-3);
+  text-align:center;
+}
+body.ag-page .ag-feedback__title {
+  color:var(--ag-accent);
+  font-size:var(--ag-fs-500);
+  font-weight:600;
+  margin-bottom:var(--ag-space-2);
+}
+body.ag-page .ag-stars {
+  font-size:var(--ag-fs-900);
+  line-height:1;
+  margin:var(--ag-space-2) 0;
+  cursor:pointer;
+  letter-spacing:.12em;
+}
+body.ag-page .ag-star {
+  display:inline-block;
+  padding:0 var(--ag-space-1);
+  color:var(--ag-text-muted);
+  transition:color var(--ag-dur) var(--ag-ease);
+  cursor:pointer;
+}
+body.ag-page .ag-stars:hover .ag-star { color:var(--ag-warn-icon); }
+body.ag-page .ag-feedback__hint {
+  font-size:var(--ag-fs-300);
+  color:var(--ag-text-secondary);
+  margin:var(--ag-space-2) 0;
+  min-height:20px;
+}
+body.ag-page .ag-feedback__form  { margin-top:var(--ag-space-4); }
+body.ag-page .ag-feedback__thanks {
+  margin-top:var(--ag-space-2);
+  color:var(--ag-accent);
+  font-size:var(--ag-fs-300);
+  font-weight:600;
+}
+
+/* — 表单与结果 ———————————————————————————————————— */
+body.ag-page textarea.ag-textarea,
+body.ag-page .ag-textarea {
+  width:100%;
+  padding:var(--ag-space-3);
+  border:1px solid var(--ag-border-strong);
+  border-radius:var(--ag-radius-2);
+  background:var(--ag-bg-surface);
+  color:var(--ag-text-body);
+  font-family:inherit;
+  font-size:var(--ag-fs-300);
+  line-height:var(--ag-lh-snug);
+  resize:vertical;
+  min-height:60px;
+}
+body.ag-page .ag-result-row {
+  display:flex;
+  justify-content:space-between;
+  gap:var(--ag-space-4);
+  padding:var(--ag-space-2) 0;
+  border-bottom:1px solid var(--ag-border);
+}
+body.ag-page .ag-result-row:last-child { border-bottom:none; }
+body.ag-page .ag-field-col { flex:1 1 200px; min-width:200px; }
+body.ag-page .ag-flex-1    { flex:1; }
+
+/* — 排布小工具（只保留实际用到的几档） ————————————— */
+body.ag-page .ag-cluster    { display:flex; flex-wrap:wrap; gap:var(--ag-space-4); }
+body.ag-page .ag-cluster-sm { display:flex; flex-wrap:wrap; gap:var(--ag-space-2); }
+
+/* — 相关链接 chip ————————————————————————————————— */
+body.ag-page a.ag-chip-link {
+  display:inline-block;
+  padding:var(--ag-space-2) 14px;
+  margin:var(--ag-space-1);
+  background:var(--ag-bg-surface);
+  border:1px solid var(--ag-border-strong);
+  border-radius:var(--ag-radius-2);
+  color:var(--ag-accent);
+  font-size:var(--ag-fs-300);
+  text-decoration:none;
+  transition:border-color var(--ag-dur-fast) var(--ag-ease),
+             color var(--ag-dur-fast) var(--ag-ease);
+}
+body.ag-page a.ag-chip-link:hover {
+  border-color:var(--ag-accent);
+  color:var(--ag-accent-strong);
+}
+body.ag-page .ag-u-accent { color:var(--ag-accent); }
+body.ag-page .ag-u-danger { color:var(--ag-danger-text); }
+/* 若这两个类挂在 <a> 上，兜底的 a:not([style]) 会盖掉直接声明，走通道 */
+body.ag-page a.ag-u-accent { --ag-c-link: var(--ag-accent);      --ag-c-link-hover: var(--ag-accent-strong); }
+body.ag-page a.ag-u-danger { --ag-c-link: var(--ag-danger-text); --ag-c-link-hover: var(--ag-danger-text); }
+
+/* --------------------------------------------------------------------------
+   12.1 给第 11 节的兜底规则补 --ag-c-* 通道
+   --------------------------------------------------------------------------
+   ⚠️ 这是内联样式清理的**必然后果**，容易漏：
+   11.1 的兜底写成 `p:not([style])` / `a:not([style])`，本意是"别去动作者
+   自己写了内联颜色的段落"。内联样式一旦被收进类，`[style]` 属性就没了，
+   这些元素**反而被兜底以 !important 接管**，颜色会集体掉回 --ag-text-body。
+
+   所以每个原本靠内联颜色生效的元素，都要改用 --ag-c-* 把正确的值喂给兜底
+   （这也是 11.6 一直在用的同一套机制）。
+   -------------------------------------------------------------------------- */
+body.ag-page .ag-feedback__hint   { --ag-c-text: var(--ag-text-secondary); }
+body.ag-page .ag-feedback__thanks { --ag-c-text: var(--ag-accent); }
+body.ag-page .ag-panel            { --ag-c-text: var(--ag-text-body); }
+body.ag-page .ag-panel__title     { --ag-c-head: var(--ag-accent); }
+body.ag-page a.ag-chip-link       { --ag-c-link: var(--ag-accent);
+                                    --ag-c-link-hover: var(--ag-accent-strong); }
+body.ag-page .ag-feedback__title  { --ag-c-head: var(--ag-accent); }
+
+/* Callout：兜底会把里面的 <p> 刷成正文色，而各变体自己声明了文字色，
+   要把这个色交回给兜底，标题同理。 */
+.callout--info    { --ag-c-text: var(--ag-info-text);     --ag-c-head: var(--ag-info-text); }
+.callout--warn    { --ag-c-text: var(--ag-warn-text);     --ag-c-head: var(--ag-warn-text); }
+.callout--success { --ag-c-text: var(--ag-success-text);  --ag-c-head: var(--ag-success-text); }
+.callout--danger  { --ag-c-text: var(--ag-danger-text);   --ag-c-head: var(--ag-danger-text); }
+.callout--tip     { --ag-c-text: var(--ag-accent-strong); --ag-c-head: var(--ag-accent-strong); }
+
+/* 首页 hero 是**固定深色面**（绿底白字），但它的类名是老的 .hero-section，
+   不是 .ag-hero，于是从来没拿到 --ag-c-text —— 副标题被兜底刷成了正文色，
+   在绿底上对比度不合格。这是存量问题，顺手修掉。 */
+body.ag-page .hero-section       { --ag-c-text: rgba(255, 255, 255, .92);
+                                   --ag-c-head: var(--ag-bg-surface);
+                                   --ag-c-link: var(--ag-bg-surface);
+                                   --ag-c-link-hover: var(--ag-bg-surface); }
+
+/* 页脚同样是固定深色面（两种主题下都不变）。 */
+body.ag-page .site-footer        { --ag-c-text: var(--ag-text-inverse-dim);
+                                   --ag-c-head: var(--ag-text-inverse);
+                                   --ag-c-link: var(--ag-text-inverse-dim);
+                                   --ag-c-link-hover: var(--ag-bg-surface); }
+
+/* — 首页两块一次性面板（原先写在行内，收敛成类） ——————— */
+body.ag-page .ag-shell-narrow { max-width:1200px; margin:var(--ag-space-5) auto; padding:0 var(--ag-space-5); }
+body.ag-page .ag-panel        { background:var(--ag-accent-50); border-radius:var(--ag-radius-3); padding:var(--ag-space-5); }
+body.ag-page .ag-panel__title { margin:0 0 var(--ag-space-2); color:var(--ag-accent); }
+/* FAQ summaries, if content kept the legacy `.faq-item` classes. */
+body.ag-page .prose summary        { color:var(--ag-c-head, var(--ag-text-primary)) !important; }
+
+/* ==========================================================================
+   13. 页面内嵌样式归并（PORTED FROM INLINE <style>）
+   --------------------------------------------------------------------------
+   427 个页面里重复粘贴了 430 段内嵌 <style>（仅 12 种内容，平均 3.4KB），
+   其中绝大多数规则共享样式表已有令牌版定义。这一节收留的是共享表确实没有的
+   那部分，取值已换成令牌；随后内嵌块被整体删除。
+   ========================================================================== */
+
+body.ag-page .content-text { color:var(--ag-text-body); }
+body.ag-page .faq-item summary::-webkit-details-marker { display:none; }
+body.ag-page .faq-item.open .faq-answer { display:block; }
+body.ag-page .footer-col h4 { color:var(--ag-text-inverse);margin-bottom:12px; }
+body.ag-page .footer-col li { margin-bottom:8px; }
+body.ag-page .footer-col ul { list-style:none;padding:0; }
+body.ag-page .form-row .form-group { flex:1;min-width:200px; }
+body.ag-page .micro-story p { font-style:italic;color:var(--ag-warn-text);font-size:14px; }
+body.ag-page .offline-container { max-width: 600px; margin: 60px auto; text-align: center; padding: 40px 20px; }
+body.ag-page .offline-icon { font-size: 64px; margin-bottom: 20px; }
+body.ag-page .offline-link { display: block; padding: 15px; background: var(--ag-bg-surface); border: 1px solid var(--ag-border-strong); border-radius: 8px; text-decoration: none; color: var(--ag-accent); font-weight: 600; transition: all 0.2s; }
+body.ag-page .offline-link .icon { font-size: 24px; display: block; margin-bottom: 5px; }
+body.ag-page .offline-link:hover { background: var(--ag-accent-50); border-color: var(--ag-accent-400); }
+body.ag-page .offline-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 30px; }
+body.ag-page .offline-text { font-size: 16px; color: var(--ag-text-secondary); line-height: 1.7; margin-bottom: 30px; }
+body.ag-page .offline-title { font-size: 28px; color: var(--ag-accent-strong); margin-bottom: 15px; }
+body.ag-page .retry-btn { display: inline-block; padding: 12px 30px; background: var(--ag-accent); color: var(--ag-bg-surface); border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; margin-top: 20px; }
+body.ag-page .retry-btn:hover { background: var(--ag-accent-strong); }
+body.ag-page .term-table { font-size:12px; }
+body.ag-page .term-table .en { font-weight:600;color:var(--ag-accent-strong); }
+body.ag-page .term-table .es { color:var(--ag-accent-strong); }
+body.ag-page .term-table .fr { color:var(--ag-accent-400); }
+body.ag-page .term-table td { padding:10px 16px;border-bottom:1px solid var(--ag-border);font-size:14px; }
+body.ag-page .term-table th { background:var(--ag-accent);color:var(--ag-bg-surface);padding:12px 16px;text-align:left;font-size:14px; }
+body.ag-page .term-table th, body.ag-page .term-table td { padding:8px; }
+body.ag-page .term-table tr:hover td { background:var(--ag-accent-50); }
+body.ag-page .tooltip { display:none; }
+body.ag-page .ux-panel h4 { margin:0 0 10px;color:var(--ag-accent); }
+body.ag-page .ux-panel.open { display:block; }
+
+/* ==========================================================================
+   14. EDITORIAL IMAGERY — homepage category banners, tool-card media,
+       calculator page covers.
+
+   The homepage and the tool pages used to be text-only, while blog/guide
+   pages carried photography. These three components bring the same
+   text-and-image density to the tool side of the site, reusing the existing
+   tokens and the media idiom already established by .ag-article-card__media.
+   ========================================================================== */
+
+/* — 14.1 Homepage category banner ----------------------------------------
+   The cover sits directly under each category header. Height is clamped so
+   eleven of them never turn the page into a photo album: it stays a band,
+   not a billboard. object-position lifts the crop slightly above centre,
+   which suits the horizon-heavy framing of the covers. */
+.ag-cat-banner {
+  margin:0 0 var(--ag-space-5);
+  height:clamp(150px, 20vw, 270px);
+  border-radius:var(--ag-radius-3);
+  overflow:hidden;
+  border:1px solid var(--ag-border);
+  background:var(--ag-bg-sunken);
+}
+.ag-cat-banner img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 58%;
+}
+
+/* — 14.2 Tool-card media strip -------------------------------------------
+   .tool-card already clips (overflow:hidden) and pads 22px — 15px under
+   720px. Cancelling exactly that padding lets the strip bleed to the card
+   edges without restructuring the card markup. If the padding ever changes
+   the failure mode is benign: the clip keeps the strip inside the card. */
+.ag-tool-media {
+  margin:-22px -22px var(--ag-space-4);
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  background:var(--ag-bg-sunken);
+}
+.ag-tool-media img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s var(--ag-ease);
+}
+.tool-card:hover .ag-tool-media img { transform:scale(1.04); }
+
+/* — 14.3 Calculator page cover -------------------------------------------
+   Shorter than the article cover used on blog/guide pages: on a tool page
+   the calculator is the point, so the photo should not push the form below
+   the fold. */
+.ag-tool-cover {
+  margin:var(--ag-space-6) 0 0;
+  height:clamp(160px, 24vw, 300px);
+  border-radius:var(--ag-radius-3);
+  overflow:hidden;
+  border:1px solid var(--ag-border);
+  background:var(--ag-bg-sunken);
+}
+.ag-tool-cover img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 58%;
+}
+
+/* — 14.4 The pre-existing .ag-related list, promoted to an image grid ----
+   The tool pages already shipped one related block (§5.17), a single-column
+   list of bulleted links. Adding a second, picture-bearing block next to it
+   would have duplicated the section, so §5.17 is upgraded in place instead:
+   same links, same order, now with a thumbnail per row. A tool page ends up
+   with exactly one related block — and it has pictures. */
+.ag-related__list {
+  /* Three across on purpose. A category only has three pictures to draw on
+     (two thumbnails plus its cover), and the frame rotation is three long, so
+     a three-column grid shows every distinct image exactly once per row. A
+     five- or four-column grid would put the same photo twice in one row. */
+  grid-template-columns:repeat(3, 1fr);
+  gap:var(--ag-space-4);
+}
+.ag-related__list a {
+  display:block;
+  padding:0;
+  overflow:hidden;
+  border-radius:var(--ag-radius-3);
+  font-weight:600;
+}
+.ag-related__list a::before { content:none; }
+.ag-related__media {
+  display:block;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  background:var(--ag-bg-sunken);
+}
+.ag-related__media img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s var(--ag-ease);
+}
+.ag-related__list a:hover .ag-related__media img { transform:scale(1.04); }
+.ag-related__label { display:block; padding:var(--ag-space-3) var(--ag-space-4); }
+
+/* — 14.5 Narrow viewports ------------------------------------------------ */
+@media (max-width:720px) {
+  .ag-tool-media { margin:-15px -15px var(--ag-space-3); }
+  .ag-cat-banner { margin-bottom:var(--ag-space-4); }
+  .ag-tool-cover  { margin-top:var(--ag-space-5); }
+  .ag-related__list { grid-template-columns:repeat(2, 1fr); }
+}
+
+@media (max-width:420px) {
+  .ag-related__list { grid-template-columns:1fr; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .tool-card:hover .ag-tool-media img { transform:none; }
+  .ag-related__list a:hover .ag-related__media img { transform:none; }
+}

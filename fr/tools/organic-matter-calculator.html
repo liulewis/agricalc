@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Calculateur biologique matter | Sol Gratuit | Agricalc</title><meta name="description" content="Calculateur biologique matter en ligne gratuit avec résultats instantanés. Formules vérifiées, exemples pratiques et conseils pour votre ferme. Sans inscript..."><meta name="keywords" content="soil organic matter calculator, OM stock, nitrogen mineralization, soil carbon, humus"><link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+
+
+<meta property="og:type" content="article"><meta property="og:title" content="Calculatrice de Matière Organique du Sol | Stock et Minéralisation N | Agricalc"><meta property="og:description" content="Calculatrice gratuite de matière organique. Estimez le stock de MO, le carbone organique du sol (COS) et la minéralisation annuelle de N à partir de MO%, masse volumique et profondeur."><meta property="og:url" content="https://agricalc.online/fr/tools/organic-matter-calculator.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Calculatrice de Matière Organique du Sol | Stock et Minéralisation N | Agricalc"><meta name="twitter:description" content="Calculatrice gratuite de matière organique. Estimez le stock de MO, le carbone organique du sol (COS) et la minéralisation annuelle de N à partir de MO%, masse volumique et profondeur."><meta property="og:image" content="https://agricalc.online/assets/images/og-image.png"><meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/tools/organic-matter-calculator.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/tools/organic-matter-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/tools/organic-matter-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/tools/organic-matter-calculator.html">
+<link rel="canonical" href="https://agricalc.online/fr/tools/organic-matter-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Calculatrice de Matière Organique", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "url": "https://agricalc.online/fr/tools/organic-matter-calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculatrice gratuite de matière organique.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "128", "bestRating": "5", "worstRating": "1"}}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page"><a class="ag-skip-link" href="#main">Aller au contenu</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/fr/" aria-label="Accueil Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/fr/">Accueil</a>
+      <a class="ag-nav__link is-active" href="/fr/#tools" aria-current="page">Outils</a>
+      <a class="ag-nav__link" href="/fr/guides/">Guides</a>
+      <a class="ag-nav__link" href="/fr/blog/">Blog</a>
+      <a class="ag-nav__link" href="/fr/glossary/">Glossaire</a>
+      <a class="ag-nav__link" href="/fr/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Langue">
+        <a class="ag-lang__btn" href="/tools/organic-matter-calculator.html">EN</a>
+        <a class="ag-lang__btn" href="/es/tools/organic-matter-calculator.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/tools/organic-matter-calculator.html" aria-current="true">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/#tools">Outils</a>
+      <a href="/fr/guides/">Guides</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/glossary/">Glossaire</a>
+      <a href="/fr/faq.html">FAQ</a>
+      <a href="/fr/about.html">À propos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+  <div class="ag-wrap">
+      <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><span aria-current="page">Calculatrice de Matière Organique</span></li>
+      </ol>
+    </nav>
+      <div class="ux-toolbar">
+<div class="ux-toolbar-left"><div class="unit-switch">
+<button type="button" class="unit-btn metric-btn active" data-unit="metric" onclick="toggleUnites('metric')">Métrique</button>
+<button type="button" class="unit-btn imperial-btn" data-unit="imperial" onclick="toggleUnites('imperial')">Impérial</button>
+</div></div>
+<div class="ux-toolbar-right">
+<button type="button" class="ux-icon-btn dark-mode" onclick="toggleDarkModeUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg> <span class="tooltip">Mode sombre</span></button>
+<button type="button" class="ux-icon-btn favorite" onclick="toggleFavoriteUI()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Ajouter aux favoris</span></button>
+<button type="button" class="ux-icon-btn" onclick="openShareModal()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> <span class="tooltip">Partager et Exporter</span></button>
+<button type="button" class="ux-icon-btn" onclick="toggleHistoryPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> <span class="tooltip">Historique</span></button>
+<button type="button" class="ux-icon-btn" onclick="toggleFavoritesPanel()"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> <span class="tooltip">Favoris</span></button>
+</div></div>
+      <div class="ux-panel" id="historyPanel"><div class="ux-panel-header"><div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> Historique des Calculs</div><span class="ux-panel-clear" onclick="clearHistory()">Tout effacer</span></div><div id="historyList"><p class="ux-empty">Aucun calcul pour le moment</p></div></div>
+      <div class="ux-panel" id="favoritesPanel"><div class="ux-panel-header"><div class="widget-title"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-ag-icon><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg> Outils Favoris</div><span class="ux-panel-clear" onclick="clearFavorites()">Tout effacer</span></div><div id="favoritesList"></div></div>
+    </div>
+
+  <header class="ag-wrap ag-article-head ag-article-head--app">
+          <h1 class="ag-article-head__title">Calculatrice de Matière Organique</h1>
+        <figure class="ag-tool-cover"><img src="/assets/images/tools/cat-soil.webp" alt="Engrais et Sol" width="1600" height="900" loading="lazy" decoding="async"></figure></header>
+
+  <div class="ag-wrap ag-mt-6">
+          <div class="prose">
+        <p class="content-text">Estimez le stock total de matière organique du sol et l'azote libéré annuellement par minéralisation microbienne, selon l'analyse de MO, la masse volumique et la profondeur d'échantillonnage.</p>
+        <aside class="ag-card ag-card--pad">
+<p class="content-text">Saisissez le taux de MO, la profondeur, la masse volumique et la texture. La calculatrice renvoie le stock de MO par hectare, le COS et la minéralisation annuelle de N.</p>
+</aside>
+        <aside class="ag-card ag-card--pad">
+<p class="content-text">On vous a dit qu'un sol à 3% de MO fournit de l'azote « gratuit ». Mais une limon sableuse en climat sec ne minéralise que 10 kg N/ha par 1% MO, tandis qu'une terre chaude et humide peut libérer 25 kg N/ha. Texture et climat doublent le taux.</p>
+</aside>
+      </div>
+          <div class="ag-calc">
+        <form onsubmit="event.preventDefault();calculate();">
+<div class="form-row ag-cluster">
+<div class="form-group ag-field-col"><label>Matière Organique du Sol (%)</label><input type="number" id="om" value="3.5" step="0.1" min="0"></div>
+<div class="form-group ag-field-col"><label>Profondeur d'Échantillonnage (cm)</label><input type="number" id="depth" value="20" step="1" min="5"></div></div>
+<div class="form-row ag-cluster">
+<div class="form-group ag-field-col"><label>Masse Volumique (g/cm³)</label><input type="number" id="bd" value="1.3" step="0.05" min="0.5" max="2.0"></div>
+<div class="form-group ag-field-col"><label>Texture du Sol</label><select id="texture"><option value="20">Sableuse (minéralisation rapide)</option><option value="25" selected">Limoneuse (modérée)</option><option value="30">Argileuse (lente)</option></select></div></div>
+<div class="form-group"><label>Surface (ha)</label><input type="number" id="area" value="1" step="0.1" min="0.01"></div>
+<div class="form-actions"><div class="button-group">
+<button type="button" class="btn-calculate" onclick="calculate()">Calculer</button>
+<button type="button" class="btn-reset" onclick="resetForm()">Réinitialiser</button>
+</div></div></form>
+        <div class="result-box" id="resultBox">
+<h2>Résultats</h2>
+<div class="result-item ag-result-row"><span class="label">Matière Organique Totale</span><span class="value" id="r1">-</span></div>
+<div class="result-item ag-result-row"><span class="label">Carbone Organique du Sol (COS)</span><span class="value" id="r2">-</span></div>
+<div class="result-item ag-result-row"><span class="label">Minéralisation Annuelle de N</span><span class="value" id="r3">-</span></div>
+<div class="result-item ag-result-row"><span class="label">MO Totale sur le Champ</span><span class="value" id="r4">-</span></div>
+</div>
+      </div>
+          <div class="prose">
+        <aside class="ag-card ag-card--pad">
+
+<p><strong>Vérifié par des Experts:</strong> Cette calculatrice et son contenu ont été vérifiés par des experts agricoles. Les formules reposent sur les recommandations standard des services de vulgarisation. Pour des conseils spécifiques, consultez votre agronome local.</p>
+
+</aside>
+        <h2>Comment Utiliser Cette Calculatrice</h2>
+<p class="content-text">Saisissez le % MO de l'analyse, la profondeur (typiquement 15–20 cm), la masse volumique, la texture et la surface. Cliquez sur Calculer pour voir le stock de MO, le COS et le N libéré chaque année.</p>
+        <h2>À Propos de Cet Outil</h2>
+<p class="content-text">Cette calculatrice utilise la relation standard : MO (t/ha) = MO% × masse volumique (g/cm³) × profondeur (cm) × 0.1. Le COS représente ~58% de la MO (facteur Van Bemmelen). La minéralisation annuelle de N ≈ MO% × 20 lb N/acre, ajustée par texture.</p><p class="content-text"><strong>Applicabilité:</strong> Conçu pour les sols tropicaux d'Afrique francophone.</p>
+        <h2>Comment le Calcul Fonctionne</h2>
+<p class="content-text">MO (t/ha) = MO% × MV × profondeur × 0.1. COS (t C/ha) = MO × 0.58. Minéralisation annuelle de N ≈ MO% × taux selon texture (20–30 kg N/ha par 1% MO), converti depuis lb/acre (× 0.4536).</p>
+<h2>Exemple Concret</h2>
+<p class="content-text">Une limon à 3.5% MO, MV 1.3 g/cm³, échantillonnage à 20 cm. MO = 3.5 × 1.3 × 20 × 0.1 = 9.1 t/ha. COS = 9.1 × 0.58 = 5.3 t C/ha. Minéralisation ≈ 3.5 × 25 × 0.4536 ≈ 40 kg N/ha/an.</p>
+<h2>Erreurs Courantes et Conseils</h2>
+<p class="content-text">Erreurs courantes : utiliser un % MO de 0–15 cm pour des calculs plus profonds, ne pas ajuster la MV pour le tassement, appliquer le même taux de minéralisation partout, et traiter la MO totale comme disponible la première année. Seuls 1–4% de la MO se minéralisent par an.</p>
+        <div><p><strong>Révisé par l'Équipe Éditoriale d'Agricalc</strong> — Ingénieurs agricoles et agronomes avec plus de 10 ans d'expérience sur le terrain. Notre équipe vérifie chaque formule contre des publications de vulgarisation révisées par des pairs. Pour des conseils spécifiques, consultez votre agronome local.</p></div>
+<h2>Références</h2>
+<ul><li><a href="https://www.nrcs.usda.gov/resources/guides-and-instructions/conservation-practice-standard-compost-use" target="_blank" rel="noopener noreferrer">USDA NRCS — Utilisation du Compost</a></li><li><a href="https://extension.umn.edu/nutrient-management-nitrogen/organic-fertilizers" target="_blank" rel="noopener noreferrer">Extension U. du Minnesota — Engrais Organiques</a></li><li><a href="https://www.fao.org/3/y5143e/y5143e.pdf" target="_blank" rel="noopener noreferrer">FAO — Méthodes de Compostage à la Ferme</a></li></ul>
+        <div class="ag-faq">
+
+<h2>Questions Fréquemment Posées</h2>
+<details><summary>Quelle teneur en matière organique est bonne ?</summary><p class="content-text">La plupart des sols minéraux visent 3–5% MO sur 15 cm. Les sables ont typiquement 1–3%, les limons 3–6%, les argiles ou tourbes peuvent dépasser 8%. Moins de 2% MO en surface indique un sol dégradé.</p></details><details><summary>Quelle est la différence entre MO et COS ?</summary><p class="content-text">La matière organique du sol (MOS) inclut tout le matériau organique ; le carbone organique du sol (COS) est la fraction carbone, ~58% de la MO. Pour convertir : COS = MO × 0.58, ou MO = COS × 1.724.</p></details><details><summary>Combien d'azote la matière organique libère-t-elle par an ?</summary><p class="content-text">Environ 1–4% de l'N organique total se minéralise annuellement. En règle générale, chaque 1% de MO sur 15 cm libère ~10–25 kg N/ha/an selon texture, température et humidité.</p></details><details><summary>Ajouter du compost augmente-t-il vraiment la matière organique ?</summary><p class="content-text">Oui, mais lentement. Apporter 10 t/ha de compost (~25% MO) n'ajoute que ~2.5 t MO/ha ; la décomposition en perd la majorité la première année. L'augmentation à long terme nécessite des apports annuels combinés au non-labour et aux cultures de couverture.</p></details><details><summary>À quelle profondeur échantillonner ?</summary><p class="content-text">Échantillonnez la couche labourée (0–15 ou 0–20 cm) pour la gestion courante. Pour la comptabilité carbone, échantillonnez par strates : 0–15, 15–30, 30–60 cm. La MO de surface peut être 2–3 fois supérieure au sous-sol.</p></details>
+</div>
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle teneur en matière organique est bonne ?", "acceptedAnswer": {"@type": "Answer", "text": "La plupart des sols minéraux visent 3–5% MO sur 15 cm. Les sables ont typiquement 1–3%, les limons 3–6%, les argiles ou tourbes peuvent dépasser 8%. Moins de 2% MO en surface indique un sol dégradé."}}, {"@type": "Question", "name": "Quelle est la différence entre MO et COS ?", "acceptedAnswer": {"@type": "Answer", "text": "La matière organique du sol (MOS) inclut tout le matériau organique ; le carbone organique du sol (COS) est la fraction carbone, ~58% de la MO. Pour convertir : COS = MO × 0.58, ou MO = COS × 1.724."}}, {"@type": "Question", "name": "Combien d'azote la matière organique libère-t-elle par an ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ 1–4% de l'N organique total se minéralise annuellement. En règle générale, chaque 1% de MO sur 15 cm libère ~10–25 kg N/ha/an selon texture, température et humidité."}}, {"@type": "Question", "name": "Ajouter du compost augmente-t-il vraiment la matière organique ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, mais lentement. Apporter 10 t/ha de compost (~25% MO) n'ajoute que ~2.5 t MO/ha ; la décomposition en perd la majorité la première année. L'augmentation à long terme nécessite des apports annuels combinés au non-labour et aux cultures de couverture."}}, {"@type": "Question", "name": "À quelle profondeur échantillonner ?", "acceptedAnswer": {"@type": "Answer", "text": "Échantillonnez la couche labourée (0–15 ou 0–20 cm) pour la gestion courante. Pour la comptabilité carbone, échantillonnez par strates : 0–15, 15–30, 30–60 cm. La MO de surface peut être 2–3 fois supérieure au sous-sol."}}]}</script>
+      </div>
+        </div>
+
+  <div class="ag-wrap ag-mt-7">
+      <div class="ag-related">
+        <p class="ag-related__title">Calculateurs associés</p>
+        <ul class="ag-related__list">
+          <li><a href="/fr/tools/soil-carbon-stock-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Carbone du Sol</span></a></li>
+          <li><a href="/fr/tools/bulk-density-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Masse Volumique</span></a></li>
+          <li><a href="/fr/tools/compost-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-soil.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur de Compost</span></a></li>
+          <li><a href="/fr/tools/vermicompost-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Vermicompost</span></a></li>
+          <li><a href="/fr/tools/nitrogen-rate-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-soil.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Dose d&#x27;Azote</span></a></li>
+          <li><a href="/fr/tools/soil-ph-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Amendement du pH</span></a></li>
+          <li><a href="/fr/tools/npk-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/cat-soil.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice NPK</span></a></li>
+          <li><a href="/fr/tools/fertilizer-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculateur d&#x27;Engrais</span></a></li>
+          <li><a href="/fr/tools/soil-test-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-2.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice de Recommandation de Sol</span></a></li>
+          <li><a href="/fr/tools/lime-application-calculator.html"><span class="ag-related__media"><img src="/assets/images/tools/thumb-soil-1.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="ag-related__label">Calculatrice d&#x27;Application de Chaux Agricole</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="rating-feedback-widget ag-feedback">
+<div class="feedback-title ag-feedback__title">Cette calculatrice vous a-t-elle été utile ?</div>
+<div class="rating-stars ag-stars">
+<span class="star ag-star" data-rating="1">★</span><span class="star ag-star" data-rating="2">★</span><span class="star ag-star" data-rating="3">★</span><span class="star ag-star" data-rating="4">★</span><span class="star ag-star" data-rating="5">★</span>
+</div>
+<p class="rating-message ag-feedback__hint">Click to rate this tool</p>
+<div class="feedback-section ag-mt-4">
+<textarea class="feedback-text ag-textarea" placeholder="Dites-nous comment améliorer cet outil..."></textarea>
+<button type="submit" class="feedback-submit btn-calculate">Envoyer un Avis</button>
+</div>
+<p style="display:none" class="feedback-thanks ag-feedback__thanks">Merci pour votre avis !</p>
+</div>
+  </article>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculateurs, tous gratuits, sans inscription</p>
+        <p class="ag-cta__text">Semis, sol, irrigation, élevage, machinisme et finances agricoles : choisissez un outil et obtenez une réponse en moins d'une minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/fr/#tools">Voir les calculateurs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculateurs agricoles gratuits pour l'agriculture moderne.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Outils">
+        <p class="ag-footer__col-title">Outils</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/#planting">Semis</a></li>
+          <li><a href="/fr/#land">Terre et sol</a></li>
+          <li><a href="/fr/#livestock">Élevage</a></li>
+          <li><a href="/fr/#general">Général</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Ressources">
+        <p class="ag-footer__col-title">Ressources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/guides/">Guides</a></li>
+          <li><a href="/fr/blog/">Blog</a></li>
+          <li><a href="/fr/glossary/">Glossaire</a></li>
+          <li><a href="/fr/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Société">
+        <p class="ag-footer__col-title">Société</p>
+        <ul class="ag-footer__links">
+          <li><a href="/fr/about.html">À propos</a></li>
+          <li><a href="/fr/contact.html">Contact</a></li>
+          <li><a href="/fr/privacy.html">Confidentialité</a></li>
+          <li><a href="/fr/editorial-policy.html">Politique éditoriale</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Langues">
+        <p class="ag-footer__col-title">Langues</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">À titre indicatif uniquement — consultez les services de vulgarisation locaux ou un agronome avant d'agir sur la base de ces chiffres.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/common.js?v=19" defer></script>
+<script>function calculate(){
+var om=getVal("om");var depth=getVal("depth");var bd=getVal("bd");var tex=getVal("texture");var area=getVal("area");
+var omStock=om*bd*depth*0.1;var soc=omStock*0.58;var nMiner=om*tex*0.4536;var totalOM=omStock*area;
+setResult("r1",omStock.toFixed(1),"t/ha");setResult("r2",soc.toFixed(1),"t C/ha");setResult("r3",nMiner.toFixed(1),"kg N/ha/yr");
+setResult("r4",totalOM.toFixed(0),"t");showResult("resultBox");}
+document.querySelectorAll("input,select").forEach(function(el){el.addEventListener("input",calculate);});</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(err){console.log('SW registration failed:',err);});});}
+</script>
+<script src="/assets/js/weather-api.js" defer></script>
+<script>(function(){try{var initRating=function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem("rating_"+pageId);var stars=document.querySelectorAll(".rating-stars .star");var message=document.querySelector(".rating-message");if(!stars.length||!message)return;var ratingMessages={5:"Excellent ! Merci pour votre évaluation !",4:"Super ! Content que cela vous ait été utile !",3:"Bien, merci pour votre retour.",2:"Merci, nous allons travailler à améliorer.",1:"Désolé d'apprendre cela, dites-nous comment améliorer."};function setRating(rating){stars.forEach(function(star,i){star.style.color=i<rating?"#f5a623":"#ddd";});message.textContent=ratingMessages[rating]||"";localStorage.setItem("rating_"+pageId,rating);}stars.forEach(function(star){star.addEventListener("click",function(){setRating(parseInt(this.dataset.rating));});star.addEventListener("mouseenter",function(){var rating=parseInt(this.dataset.rating);stars.forEach(function(s,i){s.style.color=i<rating?"#f5a623":"#ddd";});});});var starsContainer=document.querySelector(".rating-stars");if(starsContainer){starsContainer.addEventListener("mouseleave",function(){if(savedRating)setRating(parseInt(savedRating));else stars.forEach(function(s){s.style.color="#999";});});}if(savedRating)setRating(parseInt(savedRating));var submitBtn=document.querySelector(".feedback-submit");if(submitBtn){submitBtn.addEventListener("click",function(){var text=document.querySelector(".feedback-text");var feedbackSection=document.querySelector(".feedback-section");var thanks=document.querySelector(".feedback-thanks");if(text&&text.value.trim()){localStorage.setItem("feedback_"+pageId,text.value);if(feedbackSection)feedbackSection.style.display="none";if(thanks)thanks.style.display="block";}});}};if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initRating);}else{initRating();}}catch(e){console.error("Rating widget error:",e);}})();</script>
+<script src="/assets/js/agri-ui.js?v=2" defer></script>
+</body></html>

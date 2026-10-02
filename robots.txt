@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# 内部 / 构建产物绝不部署到线上；下面几条是兜底：万一误传也要挡住抓取。
+# 本地所有「不上传_*」目录与文件在上传清单里已排除，线上不会存在这些路径。
+Disallow: /*.bak
+Disallow: /*.bak-
+Disallow: /*.bak_seo
+Disallow: /*.backup
+Disallow: /*.backup-
+Disallow: /*.tmp
+Disallow: /*.sh
+
+# Sitemap
+Sitemap: https://agricalc.online/sitemap_index.xml

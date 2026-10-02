@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cálculo de Agua de Riego: Desde | Guía Completa | Agricalc</title><meta name="description" content="Aprenda sobre cálculo de Agua de Riego: respuestas prácticas, guía experta y cálculos paso a paso respaldados por investigación agrícola. Gratis pa..."><meta name="keywords" content="guía de cálculo de agua de riego, calculadora de requerimiento hídrico de cultivos, calculadora de evapotranspiración, calculadora de tiempo de riego, calculadora de caudal de riego"><meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://agricalc.online/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://agricalc.online/es/guides/"}, {"@type": "ListItem", "position": 3, "name": "Cálculo de Agua de Riego: Desde la ET hasta el Tiempo de Riego"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cálculo de Agua de Riego: Desde la ET hasta el Tiempo de Riego","description":"Aprende cálculo de agua de riego: requerimiento hídrico usando Kc de FAO, evapotranspiración, tiempo de riego y caudal. Calculadoras gratuit Free tool included.","author":{"@type":"Person","name":"Agricalc Editorial Team","url":"https://agricalc.online/about.html"},"datePublished":"2026-07-05","dateModified":"2026-07-20","articleSection":"Riego y Manejo del Agua","publisher":{"@type":"Organization","name":"Agricalc","url":"https://agricalc.online/","logo":{"@type":"ImageObject","url":"https://agricalc.online/assets/images/og-image.png"}},"image":"https://agricalc.online/assets/images/og-image.png"}</script>
+<meta property="og:type" content="article"><meta property="og:title" content="Cálculo de Agua de Riego: Desde | Guía Completa | Agricalc"><meta property="og:description" content="Calcule los requerimientos de agua de riego desde la evapotranspiración de referencia (ET0) hasta el uso de agua del cultivo, programación de riego y tiempo de funcionamiento. Metodología FAO-56 completa con ejemplos."><meta property="og:url" content="https://agricalc.online/es/guides/irrigation-water-calculation-guide.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="es_ES"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cálculo de Agua de Riego: Desde | Guía Completa | Agricalc"><meta name="twitter:description" content="Calcule los requerimientos de agua de riego desde la evapotranspiración de referencia (ET0) hasta el uso de agua del cultivo, programación de riego y tiempo de funcionamiento. Metodología FAO-56 completa con ejemplos."><meta property="og:image" content="/assets/images/blog/cat-irrigation.webp"><meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/guides/irrigation-water-calculation-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/guides/irrigation-water-calculation-guide.html">
+<link rel="canonical" href="https://agricalc.online/es/guides/irrigation-water-calculation-guide.html">
+<meta property="article:published_time" content="2026-07-05">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo calculo el requerimiento hídrico de un cultivo para riego?", "acceptedAnswer": {"@type": "Answer", "text": "Requerimiento hídrico (ETc) = Evapotranspiración de referencia (ETo) × Coeficiente de cultivo (Kc). La ETo proviene de datos meteorológicos locales (método Penman-Monteith) o una estación cercana. El Kc varía por etapa: 0.3–0.5 inicial, 0.7–1.0 media estación, 0.6–0.8 final. Por ejemplo, tomates en media estación con ETo = 0.25 pulg/día y Kc = 1.0 necesitan 0.25 pulg/día = 1.75 pulg/semana. Una calculadora de requerimiento hídrico simplifica esto."}}, {"@type": "Question", "name": "¿Cómo calculo el tiempo de riego?", "acceptedAnswer": {"@type": "Answer", "text": "Tiempo de riego (horas) = Agua necesaria (pulgadas) × Área (acres) × 27,154 ÷ (Caudal (GPM) × 60 × Eficiencia). Para riego por goteo (90% eficiencia) aplicando 1 pulgada a 1 acre a 50 GPM: (1 × 1 × 27,154) ÷ (50 × 60 × 0.90) = 27,154 ÷ 2,700 = 10.06 horas. Una calculadora de tiempo de riego considera tipo de sistema, eficiencia y área automáticamente."}}, {"@type": "Question", "name": "¿Qué es la evapotranspiración y por qué importa para el riego?", "acceptedAnswer": {"@type": "Answer", "text": "La evapotranspiración (ET) es la pérdida combinada de agua por evaporación del suelo y transpiración de las plantas. Representa el agua que debe reponerse con riego (más lluvia). La ET de referencia (ETo) se mide para una superficie de pasto estándar y se ajusta con el coeficiente de cultivo (Kc) para obtener la ET real (ETc). Entender la ET permite programación precisa de riego que evita tanto déficit (pérdida de rendimiento) como exceso (desperdicio, enfermedad, lixiviación). Usa una calculadora de evapotranspiración con datos locales."}}, {"@type": "Question", "name": "¿Cómo calculo el caudal de riego de mi sistema?", "acceptedAnswer": {"@type": "Answer", "text": "El caudal depende de la fuente de agua y el diseño. Para pozo: GPM = rendimiento del pozo (probado). Para suministro municipal: GPM = Presión (PSI) × factor de tubería. Para sistema diseñado: GPM total = Número de emisores × Caudal por emisor ÷ 120 (para dos zonas). Por ejemplo, 1,000 emisores de goteo a 0.5 GPH cada uno = 500 GPH = 8.33 GPM por zona. Una calculadora de caudal ayuda a dimensionar bomba, tubería y zonas."}}, {"@type": "Question", "name": "¿Cuánta agua necesita un acre de hortalizas por semana?", "acceptedAnswer": {"@type": "Answer", "text": "Las necesidades varían por cultivo, etapa, clima y suelo. Requerimientos típicos de pico: tomates 1.5–2.5 pulg/semana (4,000–6,800 galones/acre/día), lechuga 1.0–1.5 pulg/semana, pimientos 1.0–2.0 pulg/semana, pepinos 1.5–2.5 pulg/semana. Una pulgada de agua en un acre = 27,154 galones. En climas calurosos y secos, la demanda puede superar 3 pulg/semana. Usa una calculadora de requerimiento hídrico con datos ETo locales."}}, {"@type": "Question", "name": "¿Qué es la eficiencia de riego y cómo se calcula?", "acceptedAnswer": {"@type": "Answer", "text": "La eficiencia de riego es el porcentaje de agua aplicada que llega a la zona radicular (no perdida por evaporación, escorrentía o percolación profunda). Eficiencias típicas: goteo 85–95%, aspersión 70–85%, inundación/surco 50–70%. Eficiencia = (Agua almacenada en raíces ÷ Agua aplicada) × 100. Para calcular aplicación: Agua a aplicar = Necesidad del cultivo ÷ Eficiencia. Por ejemplo, si el cultivo necesita 1 pulgada y la eficiencia de goteo es 90%, aplica 1 ÷ 0.90 = 1.11 pulgadas. Mayor eficiencia reduce costos de agua y bombeo."}}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Saltar al contenido</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/es/" aria-label="Inicio de Agricalc">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Principal">
+      <a class="ag-nav__link" href="/es/">Inicio</a>
+      <a class="ag-nav__link" href="/es/#tools">Herramientas</a>
+      <a class="ag-nav__link is-active" href="/es/guides/" aria-current="page">Guías</a>
+      <a class="ag-nav__link" href="/es/blog/">Blog</a>
+      <a class="ag-nav__link" href="/es/glossary/">Glosario</a>
+      <a class="ag-nav__link" href="/es/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Idioma">
+        <a class="ag-lang__btn" href="/guides/irrigation-water-calculation-guide.html">EN</a>
+        <a class="ag-lang__btn" href="/es/guides/irrigation-water-calculation-guide.html" aria-current="true">ES</a>
+        <a class="ag-lang__btn" href="/fr/guides/irrigation-water-calculation-guide.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/es/">Inicio</a>
+      <a href="/es/#tools">Herramientas</a>
+      <a href="/es/guides/">Guías</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/glossary/">Glosario</a>
+      <a href="/es/faq.html">FAQ</a>
+      <a href="/es/about.html">Acerca de</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/guides/">Guías</a></li>
+        <li><span aria-current="page">Riego y Manejo del Agua</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Riego y Manejo del Agua</span>
+      <h1 class="ag-article-head__title">Cálculo de Agua de Riego: Desde la ET hasta el Tiempo de Riego</h1>
+      <p class="ag-article-head__lede"><strong>Fórmula de Tiempo de Riego:</strong> Tiempo (horas) = (Requerimiento neto (pulgadas) × Área (acres) × 27,154) ÷ (Caudal del sistema (gpm) × Eficiencia de aplicación × 60)</p>
+      <div class="ag-meta ag-article-head__meta">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 9.8h17M8.2 3.5v3M15.8 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><time datetime="2026-07-11">11 Jul 2026</time></span>
+        <span>Agricalc Editorial Team</span>
+        <span>16 min de lectura</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-irrigation.webp" alt="Cálculo de Agua de Riego: Desde la ET hasta el Tiempo de Riego" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<h2>El Marco de Cálculo de Agua de Riego: ET, Coeficientes de Cultivo y Tiempo</h2>
+<p>La programación de riego responde dos preguntas: cuándo regar y cuánta agua aplicar. La metodología FAO-56 (Allen et al., 1998) es el estándar global usado por ingenieros agrícolas, distritos de riego y asesores en todo el mundo. El marco tiene cinco pasos: (1) determinar la evapotranspiración de referencia (ET0), (2) seleccionar coeficientes de cultivo (Kc) por etapa de crecimiento, (3) calcular la evapotranspiración del cultivo (ETc = ET0 × Kc), (4) restar la lluvia efectiva y las contribuciones de agua del suelo para obtener el requerimiento neto de riego, (5) convertir a tiempo de funcionamiento del sistema.</p>
+<p>Entender este marco convierte el riego de conjeturas en un proceso preciso y repetible. El riego excesivo desperdicia agua, lixivia nutrientes y promueve enfermedades radiculares; el riego insuficiente estresa el cultivo y limita el rendimiento.</p>
+<h2>Paso 1: Evapotranspiración de Referencia (ET0)</h2>
+<p>La ET0 es el uso de agua de un cultivo de referencia estandarizado (pasto bien regado, de 8–15 cm de alto, en crecimiento activo, que sombrea completamente el suelo). Representa la demanda evaporativa atmosférica independientemente del tipo de cultivo y el agua del suelo. La ET0 se calcula a partir de datos meteorológicos usando la ecuación de Penman-Monteith (estándar FAO-56).</p>
+<p>Donde: Δ = pendiente de la curva de presión de vapor de saturación (kPa/°C), Rn = radiación neta en la superficie del cultivo (MJ/m²/día), G = flujo de calor del suelo (≈0 para diario), γ = constante psicrométrica (kPa/°C), T = temperatura media diaria del aire a 2m (°C), u2 = velocidad del viento a 2m (m/s), es = presión de vapor de saturación (kPa), ea = presión de vapor real (kPa).</p>
+<p>Enfoque práctico: La mayoría de los agricultores no calculan la ET0 manualmente. En su lugar, obténgala de: estaciones meteorológicas locales (CIMIS en California, CoAgMet en Colorado, AZMET en Arizona), redes de ET de extensión estatal, o herramientas en línea. Rangos típicos de ET0: 0.10–0.20 in/día en primavera, 0.25–0.35 in/día a mediados de verano, 0.05–0.15 in/día en otoño.</p>
+<h2>Paso 2: Coeficientes de Cultivo (Kc)</h2>
+<p>El coeficiente de cultivo (Kc) ajusta la ET0 al cultivo específico y su etapa de crecimiento. El Kc varía a lo largo de la temporada según la altura del cultivo, la cobertura del dosel, el área foliar y la resistencia estomática. Cada cultivo tiene una curva Kc característica con cuatro etapas.</p>
+<p>Valores Kc de FAO-56 (Allen et al., 1998) y extensión universitaria. Ajuste el Kc para condiciones locales: agregue 0.05–0.10 para climas ventosos y de baja humedad; reste 0.05–0.10 para climas húmedos y tranquilos. Para riego por goteo, el Kc puede ser 0.10–0.20 menor porque solo parte de la superficie del suelo se moja (menor evaporación del suelo).</p>
+<table><tr><th>Cultivo</th><th>Inicial (Kc ini)</th><th>Desarrollo (Kc dev)</th><th>Media Estación (Kc mid)</th><th>Tardío (Kc end)</th></tr><tr><td>Maíz (grano)</td><td>0.30</td><td>0.70–1.15</td><td>1.15–1.20</td><td>0.60–0.80</td></tr><tr><td>Trigo</td><td>0.35</td><td>0.70–1.15</td><td>1.05–1.20</td><td>0.40–0.65</td></tr><tr><td>Soja</td><td>0.35</td><td>0.70–1.15</td><td>1.10–1.15</td><td>0.50–0.70</td></tr><tr><td>Alfalfa (corte)</td><td>0.40–0.60</td><td>—</td><td>0.95–1.20</td><td>0.85–0.90</td></tr><tr><td>Tomate</td><td>0.45</td><td>0.70–1.05</td><td>1.05–1.25</td><td>0.80–0.95</td></tr><tr><td>Papa</td><td>0.40</td><td>0.70–1.10</td><td>1.10–1.20</td><td>0.70–0.85</td></tr></table>
+<h2>Paso 3: Evapotranspiración del Cultivo (ETc)</h2>
+<p>La ETc es el uso real de agua del cultivo bajo condiciones bien regadas (sin estrés hídrico). Se expresa en pulgadas/día o mm/día. Multiplique por el número de días en un intervalo de riego para obtener el uso total de agua del cultivo en ese período.</p>
+<p>Ejemplo: Maíz a media estación (Kc = 1.18), ET0 = 0.30 in/día. ETc = 0.30 × 1.18 = 0.354 in/día. En un intervalo de 7 días: 0.354 × 7 = 2.48 pulgadas de uso de agua del cultivo.</p>
+<h2>Paso 4: Cálculo del Requerimiento Neto de Riego para la Demanda Hídrica</h2>
+<p>No todo el uso de agua del cultivo necesita provenir del riego. La lluvia efectiva y el agua almacenada en el suelo contribuyen al suministro de agua del cultivo.</p>
+<p>Lluvia efectiva: La porción de la lluvia total que entra a la zona de raíces y está disponible para el cultivo. No toda la lluvia es efectiva — las lluvias ligeras (<0.1 in) pueden evaporarse antes de infiltrarse; la lluvia intensa puede escurrirse o drenar por debajo de la zona de raíces. Aproximación común: lluvia efectiva = lluvia total × 0.70–0.85.</p>
+<p>Contribución de agua del suelo: El agua disponible para la planta (ADP) almacenada en la zona de raíces al inicio del intervalo. ADP = (capacidad de campo − punto de marchitez permanente) × profundidad de raíces × densidad aparente. ADP típica: suelos arenosos 0.5–1.0 in/pie, francos 1.5–2.0 in/pie, arcillosos 1.2–1.8 in/pie. Agotamiento permitido (MAD): típicamente 40–60% de ADP.</p>
+<p>Requerimiento de lixiviación: Necesario solo en suelos salinos o cuando se usa agua de riego salina. LR = ECiw ÷ (5 × ECdw − ECiw). La mayoría de situaciones no salinas: LR = 0.</p>
+<h2>Paso 5: Cálculo del Tiempo de Riego para una Programación Eficiente</h2>
+<p>Una vez conocido el requerimiento neto de riego (pulgadas), conviértalo al tiempo real de funcionamiento de su sistema de riego.</p>
+<p>Donde 27,154 = galones por acre-pulgada (1 acre-pulgada = 27,154 galones). 60 = minutos por hora.</p>
+<p>Eficiencia de aplicación por tipo de sistema: Riego por goteo: 85–95% (típicamente 90%). Pivote central: 75–90% (típicamente 85%, menor en condiciones ventosas). Aspersión fija/manual: 65–80%. Riego por surcos: 50–70%. Inundación/diques: 40–60%.</p>
+<p>Caudal del sistema: Mídalo con un medidor de flujo, o calcúlelo a partir del rendimiento de la bomba. Para pivotes centrales: el caudal suele ser fijo (ej., 500–1,000 gpm para un pivote de un cuarto de milla). Para goteo: flujo total de goteros × número de goteros.</p>
+<h2>Estrategias de Programación de Riego</h2>
+<p>Basado en calendario: Regar en un horario fijo (ej., cada 7 días). Simple pero no considera la variabilidad climática. Riesgo de riego excesivo o insuficiente.</p>
+<p>Basado en humedad del suelo: Use sensores de humedad del suelo (tensiómetros, sensores de capacitancia, sonda de neutrones) para activar el riego cuando el agua del suelo alcanza el umbral de agotamiento permitido (MAD). Método más preciso. Sensores cuestan $200–1,000 por estación.</p>
+<p>Basado en ET/método de chequera: Registre la ETc diaria y la lluvia, mantenga un "balance" de agua del suelo (como una chequera). Riegue cuando el balance alcance el umbral MAD. Puede hacerse con una hoja de cálculo o aplicación.</p>
+<p>Basado en estrés de la planta: Use termómetros infrarrojos (temperatura del dosel), cámaras de presión (potencial hídrico del tallo), o síntomas visuales. Reactivo en lugar de proactivo — para cuando el estrés es visible, el rendimiento ya puede estar afectado.</p>
+<h2>Ejemplo Resuelto: Riego por Pivote Central para Maíz, 125 acres (50,6 ha)</h2>
+<p>Un pivote central de un cuarto de milla (125 acres, radio 1,320 ft) en Kansas central, regando maíz a mediados de julio. Caudal del sistema: 750 gpm. Eficiencia de aplicación: 85% (típico para pivote central en viento moderado). Suelo: franco limoso, agua disponible = 1.8 in/pie, zona de raíces = 4 ft, ADP total = 7.2 pulgadas. Agotamiento permitido (MAD) = 50%.</p>
+<p><strong>Paso 1 — ET0 y Kc:</strong> Mediados de julio en Kansas: ET0 promedio = 0.30 in/día (de estación meteorológica local). Maíz en espigado/ floración (media estación): Kc = 1.20.</p>
+<p><strong>Paso 2 — Uso de agua del cultivo (ETc):</strong> ETc = 0.30 × 1.20 = 0.36 in/día. En 7 días: 0.36 × 7 = 2.52 pulgadas.</p>
+<p><strong>Paso 3 — Lluvia efectiva:</strong> Lluvia en los últimos 7 días: 0.6 pulgadas (dos lluvias suaves). Lluvia efectiva = 0.6 × 0.80 = 0.48 pulgadas.</p>
+<p><strong>Paso 4 — Verificación de agua del suelo:</strong> Sensor de humedad a 2 ft de profundidad indica 55% de ADP agotado. Se ha alcanzado el umbral de riego (MAD = 50%). Necesidad neta = ETc − lluvia efectiva = 2.52 − 0.48 = 2.04 pulgadas. Aplicar 2.04 pulgadas.</p>
+<p><strong>Paso 5 — Calcular tiempo de riego:</strong> Tiempo = (2.04 pulgadas × 125 acres × 27,154 gal/acre-in) ÷ (750 gpm × 0.85 × 60 min/hr) = 6,920,100 ÷ 38,250 = 180.9 horas. Esto es para los 125 acres completos. Un pivote central hace una revolución completa en este tiempo. 180.9 horas ≈ 7.5 días por revolución completa. Esto significa que el pivote apenas puede mantener la demanda de agua del cultivo en esta época. Si la ET sube a 0.35 in/día, el pivote no podrá seguir el ritmo (tiempo > intervalo de riego) y ocurrirá pérdida de rendimiento.</p>
+<p><strong>Paso 6 — Verificar capacidad del sistema:</strong> Capacidad del sistema = (750 gpm × 0.85 × 1440 min/día) ÷ (125 acres × 27,154 gal/acre-in) = 918,000 ÷ 3,394,250 = 0.270 in/día. Esta es la máxima agua que el sistema puede aplicar por día. La ETc del cultivo = 0.36 in/día. ¡El sistema está subdimensionado para la demanda pico! Opciones: (1) reducir el área regada, (2) aumentar el caudal (bomba/pozo más grande), (3) aceptar riego deficitario y rendimiento reducido, (4) usar almacenamiento de agua del suelo de riego previo a la temporada para amortiguar la demanda pico. </p>
+<h2>Errores Comunes en el Cálculo de Riego</h2>
+<ul><li><strong>Usar la ET0 directamente como necesidad de agua del cultivo (olvidar el Kc):</strong> Siempre multiplique la ET0 por el coeficiente de cultivo para la etapa actual. Un cultivo con Kc = 0.3 (etapa inicial) usa solo 30% de la ET0; a media estación Kc = 1.2, usa 120% de la ET0. Usar ET0 directamente riega en exceso temprano e insuficiente en la demanda pico.</li><li><strong>Ignorar la lluvia efectiva:</strong> Reste la lluvia efectiva de la ETc antes de calcular la necesidad de riego. Una lluvia de 0.5 pulgadas puede proveer 1–2 días de uso de agua del cultivo. No contabilizar la lluvia lleva a riego excesivo, lixiviación de nutrientes y desperdicio de agua/costo de bombeo.</li><li><strong>Usar 100% de eficiencia de aplicación:</strong> Todo sistema de riego pierde agua: evaporación (aspersión), deriva (viento), percolación profunda, escorrentía. Use eficiencia realista: goteo 90%, pivote central 85%, surcos 60%. Aplicar el requerimiento neto a 100% eficiencia subaplica en 10–40%.</li><li><strong>No verificar la capacidad del sistema contra la ET pico:</strong> Calcule la aplicación diaria máxima de su sistema (in/día) y compárela con la ETc pico del cultivo. Si la capacidad del sistema < ETc pico, el sistema no puede seguir el ritmo durante los períodos de alta demanda, y la pérdida de rendimiento es inevitable. Este es el cálculo de planificación pre-temporada más importante.</li><li><strong>Regar en un horario fijo independientemente del clima:</strong> Use sensores de humedad del suelo o programación basada en ET para ajustar el momento y cantidad de riego. Una semana de clima fresco y nublado puede reducir la ETc en 50%, haciendo innecesario un riego programado. Los horarios fijos desperdician 20–30% del agua de riego en promedio.</li><li><strong>Olvidar contabilizar las pérdidas de arranque del sistema:</strong> Al iniciar un sistema de riego después de un período seco, los primeros 10–30 minutos pueden perderse llenando tuberías, mojando grietas de suelo seco y evaporándose de superficies calientes. Agregue 5–10% al tiempo calculado para el primer riego después de un largo período seco. </li></ul>
+<h2>Caso Práctico: Aplicación en la Vida Real</h2>
+<p>Considere una mixto de 50 hectáreas en el Centro Oeste de Estados Unidos implementando this topic. 
+Según las directrices de la Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO) 
+sobre prácticas agrícolas sostenibles, la implementación sistemática de técnicas basadas en evidencia puede 
+mejorar la eficiencia en el uso de recursos entre un 15–25% manteniendo o incrementando los rendimientos. 
+El Servicio de Conservación de Recursos Naturales del USDA (NRCS) recomienda comenzar con una tasa de adopción 
+del 10% en la primera temporada, escalando a medida que se verifiquen los resultados.</p>
+<p>En la práctica, esto significa realizar una evaluación de referencia durante la temporada baja, identificar 
+las dos áreas prioritarias principales de mejora y asignar una pequeña parcela de prueba (2–5% de la superficie 
+total) para probar nuevas prácticas antes de la implementación a gran escala.</p>
+<h2>Referencia de Datos: Indicadores Clave</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Rango Típico</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Mejora de eficiencia</td><td>15–25%</td><td>FAO 2024</td></tr>
+<tr><td>Área de prueba inicial</td><td>2–5% de la superficie</td><td>USDA NRCS</td></tr>
+<tr><td>Período de recuperación</td><td>1–3 ciclos de cultivo</td><td>Investigación extensiva</td></tr>
+<tr><td>Reducción de riesgo</td><td>20–40%</td><td>FAO 2024</td></tr>
+</tbody>
+</table>
+<p><em>Fuentes: Organización de las Naciones Unidas para la Agricultura y la Alimentación (FAO), "Intensificación Sostenible de la Producción de Cultivos," 2024; Servicio de Conservación de Recursos Naturales del USDA, "Normas de Prácticas de Conservación," 2024.</em></p>
+<h2>Recomendaciones de Expertos y Próximos Pasos</h2>
+<p>Los especialistas de extensión de las principales universidades agrícolas recomiendan consistentemente un 
+enfoque por fases: (1) Realizar una evaluación de referencia exhaustiva, (2) priorizar cambios de alto impacto 
+y bajo riesgo, (3) implementar en un área de prueba pequeña, (4) medir los resultados rigurosamente, y (5) escalar 
+según los datos. Este enfoque iterativo minimiza el riesgo mientras construye conocimiento práctico específico 
+para las condiciones únicas de su finca.</p>
+<p>Recomendamos consultar a su oficina local de extensión agrícola para obtener recomendaciones específicas de 
+la región, ya que las prácticas óptimas varían significativamente según la zona climática, el tipo de suelo y 
+el sistema de cultivo.</p>
+<h2>Conclusión</h2>
+<p>El cálculo de agua de riego sigue un proceso claro de cinco pasos: ET0 → Kc → ETc → requerimiento neto → tiempo de riego. La metodología FAO-56 provee el marco estándar, y las fórmulas son directas una vez que tiene datos meteorológicos, coeficientes de cultivo y especificaciones del sistema. Utilice nuestra <a href="/es/tools/irrigation-run-time-calculator.html">Calculadora de Tiempo de Riego</a> para obtener resultados precisos para su operación.</p>
+<p>La visión más valiosa de este proceso a menudo no es el tiempo exacto, sino la verificación de capacidad del sistema: ¿puede su sistema de riego satisfacer la demanda pico de agua del cultivo? Si no, ninguna cantidad de precisión en la programación evitará la pérdida de rendimiento. Combine los cálculos basados en ET con monitoreo de humedad del suelo para el programa de riego más preciso y eficiente.</p>
+<h2>FAQ</h2>
+<h3>¿Dónde obtengo datos de ET0 para mi ubicación?</h3>
+<p>Los datos de ET0 están disponibles en: (1) Redes meteorológicas agrícolas estatales (CIMIS en CA, CoAgMet en CO, AZMET en AZ, etc.), (2) Estaciones del Servicio Meteorológico Nacional / NOAA, (3) Calculadoras en línea como la calculadora FAO ET0, (4) Servicios meteorológicos comerciales (DTN, Iteris). Muchos proveen valores diarios de ET0 gratuitamente. Para mayor precisión, use una estación dentro de 10–20 millas de su campo con elevación y terreno similares.</p>
+<h3>¿Cada cuánto debo recalcular la necesidad de riego?</h3>
+<p>Diariamente o cada 2–3 días durante el pico de uso de agua (mediados de verano). Semanalmente es suficiente en primavera y otoño cuando la ET es baja. El método de chequera (registrar ETc diaria y lluvia) es el enfoque más práctico — actualice el balance de agua del suelo diariamente y riegue cuando alcance el umbral MAD. Los sensores de humedad proveen datos en tiempo real y eliminan la necesidad de cálculo manual.</p>
+<h3>¿Cuál es la diferencia entre requerimiento de riego bruto y neto?</h3>
+<p>El requerimiento neto es la cantidad de agua que debe llegar a la zona de raíces (ETc − lluvia efectiva − agua del suelo). El requerimiento bruto es la cantidad que debe bombearse/aplicarse, considerando las pérdidas del sistema: Bruto = Neto ÷ eficiencia de aplicación. Por ejemplo, si la necesidad neta = 2.0 pulgadas y la eficiencia = 85%, bruto = 2.0 ÷ 0.85 = 2.35 pulgadas. La diferencia (0.35 pulgadas) se pierde por evaporación, deriva, percolación profunda, etc.</p>
+<h3>¿Puedo usar los mismos valores Kc para todas las variedades de un cultivo?</h3>
+<p>Generalmente sí — los valores Kc son específicos del cultivo, no de la variedad, porque dependen principalmente del desarrollo del dosel, altura y cobertura del suelo, que son similares entre variedades del mismo cultivo. Sin embargo, hay excepciones: (1) variedades indeterminadas vs. determinadas pueden tener diferente duración del dosel, (2) variedades muy tempranas alcanzan el Kc de media estación más rápido pero tienen un período más corto, (3) variedades enanas/semi-enanas pueden tener Kc ligeramente menor. Ajuste el Kc en ±0.05–0.10 si su variedad difiere significativamente del estándar.</p>
+<h3>¿Cómo mido el caudal de mi sistema de riego?</h3>
+<p>El método más preciso es un medidor de flujo permanente o portátil instalado en la tubería principal (costo: $200–2,000). Si no hay medidor: (1) Para sistemas de bomba, use la curva de rendimiento del fabricante y mida la carga dinámica total (TDH), (2) Para pivotes centrales, mida el tiempo de una revolución completa y calcule a partir del caudal nominal, (3) Use una cubeta y cronómetro para sistemas pequeños de goteo, (4) Use un medidor ultrasónico (abrazadera, sin cortar tubería, costo: $500–3,000). Siempre verifique el caudal — un error de 20% en el caudal causa un error de 20% en el tiempo de riego. </p>
+<div class="cta-box"><p><strong>Calcule su plan:</strong> Utilice nuestras calculadoras a continuación para obtener resultados precisos.</p></div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>¿Cómo calculo el requerimiento hídrico de un cultivo para riego?</h3><p>Requerimiento hídrico (ETc) = Evapotranspiración de referencia (ETo) × Coeficiente de cultivo (Kc). La ETo proviene de datos meteorológicos locales (método Penman-Monteith) o una estación cercana. El Kc varía por etapa: 0.3–0.5 inicial, 0.7–1.0 media estación, 0.6–0.8 final. Por ejemplo, tomates en media estación con ETo = 0.25 pulg/día y Kc = 1.0 necesitan 0.25 pulg/día = 1.75 pulg/semana. Una calculadora de requerimiento hídrico simplifica esto.</p></div>
+<div class="faq-item"><h3>¿Cómo calculo el tiempo de riego?</h3><p>Tiempo de riego (horas) = Agua necesaria (pulgadas) × Área (acres) × 27,154 ÷ (Caudal (GPM) × 60 × Eficiencia). Para riego por goteo (90% eficiencia) aplicando 1 pulgada a 1 acre a 50 GPM: (1 × 1 × 27,154) ÷ (50 × 60 × 0.90) = 27,154 ÷ 2,700 = 10.06 horas. Una calculadora de tiempo de riego considera tipo de sistema, eficiencia y área automáticamente.</p></div>
+<div class="faq-item"><h3>¿Qué es la evapotranspiración y por qué importa para el riego?</h3><p>La evapotranspiración (ET) es la pérdida combinada de agua por evaporación del suelo y transpiración de las plantas. Representa el agua que debe reponerse con riego (más lluvia). La ET de referencia (ETo) se mide para una superficie de pasto estándar y se ajusta con el coeficiente de cultivo (Kc) para obtener la ET real (ETc). Entender la ET permite programación precisa de riego que evita tanto déficit (pérdida de rendimiento) como exceso (desperdicio, enfermedad, lixiviación). Usa una calculadora de evapotranspiración con datos locales.</p></div>
+<div class="faq-item"><h3>¿Cómo calculo el caudal de riego de mi sistema?</h3><p>El caudal depende de la fuente de agua y el diseño. Para pozo: GPM = rendimiento del pozo (probado). Para suministro municipal: GPM = Presión (PSI) × factor de tubería. Para sistema diseñado: GPM total = Número de emisores × Caudal por emisor ÷ 120 (para dos zonas). Por ejemplo, 1,000 emisores de goteo a 0.5 GPH cada uno = 500 GPH = 8.33 GPM por zona. Una calculadora de caudal ayuda a dimensionar bomba, tubería y zonas.</p></div>
+<div class="faq-item"><h3>¿Cuánta agua necesita un acre de hortalizas por semana?</h3><p>Las necesidades varían por cultivo, etapa, clima y suelo. Requerimientos típicos de pico: tomates 1.5–2.5 pulg/semana (4,000–6,800 galones/acre/día), lechuga 1.0–1.5 pulg/semana, pimientos 1.0–2.0 pulg/semana, pepinos 1.5–2.5 pulg/semana. Una pulgada de agua en un acre = 27,154 galones. En climas calurosos y secos, la demanda puede superar 3 pulg/semana. Usa una calculadora de requerimiento hídrico con datos ETo locales.</p></div>
+<div class="faq-item"><h3>¿Qué es la eficiencia de riego y cómo se calcula?</h3><p>La eficiencia de riego es el porcentaje de agua aplicada que llega a la zona radicular (no perdida por evaporación, escorrentía o percolación profunda). Eficiencias típicas: goteo 85–95%, aspersión 70–85%, inundación/surco 50–70%. Eficiencia = (Agua almacenada en raíces ÷ Agua aplicada) × 100. Para calcular aplicación: Agua a aplicar = Necesidad del cultivo ÷ Eficiencia. Por ejemplo, si el cultivo necesita 1 pulgada y la eficiencia de goteo es 90%, aplica 1 ÷ 0.90 = 1.11 pulgadas. Mayor eficiencia reduce costos de agua y bombeo.</p></div>
+<div class="guide-nav"><a href="/es/guides/">← Todas las Guías</a><a href="/es/#tools">Ver Calculadoras →</a></div>
+<div>
+<h3>Related Calculators</h3>
+<div><a href="/es/tools/crop-water-requirement.html" class="related-tool-link">Calculadora de Requerimiento Hídrico →</a><a href="/es/tools/irrigation-run-time-calculator.html" class="related-tool-link">Calculadora de Tiempo de Riego →</a><a href="/es/tools/irrigation-flow-rate-calculator.html" class="related-tool-link">Calculadora de Caudal de Riego →</a></div>
+</div>
+<div><h3>Guías Relacionadas</h3><div><a href="/es/guides/drip-irrigation-design-complete.html" class="related-tool-link">Guía Completa de Diseño de Sistemas de Riego por Goteo →</a></div></div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="En esta página"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Equipo editorial</span>
+          <p class="ag-card__text ag-mt-5">
+            Revisado según las guías de extensión regionales y actualizado cuando cambian las recomendaciones.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Especialistas en tecnología agrícola</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Calculadoras relacionadas</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="/es/tools/irrigation-run-time-calculator.html">Calculadora de Tiempo de Riego</a></li>
+            <li><a href="/es/tools/crop-water-requirement.html">Calculadora de Requerimiento Hídrico</a></li>
+            <li><a href="/es/tools/irrigation-flow-rate-calculator.html">Calculadora de Caudal de Riego</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>En esta página</summary>
+        <nav data-ag-toc aria-label="En esta página"></nav>
+      </details>
+    </div>
+  </article>
+
+  <section class="ag-section">
+    <div class="ag-wrap">
+      <div class="ag-section__head">
+        <div><h2 class="ag-section__title">Más guías</h2></div>
+        <a class="ag-section__link" href="/es/guides/">Todas las guías →</a>
+      </div>
+      <ul class="ag-grid ag-grid--3" role="list">
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Guía de Gestión de Riego por Pivote Central" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/es/guides/center-pivot-irrigation-management.html">Guía de Gestión de Riego por Pivote Central</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Drip Irrigation Design: A Complete Guide" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/es/guides/drip-irrigation-design-guide.html">Drip Irrigation Design: A Complete Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Conservación del Agua en la Finca: Estrategias para el Uso Eficiente del Agua" width="640" height="360" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/es/guides/farm-water-conservation.html">Conservación del Agua en la Finca: Estrategias para el Uso Eficiente del Agua</a>
+            </h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculadoras, todas gratis y sin registro</p>
+        <p class="ag-cta__text">Siembra, suelo, riego, ganadería, maquinaria y finanzas agrícolas: elige una herramienta y obtén la respuesta en menos de un minuto.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/es/#tools">Ver calculadoras</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 calculadoras agrícolas gratuitas para la agricultura moderna.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Herramientas">
+        <p class="ag-footer__col-title">Herramientas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/#planting">Siembra</a></li>
+          <li><a href="/es/#land">Tierra y suelo</a></li>
+          <li><a href="/es/#livestock">Ganadería</a></li>
+          <li><a href="/es/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Recursos">
+        <p class="ag-footer__col-title">Recursos</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/guides/">Guías</a></li>
+          <li><a href="/es/blog/">Blog</a></li>
+          <li><a href="/es/glossary/">Glosario</a></li>
+          <li><a href="/es/faq.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Empresa">
+        <p class="ag-footer__col-title">Empresa</p>
+        <ul class="ag-footer__links">
+          <li><a href="/es/about.html">Acerca de</a></li>
+          <li><a href="/es/contact.html">Contacto</a></li>
+          <li><a href="/es/privacy.html">Privacidad</a></li>
+          <li><a href="/es/editorial-policy.html">Política editorial</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Idiomas">
+        <p class="ag-footer__col-title">Idiomas</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">Solo a título informativo: consulte a los servicios de extensión locales o a un agrónomo antes de tomar decisiones basadas en estas cifras.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/es/sw.js').catch(function(err){console.log('SW failed:',err);});});}</script>
+<script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script></body></html>

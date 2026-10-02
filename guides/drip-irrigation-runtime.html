@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Drip Irrigation: How Long to Run | Complete Guide | Agricalc</title><meta name="description" content="Learn about drip irrigation runtime: practical answers, expert guidance and step-by-step calculations backed by agricultural research. Free guide for farmers..."><meta name="keywords" content="irrigation run time calculator, irrigation schedule calculator, crop evapotranspiration calculator, drip irrigation runtime, crop water requirement calculator"><meta name="theme-color" content="#FBFAF8">
+<link rel="stylesheet" href="/assets/css/style.css?v=45">
+<link rel="stylesheet" href="/assets/css/agri-ui.css?v=2">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://agricalc.online/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://agricalc.online/guides/"}, {"@type": "ListItem", "position": 3, "name": "Drip Irrigation: How Long to Run Your System"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Drip Irrigation: How Long to Run Your System","description":"Calculate drip irrigation run time with crop evapotranspiration (ET), soil water holding capacity, emitter flow rate and irrigation scheduling.","author":{"@type":"Person","name":"Agricalc Editorial Team","url":"https://agricalc.online/about.html"},"articleSection":"Irrigation & Water","publisher":{"@type":"Organization","name":"Agricalc","url":"https://agricalc.online/","logo":{"@type":"ImageObject","url":"https://agricalc.online/assets/images/og-image.png"}},"image":"https://agricalc.online/assets/images/og-image.png","dateModified":"2026-09-13","datePublished":"2026-07-01"}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate water requirements for a drip irrigation system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate crop water requirement using: ETc = ETo × Kc, where ETo is reference evapotranspiration (from local weather station) and Kc is the crop coefficient (varies by growth stage: 0.3-0.5 initial, 0.8-1.2 mid-season, 0.6-0.8 late). For a tomato crop in mid-season with ETo = 0.25 inches/day and Kc = 1.1: ETc = 0.275 inches/day. Adjust for irrigation efficiency (drip = 90-95%): Net water needed = ETc / efficiency. Account for effective rainfall: subtract rain from irrigation requirement. Use a crop water requirement calculator to determine daily, weekly, and seasonal water needs for your specific crop and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What emitter flow rate and spacing should I use for drip irrigation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Emitter selection depends on crop type, soil texture, and water availability. For row crops (vegetables, strawberries): 0.5-1.0 GPH (2-4 L/h) emitters spaced 12-24 inches (30-60 cm) apart, with one drip line per 2-4 crop rows. For orchards/vineyards: 1-4 GPH (4-16 L/h) emitters, 2-4 emitters per tree/vine, placed in a wetted pattern covering 30-50% of the root zone. For sandy soils: closer spacing (12 inches) and higher flow rates; for clay soils: wider spacing (24-36 inches) and lower flow rates to avoid runoff. Use a drip system designer calculator to match emitter specifications to your crop and soil conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I size the pipes and pump for a drip irrigation system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pipe sizing: Calculate total flow rate (GPM) = number of emitters × emitter flow rate (GPH) / 60. For 1,000 emitters at 1 GPH: 1,000 × 1 / 60 = 16.7 GPM. Size mainline and submain pipes to keep velocity below 5 ft/s (1.5 m/s) and friction loss below 5-10% of operating pressure. Use the Hazen-Williams equation or a drip system designer calculator. Pump sizing: Required pressure = emitter operating pressure (typically 10-25 PSI for drip) + friction loss in pipes + elevation difference + filter pressure loss (5-10 PSI) + safety margin. Required flow = total system GPM. Use an irrigation pump size calculator to match pump capacity to your system's combined GPM and pressure requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create an irrigation schedule for drip systems throughout the season?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A drip irrigation schedule adjusts with crop growth stage and weather. Initial stage (first 2 weeks after planting): light, frequent applications — 15-30 minutes every 1-2 days, applying 0.1-0.2 inches (3-5 mm) to keep the top 6 inches moist. Vegetative growth: increase to 30-60 minutes every 2-3 days, 0.3-0.5 inches (8-13 mm). Flowering/fruiting (peak water use): 60-120 minutes every 1-2 days, 0.5-1.0 inches (13-25 mm). Maturation/ripening: reduce by 30-50% to improve fruit quality and sugar content. Calculate daily ET = ETo × Kc and adjust schedule weekly. Use an irrigation schedule calculator to generate a season-long calendar. Install soil moisture sensors to automate and validate scheduling — irrigate when soil moisture drops to 50-60% of field capacity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What filtration is required for drip irrigation and how do I maintain it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filtration is critical for drip systems — emitter clogging is the #1 maintenance problem. Required filtration level depends on water source: Surface water (pond, canal, river): 100-150 mesh (100-150 micron) screen or disc filter, plus a sand media filter for algae and organic matter. Well water: 150-200 mesh (75-100 micron) screen filter. Municipal water: 200 mesh screen. Maintenance: Flush filters weekly (screen filters) or backwash daily (sand media filters). Clean screens with a soft brush — never use wire brushes that damage the screen. Replace damaged screens immediately. Install a pressure gauge before and after the filter — a pressure difference >5 PSI indicates the filter needs cleaning. Use a filter sized for 2x your peak flow rate to reduce cleaning frequency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent and fix emitter clogging in drip irrigation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Emitter clogging causes: physical (sand, silt, organic debris), chemical (precipitation of calcium, iron, manganese from fertilizer injection), biological (algae, bacterial slime, biofilm). Prevention: Proper filtration (matched to water source), regular flushing of lateral lines (flush 2-4 times per season, or monthly during heavy use), acid injection (phosphoric or nitric acid at pH 5.5-6.0 to dissolve mineral precipitates, 1-2 times per season), chlorine injection (1-2 ppm free chlorine for biological growth, monthly), and avoid injecting incompatible fertilizers (e.g., calcium + phosphate = precipitation). Fix: For clogged emitters, first flush laterals, then perform acid/chlorine treatment. Severely clogged emitters may need replacement. Use a drip system designer to plan maintenance access points (flushing valves at the end of each lateral)."
+      }
+    }
+  ]
+}
+</script><meta property="og:type" content="article"><meta property="og:title" content="Drip Irrigation: How Long to Run | Complete Guide | Agricalc"><meta property="og:description" content="Calculate drip irrigation run time with crop evapotranspiration (ET), soil water holding capacity, emitter flow rate and irrigation scheduling. Optimize water use and crop yield."><meta property="og:url" content="https://agricalc.online/guides/drip-irrigation-runtime.html"><meta property="og:site_name" content="Agricalc"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2026-07-24"><meta property="article:modified_time" content="2026-07-24"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Drip Irrigation: How Long to Run | Complete Guide | Agricalc"><meta name="twitter:description" content="Calculate drip irrigation runtime based on emitter flow rate, spacing, soil type, crop water needs, and efficiency. Avoid under and over-watering."><meta property="og:image" content="/assets/images/blog/cat-irrigation.webp">
+<meta name="twitter:image" content="https://agricalc.online/assets/images/og-image.png">
+<link rel="alternate" hreflang="en" href="https://agricalc.online/guides/drip-irrigation-runtime.html">
+<link rel="alternate" hreflang="es" href="https://agricalc.online/es/guides/drip-irrigation-runtime.html">
+<link rel="alternate" hreflang="fr" href="https://agricalc.online/fr/guides/drip-irrigation-runtime.html">
+<link rel="alternate" hreflang="x-default" href="https://agricalc.online/guides/drip-irrigation-runtime.html">
+<link rel="canonical" href="https://agricalc.online/guides/drip-irrigation-runtime.html">
+  <script type="application/ld+json" id="breadcrumb-jsonld">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://agricalc.online/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://agricalc.online/guides"}, {"@type": "ListItem", "position": 3, "name": "Drip Irrigation Runtime", "item": "https://agricalc.online/guides/drip-irrigation-runtime.html"}]}
+</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="dPDazpSKz+mf1PypLZxeYg" async></script></head><body class="ag-page">
+
+<a class="ag-skip-link" href="#main">Skip to content</a>
+<div class="ag-progress" data-ag-progress aria-hidden="true"></div>
+<header class="ag-header">
+  <div class="ag-wrap ag-header__inner">
+    <a class="ag-brand" href="/" aria-label="Agricalc home">
+      <span class="ag-brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+      </span>
+      <span>Agricalc</span>
+    </a>
+
+    <nav class="ag-nav" aria-label="Primary">
+      <a class="ag-nav__link" href="/">Home</a>
+      <a class="ag-nav__link" href="/#tools">Calculators</a>
+      <a class="ag-nav__link is-active" href="/guides/" aria-current="page">Guides</a>
+      <a class="ag-nav__link" href="/blog/">Blog</a>
+      <a class="ag-nav__link" href="/glossary/">Glossary</a>
+      <a class="ag-nav__link" href="/faq.html">FAQ</a>
+      <span class="ag-nav__sep" aria-hidden="true"></span>
+      <span class="ag-lang" role="group" aria-label="Language">
+        <a class="ag-lang__btn" href="/guides/drip-irrigation-runtime.html" aria-current="true">EN</a>
+        <a class="ag-lang__btn" href="/es/guides/drip-irrigation-runtime.html">ES</a>
+        <a class="ag-lang__btn" href="/fr/guides/drip-irrigation-runtime.html">FR</a>
+      </span>
+    </nav>
+
+    <div class="ag-header__actions">
+      <button class="ag-icon-btn" type="button" data-ag-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ag-icon-btn ag-menu-btn" type="button" data-ag-menu-toggle aria-controls="agMobileNav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="ag-mobile-nav" id="agMobileNav" data-open="false">
+    <div class="ag-wrap">
+      <a href="/">Home</a>
+      <a href="/#tools">Calculators</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/glossary/">Glossary</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="ag-wrap">
+    <nav class="ag-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><span aria-current="page">Irrigation & Water</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <article>
+    <header class="ag-wrap ag-article-head">
+      <span class="ag-badge ag-badge--accent">Irrigation & Water</span>
+      <h1 class="ag-article-head__title">Drip Irrigation: How Long to Run Your System</h1>
+      <p class="ag-article-head__lede">Drip irrigation runtime = (Water needed per plant ÷ Emitter flow rate) × Number of emitters. For a tomato plant needing 2 liters/day with 2 emitters of 2 L/h each: runtime = 2 ÷ (2 × 2) = 0.5 hours (30 minutes). Adjust for soil type (sand needs more frequent, shorter sessions; clay needs less frequent, longer sessions) and crop growth stage.</p>
+      <div class="ag-meta ag-article-head__meta">
+        <span>Agricalc Editorial Team</span>
+        <span>8 min read</span>
+      </div>
+
+      <figure class="ag-article-head__figure">
+        <img src="/assets/images/blog/cat-irrigation.webp" alt="Drip Irrigation: How Long to Run Your System" width="1280" height="720" loading="lazy">
+      </figure>
+    </header>
+
+    <div class="ag-wrap ag-article-layout">
+
+      <div class="prose" data-ag-progress-target>
+<h2>Why Drip Irrigation?</h2>
+<p>Drip irrigation delivers water directly to the root zone through emitters, with 85-95% efficiency — compared to 75-85% for sprinklers and 50-70% for flood/furrow. Benefits: 30-60% water savings, reduced weed growth (water only where crops grow), less disease (foliage stays dry), nutrient application through fertigation, and automation potential. Drip is ideal for vegetables, orchards, vineyards, and high-value row crops. It is less suitable for closely spaced crops like wheat orice (unless using drip tape). This guide covers irrigation run time calculator and related agricultural calculations to help you optimize your farm operations.</p>
+<h2>Key Components and Specifications</h2>
+<h3>Emitter Flow Rate</h3>
+<p>Common emitter flow rates: 0.5 GPH (2 L/h) — for sandy soils, close spacing, small plants. 1 GPH (4 L/h) — standard for most vegetables and medium soils. 2 GPH (8 L/h) — for clay soils, wide spacing, large plants (trees, vines). 4 GPH (16 L/h) — for mature trees, high water demand. Pressure-compensating emitters maintain consistent flow regardless of pressure variations (important for long rows or hilly terrain). Non-compensating emitters are cheaper but flow varies with pressure.</p>
+<h3>Emitter Spacing</h3>
+<p>Spacing depends on crop and soil: Sandy soil: 20-30 cm (water moves down, not sideways). Loam: 30-50 cm. Clay: 50-75 cm (water movesideways more). Close-spaced crops (lettuce, strawberries): 15-30 cm. Row crops (tomato, pepper): 30-50 cm (one or two emitters per plant). Orchards/vineyards: 50-100 cm (multiplemitters per tree). The goal is overlapping wetting patterns — each plant's root zone should be fully wetted.</p>
+<h3>Pressure and Filtration</h3>
+<p>Most drip systems operate at 10-15 psi (0.7-1.0 bar). Too high pressure = emitter damage, uneven flow, misting. Too low = insufficient flow, uneven watering. Use a pressuregulator at the system inlet. Filtration is critical — emitters clog easily. Use: Screen filter (150 mesh) for clean water (municipal, well). Disc filter (120-150 mesh) for surface water (pond, canal). Sand/media filter for dirty water (canal, river with sediment). Flush lines monthly and inspect emitters quarterly.</p>
+<h2>Calculating Runtime</h2>
+<h3>Step-by-Step Method</h3>
+<p>1. Determine daily crop water requirement (ETc = ETo × crop coefficient). Use local weather station data or evapotranspiration charts.</p>
+<p>2. Calculate water needed per plant: Daily water (L) = ETc (mm/day) × plant area (m²) × 0.85 (efficiency). Example: tomato at peak demand (6 mm/day), plant spacing 0.5m × 1m = 0.5 m²: 6 × 0.5 × 0.85 = 2.55 L/day/plant.</p>
+<p>3. Calculate total emitter output per plant: Total L/h = Number of emitters × Flow rate per emitter. Example: 2 emitters × 2 L/h = 4 L/h.</p>
+<p>4. Calculate runtime: Hours = Water needed (L) ÷ Total emitter output (L/h). Example: 2.55 ÷ 4 = 0.64 hours = 38 minutes.</p>
+<p>5. Adjust for soil type: Sandy soil: split into 2-3 shorter sessions (e.g., 15 min × 3) to reduce leaching. Clay soil: one longer session is fine, but don't exceed infiltration rate. Loam: one or two sessions.</p>
+<h3>Peak Water Requirements by Crop</h3>
+<p>Tomato: 4-7 mm/day (peak fruit production). Corn: 5-8 mm/day (tasseling/silking). Lettuce: 3-5 mm/day. Strawberry: 3-5 mm/day. Grape: 3-6 mm/day (veraison to harvest). Apple: 4-6 mm/day (fruit expansion). Alfalfa: 5-8 mm/day (regrowth after cutting). These are peak demands — reduce by 30-50% during establishment and late maturity stages.</p>
+<h2>Common Mistakes and Solutions</h2>
+<h3>Over-Watering</h3>
+<p>Symptoms: yellow leaves, root rot, wilting despite wet soil, nutrient leaching (especially N), algae growth on soil surface. Causes: running too long, too frequent, wrong emitter size. Fix: reduce runtime by 20-30%, increase interval between waterings, check soil moisture with a probe or shovel (wet at 15-30 cm = adequate). Over-watering is more common and more damaging than under-watering in drip systems.</p>
+<h3>Under-Watering</h3>
+<p>Symptoms: wilting during hottest part of day (recovers at night = mild stress; doesn't recover = severe), small fruit, premature flowering, leaf curl. Causes: too short runtime, clogged emitters, insufficient pressure, wrong ET estimate. Fix: increase runtime by 20-30%, check and clean emitters, verify pressure, use local ET data. Mild water stress (wilting that recovers overnight) can actually improve fruit quality in some crops (grapes, tomatoes) but reduces yield.</p>
+<h3>Uneven Watering</h3>
+<p>Symptoms: some plants thrive, otherstruggle; streaks in the field; varying crop maturity. Causes: pressure variations (slope, long rows), clogged emitters, improper design (too many emitters one line), elevation changes. Fix: install pressuregulators, use pressure-compensating emitters, flush lines, redesign with shorterows or multiple zones, check elevation (each 1m elevation change = 1.4 psi pressure change).</p>
+<h2>Maintenance Schedule</h2>
+<p>Daily: check pressure gauge, look for leaks or broken lines, verify controller is running correctly. Weekly: inspect emitters for clogging, check soil moisture in 2-3 locations, flush end caps briefly. Monthly: flush main lines and submains, clean filters, check fertilizer injector ifertigating. Seasonally: pressure test system, replace damaged tubing, calibratemitter flow, winterize (blow out lines with compressed air in freezing climates). A well-maintainedrip system lasts 10-15 years; a neglected one may fail in 2-3 years.</p>
+<div class="cta-box"><p class="content-text"><strong>Calculate your irrigation:</strong> Use our <a href="../tools/irrigation-calculator.html">Irrigation Calculator</a> for field-level water requirements. Check <a href="../tools/temp-converter.html">Temperature & Humidity</a> to monitor evapotranspiration conditions.</p></div>
+<div class="guide-nav"><a href="/guides/">← All Guides</a><a href="/#planting">Browse Calculators →</a></div>
+<div>
+<h3 class="sub-heading">Related Calculators</h3>
+<div><a href="../tools/irrigation-calculator.html" class="related-tool-link">Irrigation Calculator →</a><a href="../tools/crop-water-requirement.html" class="related-tool-link">Crop Water Requirement →</a><a href="../tools/area-converter.html" class="related-tool-link">Area Converter →</a></div>
+</div>
+<div>
+<h3 class="sub-heading">Related Guides</h3>
+<div><a href="drip-irrigation-design-guide.html" class="related-tool-link">Drip Irrigation Design Guide →</a></div>
+</div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>How do I calculate water requirements for a drip irrigation system?</h3><p>Calculate crop water requirement using: ETc = ETo × Kc, where ETo is reference evapotranspiration (from local weather station) and Kc is the crop coefficient (varies by growth stage: 0.3-0.5 initial, 0.8-1.2 mid-season, 0.6-0.8 late). For a tomato crop in mid-season with ETo = 0.25 inches/day and Kc = 1.1: ETc = 0.275 inches/day. Adjust for irrigation efficiency (drip = 90-95%): Net water needed = ETc / efficiency. Account for effective rainfall: subtract rain from irrigation requirement. Use a crop water requirement calculator to determine daily, weekly, and seasonal water needs for your specific crop and location.</p></div>
+<div class="faq-item"><h3>What emitter flow rate and spacing should I use for drip irrigation?</h3><p>Emitter selection depends on crop type, soil texture, and water availability. For row crops (vegetables, strawberries): 0.5-1.0 GPH (2-4 L/h) emitters spaced 12-24 inches (30-60 cm) apart, with one drip line per 2-4 crop rows. For orchards/vineyards: 1-4 GPH (4-16 L/h) emitters, 2-4 emitters per tree/vine, placed in a wetted pattern covering 30-50% of the root zone. For sandy soils: closer spacing (12 inches) and higher flow rates; for clay soils: wider spacing (24-36 inches) and lower flow rates to avoid runoff. Use a drip system designer calculator to match emitter specifications to your crop and soil conditions.</p></div>
+<div class="faq-item"><h3>How do I size the pipes and pump for a drip irrigation system?</h3><p>Pipe sizing: Calculate total flow rate (GPM) = number of emitters × emitter flow rate (GPH) / 60. For 1,000 emitters at 1 GPH: 1,000 × 1 / 60 = 16.7 GPM. Size mainline and submain pipes to keep velocity below 5 ft/s (1.5 m/s) and friction loss below 5-10% of operating pressure. Use the Hazen-Williams equation or a drip system designer calculator. Pump sizing: Required pressure = emitter operating pressure (typically 10-25 PSI for drip) + friction loss in pipes + elevation difference + filter pressure loss (5-10 PSI) + safety margin. Required flow = total system GPM. Use an irrigation pump size calculator to match pump capacity to your system's combined GPM and pressure requirements.</p></div>
+<div class="faq-item"><h3>How do I create an irrigation schedule for drip systems throughout the season?</h3><p>A drip irrigation schedule adjusts with crop growth stage and weather. Initial stage (first 2 weeks after planting): light, frequent applications — 15-30 minutes every 1-2 days, applying 0.1-0.2 inches (3-5 mm) to keep the top 6 inches moist. Vegetative growth: increase to 30-60 minutes every 2-3 days, 0.3-0.5 inches (8-13 mm). Flowering/fruiting (peak water use): 60-120 minutes every 1-2 days, 0.5-1.0 inches (13-25 mm). Maturation/ripening: reduce by 30-50% to improve fruit quality and sugar content. Calculate daily ET = ETo × Kc and adjust schedule weekly. Use an irrigation schedule calculator to generate a season-long calendar. Install soil moisture sensors to automate and validate scheduling — irrigate when soil moisture drops to 50-60% of field capacity.</p></div>
+<div class="faq-item"><h3>What filtration is required for drip irrigation and how do I maintain it?</h3><p>Filtration is critical for drip systems — emitter clogging is the #1 maintenance problem. Required filtration level depends on water source: Surface water (pond, canal, river): 100-150 mesh (100-150 micron) screen or disc filter, plus a sand media filter for algae and organic matter. Well water: 150-200 mesh (75-100 micron) screen filter. Municipal water: 200 mesh screen. Maintenance: Flush filters weekly (screen filters) or backwash daily (sand media filters). Clean screens with a soft brush — never use wire brushes that damage the screen. Replace damaged screens immediately. Install a pressure gauge before and after the filter — a pressure difference &gt;5 PSI indicates the filter needs cleaning. Use a filter sized for 2x your peak flow rate to reduce cleaning frequency.</p></div>
+<div class="faq-item"><h3>How do I prevent and fix emitter clogging in drip irrigation?</h3><p>Emitter clogging causes: physical (sand, silt, organic debris), chemical (precipitation of calcium, iron, manganese from fertilizer injection), biological (algae, bacterial slime, biofilm). Prevention: Proper filtration (matched to water source), regular flushing of lateral lines (flush 2-4 times per season, or monthly during heavy use), acid injection (phosphoric or nitric acid at pH 5.5-6.0 to dissolve mineral precipitates, 1-2 times per season), chlorine injection (1-2 ppm free chlorine for biological growth, monthly), and avoid injecting incompatible fertilizers (e.g., calcium + phosphate = precipitation). Fix: For clogged emitters, first flush laterals, then perform acid/chlorine treatment. Severely clogged emitters may need replacement. Use a drip system designer to plan maintenance access points (flushing valves at the end of each lateral).</p></div>
+<div class="guide-related">
+      <h2>Related Calculators</h2>
+      <div class="guide-related-links">
+        <a href="../tools/irrigation-run-time-calculator.html">irrigation run time calculator</a>
+        <a href="../tools/irrigation-schedule-calculator.html">irrigation schedule calculator</a>
+        <a href="../tools/crop-water-requirement.html">crop evapotranspiration calculator</a>
+      </div>
+    </div>
+      </div>
+
+      <aside class="ag-sidebar">
+
+        <nav class="ag-toc" data-ag-toc aria-label="On this page"></nav>
+
+        <div class="ag-card ag-card--pad">
+          <span class="ag-badge ag-badge--accent">Editorial team</span>
+          <p class="ag-card__text ag-mt-5">
+            Reviewed against regional extension guidance and updated when
+            recommendations change.
+          </p>
+          <div class="ag-author ag-author--bare ag-mt-5">
+            <span class="ag-author__avatar" aria-hidden="true">AT</span>
+            <span>
+              <span class="ag-author__name">Agricalc Team</span>
+              <span class="ag-author__role">Agricultural technology specialists</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="ag-card ag-card--pad">
+          <p class="ag-card__title">Related calculators</p>
+          <ul class="ag-related__list ag-mt-5">
+            <li><a href="../tools/irrigation-calculator.html">Irrigation Calculator</a></li>
+            <li><a href="../tools/temp-converter.html">Temperature & Humidity</a></li>
+            <li><a href="../tools/crop-water-requirement.html">Crop Water Requirement</a></li>
+            <li><a href="../tools/area-converter.html">Area Converter</a></li>
+            <li><a href="../tools/irrigation-run-time-calculator.html">irrigation run time calculator</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="ag-wrap ag-wrap--narrow">
+      <details class="ag-toc ag-toc--collapsible">
+        <summary>On this page</summary>
+        <nav data-ag-toc aria-label="On this page"></nav>
+      </details>
+    </div>
+  </article>
+
+  <section class="ag-section">
+    <div class="ag-wrap">
+      <div class="ag-section__head">
+        <div><h2 class="ag-section__title">More guides</h2></div>
+        <a class="ag-section__link" href="/guides/">All guides →</a>
+      </div>
+      <ul class="ag-grid ag-grid--3" role="list">
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Center Pivot Irrigation Management Guide" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/center-pivot-irrigation-management.html">Center Pivot Irrigation Management Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Drip Irrigation Design: A Complete Guide" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/drip-irrigation-design-guide.html">Drip Irrigation Design: A Complete Guide</a>
+            </h3>
+          </div>
+        </li>
+        <li class="ag-card ag-card--link ag-article-card">
+          <div class="ag-article-card__media"><img src="/assets/images/blog/cat-irrigation.webp" alt="Farm Water Conservation: Strategies for Efficient Water Use" width="1280" height="720" loading="lazy"></div>
+          <div class="ag-card__body">
+            <h3 class="ag-card__title">
+              <a class="ag-article-card__title-link" href="/guides/farm-water-conservation.html">Farm Water Conservation: Strategies for Efficient Water Use</a>
+            </h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ag-wrap">
+    <div class="ag-cta">
+      <div>
+        <p class="ag-cta__title">134 calculators, all free, no sign-up</p>
+        <p class="ag-cta__text">Planting, soil, irrigation, livestock, machinery and farm finance — pick a tool and get an answer in under a minute.</p>
+      </div>
+      <a class="ag-btn ag-btn--primary ag-btn--lg" href="/#tools">Browse calculators</a>
+    </div>
+  </div>
+</main>
+
+<footer class="ag-footer">
+  <div class="ag-wrap">
+    <div class="ag-footer__main">
+      <div class="ag-footer__brand-col">
+        <span class="ag-footer__brand">
+          <span class="ag-footer__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12.5c0-3.9 3.1-7 7-7 0 3.9-3.1 7-7 7Z" fill="currentColor"/><path d="M12 15.5C12 12.2 9.3 9.5 6 9.5c0 3.3 2.7 6 6 6Z" fill="currentColor" opacity=".6"/></svg>
+          </span>
+          Agricalc
+        </span>
+        <p class="ag-footer__tagline">134 free agricultural calculators for modern farming.</p>
+      </div>
+
+      <nav class="ag-footer__col" aria-label="Tools">
+        <p class="ag-footer__col-title">Tools</p>
+        <ul class="ag-footer__links">
+          <li><a href="/#planting">Planting</a></li>
+          <li><a href="/#land">Land &amp; Soil</a></li>
+          <li><a href="/#livestock">Livestock</a></li>
+          <li><a href="/#general">General</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Resources">
+        <p class="ag-footer__col-title">Resources</p>
+        <ul class="ag-footer__links">
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Company">
+        <p class="ag-footer__col-title">Company</p>
+        <ul class="ag-footer__links">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ag-footer__col" aria-label="Languages">
+        <p class="ag-footer__col-title">Languages</p>
+        <ul class="ag-footer__links">
+          <li><a href="/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ag-footer__bottom">
+      <p class="ag-footer__note">For reference only — consult local extension services or an agronomist before acting on these figures.</p>
+      <p>&copy; 2026 Agricalc</p>
+    </div>
+  </div>
+</footer><script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('/sw.js').then(function(reg){
+      reg.onupdatefound=function(){
+        const installingWorker=reg.installing;
+        installingWorker.onstatechange=function(){
+          if(installingWorker.state==='installed'){
+            if(navigator.serviceWorker.controller){
+              console.log('New content available; please refresh.');
+            }
+          }
+        };
+      };
+    }).catch(function(err){console.log('SW registration failed:',err);});
+  });
+}
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt',function(e){
+  e.preventDefault();
+  deferredPrompt=e;
+  setTimeout(function(){
+    const banner=document.createElement('div');
+    banner.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#1a4d2e,#2d7a35);color:#fff;padding:14px 20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:99999;display:flex;align-items:center;gap:15px;max-width:90%;font-size:14px;font-weight:500;';
+    banner.innerHTML='<span style="flex:1;">📱 Install Agricalc for offline access</span><button id="pwa-install-btn" style="background:#fff;color:#1a4d2e;border:none;padding:8px 20px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">Install</button><button id="pwa-dismiss-btn" style="background:rgba(255,255,255,0.2);color:#fff;border:none;font-size:18px;cursor:pointer;padding:2px 10px;border-radius:6px;font-weight:700;">&times;</button>';
+    document.body.appendChild(banner);
+    document.getElementById('pwa-install-btn').addEventListener('click',function(){
+      banner.remove();
+      if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(function(){deferredPrompt=null;});}
+    });
+    document.getElementById('pwa-dismiss-btn').addEventListener('click',function(){banner.remove();});
+    setTimeout(function(){if(banner.parentNode)banner.remove();},15000);
+  },3000);
+});
+</script><script src="/assets/js/common.js?v=19"></script>
+<script src="/assets/js/agri-ui.js?v=2"></script></body></html>
