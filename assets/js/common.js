@@ -1,6 +1,6 @@
 function $(id){return document.getElementById(id);}
 function formatNumber(num,decimals=2){if(typeof num==='string'){var s=num.trim();if(s!==''&&isNaN(s))return s;num=s;}if(num===''||num===null||isNaN(num))return '0';return Number(num).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:decimals});}
-function showResult(boxId){var box=$(boxId);if(box){box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function showResult(boxId){var box=$(boxId);if(box){box.style.display='';box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'nearest'});}}
 function hideResult(boxId){var box=$(boxId);if(box)box.classList.remove('show');}
 function getVal(id,def=0){var el=$(id);if(!el)return def;var val=parseFloat(el.value);return isNaN(val)? def:val;}
 function setResult(itemId,value,unit=''){var el=$(itemId);if(el)el.textContent=formatNumber(value)+(unit ? ' ' + unit:'');}
@@ -558,7 +558,7 @@ else{
 document.querySelectorAll(".form-group input[type=number]").forEach(function(inp){inp.value=inp.defaultValue||"";});
 }
 var resultBox=document.getElementById("resultBox");
-if(resultBox)resultBox.style.display="none";
+if(resultBox){resultBox.classList.remove("show");resultBox.style.display="";}
 showToast("🔄 Form reset!");
 }
 function initAutoUnits(){
@@ -730,13 +730,13 @@ if(timer) clearTimeout(timer);
 timer = setTimeout(function(){
 if(typeof calculate === 'function') calculate();
 var rb = document.getElementById('resultBox');
-if(rb) rb.classList.add('show');
+if(rb){rb.style.display='';rb.classList.add('show');}
 }, 300);
 });
 inp.addEventListener('change', function(){
 if(typeof calculate === 'function') calculate();
 var rb = document.getElementById('resultBox');
-if(rb) rb.classList.add('show');
+if(rb){rb.style.display='';rb.classList.add('show');}
 });
 });
 }
