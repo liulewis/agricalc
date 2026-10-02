@@ -283,7 +283,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var lf=document.getElementById("lastFrost").value;var ff=document.getElementById("firstFrost").value;var dm=getVal("daysMaturity");var crop=document.getElementById("cropType").value;var lfDate=new Date("2026/"+lf);var ffDate=new Date("2026/"+ff);var plantDate=new Date(lfDate.getTime());var transplants=["Tomatoes","Peppers","Eggplants","Cucumbers","Melons","Squash","Pumpkins"];if(transplants.indexOf(crop)>-1){plantDate.setDate(plantDate.getDate()+7);}else{plantDate.setDate(plantDate.getDate()-14);}var harvestDate=new Date(plantDate.getTime());harvestDate.setDate(harvestDate.getDate()+dm);var season=Math.round((ffDate-lfDate)/(1000*60*60*24));setResult("r1",plantDate.toLocaleDateString("en-US",{month:"long",day:"numeric"}),"");setResult("r2",harvestDate.toLocaleDateString("en-US",{month:"long",day:"numeric"}),"");setResult("r3",season+" days","frost-free");setResult("r4",harvestDate<ffDate?"Safe (before frost)":"Risk (after frost)","");showResult("resultBox");}</script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(e){console.log(e);});});}</script>
 <script src="/assets/js/weather-api.js" defer></script>

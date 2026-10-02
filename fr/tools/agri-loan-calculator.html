@@ -294,7 +294,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var p=getVal("loanAmount");var ar=getVal("interestRate")/100;var m=getVal("loanYears")*12;var mr=ar/12;var method=document.getElementById("repaymentMethod").value;
 if(method==="equal_payment"){var mp=p*mr*Math.pow(1+mr,m)/(Math.pow(1+mr,m)-1);var tp=mp*m;var ti=tp-p;
 setResult("r1","$"+mp.toFixed(2),"/month");setResult("r2","$"+mp,"fixed monthly");setResult("r3","$"+tp,"total repayment");setResult("r4","$"+ti,"total interest");setResult("r5",(ti/p*100).toFixed(1)+"%","interest ratio");setResult("r6","Fixed monthly","pattern");}

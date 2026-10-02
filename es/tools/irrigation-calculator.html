@@ -294,7 +294,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("area");var sm=getVal("soilMoisture")/100;var tm=getVal("targetMoisture")/100;var depth=getVal("irrDepth")/100;var eff=parseFloat(document.getElementById("irrMethod").value);var flow=getVal("flowRate");
 var am2=area*10000;var sv=am2*depth;var bd=1.3;var sw=sv*bd*1000;var wn=sw*(tm-sm)/1000;var aw=wn/eff;var vt=aw/flow;
 setResult("r1",wn.toFixed(0),"m³ net water");setResult("r2",aw.toFixed(0),"m³ actual water");setResult("r3",(aw/area).toFixed(0),"m³/ha");setResult("r4",vt.toFixed(1),"hours");setResult("r5",(vt*60).toFixed(0),"minutes");showResult("resultBox");}</script>

@@ -217,7 +217,7 @@
 </footer>
 
 <script>(function(){var pageId=window.location.pathname;var savedRating=localStorage.getItem('rating_'+pageId);var stars=document.querySelectorAll('.rating-stars .star');var message=document.querySelector('.rating-message');function setRating(r){stars.forEach(function(s,i){s.style.color=i<r?'#f5a623':'#ddd';});if(r>=5)message.textContent='Excellent!';else if(r>=4)message.textContent='Great!';else if(r>=3)message.textContent='Good, thanks!';else if(r>=2)message.textContent='Thanks, we will improve.';else message.textContent='Sorry to hear that.';localStorage.setItem('rating_'+pageId,r);}stars.forEach(function(star){star.addEventListener('click',function(){setRating(parseInt(this.dataset.rating));});});if(savedRating)setRating(parseInt(savedRating));document.querySelector('.feedback-submit').addEventListener('click',function(){var text=document.querySelector('.feedback-text').value;if(text.trim()){localStorage.setItem('feedback_'+pageId,text);document.querySelector('.feedback-section').style.display='none';document.querySelector('.feedback-thanks').style.display='block';}});})();</script>
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>
 function calculate(){
   var dens=getVal('targetDensity'),rs=getVal('rowSpacing'),area=getVal('area');

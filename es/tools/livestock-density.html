@@ -293,7 +293,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var ba=getVal("barnArea");var apa=getVal("areaPerAnimal");var ut=getVal("utilization")/100;var pq=document.getElementById("plannedQuantity").value;
 var ea=ba*ut;var ms=Math.floor(ea/apa);
 if(pq&&parseFloat(pq)>0){var q=parseFloat(pq);var ra=q*apa;var rb=ra/ut;var st=rb<=ba?"Sufficient":"Insufficient - need "+(rb-ba).toFixed(0)+" m² more";

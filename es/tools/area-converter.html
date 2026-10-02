@@ -294,7 +294,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("inputÁrea");var unit=document.getElementById("inputUnidad").value;var m2=0;
 switch(unit){case"hectare":m2=area*10000;break;case"acre":m2=area*4046.86;break;case"m2":m2=area;break;case"km2":m2=area*1000000;break;case"mu":m2=area*666.67;break;}
 setResult("r1",(m2/10000).toFixed(4),"hectares");setResult("r2",(m2/4046.86).toFixed(4),"acres");setResult("r3",m2.toFixed(2),"square meters");setResult("r4",(m2/1000000).toFixed(6),"square km");setResult("r5",(m2/666.67).toFixed(2),"Chinese mu");showResult("resultBox");}</script>

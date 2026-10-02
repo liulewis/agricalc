@@ -280,7 +280,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var yld=getVal("yield");var area=getVal("area");var price=getVal("price");
 var pre=getVal("preLoss")/100;var harv=getVal("harvLoss")/100;var trans=getVal("transLoss")/100;var store=getVal("storeLoss")/100;
 var potential=yld*area;var afterPre=potential*(1-pre);var afterHarv=afterPre*(1-harv);var afterTrans=afterHarv*(1-trans);var finalYield=afterTrans*(1-store);var totalLoss=potential-finalYield;var totalLossPct=totalLoss/potential*100;var lostRevenue=totalLoss*price;var finalRevenue=finalYield*price;

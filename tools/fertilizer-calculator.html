@@ -284,7 +284,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("area");var ty=getVal("targetYield")*1000;var nr=getVal("nRate");var pr=getVal("pRate");var kr=getVal("kRate");var ur=getVal("utilRate")/100;
 var nN=ty/100*nr;var pN=ty/100*pr;var kN=ty/100*kr;var nF=nN/ur;var pF=pN/ur;var kF=kN/ur;
 var rv=document.getElementById("compoundRatio").value.trim();var rerr=document.getElementById("ratioError");if(!/^\d+(\.\d+)?-\d+(\.\d+)?-\d+(\.\d+)?$/.test(rv)){if(rerr)rerr.style.display="block";return;} if(rerr)rerr.style.display="none";var r=rv.split("-");var nc=parseFloat(r[0])/100,pc=parseFloat(r[1])/100,kc=parseFloat(r[2])/100;var cands=[];if(nc>0)cands.push(nF/nc);if(pc>0)cands.push(pF/pc);if(kc>0)cands.push(kF/kc);var ca=cands.length?Math.min.apply(null,cands):0;var nSup=Math.max(0,nF-ca*nc);var kSup=Math.max(0,kF-ca*kc);

@@ -279,7 +279,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var type=document.getElementById("calcType").value;var p=getVal("pesticideAmount");var sol=document.getElementById("solutionAmount").value;
 if(type==="multiple"){var m=getVal("dilutionMultiple");if(sol&&parseFloat(sol)>0){var s=parseFloat(sol);var pn=s*1000/m;setResult("r1",pn.toFixed(1),"ml/g pesticide");setResult("r2",s,"liters total");}else{var w=p*m/1000;var t=w+p/1000;setResult("r1",p,"ml/g pesticide");setResult("r2",w.toFixed(1),"liters water");setResult("r3",t.toFixed(1),"liters total");}}
 else{var ppm=getVal("targetPpm");var c=getVal("activeContent")/100;if(sol&&parseFloat(sol)>0){var s=parseFloat(sol);var pn=ppm*s/(c*1000000)*1000;setResult("r1",pn.toFixed(1),"ml/g pesticide");setResult("r2",s,"liters total");}else{var sa=p*c*1000000/ppm/1000;setResult("r1",p,"ml/g pesticide");setResult("r2",sa.toFixed(1),"liters total");}}

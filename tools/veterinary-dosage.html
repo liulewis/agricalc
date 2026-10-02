@@ -282,7 +282,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var route=document.getElementById("adminRoute").value;var dose=getVal("dose");var content=getVal("content")/100;var times=getVal("timesPerDay");var days=getVal("days");
 if(route==="weight"){var w=getVal("bodyWeight");var q=getVal("quantity");var apd=dose*w;var ppd=apd/content/1000;var tpd=ppd*q;var dt=tpd*times;var ct=dt*days;
 setResult("r1",apd.toFixed(0),"mg active/animal/dose");setResult("r2",ppd.toFixed(2),"g product/animal/dose");setResult("r3",tpd.toFixed(0),"g per dose (all)");setResult("r4",dt.toFixed(0),"g/day");setResult("r5",ct.toFixed(0),"g total course");setResult("r6",(ct/1000).toFixed(2),"kg total");}

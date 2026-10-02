@@ -294,7 +294,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("area");var rs=getVal("rowSpacing");var ls=getVal("lineSpacing");var tgw=getVal("thousandGrainWeight");var gr=getVal("germinationRate")/100;
 var am2=area*10000;var ppa=rs/100*ls/100;var tp=am2/ppa;var as=tp/gr;var sw=as/1000*tgw/1000;var pph=tp/area;
 setResult("r1",Math.round(pph),"plants/ha");setResult("r2",Math.round(as),"seeds needed");setResult("r3",sw.toFixed(2),"kg seed");setResult("r4",Math.round(tp),"theoretical plants");showResult("resultBox");}</script>

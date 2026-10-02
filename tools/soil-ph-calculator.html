@@ -282,7 +282,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var cp=getVal("currentPH");var tp=getVal("targetPH");var area=getVal("area");var tx=document.getElementById("soilTexture").value;var depth=getVal("depth");
 var pd=tp-cp;var lph={sand:1.5,loam:2.5,clay:3.5};var sph={sand:.5,loam:.8,clay:1.2};var df=depth/20;
 if(pd>0){var lha=lph[tx]*pd*df;var tl=lha*area;setResult("r1","Acidic (pH "+cp+")","needs amendment");setResult("r2",lha.toFixed(2),"tons/ha lime");setResult("r3",tl.toFixed(2),"tons total");setResult("r4",(tl*1000).toFixed(0),"kg total");setResult("r5","Ag/Dolomitic/Calcitic lime","recommended");}

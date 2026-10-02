@@ -282,7 +282,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("farmlandArea");var ca=getVal("cropArea");var mc=getVal("machineryCost");var region=document.getElementById("region").value;var isLarge=document.getElementById("largeFarm").value==="yes";
 var rates={us:{direct:150,crop:80,insurance:50,conservation:100},eu:{direct:280,crop:50,insurance:30,conservation:150},cn:{direct:200,crop:100,insurance:40,conservation:50},other:{direct:100,crop:50,insurance:30,conservation:50}};
 var r=rates[region];var dp=area*r.direct;var cs=ca*r.crop;var ins=ca*r.insurance;var cb=isLarge?area*r.conservation*.5:area*r.conservation*.3;var ms=Math.min(mc*.3,50000);var ts=dp+cs+ins+cb+ms;

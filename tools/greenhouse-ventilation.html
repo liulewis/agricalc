@@ -285,7 +285,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/common.js?v=19" defer></script>
+<script src="/assets/js/common.js?v=20" defer></script>
 <script>function calculate(){var area=getVal("area");var h=getVal("height");var it=getVal("insideTemp");var ot=getVal("outsideTemp");var ih=getVal("insideHumidity");var th=getVal("targetHumidity");var va=getVal("ventArea");
 var vol=area*h;var td=it-ot;var ws=Math.sqrt(2*9.8*h*td/(ot+273))*.6;if(ws<.5)ws=.5;var vr=va*ws;var ac=vr*3600/vol;var hd=ih-th;var rc=hd*2.5;var vt=rc/ac*60;
 setResult("r1",vol.toFixed(0),"m³ volume");setResult("r2",vr.toFixed(1),"m³/s rate");setResult("r3",ac.toFixed(1),"changes/hour");setResult("r4",vt>0?vt.toFixed(0):"0","min ventime");setResult("r5",td.toFixed(1)+"°C","temp diff");showResult("resultBox");}</script>
