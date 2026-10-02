@@ -1,6 +1,6 @@
-const CACHE_NAME = 'farm-tools-v4';
-const STATIC_CACHE = 'farm-static-v4';
-const PAGES_CACHE = 'farm-pages-v4';
+const CACHE_NAME = 'farm-tools-v5';
+const STATIC_CACHE = 'farm-static-v5';
+const PAGES_CACHE = 'farm-pages-v5';
 
 const CORE_ASSETS = [
   '/',
