@@ -1732,6 +1732,9 @@ h3 svg[data-ag-icon] { color:var(--ag-accent, var(--ag-accent)); }
   font-size:var(--ag-fs-200);
 }
 .ag-footer__bottom p { margin:0; }
+.ag-footer__badges { display:flex; flex-wrap:wrap; align-items:center; gap:var(--ag-space-4); }
+.ag-footer__badges img { display:block; }
+
 .ag-footer__note { color:var(--ag-text-inverse-dim); opacity:.8; max-width:60ch; }
 
 
