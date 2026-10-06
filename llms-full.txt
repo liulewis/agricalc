@@ -1,0 +1,509 @@
+# Agricalc - Full Reference (llms-full.txt)
+
+> Agricalc (https://agricalc.online) is a free collection of science-based agriculture calculators covering the full farming cycle - planting, fertilization, irrigation, harvest, and marketing. No registration, works offline (PWA), in English, Spanish and French.
+> Companion file: llms.txt (site map with all calculators, blog posts and guides). This file adds the full glossary definitions and the trilingual terminology dictionary.
+
+## Agricultural glossary (53 terms with definitions)
+
+Source: https://agricalc.online/glossary/
+
+### Acidity
+
+A soil condition with pH below 7, caused by hydrogen ions. High acidity reduces nutrient availability and can inhibit root growth.
+
+### Aeration
+
+The process of creating small holes in soil to allow air, water, and nutrients to penetrate. Critical for root health and microbial activity.
+
+### Aggregation
+
+The binding of soil particles into larger units (aggregates). Good aggregation improves soil structure, water infiltration, and erosion resistance.
+
+### Alkalinity
+
+A soil condition with pH above 7, caused by carbonate, bicarbonate, or hydroxide ions. High alkalinity can lock up iron, zinc, and other micronutrients.
+
+### Ammonium (NH4+)
+
+A plant-available form of nitrogen. Ammonium is held by soil particles (cation exchange) and is less prone to leaching than nitrate.
+
+### Anion
+
+A negatively charged ion (e.g., nitrate NO3-, phosphate H2PO4-, chloride Cl-). Anions are generally not held by soil particles and are prone to leaching.
+
+### Base Saturation
+
+The percentage of soil cation exchange capacity occupied by basic cations (calcium, magnesium, potassium, sodium). Ideal base saturation: Ca 60-70%, Mg 10-20%, K 2-5%.
+
+### Bulk Density
+
+The mass of dry soil per unit volume (g/cm³). Ideal bulk density: 1.0-1.4 g/cm³ for loams. High bulk density (>1.6) indicates compaction and restricts root growth.
+
+### Biological Activity
+
+The activity of soil microorganisms (bacteria, fungi, protozoa, nematodes) and earthworms. Measured by respiration (CO2 release), enzyme activity, or microbial biomass carbon.
+
+### Cation Exchange Capacity (CEC)
+
+A measure of soil's ability to hold and exchange positively charged ions (cations). Higher CEC means greater nutrient-holding capacity. Sand: 1-5, loam: 10-20, clay: 20-50, organic matter: 200-400 meq/100g.
+
+### Compost
+
+Organic matter that has been decomposed and stabilized through aerobic microbial action. Compost improves soil structure, adds nutrients, and increases microbial diversity.
+
+### Cover Crop
+
+A crop planted primarily to protect and improve soil rather than for harvest. Cover crops prevent erosion, add organic matter, fix nitrogen (legumes), suppress weeds, and scavenge nutrients.
+
+### Crop Rotation
+
+The practice of growing different crops in sequence on the same land. Crop rotation breaks pest/disease cycles, improves soil fertility, reduces weed pressure, and spreads labor.
+
+### Cation
+
+A positively charged ion (e.g., calcium Ca2+, magnesium Mg2+, potassium K+, ammonium NH4+). Cations are held by negatively charged soil particles and organic matter.
+
+### Drip Irrigation
+
+A water-efficient irrigation method that delivers water directly to plant root zones through emitters or drip lines. Drip irrigation is 85-95% efficient, compared to 50-70% for flood irrigation.
+
+### Drainage
+
+The removal of excess water from soil. Good drainage is essential for root aeration and prevents waterlogging. Poor drainage leads to root rot, nutrient loss, and reduced yields.
+
+### Evapotranspiration (ET)
+
+The combined loss of water from soil evaporation and plant transpiration. Reference ET (ETo) is measured from a standard grass surface. Crop ET (ETc) = ETo × Crop Coefficient (Kc).
+
+### Erosion
+
+The removal of soil by water or wind. Waterosion includes sheet, rill, and gully erosion. Control measures: cover crops, no-till, contour plowing, terracing, windbreaks.
+
+### Fertilizer Use Efficiency
+
+The percentage of applied nutrients that the crop actually absorbs. Nitrogen: 50-70%, Phosphorus: 20-40%, Potassium: 60-80%. Improved by split applications, proper timing, and placement.
+
+### Field Capacity
+
+The amount of water held in soil after gravitational water has drained away (typically 24-48 hours after irrigation/rain). At field capacity, water is readily available to plants. Sandy soils: 8-12%, loams: 20-30%, clays: 30-40% by volume.
+
+### Foliar Application
+
+The application of nutrients or pesticides directly to plant leaves. Foliar feeding is useful for correcting micronutrient deficiencies quickly, but should supplement (not replace) soil fertilization.
+
+### Germination Rate
+
+The percentage of seeds that sprout and produce normal seedlings under optimal conditions. Commercial seed typically has 85-95% germination. Test by placing seeds on moist paper and counting sprouts after 7-14 days.
+
+### Green Manure
+
+A cover crop that is incorporated into the soil while still green, adding organic matter and nutrients. Leguminous green manures (clover, vetch) can add 50-200 kg N/ha.
+
+### Growing Degree Days (GDD)
+
+A measure of accumulated heat above a base temperature for crop development. Daily GDD = ((Max + Min Temp) ÷ 2) - Base Temp. Corn needs ~2700 GDD from planting to maturity.
+
+### Humus
+
+Stable, dark-colored organic matter in soil that has been fully decomposed by microorganisms. Humus improves soil structure, water-holding capacity, nutrient retention, and microbial diversity.
+
+### Hydroponics
+
+A method of growing plants without soil, using nutrient-rich water solutions. Hydroponics can produce higher yields with less water and space, but requires careful nutrient management and energy input.
+
+### Infiltration Rate
+
+The speed at which water enters the soil (mm/hour). High infiltration: >20 mm/h (sand, well-structured loam). Low infiltration: <5 mm/h (compacted clay, crusted soil). Improved by organic matter and reduced tillage.
+
+### Integrated Pest Management (IPM)
+
+A sustainable approach to pest control that combines biological, cultural, physical, and chemical methods. IPM prioritizes prevention and monitoring, using pesticides only when thresholds are exceeded.
+
+### Leaching
+
+The downward movement of nutrients (especially nitrate) and other substances through soil with water. Leaching wastes fertilizer and can contaminate groundwater. Reduced by split N applications, cover crops, and controlled-release fertilizers.
+
+### Liming
+
+The application of calcium- and magnesium-rich materials (agricultural lime, dolomitic lime) to raise soil pH. Lime also improves soil structure, increases microbial activity, and enhances nutrient availability.
+
+### Macronutrients
+
+Nutrients required in large amounts by plants: Nitrogen (N), Phosphorus (P), Potassium (K), Calcium (Ca), Magnesium (Mg), Sulfur (S). N-P-K are the primary nutrients; Ca-Mg-S are secondary nutrients.
+
+### Micronutrients
+
+Nutrients required in small amounts: Iron (Fe), Manganese (Mn), Zinc (Zn), Copper (Cu), Boron (B), Molybdenum (Mo), Chlorine (Cl). Deficiencies are common in high-pH soils and can be corrected with foliar or soil applications.
+
+### Mulch
+
+A layer of material (organic: straw, wood chips, leaves; or inorganic: plastic, landscape fabric) applied to soil surface. Mulch conserves moisture, suppresses weeds, moderatesoil temperature, and adds organic matter as it decomposes.
+
+### Nitrate (NO3-)
+
+The most plant-available form of nitrogen. Nitrate is highly mobile in soil and prone to leaching. Most crops take up nitrogen primarily as nitrate. Excess nitrate in drinking water is a health concern.
+
+### Nitrogen Fixation
+
+The conversion of atmospheric nitrogen (N2) into ammonia (NH3) by nitrogen-fixing bacteria (Rhizobium in legume root nodules, Azotobacter in soil). Legumes can fix 50-300 kg N/ha per season.
+
+### No-Till Farming
+
+A conservation agriculture practice that avoids disturbing soil through tillage. No-till preserves soil structure, increases organic matter, reduces erosion, improves water infiltration, and saves fuel and labor.
+
+### Organic Matter
+
+Plant and animal residues in various stages of decomposition in soil. Includes fresh residues, decomposing material, and stable humus. Target: 3-5% organic matter for most agricultural soils. Each 1% increase adds ~20,000 kg organic matter/ha in top 15cm.
+
+### Osmosis
+
+The movement of water across a semipermeable membrane from an area of low solute concentration to high solute concentration. In plants, osmosis drives water uptake from soil and maintains cell turgor. High soil salinity disrupts osmotic water uptake.
+
+### Permanent Wilting Point (PWP)
+
+The soil moisture level at which plants cano longer extract water and wilt permanently. PWP: sandy soils 3-5%, loams 10-15%, clays 15-25% by volume. Available water = Field Capacity - PWP.
+
+### pH
+
+A measure of soil acidity or alkalinity on a scale of 0-14. pH 7 is neutral, below 7 is acidic, above 7 is alkaline. Most crops prefer pH 6.0-7.0. pH affects nutrient availability, microbial activity, and aluminum toxicity.
+
+### Phosphorus Fixation
+
+The binding of phosphorus to soil particles (iron/aluminum in acid soils, calcium in alkaline soils), making it unavailable to plants. Fixed P is not lost but becomes available very slowly over years. Reduced by banding P nearoots and maintaining optimal pH.
+
+### Rhizosphere
+
+The narrow zone of soil surrounding plant roots (1-3mm), where root exudatestimulate high microbial activity. The rhizosphere has 10-100x more microorganisms than bulk soil and is critical for nutrient cycling and plant health.
+
+### Rotation
+
+See Crop Rotation. The systematic sequencing of different crops on the same land over years. Essential for sustainable agriculture.
+
+### Salinity
+
+The concentration of soluble salts in soil. Measured by electrical conductivity (EC) in dS/m. Non-saline: <2 dS/m, moderately saline: 4-8, strongly saline: >16. High salinity reduces water uptake (osmotic stress) and can cause ion toxicity.
+
+### Soil Structure
+
+The arrangement of soil particles into aggregates (crumbs, blocks, prisms, plates). Good structure (granular/crumb) improves aeration, water infiltration, and root penetration. Degraded by tillage, compaction, and low organic matter.
+
+### Soil Texture
+
+The relative proportion of sand (0.05-2mm), silt (0.002-0.05mm), and clay (<0.002mm) particles. Texture affects water-holding capacity, drainage, nutrient retention, and workability. Determined by feel or laboratory sedimentation.
+
+### Subsoil
+
+The soil layer below the topsoil (typically 20-60cm depth), containing less organic matter but important for water storage and deep root growth. Subsoil compaction is a major yield-limiting factor in many agricultural soils.
+
+### Sustainable Agriculture
+
+Farming practices that meet current food and fiber needs while preserving natural resources and environment for future generations. Key practices: crop rotation, cover crops, reduced tillage, integrated pest management, nutrient cycling, water conservation.
+
+### Thousand-Grain Weight (TGW)
+
+The weight in grams of 1000 seeds. Used to calculate seeding rates and estimate yield. TGW varies by crop: wheat 30-50g, corn 250-350g, rice 20-30g, soybeans 150-250g.
+
+### Topsoil
+
+The uppermost soil layer (typically 0-20cm), richest in organic matter and microorganisms, where most plant roots and nutrient cycling occur. Topsoil loss through erosion is a major global agricultural problem.
+
+### Transpiration
+
+The loss of water vapor from plant leaves through stomata. Transpiration drives water and nutrient uptake from roots and cools plants. Crop transpiration is a major component of evapotranspiration (ET).
+
+### Water-Holding Capacity
+
+The amount of water a soil can retain against gravity. Determined primarily by texture and organic matter. Sand: 8-12% by volume, loam: 20-30%, clay: 30-40%. Each 1% organic matter increases water-holding capacity by ~2-3%.
+
+### Waterlogging
+
+A condition where soil is saturated with water, displacing air from pore spaces. Waterlogging causes root oxygen deficiency, nutrient loss (denitrification), root rot, and reduced yields. Improved by drainage, raised beds, and reduced compaction.
+
+## Trilingual terminology dictionary (80 terms: English = Spanish = French)
+
+Source: https://agricalc.online/glossary/terminology-en-es-fr.html
+
+### 1. Crop Sowing / Cultivos y Siembra / Culture et Semis
+
+- Seed rate = Dosis de siembra = Taux de semis
+- Plant density = Densidad de siembra = Densité de plantation
+- Row spacing = Distancia entre surcos = Ecartement des rangs
+- Germination = Germinación = Germination
+- Seedling = Plántula = Plantule
+- Transplanting = Trasplante = Repiquage
+- Crop rotation = Rotación de cultivos = Rotation culturale
+- Cover crop = Cultivo de cobertura = Culture de couverture
+- Weed control = Control de malezas = Lutte contre les mauvaises herbes
+- Sowing depth = Profundidad de siembra = Profondeur de semis
+
+### 2. Fertilizer & Soil / Fertilizantes y Suelo / Engrais et Sol
+
+- Nitrogen (N) = Nitrógeno (N) = Azote (N)
+- Phosphorus (P) = Fósforo (P) = Phosphore (P)
+- Potassium (K) = Potasio (K) = Potassium (K)
+- pH level = Nivel de pH = Niveau de pH
+- Organic matter = Materia orgánica = Matière organique
+- Compost = Compuesta / Abono = Compost
+- Manure = Estiércol = Fumier
+- Fertigation = Fertigación = Fertirrigation
+- Soil test = Análisis de suelo = Analyse de sol
+- Topdressing = Fertilización de cobertera = Fumure d'appoint
+
+### 3. Irrigation / Riego / Irrigation
+
+- Drip irrigation = Riego por goteo = Irrigation goutte-à-goutte
+- Sprinkler irrigation = Riego por aspersión = Irrigation par aspersion
+- Evapotranspiration = Evapotranspiración = Evapotranspiration
+- Field capacity = Capacidad de campo = Capabilité au champ
+- Wilting point = Punto de marchitez = Point de flétrissement
+- Water table = Nivel freático = Nappe phréatique
+- Drainage = Drenaje = Drainage
+- Water application rate = Tasa de aplicación de agua = Taux d'application d'eau
+- Irrigation scheduling = Programación de riego = Calendrier d'irrigation
+- Soil moisture = Humedad del suelo = Humidité du sol
+
+### 4. Livestock / Ganadería / Élevage
+
+- Forage = Forraje = Fourrage
+- Silage = Ensilaje = Ensilage
+- Hay = Heno = Foin
+- Concentrate feed = Concentrado = Aliment concentré
+- Ration = Ración = Ration
+- Body condition score = Condición corporal = Note d'état corporel
+- Lactation period = Periodo de lactancia = Période de lactation
+- Gestation = Gestación = Gestation
+- Pasture = Pastizal = Pâturage
+- Stocking rate = Carga animal = Charge de pâturage
+
+### 5. Storage & Post-Harvest / Almacenamiento / Stockage et Récolte
+
+- Moisture content = Contenido de humedad = Teneur en humidité
+- Grain bin = Silograno = Silos à grains
+- Cold storage = Almacenamiento en frío = Chambre froide
+- Drying = Secado = Séchage
+- Fumigation = Fumigación = Fumigation
+- Spoilage = Deterioro = Altération
+- Shrinkage loss = Pérdida por merma = Perte de poids
+- Hermetic storage = Almacenamiento hermético = Stockage hermétique
+- Aeration = Aireación = Aération
+- Post-harvest loss = Pérdida poscosecha = Perte post-récolte
+
+### 6. Farm Finance / Finanzas Agrícolas / Finance Agricole
+
+- Yield = Rendimiento = Rendement
+- Break-even price = Precio de equilibrio = Seuil de rentabilité
+- Variable cost = Costo variable = Coût variable
+- Fixed cost = Costo fijo = Coût fixe
+- Cash flow = Flujo de caja = Flux de trésorerie
+- Depreciation = Depreciación = Amortissement
+- Subsidy = Subsidio = Subvention
+- Profit margin = Margen de ganancia = Marge bénéficiaire
+- Land rent = Renta de la tierra = Foncier
+- Input cost = Costo de insumos = Coût des intrants
+
+### 7. Farm Machinery / Maquinaria Agrícola / Machines Agricoles
+
+- Tractor = Tractor = Tracteur
+- Plow = Arado = Charrue
+- Harvester / Combine = Cosechadora = Moissonneuse-batteuse
+- Seeder / Drill = Sembradora = Semoir
+- Sprayer = Fumigadora / Pulverizadora = Pulvérisateur
+- Disc harrow = Rastra de discos = Herse à disques
+- Field capacity = Capacidad de campo (máquina) = Capacité de chantier
+- Fuel consumption = Consumo de combustible = Consommation de carburant
+- Maintenance = Mantenimiento = Entretien
+- Horsepower (HP) = Caballos de fuerza = Cheval-vapeur (CV)
+
+### 8. Climate & Weather / Clima y Meteorología / Climat et Météo
+
+- Frost risk = Riesgo de heladas = Risque de gel
+- Growing degree days = Grados día crecimiento = Degrés-jours de croissance
+- Drought = Sequía = Sécheresse
+- Rainfall = Precipitación = Précipitations
+- Relative humidity = Humedad relativa = Humidité relative
+- Evaporation = Evaporación = Évaporation
+- Windbreak = Cortina rompeviento = Brise-vent
+- Microclimate = Microclima = Microclimat
+- Heat stress = Estrés por calor = Stress thermique
+- Climate adaptation = Adaptación climática = Adaptation au climat
+
+## Calculator index (140 free calculators)
+
+Every calculator is available in English, Spanish and French under the same path prefix per language. All include structured data (SoftwareApplication + FAQ schema).
+
+### Planting & Crops (19)
+
+- [Seed Rate Calculator](/tools/seed-calculator.html): Seed needs from spacing and 1000-grain weight
+- [Plant Population Calculator](/tools/plant-population-calculator.html): Plants per hectare from spacing and row width
+- [Seed Spacing Calculator](/tools/seed-spacing-calculator.html): In-row spacing and seeding density per meter
+- [Seed Treatment Calculator](/tools/seed-treatment-calculator.html): Pesticide and inoculant rate per kg of seed
+- [Planting Cost Calculator](/tools/planting-cost-calculator.html): Seed, fertilizer and labor cost per hectare
+- [Corn Yield Calculator](/tools/corn-yield-calculator.html): Bushels per acre from ears, kernels and test weight
+- [Soybean Yield Calculator](/tools/soybean-yield-calculator.html): Yield from pods per plant, seeds and size
+- [Rice Yield Calculator](/tools/rice-yield-calculator.html): Paddy yield from panicles, grains and moisture
+- [Cassava Yield Calculator](/tools/cassava-yield-calculator.html): Tuber yield per hectare from stands and roots
+- [Sugarcane Yield Calculator](/tools/sugarcane-yield-calculator.html): Tons per hectare from stalk count and weight
+- [Harvest Date Calculator](/tools/harvest-date-calculator.html): Optimal harvest window from planting and GDD
+- [Harvest Loss Calculator](/tools/harvest-loss-calculator.html): Losses at each harvest stage and financial impact
+- [Crop Yield Estimator](/tools/yield-calculator.html): Yield from plant population, grains and test weight
+- [Seed Germination Calculator](/tools/germination-calculator.html): Germination rate and adjusted seeding rate
+- [Crop Rotation Planner](/tools/crop-rotation.html): Rotation sequences, area allocation and schedules
+- [Cover Crop Calculator](/tools/cover-crop-calculator.html): Seed mix and biomass production for cover crops
+- [Crop Planting Calendar](/tools/crop-planting-calendar.html): Planting and harvest dates by frost dates
+- [Orchard Spacing Calculator](/tools/orchard-spacing.html): Tree spacing, trees/ha and seedling needs
+- [Crop Growth Stage Calculator](/tools/growth-calculator.html): Key stages and harvest date from planting date
+
+### Fertilizer & Soil (22)
+
+- [Fertilizer Calculator](/tools/fertilizer-calculator.html): N-P-K requirements from target yield and efficiency
+- [Nitrogen Rate Calculator](/tools/nitrogen-rate-calculator.html): Nitrogen application rate by crop and yield goal
+- [NPK Fertilizer Mix Calculator](/tools/npk-calculator.html): Blend N-P-K sources to match target ratio
+- [Lime Application Calculator](/tools/lime-application-calculator.html): Lime tons per acre to correct soil pH
+- [Soil Bulk Density Calculator](/tools/bulk-density-calculator.html): Bulk density from core volume and dry weight
+- [Soil Organic Matter Calculator](/tools/organic-matter-calculator.html): Organic matter and carbon from soil test
+- [Soil Test Calculator](/tools/soil-test-calculator.html): Interpret soil test and recommend nutrient rates
+- [Nutrient Deficiency Analyzer](/tools/nutrient-deficiency-calculator.html): Diagnose deficiency symptoms and corrections
+- [Soil Carbon Stock Calculator](/tools/soil-carbon-stock-calculator.html): Carbon stored per hectare by depth and texture
+- [Compost Calculator](/tools/compost-calculator.html): Compost batch size and C:N ratio balancing
+- [Compost Application Calculator](/tools/compost-application-calculator.html): Tons per acre of compost for nutrient needs
+- [Mulching Estimator](/tools/mulching-estimator.html): Mulch material quantity and cost per area
+- [Vermicompost Calculator](/tools/vermicompost-calculator.html): Worm bed size and vermicompost production
+- [Soil Compaction Analyzer](/tools/soil-compaction-analyzer.html): Compaction risk and tillage depth recommendation
+- [Soil pH Amendment Calculator](/tools/soil-ph-calculator.html): Lime for acid or sulfur for alkaline soils
+- [Soil Amendment Calculator](/tools/soil-amendment-calculator.html): Gypsum, sulfur and organic amendment rates
+- [Soil Volume Calculator](/tools/soil-volume-calculator.html): Topsoil and fill dirt volume for beds and fields
+- [Soil Moisture Monitor](/tools/soil-moisture-monitor.html): Track moisture and generate irrigation schedules
+- [Organic Fertilizer Calculator](/tools/organic-fertilizer.html): Manure and compost nutrient content and rates
+- [Banana Fertilizer Calculator](/tools/banana-fertilizer-calculator.html): N-P-K and micronutrient schedule for bananas
+- [Cocoa Fertilizer Calculator](/tools/cocoa-fertilizer-calculator.html): Fertilizer rates by cocoa tree age and yield
+- [Coffee Fertilizer Calculator](/tools/coffee-fertilizer-calculator.html): Nitrogen and nutrient schedule for coffee
+
+### Irrigation & Water (14)
+
+- [Irrigation Calculator](/tools/irrigation-calculator.html): Water requirement and irrigation time by soil
+- [Irrigation Run Time Calculator](/tools/irrigation-run-time-calculator.html): Runtime to refill root zone from moisture
+- [Water Application Rate Calculator](/tools/water-application-rate-calculator.html): Inches per hour from sprinkler spacing and flow
+- [Irrigation Flow Rate Calculator](/tools/irrigation-flow-rate-calculator.html): Flow in gpm from hose size and pressure
+- [Irrigation Schedule Calculator](/tools/irrigation-schedule-calculator.html): Weekly watering schedule by ET and growth stage
+- [Dam Volume Calculator](/tools/dam-volume-calculator.html): Farm dam capacity from shape and depth
+- [Farm Water Security Calculator](/tools/farm-water-security-calculator.html): Water supply vs demand across the season
+- [Rainfall Harvest Calculator](/tools/rainfall-harvest-calculator.html): Rainwater collected from roof and catchment area
+- [Water Table Depth Calculator](/tools/water-table-depth-calculator.html): Well yield and water table monitoring
+- [Center Pivot Calculator](/tools/center-pivot-calculator.html): Acreage covered and water application by pivot
+- [Drip System Designer](/tools/drip-system-designer.html): Emitters, spacing, flow and pipe sizing
+- [Pump Capacity Calculator](/tools/pump-capacity-calculator.html): Horsepower and flow needed for irrigation
+- [Crop Water Requirement](/tools/crop-water-requirement.html): Daily and seasonal water needs by ET
+- [Drainage Tile Calculator](/tools/drainage-tile-calculator.html): Tile spacing and depth for wet soils
+
+### Machinery & Equipment (11)
+
+- [Equipment Cost Calculator](/tools/equipment-cost-calculator.html): Ownership and operating cost per hour
+- [Repair & Maintenance Calculator](/tools/repair-maintenance-calculator.html): Annual repair and maintenance cost estimate
+- [Machinery Cost per Acre](/tools/machinery-cost-per-acre-calculator.html): Total machinery cost amortized over acres
+- [Fuel Efficiency Calculator](/tools/fuel-efficiency-calculator.html): Fuel use per acre and cost by operation
+- [Tractor Fuel Use Calculator](/tools/tractor-fuel-use-calculator.html): Diesel consumption by tractor HP and task
+- [Field Capacity Calculator](/tools/field-capacity-calculator.html): Acres per hour from speed, width and efficiency
+- [Transport Cost Calculator](/tools/transport-cost-calculator.html): Freight cost per tonne by distance and vehicle
+- [Solar Panels Calculator](/tools/solar-panels-calculator.html): System size and payback for farm solar
+- [Biogas Plant Calculator](/tools/biogas-plant-calculator.html): Biogas output from manure and plant size
+- [Greenhouse Cost & Payback](/tools/greenhouse-cost-payback.html): Construction cost, profit and ROI
+- [Greenhouse Ventilation Calculator](/tools/greenhouse-ventilation.html): Ventilation rate for temperature and humidity
+
+### Livestock & Animals (27)
+
+- [Feed Ration Calculator](/tools/feed-calculator.html): Daily intake and protein needs per animal
+- [Feed Conversion Ratio Calculator](/tools/fcr-calculator.html): FCR and profitability for livestock and aquaculture
+- [Cattle Feed Ration Calculator](/tools/cattle-feed-ration-calculator.html): Balanced ration for dairy and beef cattle
+- [Livestock Mortality Calculator](/tools/livestock-mortality-calculator.html): Mortality rate and financial loss from losses
+- [Egg Production Calculator](/tools/egg-production-calculator.html): Eggs per hen and weekly revenue from flock
+- [Dairy Milk Calculator](/tools/dairy-milk-calculator.html): Milk yield, feed cost and dairy profit
+- [Drought Feeding Calculator](/tools/drought-feeding-calculator.html): Emergency feed rations during drought
+- [Forage Yield Calculator](/tools/forage-yield-calculator.html): Forage tons per acre from cutting and dry matter
+- [Pasture Growth Calculator](/tools/pasture-growth-calculator.html): Daily pasture growth rate and cover
+- [Fodder Production Calculator](/tools/fodder-production-calculator.html): Hydroponic and green fodder yield per tray
+- [Hay Value Calculator](/tools/hay-value-calculator.html): Nutrient value of hay vs purchased feed
+- [Hay Requirement Calculator](/tools/hay-requirement-calculator.html): Tons of hay needed for winter feeding
+- [Silage Preparation Calculator](/tools/silage-preparation-calculator.html): Forage needed and additive rate for silage
+- [Silage Pile Calculator](/tools/silage-pile-calculator.html): Bunker size and volume for silage storage
+- [Pasture Rotation Planner](/tools/pasture-rotation-calculator.html): Paddock size and grazing rotation schedule
+- [Livestock Stocking Density](/tools/livestock-density.html): Optimal density and max barn capacity
+- [Livestock Weight Estimator](/tools/livestock-weight-estimator.html): Weight from heart girth and body length
+- [Weight Gain Calculator](/tools/weight-gain-calculator.html): Average daily gain and finish date
+- [Calving Date Calculator](/tools/calving-date-calculator.html): Expected calving date from breeding date
+- [Dry Matter Calculator](/tools/dry-matter-calculator.html): Dry matter content and intake from feed
+- [Bale Count Calculator](/tools/bale-count-calculator.html): Number of bales from field yield and size
+- [Fencing Calculator](/tools/fencing-calculator.html): Fence length, posts and cost per paddock
+- [Water Trough Calculator](/tools/water-trough-calculator.html): Trough size and flow for herd watering
+- [Aquaculture Stocking Calculator](/tools/aquaculture-stocking.html): Fish and shrimp density, seed and feed needs
+- [Beekeeping & Honey Calculator](/tools/beekeeping-honey-calculator.html): Honey yield, revenue and apiary profit
+- [Mushroom Substrate Calculator](/tools/mushroom-substrate-calculator.html): Substrate recipes, spawn and expected yield
+- [Veterinary Dosage Calculator](/tools/veterinary-dosage.html): Drug dosing by weight, water or feed
+
+### Grain Storage (8)
+
+- [Grain Bin Capacity Calculator](/tools/grain-bin-capacity-calculator.html): Bushels by bin diameter and height
+- [Grain Storage Calculator](/tools/grain-storage-calculator.html): Storage time and cost per bushel
+- [Grain Weight Calculator](/tools/grain-weight-calculator.html): Weight from volume and bushel weight
+- [Grain Shrink Calculator](/tools/grain-shrink-calculator.html): Weight loss from drying to target moisture
+- [Moisture Shrink Calculator](/tools/moisture-shrink-calculator.html): Shrinkage from high to safe moisture content
+- [Dockage Calculator](/tools/dockage-calculator.html): Foreign material and dockage deduction
+- [Test Weight Deduction](/tools/test-weight-deduction-calculator.html): Price deduction from low test weight
+- [Cold Storage Calculator](/tools/cold-storage-calculator.html): Room size and cooling load for produce
+
+### Farm Finance (23)
+
+- [Farm Budget & Profit Calculator](/tools/farm-budget-calculator.html): Revenue, costs, margin and break-even
+- [Farm ROI Calculator](/tools/farm-roi-calculator.html): Return on investment for farm projects
+- [Break-Even Price Calculator](/tools/break-even-price-calculator.html): Minimum price to cover all costs
+- [Break-Even Yield Calculator](/tools/break-even-yield-calculator.html): Yield needed to cover fixed and variable costs
+- [Agricultural Loan Calculator](/tools/agri-loan-calculator.html): Monthly payment, interest and amortization
+- [Farm Subsidy Estimator](/tools/agri-subsidy-calculator.html): Direct payments, insurance and conservation aid
+- [ARC/PLC Payment Calculator](/tools/arc-plc-payment-calculator.html): 2026 reference prices, ARC vs PLC payments
+- [FSA Loan Calculator](/tools/fsa-loan-calculator.html): Loan limits, rates and monthly payments
+- [Beginning Farmer Down Payment](/tools/beginning-farmer-down-payment-calculator.html): 5-45-50 land purchase structure
+- [Crop Insurance Premium Calculator](/tools/crop-insurance-premium-calculator.html): 2026 subsidy rates, SCO/ECO and beginner bonus
+- [Dairy Margin Coverage Calculator](/tools/dmc-margin-calculator.html): Tier 1/2 indemnity and premium estimate
+- [EQIP Cost-Share Calculator](/tools/eqip-cost-share-calculator.html): 75%/90% conservation cost-share estimate
+- [Crop Insurance Calculator](/tools/crop-insurance-calculator.html): Premium and indemnity for crop risk
+- [Crop Margin Calculator](/tools/crop-margin-calculator.html): Net margin per acre by crop and enterprise
+- [Land Rent Calculator](/tools/rent-calculator.html): Annual or monthly rent with escalation
+- [Land Value Calculator](/tools/land-value-calculator.html): Farmland value from rent and cap rate
+- [Labour Productivity Calculator](/tools/labour-productivity-calculator.html): Output per worker and labour cost per unit
+- [Farm Income Tax Calculator](/tools/farm-income-tax-calculator.html): Estimated tax and deductions for farmers
+- [Custom Farming Rate Calculator](/tools/custom-farming-rate-calculator.html): Rate per acre for custom farming services
+- [Profit per Head Calculator](/tools/profit-per-head-calculator.html): Net profit per animal for livestock enterprises
+- [Produce Price Converter](/tools/price-converter.html): $/kg to $/lb to $/ton conversion
+- [Farm Carbon Footprint Calculator](/tools/carbon-footprint-calculator.html): GHG emissions and reduction opportunities
+- [Produce Pricing Calculator](/tools/produce-pricing-calculator.html): Optimal selling price from cost and margin
+
+### Land & Area (1)
+
+- [Land Area Converter](/tools/area-converter.html): Hectares, acres, m², km² and mu conversion
+
+### Calibration & Spraying (7)
+
+- [Tank Mix Calculator](/tools/tank-mix-calculator.html): Chemical and water amounts per spray tank
+- [Seed Drill Calibration](/tools/seed-drill-calibration.html): Calibrate drill to desired seeding rate
+- [Fertilizer Rate Converter](/tools/fertilizer-converter.html): Convert between fertilizer formulations and units
+- [Pesticide Dilution Calculator](/tools/pesticide-dilution.html): Mix by ratio, percentage or ppm
+- [Herbicide Application Calculator](/tools/herbicide-calculator.html): Herbicide and water volume per acre
+- [Pesticide Residue Calculator](/tools/pesticide-residue-calculator.html): Estimate residue and safe consumption limits
+- [Pesticide Safety Interval](/tools/pesticide-safety-interval.html): Pre-harvest interval and safe harvest date
+
+### Climate & Risk (3)
+
+- [Frost Risk Calculator](/tools/frost-risk-calculator.html): Frost probability and crop damage risk
+- [Growing Degree Days Calculator](/tools/growing-degree-days-calculator.html): GDD accumulation for crop development
+- [Soil Temperature & Planting](/tools/soil-temperature-planting.html): Optimal planting dates from soil temperature
+
+### General & Utilities (2)
+
+- [Temperature Converter](/tools/temp-converter.html): °C, °F, K conversion and dew point
+- [Farm Date Calculator](/tools/date-calculator.html): Planting/harvest dates and interval math
+
+### More calculators (3)
+
+- [Cow Water Intake Calculator](/tools/cow-water-intake-calculator.html)
+- [No-Till Transition Calculator](/tools/no-till-transition-calculator.html): Compare conventional tillage with no-till on your own figures: fuel and labour saved, yield drag during the transition years, soil carbon gain and payback.
+- [Crop Residue Cover Calculator](/tools/residue-cover-calculator.html): Estimate the share of soil surface left covered by crop residue after harvest and each tillage pass. Check erosion risk and whether the field still counts.
+
